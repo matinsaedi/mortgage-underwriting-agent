@@ -1,3 +1,4 @@
 data/raw/
 .env
 .venv/
+data/qdrant*/
