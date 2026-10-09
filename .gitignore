@@ -2,3 +2,5 @@ data/raw/
 .env
 .venv/
 data/qdrant*/
+.ipynb_checkpoints/
+__pycache__/

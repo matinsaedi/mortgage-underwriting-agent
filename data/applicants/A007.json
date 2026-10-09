@@ -1,0 +1,58 @@
+{
+  "applicant_id": "A007",
+  "name": "Sarah Chen",
+  "loan": {
+    "amount": 320000.0,
+    "property_value": 400000.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "manual"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 8500.0,
+    "years_employed": 3.0,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 450.0,
+      "balance": 9000.0,
+      "months_remaining": 20
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 120.0,
+      "balance": 3500.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 705,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 95000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 40000.0,
+        "deposit_date": "2026-09-01",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Undocumented $40,000 deposit must be sourced"
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  }
+}
