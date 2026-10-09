@@ -8,15 +8,21 @@ class Loan(BaseModel):
     """The mortgage being requested and the property behind it"""
     amount: float = Field(gt=0, description="Loan amount in dollars")
     property_value: float = Field(gt=0, description="Appraised value in dollars")
+    monthly_housing_payment: float = Field(
+        gt=0, description="Proposed monthly PITIA: principal, interest, taxes, insurance, HOA dues")
+    estimated_closing_costs: float = Field(                                  
+        ge=0, description="Estimated closing costs in dollars, paid at closing")
     property_type: Literal["1-unit", "2-4 unit"]
     occupancy: Literal["principal residence", "second home", "investment property"]
     underwriting: Literal["manual", "DU"]
 
 
 class Income(BaseModel):
-    """What the borrower states they earn on the application"""
+    """What the borrower states they earn, and what their pay stubs show."""
     employer: str = Field(min_length=1, description="Current employer name")
     monthly_income: float = Field(gt=0, description="Stated gross monthly income in dollars")
+    verified_monthly_income: float = Field(                                  
+        gt=0, description="Gross monthly income as shown on pay stubs and W-2s")
     years_employed: float = Field(ge=0, description="Years with current employer")
     pay_frequency: Literal["weekly", "biweekly", "semimonthly", "monthly"]
     self_employed: bool = False
@@ -34,6 +40,8 @@ class Debt(BaseModel):
 class Credit(BaseModel):
     """The borrower's credit score and major past credit events"""
     score: int = Field(ge=300, le=850, description="Representative credit score")
+    bankruptcy_chapter: Literal[7, 13] | None = Field(                       
+        default=None, description="Chapter 7 (liquidation) or 13 (repayment plan), if any")
     bankruptcy_discharge_date: date | None = Field(
         default=None, description="Date a bankruptcy was discharged, if any"
     )
@@ -52,14 +60,14 @@ class Gift(BaseModel):
     """Money given to the borrower to help with the purchase"""
     amount: float = Field(gt=0, description="Gift amount in dollars")
     donor_relationship: Literal["parent", "grandparent", "sibling", "spouse",
-                                "fiance", "other relative", "friend", "employer"]
+                                "fiance", "other relative", "friend", "interested party"]
     has_gift_letter: bool
 
 
 class Assets(BaseModel):
     """The borrower's funds available for closing and reserves"""
     bank_balance: float = Field(ge=0, description="Checking and savings balance in dollars")
-    retirement_balance: float = Field(default=0.0, ge=0, description="401(k)/IRA balance in dollars")
+    retirement_balance: float = Field(default=0.0, ge=0, description="Vested 401(k)/IRA balance in dollars")
     large_deposits: list[LargeDeposit] = Field(default_factory=list)
     gifts: list[Gift] = Field(default_factory=list)
 
@@ -75,6 +83,8 @@ class Applicant(BaseModel):
     """A complete synthetic mortgage application"""
     applicant_id: str
     name: str
+    closing_date: date = Field(
+        description="Planned loan closing date; waiting periods are measured to this date")
     loan: Loan
     income: Income
     debts: list[Debt] = Field(default_factory=list)
