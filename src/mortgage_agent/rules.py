@@ -3,7 +3,8 @@
 from typing import Literal
 from pydantic import BaseModel
 from mortgage_agent.schemas import Applicant, ExpectedOutcome
-from mortgage_agent.calculators import dti, add_years, funds_to_close, usable_assets, unsourced_deposits, unlettered_gifts, excluded_gifts
+from mortgage_agent.calculators import dti, ltv, add_years, funds_to_close, usable_assets, unsourced_deposits, unlettered_gifts, excluded_gifts, own_funds
+
 
 class Finding(BaseModel):
     """One problem a rule found in the application"""
@@ -173,4 +174,50 @@ def check_funds(applicant: Applicant) -> Finding | None:
             f"to close and hold {months} months of reserves."
         ),
     )
-    
+
+
+MIN_CONTRIBUTION_PCT = 5
+
+def check_min_contribution(applicant: Applicant) -> Finding | None:
+    """With gifts above 80% LTV, a second home or 2-4 unit principal residence
+    needs 5% of the price from the borrower's own funds (B3-4.3-04)."""
+    loan = applicant.loan
+    if not applicant.assets.gifts or ltv(applicant) <= 80:
+        return None
+    if loan.occupancy == "second home":
+        kind = "second home"
+    elif loan.occupancy == "principal residence" and loan.property_type == "2-4 unit":
+        kind = "2-4 unit principal residence"
+    else:
+        return None
+    required = loan.property_value * MIN_CONTRIBUTION_PCT / 100
+    own = own_funds(applicant)
+    if own < required:
+        return Finding(
+            rule_id="B3-4.3-04",
+            severity="decline",
+            reason=(
+                f"Gifts are used on a {kind} at {ltv(applicant):.0f}% LTV, so {MIN_CONTRIBUTION_PCT}% "
+                f"(${required:,.0f}) must come from the borrower's own funds; they have ${own:,.0f}."
+            )
+        )
+    return None
+
+
+RULES = [
+    check_credit_score,
+    check_dti,
+    check_bankruptcy,
+    check_foreclosure,
+    check_funds,
+    check_min_contribution,
+]
+
+def check_applicant(applicant: Applicant) -> ExpectedOutcome:
+    """Run every rule on the applicant and turn the findings into a decision"""
+    findings = []
+    for rule in RULES:
+        finding = rule(applicant)
+        if finding is not None:
+            findings.append(finding)
+    return decide(findings)

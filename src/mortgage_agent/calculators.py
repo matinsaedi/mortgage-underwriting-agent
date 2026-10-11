@@ -96,3 +96,10 @@ def unlettered_gifts(applicant: Applicant) -> float:
 def excluded_gifts(applicant: Applicant) -> float:
     """Total of gifts that can't be used at all (B3-4.3-04)."""
     return sum(g.amount for g in applicant.assets.gifts if not gift_allowed(g, applicant))
+
+
+def own_funds(applicant: Applicant) -> float:
+    """The borrower's own verified money: bank + vested retirement,
+    minus undocumented large deposits. Gifts are not included."""
+    a = applicant.assets
+    return a.bank_balance + a.retirement_balance - unsourced_deposits(applicant)
