@@ -9,7 +9,7 @@
     "estimated_closing_costs": 9000.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
-    "underwriting": "manual"
+    "underwriting": "DU"
   },
   "income": {
     "employer": "Northwind Logistics",
