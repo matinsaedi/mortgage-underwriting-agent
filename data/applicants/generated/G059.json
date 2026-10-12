@@ -1,40 +1,51 @@
 {
   "applicant_id": "G059",
-  "name": "Kofi Okafor",
-  "closing_date": "2026-12-19",
+  "name": "Hana Silva",
+  "closing_date": "2026-11-25",
   "loan": {
-    "amount": 436000.0,
-    "property_value": 545000.0,
-    "monthly_housing_payment": 3401.0,
-    "estimated_closing_costs": 12951.0,
+    "amount": 458500.0,
+    "property_value": 655000.0,
+    "monthly_housing_payment": 3653.0,
+    "estimated_closing_costs": 17430.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 10700.0,
-    "verified_monthly_income": 10700.0,
-    "years_employed": 6.2,
+    "employer": "Lakeshore Bank",
+    "monthly_income": 11800.0,
+    "verified_monthly_income": 11800.0,
+    "years_employed": 13.3,
     "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 90.0,
+      "balance": 3510.0,
+      "months_remaining": null
+    }
+  ],
   "credit": {
-    "score": 725,
-    "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2022-09-30",
-    "foreclosure_date": null
+    "score": 776,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2021-11-28"
   },
   "assets": {
-    "bank_balance": 150000.0,
-    "retirement_balance": 101000.0,
+    "bank_balance": 295000.0,
+    "retirement_balance": 93000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2021-11-28; the 7-year wait ends 2028-11-28, after the 2026-11-25 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   }
 }

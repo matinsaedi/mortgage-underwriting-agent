@@ -1,53 +1,63 @@
 {
   "applicant_id": "G115",
-  "name": "Hana Haddad",
-  "closing_date": "2026-12-26",
+  "name": "Lisa Rossi",
+  "closing_date": "2026-11-25",
   "loan": {
-    "amount": 492000.0,
-    "property_value": 615000.0,
-    "monthly_housing_payment": 3824.0,
-    "estimated_closing_costs": 15910.0,
+    "amount": 540000.0,
+    "property_value": 600000.0,
+    "monthly_housing_payment": 4113.0,
+    "estimated_closing_costs": 16852.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 11400.0,
-    "verified_monthly_income": 11400.0,
-    "years_employed": 6.1,
-    "pay_frequency": "semimonthly",
+    "employer": "Bluefin Software",
+    "monthly_income": 13500.0,
+    "verified_monthly_income": 13500.0,
+    "years_employed": 8.7,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
+      "kind": "student loan",
+      "monthly_payment": 550.0,
+      "balance": 22550.0,
+      "months_remaining": 41
+    },
+    {
       "kind": "credit card",
-      "monthly_payment": 40.0,
-      "balance": 1400.0,
+      "monthly_payment": 150.0,
+      "balance": 5100.0,
       "months_remaining": null
     }
   ],
   "credit": {
-    "score": 732,
+    "score": 778,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 86710.0,
+    "bank_balance": 17400.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 82000.0,
-        "donor_relationship": "sibling",
+        "amount": 71778.0,
+        "donor_relationship": "parent",
         "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($30,000) must come from the borrower's own funds; they have $17,400."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

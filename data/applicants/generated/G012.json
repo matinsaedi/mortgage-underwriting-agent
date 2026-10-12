@@ -41,13 +41,17 @@
       {
         "amount": 66000.0,
         "donor_relationship": "grandparent",
-        "has_gift_letter": true
+        "has_gift_letter": false
       }
     ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $100,993 are short of the $155,493 needed; obtain a signed gift letter for $66,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

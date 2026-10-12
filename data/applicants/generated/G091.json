@@ -1,47 +1,44 @@
 {
   "applicant_id": "G091",
-  "name": "Priya Nguyen",
-  "closing_date": "2026-11-12",
+  "name": "Lisa Garcia",
+  "closing_date": "2026-12-05",
   "loan": {
-    "amount": 458500.0,
-    "property_value": 655000.0,
-    "monthly_housing_payment": 3653.0,
-    "estimated_closing_costs": 18511.0,
+    "amount": 187500.0,
+    "property_value": 250000.0,
+    "monthly_housing_payment": 1535.0,
+    "estimated_closing_costs": 7445.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 11300.0,
-    "verified_monthly_income": 11300.0,
-    "years_employed": 12.5,
-    "pay_frequency": "monthly",
+    "employer": "Cedar School Board",
+    "monthly_income": 4600.0,
+    "verified_monthly_income": 2800.0,
+    "years_employed": 10.5,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "auto loan",
-      "monthly_payment": 220.0,
-      "balance": 12760.0,
-      "months_remaining": 58
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 706,
-    "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2023-10-04",
+    "score": 783,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 300000.0,
-    "retirement_balance": 146000.0,
+    "bank_balance": 107000.0,
+    "retirement_balance": 64000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "DTI 54.8% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
   }
 }

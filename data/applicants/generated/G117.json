@@ -1,53 +1,57 @@
 {
   "applicant_id": "G117",
-  "name": "Sarah Patel",
-  "closing_date": "2026-12-07",
+  "name": "Ana Okafor",
+  "closing_date": "2026-12-11",
   "loan": {
-    "amount": 406000.0,
-    "property_value": 580000.0,
-    "monthly_housing_payment": 3246.0,
-    "estimated_closing_costs": 13962.0,
+    "amount": 273750.0,
+    "property_value": 365000.0,
+    "monthly_housing_payment": 2195.0,
+    "estimated_closing_costs": 10137.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Northwind Logistics",
-    "monthly_income": 13600.0,
-    "verified_monthly_income": 13600.0,
-    "years_employed": 12.8,
+    "monthly_income": 9700.0,
+    "verified_monthly_income": 9700.0,
+    "years_employed": 3.8,
     "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 270.0,
-      "balance": 5400.0,
-      "months_remaining": 20
+      "kind": "student loan",
+      "monthly_payment": 190.0,
+      "balance": 8170.0,
+      "months_remaining": 43
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 310.0,
+      "balance": 13950.0,
+      "months_remaining": 45
     }
   ],
   "credit": {
-    "score": 706,
+    "score": 752,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 247000.0,
-    "retirement_balance": 126000.0,
-    "large_deposits": [
-      {
-        "amount": 11000.0,
-        "deposit_date": "2026-10-28",
-        "source_documented": false
-      }
-    ],
+    "bank_balance": 90400.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Funds of $90,400 are short of the $101,387 needed to close and hold 0 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   }
 }

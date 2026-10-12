@@ -1,52 +1,39 @@
 {
   "applicant_id": "G046",
-  "name": "Nina Smith",
-  "closing_date": "2026-11-08",
+  "name": "Raj Silva",
+  "closing_date": "2026-12-14",
   "loan": {
-    "amount": 412000.0,
-    "property_value": 515000.0,
-    "monthly_housing_payment": 3219.0,
-    "estimated_closing_costs": 13219.0,
+    "amount": 287000.0,
+    "property_value": 410000.0,
+    "monthly_housing_payment": 2324.0,
+    "estimated_closing_costs": 8674.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 12300.0,
-    "verified_monthly_income": 12300.0,
-    "years_employed": 14.3,
-    "pay_frequency": "biweekly",
+    "employer": "Cedar School Board",
+    "monthly_income": 7600.0,
+    "verified_monthly_income": 7600.0,
+    "years_employed": 4.3,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "student loan",
-      "monthly_payment": 200.0,
-      "balance": 11800.0,
-      "months_remaining": 59
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 115.0,
-      "balance": 2300.0,
-      "months_remaining": null
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 719,
+    "score": 683,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 107619.0,
+    "bank_balance": 123774.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
         "amount": 32000.0,
-        "donor_relationship": "other relative",
+        "donor_relationship": "fiance",
         "has_gift_letter": false
       }
     ]
@@ -54,7 +41,7 @@
   "expected": {
     "decision": "approve with conditions",
     "reasons": [
-      "Verified funds of $107,619 are short of the $116,219 needed; obtain a signed gift letter for $32,000 in gifts."
+      "Verified funds of $123,774 are short of the $131,674 needed; obtain a signed gift letter for $32,000 in gifts."
     ],
     "rule_ids": [
       "B3-4.3-04"

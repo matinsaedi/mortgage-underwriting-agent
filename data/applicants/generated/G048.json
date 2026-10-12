@@ -1,48 +1,48 @@
 {
   "applicant_id": "G048",
-  "name": "Mark Kim",
+  "name": "Raj Garcia",
   "closing_date": "2026-11-29",
   "loan": {
-    "amount": 392000.0,
-    "property_value": 490000.0,
-    "monthly_housing_payment": 3067.0,
-    "estimated_closing_costs": 12864.0,
+    "amount": 341250.0,
+    "property_value": 455000.0,
+    "monthly_housing_payment": 2712.0,
+    "estimated_closing_costs": 12784.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Bluefin Software",
-    "monthly_income": 9400.0,
-    "verified_monthly_income": 9400.0,
-    "years_employed": 14.4,
-    "pay_frequency": "monthly",
+    "monthly_income": 9700.0,
+    "verified_monthly_income": 9700.0,
+    "years_employed": 8.1,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 40.0,
-      "balance": 920.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 430.0,
+      "balance": 17200.0,
+      "months_remaining": 40
     }
   ],
   "credit": {
-    "score": 778,
-    "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2025-10-14",
-    "foreclosure_date": null
+    "score": 784,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2021-01-21"
   },
   "assets": {
-    "bank_balance": 179000.0,
-    "retirement_balance": 86000.0,
+    "bank_balance": 162000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Chapter 13 bankruptcy discharged 2025-10-14; the 2-year wait ends 2027-10-14, after the 2026-11-29 closing."
+      "Foreclosure completed 2021-01-21; the 7-year wait ends 2028-01-21, after the 2026-11-29 closing."
     ],
     "rule_ids": [
       "B3-5.3-07"

@@ -14,7 +14,7 @@
   "income": {
     "employer": "Northwind Logistics",
     "monthly_income": 11300.0,
-    "verified_monthly_income": 6300.0,
+    "verified_monthly_income": 11300.0,
     "years_employed": 4.2,
     "pay_frequency": "monthly",
     "self_employed": false
@@ -22,8 +22,8 @@
   "debts": [],
   "credit": {
     "score": 744,
-    "bankruptcy_chapter": null,
-    "bankruptcy_discharge_date": null,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2025-04-27",
     "foreclosure_date": null
   },
   "assets": {
@@ -35,10 +35,10 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "DTI 58.1% exceeds the 50% maximum for DU underwriting."
+      "Chapter 13 bankruptcy discharged 2025-04-27; the 2-year wait ends 2027-04-27, after the 2026-11-17 closing."
     ],
     "rule_ids": [
-      "B3-6-02"
+      "B3-5.3-07"
     ]
   }
 }

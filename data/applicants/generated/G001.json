@@ -30,7 +30,7 @@
   "credit": {
     "score": 736,
     "bankruptcy_chapter": 7,
-    "bankruptcy_discharge_date": "2023-07-19",
+    "bankruptcy_discharge_date": "2020-03-28",
     "foreclosure_date": null
   },
   "assets": {
@@ -40,12 +40,8 @@
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Chapter 7 bankruptcy discharged 2023-07-19; the 4-year wait ends 2027-07-19, after the 2026-12-13 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

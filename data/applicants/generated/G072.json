@@ -1,60 +1,54 @@
 {
   "applicant_id": "G072",
-  "name": "Lisa Rossi",
-  "closing_date": "2026-11-12",
+  "name": "Diego Smith",
+  "closing_date": "2026-11-06",
   "loan": {
-    "amount": 320000.0,
-    "property_value": 400000.0,
-    "monthly_housing_payment": 2522.0,
-    "estimated_closing_costs": 11549.0,
-    "property_type": "1-unit",
+    "amount": 270000.0,
+    "property_value": 360000.0,
+    "monthly_housing_payment": 2166.0,
+    "estimated_closing_costs": 9903.0,
+    "property_type": "2-4 unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 12300.0,
-    "verified_monthly_income": 12300.0,
-    "years_employed": 14.1,
+    "employer": "Lakeshore Bank",
+    "monthly_income": 9000.0,
+    "verified_monthly_income": 9000.0,
+    "years_employed": 13.4,
     "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
       "kind": "student loan",
-      "monthly_payment": 500.0,
-      "balance": 8500.0,
-      "months_remaining": 17
-    },
-    {
-      "kind": "auto loan",
-      "monthly_payment": 320.0,
-      "balance": 7360.0,
-      "months_remaining": 23
+      "monthly_payment": 420.0,
+      "balance": 19740.0,
+      "months_remaining": 47
     }
   ],
   "credit": {
-    "score": 739,
+    "score": 713,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 55349.0,
+    "bank_balance": 108699.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 51000.0,
-        "donor_relationship": "other relative",
-        "has_gift_letter": false
+        "amount": 48000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "approve with conditions",
+    "decision": "decline",
     "reasons": [
-      "Verified funds of $55,349 are short of the $91,549 needed; obtain a signed gift letter for $51,000 in gifts."
+      "Funds of $108,699 are short of the $112,899 needed; $48,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

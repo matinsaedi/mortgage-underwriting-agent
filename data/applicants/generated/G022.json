@@ -31,7 +31,7 @@
     "score": 735,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2021-08-27"
+    "foreclosure_date": "2018-12-18"
   },
   "assets": {
     "bank_balance": 229000.0,
@@ -40,12 +40,8 @@
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Foreclosure completed 2021-08-27; the 7-year wait ends 2028-08-27, after the 2026-11-10 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

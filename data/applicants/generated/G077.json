@@ -1,51 +1,53 @@
 {
   "applicant_id": "G077",
-  "name": "Omar Okafor",
-  "closing_date": "2026-12-16",
+  "name": "Omar Rossi",
+  "closing_date": "2026-12-20",
   "loan": {
-    "amount": 356000.0,
-    "property_value": 445000.0,
-    "monthly_housing_payment": 2795.0,
-    "estimated_closing_costs": 13285.0,
+    "amount": 493500.0,
+    "property_value": 705000.0,
+    "monthly_housing_payment": 3924.0,
+    "estimated_closing_costs": 18515.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Maple Health",
-    "monthly_income": 11700.0,
-    "verified_monthly_income": 11700.0,
-    "years_employed": 13.7,
-    "pay_frequency": "semimonthly",
+    "employer": "Cedar School Board",
+    "monthly_income": 16800.0,
+    "verified_monthly_income": 16800.0,
+    "years_employed": 4.0,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
+      "kind": "auto loan",
+      "monthly_payment": 160.0,
+      "balance": 2080.0,
+      "months_remaining": 13
+    },
+    {
       "kind": "student loan",
-      "monthly_payment": 590.0,
-      "balance": 26550.0,
-      "months_remaining": 45
+      "monthly_payment": 180.0,
+      "balance": 2340.0,
+      "months_remaining": 13
     }
   ],
   "credit": {
-    "score": 731,
+    "score": 708,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2020-05-29"
+    "foreclosure_date": "2019-11-17"
   },
   "assets": {
-    "bank_balance": 145000.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 266000.0,
+    "retirement_balance": 105000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Foreclosure completed 2020-05-29; the 7-year wait ends 2027-05-29, after the 2026-12-16 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

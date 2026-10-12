@@ -29,9 +29,9 @@
   ],
   "credit": {
     "score": 800,
-    "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2025-05-29",
-    "foreclosure_date": null
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2023-07-29"
   },
   "assets": {
     "bank_balance": 172000.0,
@@ -42,7 +42,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Chapter 13 bankruptcy discharged 2025-05-29; the 2-year wait ends 2027-05-29, after the 2026-12-05 closing."
+      "Foreclosure completed 2023-07-29; the 7-year wait ends 2030-07-29, after the 2026-12-05 closing."
     ],
     "rule_ids": [
       "B3-5.3-07"

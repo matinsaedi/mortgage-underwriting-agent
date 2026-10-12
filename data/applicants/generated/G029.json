@@ -1,38 +1,51 @@
 {
   "applicant_id": "G029",
-  "name": "Nina Haddad",
-  "closing_date": "2026-12-04",
+  "name": "Priya Haddad",
+  "closing_date": "2026-11-14",
   "loan": {
-    "amount": 255500.0,
-    "property_value": 365000.0,
-    "monthly_housing_payment": 2080.0,
-    "estimated_closing_costs": 10909.0,
+    "amount": 396000.0,
+    "property_value": 495000.0,
+    "monthly_housing_payment": 3098.0,
+    "estimated_closing_costs": 10427.0,
     "property_type": "1-unit",
     "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 6200.0,
-    "verified_monthly_income": 6200.0,
-    "years_employed": 3.4,
-    "pay_frequency": "biweekly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 10800.0,
+    "verified_monthly_income": 10800.0,
+    "years_employed": 12.1,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 160.0,
+      "balance": 6560.0,
+      "months_remaining": 41
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 280.0,
+      "balance": 10920.0,
+      "months_remaining": 39
+    }
+  ],
   "credit": {
-    "score": 683,
+    "score": 697,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 126689.0,
+    "bank_balance": 94315.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 50000.0,
+        "amount": 53000.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
@@ -41,7 +54,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $126,689 are short of the $132,889 needed; $50,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Funds of $94,315 are short of the $128,015 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

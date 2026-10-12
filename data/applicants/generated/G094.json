@@ -1,53 +1,51 @@
 {
   "applicant_id": "G094",
-  "name": "Diego Chen",
-  "closing_date": "2026-11-22",
+  "name": "Mark Silva",
+  "closing_date": "2026-11-15",
   "loan": {
-    "amount": 195000.0,
-    "property_value": 260000.0,
-    "monthly_housing_payment": 1592.0,
-    "estimated_closing_costs": 6694.0,
+    "amount": 397500.0,
+    "property_value": 530000.0,
+    "monthly_housing_payment": 3142.0,
+    "estimated_closing_costs": 12726.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 6000.0,
-    "verified_monthly_income": 6000.0,
-    "years_employed": 4.9,
-    "pay_frequency": "biweekly",
+    "employer": "Maple Health",
+    "monthly_income": 11200.0,
+    "verified_monthly_income": 5000.0,
+    "years_employed": 10.6,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "student loan",
-      "monthly_payment": 150.0,
-      "balance": 7200.0,
-      "months_remaining": 48
+      "kind": "credit card",
+      "monthly_payment": 95.0,
+      "balance": 2090.0,
+      "months_remaining": null
     }
   ],
   "credit": {
-    "score": 745,
+    "score": 682,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 56394.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 199000.0,
+    "retirement_balance": 110000.0,
     "large_deposits": [],
-    "gifts": [
-      {
-        "amount": 39000.0,
-        "donor_relationship": "fiance",
-        "has_gift_letter": true
-      }
-    ]
+    "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "DTI 64.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
   }
 }

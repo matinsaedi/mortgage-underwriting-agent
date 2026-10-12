@@ -1,44 +1,46 @@
 {
   "applicant_id": "G045",
-  "name": "Liam Brown",
-  "closing_date": "2026-11-10",
+  "name": "Priya Chen",
+  "closing_date": "2026-12-23",
   "loan": {
-    "amount": 264000.0,
-    "property_value": 330000.0,
-    "monthly_housing_payment": 2098.0,
-    "estimated_closing_costs": 9447.0,
-    "property_type": "1-unit",
-    "occupancy": "second home",
+    "amount": 318500.0,
+    "property_value": 455000.0,
+    "monthly_housing_payment": 2568.0,
+    "estimated_closing_costs": 11352.0,
+    "property_type": "2-4 unit",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 6600.0,
-    "verified_monthly_income": 6600.0,
-    "years_employed": 4.3,
-    "pay_frequency": "weekly",
+    "employer": "Harbor Engineering",
+    "monthly_income": 9000.0,
+    "verified_monthly_income": 9000.0,
+    "years_employed": 8.5,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [],
   "credit": {
-    "score": 697,
+    "score": 765,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 74700.0,
+    "bank_balance": 141760.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
-    "gifts": []
+    "gifts": [
+      {
+        "amount": 82000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Funds of $74,700 are short of the $79,643 needed to close and hold 2 months of reserves."
-    ],
-    "rule_ids": [
-      "B3-4.1-01"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

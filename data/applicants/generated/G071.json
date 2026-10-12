@@ -1,63 +1,53 @@
 {
   "applicant_id": "G071",
-  "name": "Diego Okafor",
-  "closing_date": "2026-12-06",
+  "name": "Nina Smith",
+  "closing_date": "2026-11-30",
   "loan": {
-    "amount": 462000.0,
-    "property_value": 660000.0,
-    "monthly_housing_payment": 3680.0,
-    "estimated_closing_costs": 18576.0,
+    "amount": 243750.0,
+    "property_value": 325000.0,
+    "monthly_housing_payment": 1966.0,
+    "estimated_closing_costs": 6883.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Maple Health",
-    "monthly_income": 14300.0,
-    "verified_monthly_income": 14300.0,
-    "years_employed": 7.2,
-    "pay_frequency": "semimonthly",
+    "monthly_income": 7400.0,
+    "verified_monthly_income": 7400.0,
+    "years_employed": 3.6,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 70.0,
-      "balance": 1750.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "student loan",
-      "monthly_payment": 420.0,
-      "balance": 12600.0,
-      "months_remaining": 30
+      "kind": "auto loan",
+      "monthly_payment": 560.0,
+      "balance": 14000.0,
+      "months_remaining": 25
     }
   ],
   "credit": {
-    "score": 791,
+    "score": 724,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 236276.0,
+    "bank_balance": 114000.0,
     "retirement_balance": 0.0,
     "large_deposits": [
       {
-        "amount": 25000.0,
-        "deposit_date": "2026-10-27",
+        "amount": 17000.0,
+        "deposit_date": "2026-09-27",
         "source_documented": false
       }
     ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve with conditions",
-    "reasons": [
-      "Verified funds of $211,276 are short of the $216,576 needed; document the source of $25,000 in large deposits."
-    ],
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

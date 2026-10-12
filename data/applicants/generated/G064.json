@@ -1,40 +1,63 @@
 {
   "applicant_id": "G064",
-  "name": "Sarah Kim",
-  "closing_date": "2026-12-07",
+  "name": "Tom Brown",
+  "closing_date": "2026-11-19",
   "loan": {
-    "amount": 346500.0,
-    "property_value": 495000.0,
-    "monthly_housing_payment": 2785.0,
-    "estimated_closing_costs": 11679.0,
+    "amount": 367500.0,
+    "property_value": 525000.0,
+    "monthly_housing_payment": 2948.0,
+    "estimated_closing_costs": 11916.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 8800.0,
-    "verified_monthly_income": 8800.0,
-    "years_employed": 9.2,
-    "pay_frequency": "biweekly",
+    "employer": "Maple Health",
+    "monthly_income": 14700.0,
+    "verified_monthly_income": 14700.0,
+    "years_employed": 4.5,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 480.0,
+      "balance": 24480.0,
+      "months_remaining": 51
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 280.0,
+      "balance": 8960.0,
+      "months_remaining": 32
+    }
+  ],
   "credit": {
-    "score": 723,
+    "score": 689,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2018-06-04"
+    "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 205000.0,
-    "retirement_balance": 33000.0,
-    "large_deposits": [],
+    "bank_balance": 179912.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 9000.0,
+        "deposit_date": "2026-09-24",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $170,912 are short of the $175,312 needed; document the source of $9,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   }
 }

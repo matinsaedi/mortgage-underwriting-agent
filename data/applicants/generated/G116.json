@@ -1,59 +1,50 @@
 {
   "applicant_id": "G116",
-  "name": "Liam Haddad",
-  "closing_date": "2026-11-22",
+  "name": "Kofi Kim",
+  "closing_date": "2026-12-19",
   "loan": {
-    "amount": 296000.0,
-    "property_value": 370000.0,
-    "monthly_housing_payment": 2341.0,
-    "estimated_closing_costs": 10689.0,
-    "property_type": "2-4 unit",
+    "amount": 420000.0,
+    "property_value": 560000.0,
+    "monthly_housing_payment": 3314.0,
+    "estimated_closing_costs": 13503.0,
+    "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Bluefin Software",
-    "monthly_income": 11000.0,
-    "verified_monthly_income": 11000.0,
-    "years_employed": 13.6,
-    "pay_frequency": "semimonthly",
+    "employer": "Cedar School Board",
+    "monthly_income": 11900.0,
+    "verified_monthly_income": 11900.0,
+    "years_employed": 4.5,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "credit card",
-      "monthly_payment": 135.0,
-      "balance": 5400.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "student loan",
-      "monthly_payment": 460.0,
-      "balance": 6900.0,
-      "months_remaining": 15
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 779,
+    "score": 742,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 125000.0,
-    "retirement_balance": 142000.0,
-    "large_deposits": [
+    "bank_balance": 108603.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
       {
-        "amount": 11000.0,
-        "deposit_date": "2026-10-02",
-        "source_documented": false
+        "amount": 52000.0,
+        "donor_relationship": "fiance",
+        "has_gift_letter": false
       }
-    ],
-    "gifts": []
+    ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $108,603 are short of the $153,503 needed; obtain a signed gift letter for $52,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

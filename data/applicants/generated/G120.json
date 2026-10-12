@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G120",
+  "name": "Mei Okafor",
+  "closing_date": "2026-12-01",
+  "loan": {
+    "amount": 315000.0,
+    "property_value": 450000.0,
+    "monthly_housing_payment": 2541.0,
+    "estimated_closing_costs": 9534.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 9500.0,
+    "verified_monthly_income": 5700.0,
+    "years_employed": 14.8,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 460.0,
+      "balance": 23920.0,
+      "months_remaining": 52
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 95.0,
+      "balance": 2470.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 689,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 188000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 54.3% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  }
+}

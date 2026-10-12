@@ -1,44 +1,40 @@
 {
   "applicant_id": "G119",
-  "name": "Nina Smith",
-  "closing_date": "2026-11-21",
+  "name": "Ana Brown",
+  "closing_date": "2026-12-18",
   "loan": {
-    "amount": 416250.0,
-    "property_value": 555000.0,
-    "monthly_housing_payment": 3286.0,
-    "estimated_closing_costs": 12845.0,
+    "amount": 396000.0,
+    "property_value": 495000.0,
+    "monthly_housing_payment": 3098.0,
+    "estimated_closing_costs": 14324.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Maple Health",
-    "monthly_income": 9800.0,
-    "verified_monthly_income": 5700.0,
-    "years_employed": 6.2,
-    "pay_frequency": "biweekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 8900.0,
+    "verified_monthly_income": 8900.0,
+    "years_employed": 3.8,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [],
   "credit": {
-    "score": 743,
+    "score": 741,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": null
+    "foreclosure_date": "2017-11-30"
   },
   "assets": {
-    "bank_balance": 231000.0,
+    "bank_balance": 163000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "DTI 57.6% exceeds the 50% maximum for DU underwriting."
-    ],
-    "rule_ids": [
-      "B3-6-02"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

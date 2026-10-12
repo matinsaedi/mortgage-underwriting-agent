@@ -1,53 +1,57 @@
 {
   "applicant_id": "G108",
-  "name": "Ben Brown",
-  "closing_date": "2026-11-25",
+  "name": "Mei Novak",
+  "closing_date": "2026-12-07",
   "loan": {
-    "amount": 408750.0,
-    "property_value": 545000.0,
-    "monthly_housing_payment": 3228.0,
-    "estimated_closing_costs": 12347.0,
+    "amount": 221250.0,
+    "property_value": 295000.0,
+    "monthly_housing_payment": 1793.0,
+    "estimated_closing_costs": 6428.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Cedar School Board",
-    "monthly_income": 11600.0,
-    "verified_monthly_income": 11600.0,
-    "years_employed": 13.1,
-    "pay_frequency": "monthly",
+    "monthly_income": 5700.0,
+    "verified_monthly_income": 5700.0,
+    "years_employed": 6.1,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [
     {
       "kind": "credit card",
-      "monthly_payment": 25.0,
-      "balance": 750.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 65.0,
-      "balance": 2535.0,
+      "monthly_payment": 60.0,
+      "balance": 1560.0,
       "months_remaining": null
     }
   ],
   "credit": {
-    "score": 775,
+    "score": 733,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2018-05-28"
+    "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 188000.0,
+    "bank_balance": 78736.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
-    "gifts": []
+    "gifts": [
+      {
+        "amount": 24000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,736 are short of the $90,936 needed; $24,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

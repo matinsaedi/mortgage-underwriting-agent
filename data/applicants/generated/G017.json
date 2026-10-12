@@ -3,51 +3,61 @@
   "name": "Raj Silva",
   "closing_date": "2026-11-03",
   "loan": {
-    "amount": 536250.0,
-    "property_value": 715000.0,
-    "monthly_housing_payment": 4204.0,
-    "estimated_closing_costs": 15286.0,
+    "amount": 476000.0,
+    "property_value": 595000.0,
+    "monthly_housing_payment": 3703.0,
+    "estimated_closing_costs": 13477.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Bluefin Software",
-    "monthly_income": 14400.0,
-    "verified_monthly_income": 14400.0,
+    "monthly_income": 11000.0,
+    "verified_monthly_income": 11000.0,
     "years_employed": 9.0,
     "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 160.0,
-      "balance": 7360.0,
-      "months_remaining": 46
+      "kind": "credit card",
+      "monthly_payment": 40.0,
+      "balance": 800.0,
+      "months_remaining": null
     },
     {
-      "kind": "auto loan",
-      "monthly_payment": 590.0,
-      "balance": 28910.0,
-      "months_remaining": 49
+      "kind": "credit card",
+      "monthly_payment": 55.0,
+      "balance": 2090.0,
+      "months_remaining": null
     }
   ],
   "credit": {
     "score": 745,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2017-10-14"
+    "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 241000.0,
+    "bank_balance": 149477.0,
     "retirement_balance": 0.0,
-    "large_deposits": [],
+    "large_deposits": [
+      {
+        "amount": 31000.0,
+        "deposit_date": "2026-09-09",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $118,477 are short of the $132,477 needed; document the source of $31,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   }
 }

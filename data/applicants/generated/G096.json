@@ -1,51 +1,53 @@
 {
   "applicant_id": "G096",
-  "name": "Kofi Patel",
-  "closing_date": "2026-11-27",
+  "name": "Elena Okafor",
+  "closing_date": "2026-12-05",
   "loan": {
-    "amount": 476000.0,
-    "property_value": 680000.0,
-    "monthly_housing_payment": 3788.0,
-    "estimated_closing_costs": 16846.0,
+    "amount": 307500.0,
+    "property_value": 410000.0,
+    "monthly_housing_payment": 2453.0,
+    "estimated_closing_costs": 9838.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 12100.0,
-    "verified_monthly_income": 12100.0,
-    "years_employed": 2.8,
-    "pay_frequency": "biweekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 10600.0,
+    "verified_monthly_income": 10600.0,
+    "years_employed": 12.7,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 115.0,
-      "balance": 3680.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 170.0,
+      "balance": 4590.0,
+      "months_remaining": 27
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 260.0,
+      "balance": 3380.0,
+      "months_remaining": 13
     }
   ],
   "credit": {
-    "score": 685,
-    "bankruptcy_chapter": 7,
-    "bankruptcy_discharge_date": "2022-12-15",
+    "score": 766,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 278000.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 132000.0,
+    "retirement_balance": 132000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Chapter 7 bankruptcy discharged 2022-12-15; the 4-year wait ends 2026-12-15, after the 2026-11-27 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

@@ -1,53 +1,50 @@
 {
   "applicant_id": "G084",
-  "name": "Omar Haddad",
-  "closing_date": "2026-12-04",
+  "name": "Sarah Haddad",
+  "closing_date": "2026-12-17",
   "loan": {
-    "amount": 600000.0,
-    "property_value": 750000.0,
-    "monthly_housing_payment": 4642.0,
-    "estimated_closing_costs": 20980.0,
+    "amount": 536000.0,
+    "property_value": 670000.0,
+    "monthly_housing_payment": 4158.0,
+    "estimated_closing_costs": 18711.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 15900.0,
-    "verified_monthly_income": 15900.0,
-    "years_employed": 7.8,
+    "employer": "Northwind Logistics",
+    "monthly_income": 12300.0,
+    "verified_monthly_income": 12300.0,
+    "years_employed": 11.2,
     "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "credit card",
-      "monthly_payment": 80.0,
-      "balance": 1680.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "student loan",
-      "monthly_payment": 180.0,
-      "balance": 9540.0,
-      "months_remaining": 53
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 695,
+    "score": 699,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2017-05-17"
+    "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 255000.0,
-    "retirement_balance": 40000.0,
-    "large_deposits": [],
+    "bank_balance": 163011.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 16000.0,
+        "deposit_date": "2026-11-17",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $147,011 are short of the $152,711 needed; document the source of $16,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   }
 }

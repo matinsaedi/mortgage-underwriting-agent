@@ -1,44 +1,46 @@
 {
   "applicant_id": "G098",
-  "name": "Diego Silva",
-  "closing_date": "2026-11-10",
+  "name": "Liam Patel",
+  "closing_date": "2026-11-08",
   "loan": {
-    "amount": 191250.0,
-    "property_value": 255000.0,
-    "monthly_housing_payment": 1564.0,
-    "estimated_closing_costs": 5143.0,
-    "property_type": "1-unit",
+    "amount": 397500.0,
+    "property_value": 530000.0,
+    "monthly_housing_payment": 3142.0,
+    "estimated_closing_costs": 13640.0,
+    "property_type": "2-4 unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Cedar School Board",
-    "monthly_income": 4500.0,
-    "verified_monthly_income": 4500.0,
-    "years_employed": 5.4,
-    "pay_frequency": "biweekly",
+    "monthly_income": 12600.0,
+    "verified_monthly_income": 12600.0,
+    "years_employed": 8.7,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [],
   "credit": {
-    "score": 743,
+    "score": 732,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 58200.0,
+    "bank_balance": 204992.0,
     "retirement_balance": 0.0,
-    "large_deposits": [],
+    "large_deposits": [
+      {
+        "amount": 40000.0,
+        "deposit_date": "2026-08-29",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Funds of $58,200 are short of the $68,893 needed to close and hold 0 months of reserves."
-    ],
-    "rule_ids": [
-      "B3-4.1-01"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

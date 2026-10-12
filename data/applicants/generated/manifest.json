@@ -1,17 +1,17 @@
 [
   {
     "applicant_id": "G001",
+    "trap": "old_bankruptcy",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G002",
     "trap": "recent_bankruptcy",
     "decision": "decline",
     "rule_ids": [
       "B3-5.3-07"
     ]
-  },
-  {
-    "applicant_id": "G002",
-    "trap": "short_debt",
-    "decision": "approve",
-    "rule_ids": []
   },
   {
     "applicant_id": "G003",
@@ -21,7 +21,7 @@
   },
   {
     "applicant_id": "G004",
-    "trap": "gift_bad_donor",
+    "trap": "gift_rental",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -29,7 +29,7 @@
   },
   {
     "applicant_id": "G005",
-    "trap": "gift_rental",
+    "trap": "gift_bad_donor",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -53,10 +53,10 @@
   },
   {
     "applicant_id": "G008",
-    "trap": "high_dti",
+    "trap": "recent_bankruptcy",
     "decision": "decline",
     "rule_ids": [
-      "B3-6-02"
+      "B3-5.3-07"
     ]
   },
   {
@@ -69,7 +69,7 @@
   },
   {
     "applicant_id": "G010",
-    "trap": "gift_bad_donor",
+    "trap": "min_contribution_short",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -83,9 +83,11 @@
   },
   {
     "applicant_id": "G012",
-    "trap": "gift_ok",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "gift_no_letter",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   },
   {
     "applicant_id": "G013",
@@ -95,7 +97,7 @@
   },
   {
     "applicant_id": "G014",
-    "trap": "recent_bankruptcy",
+    "trap": "recent_foreclosure",
     "decision": "decline",
     "rule_ids": [
       "B3-5.3-07"
@@ -103,35 +105,41 @@
   },
   {
     "applicant_id": "G015",
-    "trap": "deposit_not_needed",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "short_funds",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   },
   {
     "applicant_id": "G016",
-    "trap": "short_debt",
+    "trap": "old_bankruptcy",
     "decision": "approve",
     "rule_ids": []
   },
   {
     "applicant_id": "G017",
-    "trap": "old_foreclosure",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "deposit_needed",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   },
   {
     "applicant_id": "G018",
-    "trap": "gift_no_letter",
-    "decision": "approve with conditions",
+    "trap": "gift_bad_donor",
+    "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
     ]
   },
   {
     "applicant_id": "G019",
-    "trap": "old_foreclosure",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "deposit_needed",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   },
   {
     "applicant_id": "G020",
@@ -141,44 +149,48 @@
   },
   {
     "applicant_id": "G021",
-    "trap": "high_dti",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-6-02"
-    ]
-  },
-  {
-    "applicant_id": "G022",
-    "trap": "recent_foreclosure",
+    "trap": "recent_bankruptcy",
     "decision": "decline",
     "rule_ids": [
       "B3-5.3-07"
     ]
   },
   {
-    "applicant_id": "G023",
-    "trap": "short_debt",
+    "applicant_id": "G022",
+    "trap": "old_foreclosure",
     "decision": "approve",
     "rule_ids": []
+  },
+  {
+    "applicant_id": "G023",
+    "trap": "recent_bankruptcy",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   },
   {
     "applicant_id": "G024",
-    "trap": "gift_ok",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "gift_no_letter",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   },
   {
     "applicant_id": "G025",
-    "trap": "short_debt",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "recent_bankruptcy",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   },
   {
     "applicant_id": "G026",
-    "trap": "high_dti",
+    "trap": "recent_bankruptcy",
     "decision": "decline",
     "rule_ids": [
-      "B3-6-02"
+      "B3-5.3-07"
     ]
   },
   {
@@ -191,7 +203,7 @@
   },
   {
     "applicant_id": "G028",
-    "trap": "gift_rental",
+    "trap": "min_contribution_short",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -207,11 +219,9 @@
   },
   {
     "applicant_id": "G030",
-    "trap": "min_contribution_short",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.3-04"
-    ]
+    "trap": "min_contribution_met",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G031",
@@ -227,9 +237,11 @@
   },
   {
     "applicant_id": "G033",
-    "trap": "min_contribution_met",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "min_contribution_short",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   },
   {
     "applicant_id": "G034",
@@ -245,22 +257,24 @@
   },
   {
     "applicant_id": "G036",
-    "trap": "old_bankruptcy",
+    "trap": "old_foreclosure",
     "decision": "approve",
     "rule_ids": []
   },
   {
     "applicant_id": "G037",
-    "trap": "deposit_not_needed",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "short_funds",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   },
   {
     "applicant_id": "G038",
-    "trap": "low_score",
+    "trap": "high_dti",
     "decision": "decline",
     "rule_ids": [
-      "B3-5.1-01"
+      "B3-6-02"
     ]
   },
   {
@@ -273,12 +287,6 @@
   },
   {
     "applicant_id": "G040",
-    "trap": "gift_ok",
-    "decision": "approve",
-    "rule_ids": []
-  },
-  {
-    "applicant_id": "G041",
     "trap": "gift_no_letter",
     "decision": "approve with conditions",
     "rule_ids": [
@@ -286,10 +294,20 @@
     ]
   },
   {
+    "applicant_id": "G041",
+    "trap": "gift_bad_donor",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  {
     "applicant_id": "G042",
-    "trap": "deposit_not_needed",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "short_funds",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   },
   {
     "applicant_id": "G043",
@@ -301,7 +319,7 @@
   },
   {
     "applicant_id": "G044",
-    "trap": "gift_bad_donor",
+    "trap": "min_contribution_short",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -309,11 +327,9 @@
   },
   {
     "applicant_id": "G045",
-    "trap": "short_funds",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.1-01"
-    ]
+    "trap": "gift_ok",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G046",
@@ -325,14 +341,6 @@
   },
   {
     "applicant_id": "G047",
-    "trap": "high_dti",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-6-02"
-    ]
-  },
-  {
-    "applicant_id": "G048",
     "trap": "recent_bankruptcy",
     "decision": "decline",
     "rule_ids": [
@@ -340,40 +348,46 @@
     ]
   },
   {
-    "applicant_id": "G049",
-    "trap": "deposit_needed",
-    "decision": "approve with conditions",
+    "applicant_id": "G048",
+    "trap": "recent_foreclosure",
+    "decision": "decline",
     "rule_ids": [
-      "B3-4.2-02"
+      "B3-5.3-07"
     ]
+  },
+  {
+    "applicant_id": "G049",
+    "trap": "deposit_not_needed",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G050",
+    "trap": "deposit_not_needed",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G051",
+    "trap": "recent_foreclosure",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  {
+    "applicant_id": "G052",
+    "trap": "min_contribution_met",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G053",
     "trap": "deposit_needed",
     "decision": "approve with conditions",
     "rule_ids": [
       "B3-4.2-02"
     ]
-  },
-  {
-    "applicant_id": "G051",
-    "trap": "old_bankruptcy",
-    "decision": "approve",
-    "rule_ids": []
-  },
-  {
-    "applicant_id": "G052",
-    "trap": "min_contribution_short",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.3-04"
-    ]
-  },
-  {
-    "applicant_id": "G053",
-    "trap": "old_foreclosure",
-    "decision": "approve",
-    "rule_ids": []
   },
   {
     "applicant_id": "G054",
@@ -383,57 +397,55 @@
   },
   {
     "applicant_id": "G055",
-    "trap": "short_debt",
+    "trap": "old_bankruptcy",
     "decision": "approve",
     "rule_ids": []
   },
   {
     "applicant_id": "G056",
-    "trap": "low_score",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.1-01"
-    ]
-  },
-  {
-    "applicant_id": "G057",
-    "trap": "old_foreclosure",
+    "trap": "none",
     "decision": "approve",
     "rule_ids": []
   },
   {
+    "applicant_id": "G057",
+    "trap": "deposit_needed",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  {
     "applicant_id": "G058",
-    "trap": "recent_bankruptcy",
+    "trap": "old_bankruptcy",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G059",
+    "trap": "recent_foreclosure",
     "decision": "decline",
     "rule_ids": [
       "B3-5.3-07"
     ]
   },
   {
-    "applicant_id": "G059",
-    "trap": "old_bankruptcy",
+    "applicant_id": "G060",
+    "trap": "gift_ok",
     "decision": "approve",
     "rule_ids": []
   },
   {
-    "applicant_id": "G060",
-    "trap": "short_funds",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.1-01"
-    ]
-  },
-  {
     "applicant_id": "G061",
-    "trap": "gift_no_letter",
-    "decision": "approve with conditions",
+    "trap": "gift_bad_donor",
+    "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
     ]
   },
   {
     "applicant_id": "G062",
-    "trap": "short_debt",
+    "trap": "old_bankruptcy",
     "decision": "approve",
     "rule_ids": []
   },
@@ -445,12 +457,6 @@
   },
   {
     "applicant_id": "G064",
-    "trap": "old_foreclosure",
-    "decision": "approve",
-    "rule_ids": []
-  },
-  {
-    "applicant_id": "G065",
     "trap": "deposit_needed",
     "decision": "approve with conditions",
     "rule_ids": [
@@ -458,20 +464,22 @@
     ]
   },
   {
+    "applicant_id": "G065",
+    "trap": "deposit_not_needed",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
     "applicant_id": "G066",
-    "trap": "recent_foreclosure",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "trap": "old_foreclosure",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G067",
-    "trap": "recent_foreclosure",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "trap": "old_foreclosure",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G068",
@@ -481,45 +489,49 @@
   },
   {
     "applicant_id": "G069",
-    "trap": "old_bankruptcy",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "recent_foreclosure",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   },
   {
     "applicant_id": "G070",
-    "trap": "high_dti",
+    "trap": "recent_bankruptcy",
     "decision": "decline",
     "rule_ids": [
-      "B3-6-02"
+      "B3-5.3-07"
     ]
   },
   {
     "applicant_id": "G071",
-    "trap": "deposit_needed",
-    "decision": "approve with conditions",
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
+    "trap": "deposit_not_needed",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G072",
-    "trap": "gift_no_letter",
-    "decision": "approve with conditions",
+    "trap": "gift_bad_donor",
+    "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
     ]
   },
   {
     "applicant_id": "G073",
-    "trap": "old_bankruptcy",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "recent_foreclosure",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   },
   {
     "applicant_id": "G074",
-    "trap": "deposit_not_needed",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "short_funds",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   },
   {
     "applicant_id": "G075",
@@ -531,26 +543,24 @@
   },
   {
     "applicant_id": "G076",
-    "trap": "low_score",
+    "trap": "high_dti",
     "decision": "decline",
     "rule_ids": [
-      "B3-5.1-01"
+      "B3-6-02"
     ]
   },
   {
     "applicant_id": "G077",
-    "trap": "recent_foreclosure",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "trap": "old_foreclosure",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G078",
-    "trap": "low_score",
+    "trap": "high_dti",
     "decision": "decline",
     "rule_ids": [
-      "B3-5.1-01"
+      "B3-6-02"
     ]
   },
   {
@@ -561,31 +571,27 @@
   },
   {
     "applicant_id": "G080",
-    "trap": "recent_foreclosure",
-    "decision": "decline",
+    "trap": "deposit_needed",
+    "decision": "approve with conditions",
     "rule_ids": [
-      "B3-5.3-07"
+      "B3-4.2-02"
     ]
   },
   {
     "applicant_id": "G081",
-    "trap": "recent_foreclosure",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "trap": "old_foreclosure",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G082",
-    "trap": "recent_foreclosure",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "trap": "old_foreclosure",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G083",
-    "trap": "recent_bankruptcy",
+    "trap": "recent_foreclosure",
     "decision": "decline",
     "rule_ids": [
       "B3-5.3-07"
@@ -593,13 +599,15 @@
   },
   {
     "applicant_id": "G084",
-    "trap": "old_foreclosure",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "deposit_needed",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   },
   {
     "applicant_id": "G085",
-    "trap": "short_debt",
+    "trap": "old_bankruptcy",
     "decision": "approve",
     "rule_ids": []
   },
@@ -611,7 +619,7 @@
   },
   {
     "applicant_id": "G087",
-    "trap": "min_contribution_short",
+    "trap": "gift_rental",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -619,34 +627,26 @@
   },
   {
     "applicant_id": "G088",
+    "trap": "gift_no_letter",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  {
+    "applicant_id": "G089",
     "trap": "none",
     "decision": "approve",
     "rule_ids": []
   },
   {
-    "applicant_id": "G089",
-    "trap": "deposit_needed",
-    "decision": "approve with conditions",
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
-  },
-  {
     "applicant_id": "G090",
-    "trap": "low_score",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.1-01"
-    ]
-  },
-  {
-    "applicant_id": "G091",
-    "trap": "old_bankruptcy",
+    "trap": "deposit_not_needed",
     "decision": "approve",
     "rule_ids": []
   },
   {
-    "applicant_id": "G092",
+    "applicant_id": "G091",
     "trap": "high_dti",
     "decision": "decline",
     "rule_ids": [
@@ -654,60 +654,62 @@
     ]
   },
   {
-    "applicant_id": "G093",
-    "trap": "low_score",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.1-01"
-    ]
-  },
-  {
-    "applicant_id": "G094",
-    "trap": "gift_ok",
-    "decision": "approve",
-    "rule_ids": []
-  },
-  {
-    "applicant_id": "G095",
-    "trap": "none",
-    "decision": "approve",
-    "rule_ids": []
-  },
-  {
-    "applicant_id": "G096",
-    "trap": "recent_bankruptcy",
+    "applicant_id": "G092",
+    "trap": "recent_foreclosure",
     "decision": "decline",
     "rule_ids": [
       "B3-5.3-07"
     ]
   },
   {
-    "applicant_id": "G097",
-    "trap": "deposit_needed",
-    "decision": "approve with conditions",
+    "applicant_id": "G093",
+    "trap": "high_dti",
+    "decision": "decline",
     "rule_ids": [
-      "B3-4.2-02"
+      "B3-6-02"
     ]
+  },
+  {
+    "applicant_id": "G094",
+    "trap": "high_dti",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  {
+    "applicant_id": "G095",
+    "trap": "gift_ok",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G096",
+    "trap": "none",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G097",
+    "trap": "old_bankruptcy",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G098",
-    "trap": "short_funds",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.1-01"
-    ]
+    "trap": "deposit_not_needed",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G099",
-    "trap": "gift_rental",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.3-04"
-    ]
+    "trap": "gift_ok",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G100",
-    "trap": "gift_bad_donor",
+    "trap": "gift_rental",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -715,19 +717,17 @@
   },
   {
     "applicant_id": "G101",
-    "trap": "deposit_needed",
-    "decision": "approve with conditions",
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
-  },
-  {
-    "applicant_id": "G102",
     "trap": "gift_rental",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
     ]
+  },
+  {
+    "applicant_id": "G102",
+    "trap": "deposit_not_needed",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G103",
@@ -739,7 +739,7 @@
   },
   {
     "applicant_id": "G104",
-    "trap": "gift_bad_donor",
+    "trap": "gift_rental",
     "decision": "decline",
     "rule_ids": [
       "B3-4.3-04"
@@ -747,10 +747,10 @@
   },
   {
     "applicant_id": "G105",
-    "trap": "short_funds",
+    "trap": "gift_bad_donor",
     "decision": "decline",
     "rule_ids": [
-      "B3-4.1-01"
+      "B3-4.3-04"
     ]
   },
   {
@@ -763,6 +763,12 @@
   },
   {
     "applicant_id": "G107",
+    "trap": "gift_ok",
+    "decision": "approve",
+    "rule_ids": []
+  },
+  {
+    "applicant_id": "G108",
     "trap": "gift_rental",
     "decision": "decline",
     "rule_ids": [
@@ -770,13 +776,15 @@
     ]
   },
   {
-    "applicant_id": "G108",
-    "trap": "old_foreclosure",
-    "decision": "approve",
-    "rule_ids": []
+    "applicant_id": "G109",
+    "trap": "deposit_needed",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   },
   {
-    "applicant_id": "G109",
+    "applicant_id": "G110",
     "trap": "short_funds",
     "decision": "decline",
     "rule_ids": [
@@ -784,37 +792,33 @@
     ]
   },
   {
-    "applicant_id": "G110",
+    "applicant_id": "G111",
     "trap": "gift_ok",
     "decision": "approve",
     "rule_ids": []
   },
   {
-    "applicant_id": "G111",
-    "trap": "short_funds",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-4.1-01"
-    ]
-  },
-  {
     "applicant_id": "G112",
-    "trap": "recent_bankruptcy",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "trap": "gift_ok",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G113",
-    "trap": "low_score",
-    "decision": "decline",
-    "rule_ids": [
-      "B3-5.1-01"
-    ]
+    "trap": "old_bankruptcy",
+    "decision": "approve",
+    "rule_ids": []
   },
   {
     "applicant_id": "G114",
+    "trap": "high_dti",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  {
+    "applicant_id": "G115",
     "trap": "min_contribution_short",
     "decision": "decline",
     "rule_ids": [
@@ -822,31 +826,37 @@
     ]
   },
   {
-    "applicant_id": "G115",
-    "trap": "gift_ok",
-    "decision": "approve",
-    "rule_ids": []
-  },
-  {
     "applicant_id": "G116",
-    "trap": "deposit_not_needed",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "gift_no_letter",
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   },
   {
     "applicant_id": "G117",
-    "trap": "deposit_not_needed",
-    "decision": "approve",
-    "rule_ids": []
+    "trap": "short_funds",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   },
   {
     "applicant_id": "G118",
-    "trap": "old_bankruptcy",
+    "trap": "short_funds",
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  {
+    "applicant_id": "G119",
+    "trap": "old_foreclosure",
     "decision": "approve",
     "rule_ids": []
   },
   {
-    "applicant_id": "G119",
+    "applicant_id": "G120",
     "trap": "high_dti",
     "decision": "decline",
     "rule_ids": [

@@ -1,46 +1,46 @@
 {
   "applicant_id": "G044",
-  "name": "Tom Smith",
-  "closing_date": "2026-11-11",
+  "name": "Tom Rossi",
+  "closing_date": "2026-11-06",
   "loan": {
-    "amount": 382500.0,
-    "property_value": 510000.0,
-    "monthly_housing_payment": 3027.0,
-    "estimated_closing_costs": 13035.0,
+    "amount": 319500.0,
+    "property_value": 355000.0,
+    "monthly_housing_payment": 2474.0,
+    "estimated_closing_costs": 7808.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
+    "employer": "Maple Health",
     "monthly_income": 10300.0,
     "verified_monthly_income": 10300.0,
-    "years_employed": 11.8,
-    "pay_frequency": "monthly",
+    "years_employed": 11.7,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 120.0,
-      "balance": 3000.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 320.0,
+      "balance": 16960.0,
+      "months_remaining": 53
     }
   ],
   "credit": {
-    "score": 715,
+    "score": 800,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 114335.0,
+    "bank_balance": 14400.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 30000.0,
-        "donor_relationship": "interested party",
+        "amount": 34756.0,
+        "donor_relationship": "parent",
         "has_gift_letter": true
       }
     ]
@@ -48,7 +48,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $114,335 are short of the $140,535 needed; $30,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Gifts are used on a second home at 90% LTV, so 5% ($17,750) must come from the borrower's own funds; they have $14,400."
     ],
     "rule_ids": [
       "B3-4.3-04"

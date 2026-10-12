@@ -3,18 +3,18 @@
   "name": "Diego Nguyen",
   "closing_date": "2026-11-29",
   "loan": {
-    "amount": 388500.0,
-    "property_value": 555000.0,
-    "monthly_housing_payment": 3110.0,
-    "estimated_closing_costs": 14699.0,
+    "amount": 536250.0,
+    "property_value": 715000.0,
+    "monthly_housing_payment": 4204.0,
+    "estimated_closing_costs": 21022.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Maple Health",
-    "monthly_income": 9800.0,
-    "verified_monthly_income": 9800.0,
+    "monthly_income": 14500.0,
+    "verified_monthly_income": 14500.0,
     "years_employed": 2.0,
     "pay_frequency": "weekly",
     "self_employed": false
@@ -22,32 +22,36 @@
   "debts": [
     {
       "kind": "student loan",
-      "monthly_payment": 210.0,
-      "balance": 5040.0,
-      "months_remaining": 24
+      "monthly_payment": 460.0,
+      "balance": 16100.0,
+      "months_remaining": 35
     },
     {
       "kind": "auto loan",
-      "monthly_payment": 2070.0,
-      "balance": 4140.0,
-      "months_remaining": 2
+      "monthly_payment": 270.0,
+      "balance": 15930.0,
+      "months_remaining": 59
     }
   ],
   "credit": {
     "score": 758,
-    "bankruptcy_chapter": null,
-    "bankruptcy_discharge_date": null,
+    "bankruptcy_chapter": 7,
+    "bankruptcy_discharge_date": "2023-09-05",
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 225000.0,
+    "bank_balance": 259000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-09-05; the 4-year wait ends 2027-09-05, after the 2026-11-29 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   }
 }

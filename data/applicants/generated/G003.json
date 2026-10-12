@@ -1,40 +1,33 @@
 {
   "applicant_id": "G003",
-  "name": "Liam Brown",
-  "closing_date": "2026-12-17",
+  "name": "Elena Novak",
+  "closing_date": "2026-12-08",
   "loan": {
-    "amount": 336000.0,
-    "property_value": 420000.0,
-    "monthly_housing_payment": 2644.0,
-    "estimated_closing_costs": 11582.0,
+    "amount": 540000.0,
+    "property_value": 675000.0,
+    "monthly_housing_payment": 4188.0,
+    "estimated_closing_costs": 15911.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 8200.0,
-    "verified_monthly_income": 8200.0,
-    "years_employed": 4.9,
+    "employer": "Bluefin Software",
+    "monthly_income": 13700.0,
+    "verified_monthly_income": 13700.0,
+    "years_employed": 11.0,
     "pay_frequency": "biweekly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "auto loan",
-      "monthly_payment": 150.0,
-      "balance": 4800.0,
-      "months_remaining": 32
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 756,
+    "score": 749,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 160000.0,
+    "bank_balance": 214000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []

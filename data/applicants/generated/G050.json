@@ -1,63 +1,53 @@
 {
   "applicant_id": "G050",
-  "name": "Kofi Rossi",
-  "closing_date": "2026-11-16",
+  "name": "Raj Chen",
+  "closing_date": "2026-12-18",
   "loan": {
-    "amount": 528000.0,
-    "property_value": 660000.0,
-    "monthly_housing_payment": 4097.0,
-    "estimated_closing_costs": 15804.0,
-    "property_type": "2-4 unit",
-    "occupancy": "principal residence",
+    "amount": 517500.0,
+    "property_value": 690000.0,
+    "monthly_housing_payment": 4061.0,
+    "estimated_closing_costs": 16199.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 15900.0,
-    "verified_monthly_income": 15900.0,
-    "years_employed": 2.5,
-    "pay_frequency": "biweekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 13900.0,
+    "verified_monthly_income": 13900.0,
+    "years_employed": 5.9,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 70.0,
-      "balance": 2590.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 85.0,
-      "balance": 2380.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 260.0,
+      "balance": 11440.0,
+      "months_remaining": 44
     }
   ],
   "credit": {
-    "score": 718,
+    "score": 765,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 191586.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 262065.0,
+    "retirement_balance": 123000.0,
     "large_deposits": [
       {
-        "amount": 38000.0,
-        "deposit_date": "2026-09-17",
+        "amount": 49000.0,
+        "deposit_date": "2026-10-28",
         "source_documented": false
       }
     ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve with conditions",
-    "reasons": [
-      "Verified funds of $153,586 are short of the $172,386 needed; document the source of $38,000 in large deposits."
-    ],
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

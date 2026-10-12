@@ -1,57 +1,47 @@
 {
   "applicant_id": "G082",
-  "name": "Lisa Nguyen",
-  "closing_date": "2026-11-18",
+  "name": "Ben Okafor",
+  "closing_date": "2026-11-26",
   "loan": {
-    "amount": 423750.0,
-    "property_value": 565000.0,
-    "monthly_housing_payment": 3343.0,
-    "estimated_closing_costs": 15743.0,
+    "amount": 378750.0,
+    "property_value": 505000.0,
+    "monthly_housing_payment": 2999.0,
+    "estimated_closing_costs": 14260.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 15200.0,
-    "verified_monthly_income": 15200.0,
-    "years_employed": 14.9,
-    "pay_frequency": "biweekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 10100.0,
+    "verified_monthly_income": 10100.0,
+    "years_employed": 12.6,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 350.0,
-      "balance": 17150.0,
-      "months_remaining": 49
-    },
-    {
       "kind": "student loan",
-      "monthly_payment": 270.0,
-      "balance": 7560.0,
-      "months_remaining": 28
+      "monthly_payment": 490.0,
+      "balance": 15680.0,
+      "months_remaining": 32
     }
   ],
   "credit": {
-    "score": 728,
+    "score": 730,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2022-02-06"
+    "foreclosure_date": "2017-05-15"
   },
   "assets": {
-    "bank_balance": 211000.0,
-    "retirement_balance": 67000.0,
+    "bank_balance": 210000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Foreclosure completed 2022-02-06; the 7-year wait ends 2029-02-06, after the 2026-11-18 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

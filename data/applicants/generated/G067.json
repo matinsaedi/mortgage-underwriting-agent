@@ -1,51 +1,40 @@
 {
   "applicant_id": "G067",
-  "name": "Ben Patel",
-  "closing_date": "2026-11-19",
+  "name": "Nina Rossi",
+  "closing_date": "2026-11-26",
   "loan": {
-    "amount": 510000.0,
-    "property_value": 680000.0,
-    "monthly_housing_payment": 4003.0,
-    "estimated_closing_costs": 14089.0,
+    "amount": 458500.0,
+    "property_value": 655000.0,
+    "monthly_housing_payment": 3653.0,
+    "estimated_closing_costs": 19107.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Maple Health",
-    "monthly_income": 13400.0,
-    "verified_monthly_income": 13400.0,
-    "years_employed": 13.4,
-    "pay_frequency": "biweekly",
+    "employer": "Harbor Engineering",
+    "monthly_income": 10800.0,
+    "verified_monthly_income": 10800.0,
+    "years_employed": 3.3,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "student loan",
-      "monthly_payment": 340.0,
-      "balance": 6800.0,
-      "months_remaining": 20
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 799,
+    "score": 695,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2021-01-06"
+    "foreclosure_date": "2018-07-24"
   },
   "assets": {
-    "bank_balance": 217000.0,
-    "retirement_balance": 17000.0,
+    "bank_balance": 275000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Foreclosure completed 2021-01-06; the 7-year wait ends 2028-01-06, after the 2026-11-19 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

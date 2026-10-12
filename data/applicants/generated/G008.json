@@ -14,7 +14,7 @@
   "income": {
     "employer": "Harbor Engineering",
     "monthly_income": 6200.0,
-    "verified_monthly_income": 3300.0,
+    "verified_monthly_income": 6200.0,
     "years_employed": 4.4,
     "pay_frequency": "weekly",
     "self_employed": false
@@ -22,8 +22,8 @@
   "debts": [],
   "credit": {
     "score": 725,
-    "bankruptcy_chapter": null,
-    "bankruptcy_discharge_date": null,
+    "bankruptcy_chapter": 7,
+    "bankruptcy_discharge_date": "2023-10-06",
     "foreclosure_date": null
   },
   "assets": {
@@ -35,10 +35,10 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "DTI 54.0% exceeds the 50% maximum for DU underwriting."
+      "Chapter 7 bankruptcy discharged 2023-10-06; the 4-year wait ends 2027-10-06, after the 2026-11-22 closing."
     ],
     "rule_ids": [
-      "B3-6-02"
+      "B3-5.3-07"
     ]
   }
 }

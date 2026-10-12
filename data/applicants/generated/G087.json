@@ -1,45 +1,45 @@
 {
   "applicant_id": "G087",
-  "name": "Priya Rossi",
-  "closing_date": "2026-11-19",
+  "name": "Omar Smith",
+  "closing_date": "2026-12-04",
   "loan": {
-    "amount": 621000.0,
-    "property_value": 690000.0,
-    "monthly_housing_payment": 4715.0,
-    "estimated_closing_costs": 16509.0,
+    "amount": 248000.0,
+    "property_value": 310000.0,
+    "monthly_housing_payment": 1977.0,
+    "estimated_closing_costs": 8852.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 14100.0,
-    "verified_monthly_income": 14100.0,
-    "years_employed": 13.2,
+    "employer": "Bluefin Software",
+    "monthly_income": 5900.0,
+    "verified_monthly_income": 5900.0,
+    "years_employed": 2.8,
     "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 310.0,
-      "balance": 8060.0,
-      "months_remaining": 26
+      "kind": "credit card",
+      "monthly_payment": 40.0,
+      "balance": 1000.0,
+      "months_remaining": null
     }
   ],
   "credit": {
-    "score": 688,
+    "score": 682,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 8200.0,
+    "bank_balance": 77314.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 91239.0,
+        "amount": 35000.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
@@ -48,7 +48,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Gifts are used on a second home at 90% LTV, so 5% ($34,500) must come from the borrower's own funds; they have $8,200."
+      "Funds of $77,314 are short of the $82,714 needed; $35,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

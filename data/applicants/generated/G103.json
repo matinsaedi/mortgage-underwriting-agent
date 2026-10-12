@@ -1,51 +1,51 @@
 {
   "applicant_id": "G103",
-  "name": "Kofi Silva",
-  "closing_date": "2026-12-31",
+  "name": "Raj Nguyen",
+  "closing_date": "2026-11-22",
   "loan": {
-    "amount": 216000.0,
-    "property_value": 270000.0,
-    "monthly_housing_payment": 1735.0,
-    "estimated_closing_costs": 6553.0,
+    "amount": 264000.0,
+    "property_value": 330000.0,
+    "monthly_housing_payment": 2098.0,
+    "estimated_closing_costs": 9072.0,
     "property_type": "1-unit",
     "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Bluefin Software",
-    "monthly_income": 7000.0,
-    "verified_monthly_income": 7000.0,
-    "years_employed": 2.4,
-    "pay_frequency": "monthly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 8800.0,
+    "verified_monthly_income": 8800.0,
+    "years_employed": 8.4,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
       "kind": "student loan",
-      "monthly_payment": 350.0,
-      "balance": 4200.0,
-      "months_remaining": 12
+      "monthly_payment": 240.0,
+      "balance": 12240.0,
+      "months_remaining": 51
     },
     {
       "kind": "auto loan",
-      "monthly_payment": 190.0,
-      "balance": 5700.0,
-      "months_remaining": 30
+      "monthly_payment": 180.0,
+      "balance": 7740.0,
+      "months_remaining": 43
     }
   ],
   "credit": {
-    "score": 726,
+    "score": 740,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 62763.0,
+    "bank_balance": 78360.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 15000.0,
+        "amount": 26000.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
@@ -54,7 +54,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $62,763 are short of the $70,963 needed; $15,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Funds of $78,360 are short of the $87,660 needed; $26,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

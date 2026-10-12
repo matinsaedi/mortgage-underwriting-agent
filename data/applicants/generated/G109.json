@@ -1,57 +1,63 @@
 {
   "applicant_id": "G109",
-  "name": "Kofi Okafor",
-  "closing_date": "2026-11-06",
+  "name": "Kofi Haddad",
+  "closing_date": "2026-12-25",
   "loan": {
-    "amount": 555000.0,
-    "property_value": 740000.0,
-    "monthly_housing_payment": 4348.0,
-    "estimated_closing_costs": 15361.0,
+    "amount": 568000.0,
+    "property_value": 710000.0,
+    "monthly_housing_payment": 4400.0,
+    "estimated_closing_costs": 14282.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Bluefin Software",
-    "monthly_income": 18900.0,
-    "verified_monthly_income": 18900.0,
-    "years_employed": 12.3,
-    "pay_frequency": "weekly",
+    "monthly_income": 18700.0,
+    "verified_monthly_income": 18700.0,
+    "years_employed": 11.7,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
       "kind": "student loan",
-      "monthly_payment": 600.0,
-      "balance": 15000.0,
-      "months_remaining": 25
+      "monthly_payment": 530.0,
+      "balance": 23320.0,
+      "months_remaining": 44
     },
     {
-      "kind": "student loan",
-      "monthly_payment": 160.0,
-      "balance": 8480.0,
-      "months_remaining": 53
+      "kind": "auto loan",
+      "monthly_payment": 390.0,
+      "balance": 13650.0,
+      "months_remaining": 35
     }
   ],
   "credit": {
-    "score": 732,
+    "score": 776,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 165600.0,
+    "bank_balance": 178482.0,
     "retirement_balance": 0.0,
-    "large_deposits": [],
+    "large_deposits": [
+      {
+        "amount": 32000.0,
+        "deposit_date": "2026-12-01",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
+    "decision": "approve with conditions",
     "reasons": [
-      "Funds of $165,600 are short of the $200,361 needed to close and hold 0 months of reserves."
+      "Verified funds of $146,482 are short of the $156,282 needed; document the source of $32,000 in large deposits."
     ],
     "rule_ids": [
-      "B3-4.1-01"
+      "B3-4.2-02"
     ]
   }
 }

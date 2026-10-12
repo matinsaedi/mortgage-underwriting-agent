@@ -136,24 +136,12 @@ def no_trap(rng: random.Random, a: Applicant) -> None:
     """Leave the clean applicant as it is."""
 
 
-def trap_low_score(rng: random.Random, a: Applicant) -> None:
-    """Credit score below the 620 minimum (B3-5.1-01)."""
-    a.credit.score = rng.randint(560, 619)
-
 
 def trap_high_dti(rng: random.Random, a: Applicant) -> None:
     """Pay stubs show much less than the stated income, pushing DTI over 50% (B3-6-02)."""
     obligations = a.loan.monthly_housing_payment + sum(d.monthly_payment for d in a.debts)
     a.income.verified_monthly_income = math.floor(obligations / rng.uniform(0.52, 0.65) / 100) * 100
 
-
-def trap_short_debt(rng: random.Random, a: Applicant) -> None:
-    """A big car loan with 10 or fewer payments left. Counting it would push DTI over 50%,
-    but it is excluded (B3-6-05), so the loan is still fine."""
-    obligations = a.loan.monthly_housing_payment + sum(d.monthly_payment for d in a.debts)
-    payment = math.ceil((0.55 * a.income.verified_monthly_income - obligations) / 10) * 10
-    months = rng.randint(2, 10)
-    a.debts.append(Debt(kind="auto loan", monthly_payment=payment, balance=payment * months, months_remaining=months))
 
 
 def trap_recent_bankruptcy(rng: random.Random, a: Applicant) -> None:
@@ -290,9 +278,7 @@ def trap_min_contribution_met(rng: random.Random, a: Applicant) -> None:
 
 TRAPS = {
     "none": (no_trap, "approve"),
-    "low_score": (trap_low_score, "decline"),
     "high_dti": (trap_high_dti, "decline"),
-    "short_debt": (trap_short_debt, "approve"),
     "recent_bankruptcy": (trap_recent_bankruptcy, "decline"),
     "old_bankruptcy": (trap_old_bankruptcy, "approve"),
     "recent_foreclosure": (trap_recent_foreclosure, "decline"),
@@ -322,7 +308,7 @@ def make_applicant(rng: random.Random, applicant_id: str, trap: str) -> Applican
     return applicant
 
 
-def generate_dataset(n_per_trap: int = 7, seed: int = 2026) -> list[tuple[str, Applicant]]:
+def generate_dataset(n_per_trap: int = 8, seed: int = 2026) -> list[tuple[str, Applicant]]:
     """n_per_trap applicants for every trap, in shuffled order, numbered G001, G002, ..."""
     rng = random.Random(seed)
     plan = [trap for trap in TRAPS for _ in range(n_per_trap)]

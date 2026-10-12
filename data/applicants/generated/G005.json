@@ -1,39 +1,39 @@
 {
   "applicant_id": "G005",
-  "name": "Liam Rossi",
-  "closing_date": "2026-12-07",
+  "name": "Sarah Haddad",
+  "closing_date": "2026-12-01",
   "loan": {
-    "amount": 330000.0,
-    "property_value": 440000.0,
-    "monthly_housing_payment": 2626.0,
-    "estimated_closing_costs": 10235.0,
+    "amount": 495000.0,
+    "property_value": 660000.0,
+    "monthly_housing_payment": 3888.0,
+    "estimated_closing_costs": 19368.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 8500.0,
-    "verified_monthly_income": 8500.0,
-    "years_employed": 4.0,
-    "pay_frequency": "biweekly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 13800.0,
+    "verified_monthly_income": 13800.0,
+    "years_employed": 7.9,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [],
   "credit": {
-    "score": 735,
+    "score": 743,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 78091.0,
+    "bank_balance": 129244.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 65000.0,
-        "donor_relationship": "parent",
+        "amount": 84000.0,
+        "donor_relationship": "interested party",
         "has_gift_letter": true
       }
     ]
@@ -41,7 +41,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $78,091 are short of the $135,991 needed; $65,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Funds of $129,244 are short of the $192,144 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

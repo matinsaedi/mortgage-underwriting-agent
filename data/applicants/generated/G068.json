@@ -1,47 +1,47 @@
 {
   "applicant_id": "G068",
-  "name": "Mark Chen",
-  "closing_date": "2026-11-23",
+  "name": "Ana Haddad",
+  "closing_date": "2026-11-01",
   "loan": {
-    "amount": 315000.0,
-    "property_value": 450000.0,
-    "monthly_housing_payment": 2541.0,
-    "estimated_closing_costs": 10139.0,
+    "amount": 308000.0,
+    "property_value": 440000.0,
+    "monthly_housing_payment": 2487.0,
+    "estimated_closing_costs": 13074.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 9800.0,
-    "verified_monthly_income": 9800.0,
-    "years_employed": 11.3,
-    "pay_frequency": "monthly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 11400.0,
+    "verified_monthly_income": 11400.0,
+    "years_employed": 4.6,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "student loan",
-      "monthly_payment": 580.0,
-      "balance": 19140.0,
-      "months_remaining": 33
+      "kind": "auto loan",
+      "monthly_payment": 190.0,
+      "balance": 5700.0,
+      "months_remaining": 30
     },
     {
-      "kind": "credit card",
-      "monthly_payment": 140.0,
-      "balance": 5460.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 200.0,
+      "balance": 4800.0,
+      "months_remaining": 24
     }
   ],
   "credit": {
-    "score": 768,
+    "score": 692,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 199000.0,
-    "retirement_balance": 25000.0,
+    "bank_balance": 185000.0,
+    "retirement_balance": 137000.0,
     "large_deposits": [],
     "gifts": []
   },

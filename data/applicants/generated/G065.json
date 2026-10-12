@@ -1,57 +1,53 @@
 {
   "applicant_id": "G065",
-  "name": "Tom Nguyen",
-  "closing_date": "2026-11-13",
+  "name": "Omar Haddad",
+  "closing_date": "2026-11-05",
   "loan": {
-    "amount": 416500.0,
-    "property_value": 595000.0,
-    "monthly_housing_payment": 3327.0,
-    "estimated_closing_costs": 16004.0,
-    "property_type": "1-unit",
+    "amount": 340000.0,
+    "property_value": 425000.0,
+    "monthly_housing_payment": 2674.0,
+    "estimated_closing_costs": 9430.0,
+    "property_type": "2-4 unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 11200.0,
-    "verified_monthly_income": 11200.0,
-    "years_employed": 3.6,
-    "pay_frequency": "semimonthly",
+    "employer": "Bluefin Software",
+    "monthly_income": 9100.0,
+    "verified_monthly_income": 9100.0,
+    "years_employed": 9.3,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 80.0,
-      "balance": 1920.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 200.0,
+      "balance": 6200.0,
+      "months_remaining": 31
     }
   ],
   "credit": {
-    "score": 755,
+    "score": 701,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 199004.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 127000.0,
+    "retirement_balance": 59000.0,
     "large_deposits": [
       {
-        "amount": 19000.0,
-        "deposit_date": "2026-08-25",
+        "amount": 13000.0,
+        "deposit_date": "2026-09-22",
         "source_documented": false
       }
     ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve with conditions",
-    "reasons": [
-      "Verified funds of $180,004 are short of the $194,504 needed; document the source of $19,000 in large deposits."
-    ],
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

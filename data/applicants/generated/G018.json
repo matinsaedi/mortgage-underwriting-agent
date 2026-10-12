@@ -1,60 +1,47 @@
 {
   "applicant_id": "G018",
-  "name": "Raj Kim",
-  "closing_date": "2026-11-09",
+  "name": "Tom Garcia",
+  "closing_date": "2026-11-19",
   "loan": {
-    "amount": 450000.0,
-    "property_value": 600000.0,
-    "monthly_housing_payment": 3544.0,
-    "estimated_closing_costs": 13863.0,
+    "amount": 220000.0,
+    "property_value": 275000.0,
+    "monthly_housing_payment": 1765.0,
+    "estimated_closing_costs": 7130.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 11600.0,
-    "verified_monthly_income": 11600.0,
-    "years_employed": 14.7,
-    "pay_frequency": "weekly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 5900.0,
+    "verified_monthly_income": 5900.0,
+    "years_employed": 3.7,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "credit card",
-      "monthly_payment": 130.0,
-      "balance": 3380.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "auto loan",
-      "monthly_payment": 330.0,
-      "balance": 9900.0,
-      "months_remaining": 30
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 788,
+    "score": 704,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 146263.0,
+    "bank_balance": 59830.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 44000.0,
-        "donor_relationship": "fiance",
-        "has_gift_letter": false
+        "amount": 22000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "approve with conditions",
+    "decision": "decline",
     "reasons": [
-      "Verified funds of $146,263 are short of the $163,863 needed; obtain a signed gift letter for $44,000 in gifts."
+      "Funds of $59,830 are short of the $62,130 needed; $22,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

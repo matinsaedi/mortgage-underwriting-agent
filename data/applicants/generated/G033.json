@@ -1,46 +1,57 @@
 {
   "applicant_id": "G033",
-  "name": "Diego Novak",
-  "closing_date": "2026-11-28",
+  "name": "Liam Patel",
+  "closing_date": "2026-12-27",
   "loan": {
-    "amount": 238500.0,
-    "property_value": 265000.0,
-    "monthly_housing_payment": 1872.0,
-    "estimated_closing_costs": 6634.0,
+    "amount": 486000.0,
+    "property_value": 540000.0,
+    "monthly_housing_payment": 3712.0,
+    "estimated_closing_costs": 14607.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 5700.0,
-    "verified_monthly_income": 5700.0,
-    "years_employed": 5.1,
-    "pay_frequency": "monthly",
+    "employer": "Harbor Engineering",
+    "monthly_income": 9900.0,
+    "verified_monthly_income": 9900.0,
+    "years_employed": 4.5,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 140.0,
+      "balance": 4760.0,
+      "months_remaining": null
+    }
+  ],
   "credit": {
-    "score": 707,
+    "score": 725,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 19000.0,
+    "bank_balance": 9300.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 20778.0,
+        "amount": 69431.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($27,000) must come from the borrower's own funds; they have $9,300."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

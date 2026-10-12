@@ -1,57 +1,53 @@
 {
   "applicant_id": "G081",
-  "name": "Mei Rossi",
-  "closing_date": "2026-12-23",
+  "name": "Liam Novak",
+  "closing_date": "2026-12-26",
   "loan": {
-    "amount": 268000.0,
-    "property_value": 335000.0,
-    "monthly_housing_payment": 2129.0,
-    "estimated_closing_costs": 9581.0,
+    "amount": 451500.0,
+    "property_value": 645000.0,
+    "monthly_housing_payment": 3598.0,
+    "estimated_closing_costs": 14214.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 8200.0,
-    "verified_monthly_income": 8200.0,
-    "years_employed": 9.1,
-    "pay_frequency": "semimonthly",
+    "employer": "Bluefin Software",
+    "monthly_income": 15600.0,
+    "verified_monthly_income": 15600.0,
+    "years_employed": 3.6,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 40.0,
-      "balance": 1160.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 270.0,
+      "balance": 6480.0,
+      "months_remaining": 24
     },
     {
       "kind": "student loan",
-      "monthly_payment": 160.0,
-      "balance": 8640.0,
-      "months_remaining": 54
+      "monthly_payment": 180.0,
+      "balance": 3600.0,
+      "months_remaining": 20
     }
   ],
   "credit": {
-    "score": 687,
+    "score": 697,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2021-10-29"
+    "foreclosure_date": "2017-05-23"
   },
   "assets": {
-    "bank_balance": 122000.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 248000.0,
+    "retirement_balance": 84000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Foreclosure completed 2021-10-29; the 7-year wait ends 2028-10-29, after the 2026-12-23 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

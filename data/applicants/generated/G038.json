@@ -1,33 +1,40 @@
 {
   "applicant_id": "G038",
-  "name": "Omar Brown",
-  "closing_date": "2026-12-25",
+  "name": "Mark Haddad",
+  "closing_date": "2026-12-26",
   "loan": {
-    "amount": 182000.0,
-    "property_value": 260000.0,
-    "monthly_housing_payment": 1510.0,
-    "estimated_closing_costs": 7147.0,
+    "amount": 385000.0,
+    "property_value": 550000.0,
+    "monthly_housing_payment": 3083.0,
+    "estimated_closing_costs": 12772.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 4500.0,
-    "verified_monthly_income": 4500.0,
-    "years_employed": 4.0,
-    "pay_frequency": "monthly",
+    "employer": "Bluefin Software",
+    "monthly_income": 9400.0,
+    "verified_monthly_income": 5000.0,
+    "years_employed": 2.5,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 60.0,
+      "balance": 1920.0,
+      "months_remaining": null
+    }
+  ],
   "credit": {
-    "score": 585,
+    "score": 756,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 113000.0,
+    "bank_balance": 218000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
@@ -35,10 +42,10 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Credit score 585 is below the 620 minimum."
+      "DTI 62.9% exceeds the 50% maximum for DU underwriting."
     ],
     "rule_ids": [
-      "B3-5.1-01"
+      "B3-6-02"
     ]
   }
 }

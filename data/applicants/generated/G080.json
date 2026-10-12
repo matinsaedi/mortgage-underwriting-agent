@@ -1,57 +1,63 @@
 {
   "applicant_id": "G080",
-  "name": "Ana Smith",
-  "closing_date": "2026-12-02",
+  "name": "Ben Haddad",
+  "closing_date": "2026-12-16",
   "loan": {
-    "amount": 508000.0,
-    "property_value": 635000.0,
-    "monthly_housing_payment": 3946.0,
-    "estimated_closing_costs": 13800.0,
+    "amount": 348750.0,
+    "property_value": 465000.0,
+    "monthly_housing_payment": 2769.0,
+    "estimated_closing_costs": 10129.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Northwind Logistics",
-    "monthly_income": 16100.0,
-    "verified_monthly_income": 16100.0,
-    "years_employed": 14.9,
-    "pay_frequency": "weekly",
+    "monthly_income": 13000.0,
+    "verified_monthly_income": 13000.0,
+    "years_employed": 12.1,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 50.0,
-      "balance": 1300.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 170.0,
+      "balance": 2890.0,
+      "months_remaining": 17
     },
     {
-      "kind": "credit card",
-      "monthly_payment": 105.0,
-      "balance": 2310.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 410.0,
+      "balance": 16400.0,
+      "months_remaining": 40
     }
   ],
   "credit": {
-    "score": 745,
+    "score": 740,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2023-01-18"
+    "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 224000.0,
-    "retirement_balance": 41000.0,
-    "large_deposits": [],
+    "bank_balance": 163279.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 46000.0,
+        "deposit_date": "2026-11-15",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
+    "decision": "approve with conditions",
     "reasons": [
-      "Foreclosure completed 2023-01-18; the 7-year wait ends 2030-01-18, after the 2026-12-02 closing."
+      "Verified funds of $117,279 are short of the $126,379 needed; document the source of $46,000 in large deposits."
     ],
     "rule_ids": [
-      "B3-5.3-07"
+      "B3-4.2-02"
     ]
   }
 }

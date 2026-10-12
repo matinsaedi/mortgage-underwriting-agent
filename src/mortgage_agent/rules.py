@@ -38,13 +38,16 @@ def decide(findings: list[Finding]) -> ExpectedOutcome:
 MIN_CREDIT_SCORE = 620
 
 def check_credit_score(applicant: Applicant) -> Finding | None:
-    """Minimum credit score for fixed-rate loans (B3-5.1-01)"""
+    """Minimum credit score for manually underwritten fixed-rate loans (B3-5.1-01).
+    DU loans have no minimum score: DU assesses credit risk itself."""
+    if applicant.loan.underwriting == "DU":
+        return None
     score = applicant.credit.score
     if score < MIN_CREDIT_SCORE:
         return Finding(
             rule_id="B3-5.1-01",
             severity="decline",
-            reason=f"Credit score {score} is below the {MIN_CREDIT_SCORE} minimum.",
+            reason=f"Credit score {score} is below the {MIN_CREDIT_SCORE} minimum for manually underwritten loans.",
         )
     return None
 

@@ -1,44 +1,57 @@
 {
   "applicant_id": "G092",
-  "name": "Raj Okafor",
-  "closing_date": "2026-12-04",
+  "name": "Omar Brown",
+  "closing_date": "2026-11-09",
   "loan": {
-    "amount": 493500.0,
-    "property_value": 705000.0,
-    "monthly_housing_payment": 3924.0,
-    "estimated_closing_costs": 16635.0,
+    "amount": 409500.0,
+    "property_value": 585000.0,
+    "monthly_housing_payment": 3273.0,
+    "estimated_closing_costs": 16446.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 12400.0,
-    "verified_monthly_income": 6200.0,
-    "years_employed": 10.8,
-    "pay_frequency": "semimonthly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 15700.0,
+    "verified_monthly_income": 15700.0,
+    "years_employed": 11.1,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 550.0,
+      "balance": 8800.0,
+      "months_remaining": 16
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 380.0,
+      "balance": 7600.0,
+      "months_remaining": 20
+    }
+  ],
   "credit": {
-    "score": 697,
+    "score": 706,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": null
+    "foreclosure_date": "2022-07-31"
   },
   "assets": {
-    "bank_balance": 315000.0,
-    "retirement_balance": 120000.0,
+    "bank_balance": 268000.0,
+    "retirement_balance": 146000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
     "decision": "decline",
     "reasons": [
-      "DTI 63.3% exceeds the 50% maximum for DU underwriting."
+      "Foreclosure completed 2022-07-31; the 7-year wait ends 2029-07-31, after the 2026-11-09 closing."
     ],
     "rule_ids": [
-      "B3-6-02"
+      "B3-5.3-07"
     ]
   }
 }

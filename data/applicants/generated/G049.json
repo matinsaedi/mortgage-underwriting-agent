@@ -1,50 +1,53 @@
 {
   "applicant_id": "G049",
-  "name": "Sarah Smith",
-  "closing_date": "2026-11-14",
+  "name": "Elena Nguyen",
+  "closing_date": "2026-12-22",
   "loan": {
-    "amount": 326250.0,
-    "property_value": 435000.0,
-    "monthly_housing_payment": 2597.0,
-    "estimated_closing_costs": 12259.0,
+    "amount": 521250.0,
+    "property_value": 695000.0,
+    "monthly_housing_payment": 4089.0,
+    "estimated_closing_costs": 18852.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 7500.0,
-    "verified_monthly_income": 7500.0,
-    "years_employed": 11.3,
-    "pay_frequency": "monthly",
+    "employer": "Bluefin Software",
+    "monthly_income": 18000.0,
+    "verified_monthly_income": 18000.0,
+    "years_employed": 3.7,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 590.0,
+      "balance": 31860.0,
+      "months_remaining": 54
+    }
+  ],
   "credit": {
-    "score": 708,
+    "score": 762,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 130809.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 275000.0,
+    "retirement_balance": 63000.0,
     "large_deposits": [
       {
-        "amount": 19000.0,
-        "deposit_date": "2026-10-17",
+        "amount": 45000.0,
+        "deposit_date": "2026-10-29",
         "source_documented": false
       }
     ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve with conditions",
-    "reasons": [
-      "Verified funds of $111,809 are short of the $121,009 needed; document the source of $19,000 in large deposits."
-    ],
-    "rule_ids": [
-      "B3-4.2-02"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

@@ -1,25 +1,38 @@
 {
   "applicant_id": "G006",
-  "name": "Ben Novak",
-  "closing_date": "2026-12-05",
+  "name": "Tom Chen",
+  "closing_date": "2026-12-12",
   "loan": {
-    "amount": 189000.0,
-    "property_value": 270000.0,
-    "monthly_housing_payment": 1564.0,
-    "estimated_closing_costs": 7148.0,
+    "amount": 348750.0,
+    "property_value": 465000.0,
+    "monthly_housing_payment": 2769.0,
+    "estimated_closing_costs": 12082.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Maple Health",
-    "monthly_income": 4600.0,
-    "verified_monthly_income": 4600.0,
+    "monthly_income": 9800.0,
+    "verified_monthly_income": 9800.0,
     "years_employed": 7.9,
     "pay_frequency": "biweekly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 35.0,
+      "balance": 1295.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 170.0,
+      "balance": 4080.0,
+      "months_remaining": 24
+    }
+  ],
   "credit": {
     "score": 741,
     "bankruptcy_chapter": null,
@@ -27,12 +40,12 @@
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 45148.0,
+    "bank_balance": 70432.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 50000.0,
+        "amount": 72000.0,
         "donor_relationship": "fiance",
         "has_gift_letter": false
       }
@@ -41,7 +54,7 @@
   "expected": {
     "decision": "approve with conditions",
     "reasons": [
-      "Verified funds of $45,148 are short of the $88,148 needed; obtain a signed gift letter for $50,000 in gifts."
+      "Verified funds of $70,432 are short of the $128,332 needed; obtain a signed gift letter for $72,000 in gifts."
     ],
     "rule_ids": [
       "B3-4.3-04"

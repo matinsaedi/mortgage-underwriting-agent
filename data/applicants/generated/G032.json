@@ -1,38 +1,45 @@
 {
   "applicant_id": "G032",
-  "name": "Hana Novak",
-  "closing_date": "2026-12-18",
+  "name": "Ana Patel",
+  "closing_date": "2026-11-28",
   "loan": {
-    "amount": 431250.0,
-    "property_value": 575000.0,
-    "monthly_housing_payment": 3400.0,
-    "estimated_closing_costs": 16606.0,
+    "amount": 500000.0,
+    "property_value": 625000.0,
+    "monthly_housing_payment": 3885.0,
+    "estimated_closing_costs": 16865.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 11700.0,
-    "verified_monthly_income": 11700.0,
-    "years_employed": 3.9,
-    "pay_frequency": "weekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 12800.0,
+    "verified_monthly_income": 12800.0,
+    "years_employed": 12.8,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 160.0,
+      "balance": 3520.0,
+      "months_remaining": 22
+    }
+  ],
   "credit": {
-    "score": 740,
+    "score": 710,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 116656.0,
+    "bank_balance": 125465.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 70000.0,
+        "amount": 38000.0,
         "donor_relationship": "sibling",
         "has_gift_letter": true
       }

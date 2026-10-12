@@ -1,40 +1,57 @@
 {
   "applicant_id": "G051",
-  "name": "Elena Haddad",
-  "closing_date": "2026-11-20",
+  "name": "Raj Novak",
+  "closing_date": "2026-12-24",
   "loan": {
-    "amount": 228000.0,
-    "property_value": 285000.0,
-    "monthly_housing_payment": 1826.0,
-    "estimated_closing_costs": 6575.0,
-    "property_type": "1-unit",
+    "amount": 480000.0,
+    "property_value": 640000.0,
+    "monthly_housing_payment": 3774.0,
+    "estimated_closing_costs": 17523.0,
+    "property_type": "2-4 unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 5500.0,
-    "verified_monthly_income": 5500.0,
-    "years_employed": 14.8,
+    "employer": "Cedar School Board",
+    "monthly_income": 12400.0,
+    "verified_monthly_income": 12400.0,
+    "years_employed": 6.6,
     "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 75.0,
+      "balance": 2775.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 410.0,
+      "balance": 10660.0,
+      "months_remaining": 26
+    }
+  ],
   "credit": {
-    "score": 782,
-    "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2023-06-01",
-    "foreclosure_date": null
+    "score": 776,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2020-01-21"
   },
   "assets": {
-    "bank_balance": 108000.0,
-    "retirement_balance": 99000.0,
+    "bank_balance": 254000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2020-01-21; the 7-year wait ends 2027-01-21, after the 2026-12-24 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   }
 }

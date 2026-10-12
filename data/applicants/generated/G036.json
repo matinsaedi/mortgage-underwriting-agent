@@ -1,40 +1,33 @@
 {
   "applicant_id": "G036",
-  "name": "Ben Brown",
-  "closing_date": "2026-12-13",
+  "name": "Lisa Haddad",
+  "closing_date": "2026-12-30",
   "loan": {
-    "amount": 220500.0,
-    "property_value": 315000.0,
-    "monthly_housing_payment": 1809.0,
-    "estimated_closing_costs": 8063.0,
+    "amount": 304500.0,
+    "property_value": 435000.0,
+    "monthly_housing_payment": 2459.0,
+    "estimated_closing_costs": 9050.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 7200.0,
-    "verified_monthly_income": 7200.0,
-    "years_employed": 14.6,
-    "pay_frequency": "weekly",
+    "employer": "Maple Health",
+    "monthly_income": 8400.0,
+    "verified_monthly_income": 8400.0,
+    "years_employed": 7.0,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "student loan",
-      "monthly_payment": 390.0,
-      "balance": 19500.0,
-      "months_remaining": 50
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 739,
-    "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2024-02-14",
-    "foreclosure_date": null
+    "score": 758,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2019-07-27"
   },
   "assets": {
-    "bank_balance": 143000.0,
+    "bank_balance": 197000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []

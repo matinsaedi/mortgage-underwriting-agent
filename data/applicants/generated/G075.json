@@ -1,45 +1,38 @@
 {
   "applicant_id": "G075",
-  "name": "Mei Haddad",
-  "closing_date": "2026-12-15",
+  "name": "Mark Kim",
+  "closing_date": "2026-12-22",
   "loan": {
-    "amount": 378000.0,
-    "property_value": 420000.0,
-    "monthly_housing_payment": 2909.0,
-    "estimated_closing_costs": 8433.0,
+    "amount": 292500.0,
+    "property_value": 325000.0,
+    "monthly_housing_payment": 2274.0,
+    "estimated_closing_costs": 6679.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 12200.0,
-    "verified_monthly_income": 12200.0,
-    "years_employed": 2.0,
-    "pay_frequency": "weekly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 6800.0,
+    "verified_monthly_income": 6800.0,
+    "years_employed": 14.3,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "auto loan",
-      "monthly_payment": 540.0,
-      "balance": 18900.0,
-      "months_remaining": 35
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 793,
+    "score": 758,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 13600.0,
+    "bank_balance": 13700.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 42751.0,
+        "amount": 33627.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
@@ -48,7 +41,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Gifts are used on a second home at 90% LTV, so 5% ($21,000) must come from the borrower's own funds; they have $13,600."
+      "Gifts are used on a second home at 90% LTV, so 5% ($16,250) must come from the borrower's own funds; they have $13,700."
     ],
     "rule_ids": [
       "B3-4.3-04"

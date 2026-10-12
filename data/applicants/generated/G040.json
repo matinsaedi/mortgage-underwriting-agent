@@ -1,53 +1,63 @@
 {
   "applicant_id": "G040",
-  "name": "Nina Okafor",
-  "closing_date": "2026-12-26",
+  "name": "Lisa Haddad",
+  "closing_date": "2026-11-11",
   "loan": {
-    "amount": 438750.0,
-    "property_value": 585000.0,
-    "monthly_housing_payment": 3458.0,
-    "estimated_closing_costs": 16290.0,
+    "amount": 434000.0,
+    "property_value": 620000.0,
+    "monthly_housing_payment": 3463.0,
+    "estimated_closing_costs": 14592.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Maple Health",
-    "monthly_income": 12200.0,
-    "verified_monthly_income": 12200.0,
-    "years_employed": 6.6,
-    "pay_frequency": "biweekly",
+    "monthly_income": 13700.0,
+    "verified_monthly_income": 13700.0,
+    "years_employed": 12.4,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
       "kind": "auto loan",
       "monthly_payment": 480.0,
-      "balance": 15360.0,
-      "months_remaining": 32
+      "balance": 9120.0,
+      "months_remaining": 19
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 80.0,
+      "balance": 2080.0,
+      "months_remaining": null
     }
   ],
   "credit": {
-    "score": 747,
+    "score": 731,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 138156.0,
+    "bank_balance": 160818.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 40000.0,
-        "donor_relationship": "fiance",
-        "has_gift_letter": true
+        "amount": 64000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": false
       }
     ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $160,818 are short of the $207,518 needed; obtain a signed gift letter for $64,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

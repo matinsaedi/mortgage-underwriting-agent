@@ -1,45 +1,51 @@
 {
   "applicant_id": "G028",
-  "name": "Raj Smith",
-  "closing_date": "2026-12-08",
+  "name": "Lisa Haddad",
+  "closing_date": "2026-12-04",
   "loan": {
-    "amount": 307500.0,
-    "property_value": 410000.0,
-    "monthly_housing_payment": 2453.0,
-    "estimated_closing_costs": 9015.0,
+    "amount": 459000.0,
+    "property_value": 510000.0,
+    "monthly_housing_payment": 3511.0,
+    "estimated_closing_costs": 13902.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Bluefin Software",
-    "monthly_income": 10200.0,
-    "verified_monthly_income": 10200.0,
-    "years_employed": 13.2,
+    "monthly_income": 11100.0,
+    "verified_monthly_income": 11100.0,
+    "years_employed": 6.1,
     "pay_frequency": "semimonthly",
     "self_employed": false
   },
   "debts": [
     {
       "kind": "credit card",
-      "monthly_payment": 140.0,
-      "balance": 4480.0,
+      "monthly_payment": 105.0,
+      "balance": 3885.0,
       "months_remaining": null
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 450.0,
+      "balance": 22950.0,
+      "months_remaining": 51
     }
   ],
   "credit": {
-    "score": 741,
+    "score": 726,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 110033.0,
+    "bank_balance": 18700.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 50000.0,
+        "amount": 56524.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
@@ -48,7 +54,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $110,033 are short of the $126,233 needed; $50,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Gifts are used on a second home at 90% LTV, so 5% ($25,500) must come from the borrower's own funds; they have $18,700."
     ],
     "rule_ids": [
       "B3-4.3-04"

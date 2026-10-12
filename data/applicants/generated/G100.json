@@ -1,46 +1,46 @@
 {
   "applicant_id": "G100",
-  "name": "Ana Garcia",
-  "closing_date": "2026-11-20",
+  "name": "Mei Garcia",
+  "closing_date": "2026-11-14",
   "loan": {
-    "amount": 428000.0,
-    "property_value": 535000.0,
-    "monthly_housing_payment": 3340.0,
-    "estimated_closing_costs": 11547.0,
+    "amount": 318750.0,
+    "property_value": 425000.0,
+    "monthly_housing_payment": 2540.0,
+    "estimated_closing_costs": 9424.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 13400.0,
-    "verified_monthly_income": 13400.0,
-    "years_employed": 14.7,
+    "employer": "Northwind Logistics",
+    "monthly_income": 10800.0,
+    "verified_monthly_income": 10800.0,
+    "years_employed": 3.5,
     "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 590.0,
-      "balance": 20650.0,
-      "months_remaining": 35
+      "kind": "student loan",
+      "monthly_payment": 320.0,
+      "balance": 12480.0,
+      "months_remaining": 39
     }
   ],
   "credit": {
-    "score": 736,
+    "score": 795,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 93347.0,
+    "bank_balance": 104514.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 27000.0,
-        "donor_relationship": "interested party",
+        "amount": 31000.0,
+        "donor_relationship": "parent",
         "has_gift_letter": true
       }
     ]
@@ -48,7 +48,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $93,347 are short of the $118,547 needed; $27,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Funds of $104,514 are short of the $130,914 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

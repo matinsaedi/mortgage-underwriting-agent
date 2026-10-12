@@ -1,47 +1,44 @@
 {
   "applicant_id": "G073",
-  "name": "Mei Haddad",
-  "closing_date": "2026-12-03",
+  "name": "Mark Brown",
+  "closing_date": "2026-12-20",
   "loan": {
-    "amount": 455000.0,
-    "property_value": 650000.0,
-    "monthly_housing_payment": 3626.0,
-    "estimated_closing_costs": 14793.0,
-    "property_type": "2-4 unit",
+    "amount": 294000.0,
+    "property_value": 420000.0,
+    "monthly_housing_payment": 2378.0,
+    "estimated_closing_costs": 8733.0,
+    "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Lakeshore Bank",
-    "monthly_income": 14400.0,
-    "verified_monthly_income": 14400.0,
-    "years_employed": 7.4,
-    "pay_frequency": "weekly",
+    "monthly_income": 8800.0,
+    "verified_monthly_income": 8800.0,
+    "years_employed": 10.1,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "student loan",
-      "monthly_payment": 590.0,
-      "balance": 9440.0,
-      "months_remaining": 16
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 769,
-    "bankruptcy_chapter": 7,
-    "bankruptcy_discharge_date": "2022-03-25",
-    "foreclosure_date": null
+    "score": 787,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2024-01-04"
   },
   "assets": {
-    "bank_balance": 268000.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 188000.0,
+    "retirement_balance": 20000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2024-01-04; the 7-year wait ends 2031-01-04, after the 2026-12-20 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   }
 }

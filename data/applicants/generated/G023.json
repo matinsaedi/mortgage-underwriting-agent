@@ -31,18 +31,12 @@
       "monthly_payment": 500.0,
       "balance": 9500.0,
       "months_remaining": 19
-    },
-    {
-      "kind": "auto loan",
-      "monthly_payment": 3390.0,
-      "balance": 30510.0,
-      "months_remaining": 9
     }
   ],
   "credit": {
     "score": 766,
-    "bankruptcy_chapter": null,
-    "bankruptcy_discharge_date": null,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2025-11-20",
     "foreclosure_date": null
   },
   "assets": {
@@ -52,8 +46,12 @@
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-11-20; the 2-year wait ends 2027-11-20, after the 2026-12-07 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
   }
 }

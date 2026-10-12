@@ -1,53 +1,50 @@
 {
   "applicant_id": "G057",
-  "name": "Tom Haddad",
-  "closing_date": "2026-11-27",
+  "name": "Nina Kim",
+  "closing_date": "2026-11-28",
   "loan": {
-    "amount": 311250.0,
-    "property_value": 415000.0,
-    "monthly_housing_payment": 2482.0,
-    "estimated_closing_costs": 10072.0,
+    "amount": 221250.0,
+    "property_value": 295000.0,
+    "monthly_housing_payment": 1793.0,
+    "estimated_closing_costs": 8485.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Cedar School Board",
-    "monthly_income": 9800.0,
-    "verified_monthly_income": 9800.0,
-    "years_employed": 9.9,
-    "pay_frequency": "monthly",
+    "monthly_income": 5400.0,
+    "verified_monthly_income": 5400.0,
+    "years_employed": 6.0,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "credit card",
-      "monthly_payment": 70.0,
-      "balance": 1890.0,
-      "months_remaining": null
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 120.0,
-      "balance": 4320.0,
-      "months_remaining": null
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 717,
+    "score": 747,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2017-12-03"
+    "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 166000.0,
+    "bank_balance": 124193.0,
     "retirement_balance": 0.0,
-    "large_deposits": [],
+    "large_deposits": [
+      {
+        "amount": 39000.0,
+        "deposit_date": "2026-10-23",
+        "source_documented": false
+      }
+    ],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,193 are short of the $92,993 needed; document the source of $39,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
   }
 }

@@ -1,59 +1,57 @@
 {
   "applicant_id": "G024",
-  "name": "Mei Brown",
-  "closing_date": "2026-11-12",
+  "name": "Ben Okafor",
+  "closing_date": "2026-12-17",
   "loan": {
-    "amount": 524000.0,
-    "property_value": 655000.0,
-    "monthly_housing_payment": 4067.0,
-    "estimated_closing_costs": 18107.0,
+    "amount": 540000.0,
+    "property_value": 675000.0,
+    "monthly_housing_payment": 4188.0,
+    "estimated_closing_costs": 16988.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Cedar School Board",
-    "monthly_income": 18200.0,
-    "verified_monthly_income": 18200.0,
-    "years_employed": 11.1,
-    "pay_frequency": "biweekly",
+    "employer": "Lakeshore Bank",
+    "monthly_income": 17800.0,
+    "verified_monthly_income": 17800.0,
+    "years_employed": 9.3,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 420.0,
-      "balance": 14280.0,
-      "months_remaining": 34
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 75.0,
-      "balance": 1575.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 560.0,
+      "balance": 18480.0,
+      "months_remaining": 33
     }
   ],
   "credit": {
-    "score": 722,
+    "score": 696,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 129307.0,
+    "bank_balance": 110164.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 31000.0,
-        "donor_relationship": "sibling",
-        "has_gift_letter": true
+        "amount": 54000.0,
+        "donor_relationship": "spouse",
+        "has_gift_letter": false
       }
     ]
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $110,164 are short of the $160,364 needed; obtain a signed gift letter for $54,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
   }
 }

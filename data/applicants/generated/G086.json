@@ -1,38 +1,45 @@
 {
   "applicant_id": "G086",
-  "name": "Tom Patel",
-  "closing_date": "2026-11-13",
+  "name": "Kofi Brown",
+  "closing_date": "2026-11-28",
   "loan": {
-    "amount": 621000.0,
-    "property_value": 690000.0,
-    "monthly_housing_payment": 4715.0,
-    "estimated_closing_costs": 16579.0,
+    "amount": 355500.0,
+    "property_value": 395000.0,
+    "monthly_housing_payment": 2742.0,
+    "estimated_closing_costs": 10370.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 14200.0,
-    "verified_monthly_income": 14200.0,
-    "years_employed": 7.2,
+    "employer": "Northwind Logistics",
+    "monthly_income": 9000.0,
+    "verified_monthly_income": 9000.0,
+    "years_employed": 14.8,
     "pay_frequency": "monthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 390.0,
+      "balance": 19110.0,
+      "months_remaining": 49
+    }
+  ],
   "credit": {
-    "score": 685,
+    "score": 747,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 39000.0,
+    "bank_balance": 28000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 58509.0,
+        "amount": 31454.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }

@@ -1,53 +1,44 @@
 {
   "applicant_id": "G110",
-  "name": "Lisa Rossi",
-  "closing_date": "2026-12-10",
+  "name": "Kofi Okafor",
+  "closing_date": "2026-11-06",
   "loan": {
-    "amount": 476000.0,
-    "property_value": 595000.0,
-    "monthly_housing_payment": 3703.0,
-    "estimated_closing_costs": 12618.0,
-    "property_type": "2-4 unit",
-    "occupancy": "principal residence",
+    "amount": 412000.0,
+    "property_value": 515000.0,
+    "monthly_housing_payment": 3219.0,
+    "estimated_closing_costs": 11404.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Maple Health",
-    "monthly_income": 10900.0,
-    "verified_monthly_income": 10900.0,
-    "years_employed": 14.0,
-    "pay_frequency": "biweekly",
+    "employer": "Bluefin Software",
+    "monthly_income": 11900.0,
+    "verified_monthly_income": 11900.0,
+    "years_employed": 12.3,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "credit card",
-      "monthly_payment": 55.0,
-      "balance": 1485.0,
-      "months_remaining": null
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 768,
+    "score": 732,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 134336.0,
+    "bank_balance": 110500.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
-    "gifts": [
-      {
-        "amount": 59000.0,
-        "donor_relationship": "spouse",
-        "has_gift_letter": true
-      }
-    ]
+    "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Funds of $110,500 are short of the $133,718 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   }
 }

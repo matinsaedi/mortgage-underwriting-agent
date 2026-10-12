@@ -1,50 +1,59 @@
 {
   "applicant_id": "G107",
-  "name": "Mark Rossi",
-  "closing_date": "2026-12-11",
+  "name": "Ben Novak",
+  "closing_date": "2026-11-11",
   "loan": {
-    "amount": 283500.0,
-    "property_value": 405000.0,
-    "monthly_housing_payment": 2297.0,
-    "estimated_closing_costs": 11299.0,
+    "amount": 356250.0,
+    "property_value": 475000.0,
+    "monthly_housing_payment": 2826.0,
+    "estimated_closing_costs": 11155.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 8500.0,
-    "verified_monthly_income": 8500.0,
-    "years_employed": 7.0,
-    "pay_frequency": "monthly",
+    "employer": "Cedar School Board",
+    "monthly_income": 12000.0,
+    "verified_monthly_income": 12000.0,
+    "years_employed": 13.1,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 540.0,
+      "balance": 28080.0,
+      "months_remaining": 52
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 45.0,
+      "balance": 990.0,
+      "months_remaining": null
+    }
+  ],
   "credit": {
-    "score": 752,
+    "score": 789,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 115081.0,
+    "bank_balance": 106805.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 61000.0,
-        "donor_relationship": "parent",
+        "amount": 57000.0,
+        "donor_relationship": "sibling",
         "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Funds of $115,081 are short of the $146,581 needed; $61,000 in gifts can't be used because the donor or property type isn't allowed."
-    ],
-    "rule_ids": [
-      "B3-4.3-04"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

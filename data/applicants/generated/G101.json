@@ -1,63 +1,63 @@
 {
   "applicant_id": "G101",
-  "name": "Tom Nguyen",
-  "closing_date": "2026-11-30",
+  "name": "Kofi Nguyen",
+  "closing_date": "2026-11-05",
   "loan": {
-    "amount": 269500.0,
+    "amount": 288750.0,
     "property_value": 385000.0,
-    "monthly_housing_payment": 2188.0,
-    "estimated_closing_costs": 7980.0,
+    "monthly_housing_payment": 2310.0,
+    "estimated_closing_costs": 8853.0,
     "property_type": "1-unit",
-    "occupancy": "second home",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Northwind Logistics",
-    "monthly_income": 8700.0,
-    "verified_monthly_income": 8700.0,
-    "years_employed": 8.8,
-    "pay_frequency": "weekly",
+    "employer": "Cedar School Board",
+    "monthly_income": 8900.0,
+    "verified_monthly_income": 8900.0,
+    "years_employed": 9.5,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "student loan",
-      "monthly_payment": 600.0,
-      "balance": 22200.0,
-      "months_remaining": 37
+      "kind": "credit card",
+      "monthly_payment": 130.0,
+      "balance": 4160.0,
+      "months_remaining": null
     },
     {
-      "kind": "credit card",
-      "monthly_payment": 90.0,
-      "balance": 3420.0,
-      "months_remaining": null
+      "kind": "student loan",
+      "monthly_payment": 230.0,
+      "balance": 12190.0,
+      "months_remaining": 53
     }
   ],
   "credit": {
-    "score": 702,
+    "score": 707,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 129256.0,
+    "bank_balance": 100463.0,
     "retirement_balance": 0.0,
-    "large_deposits": [
+    "large_deposits": [],
+    "gifts": [
       {
-        "amount": 29000.0,
-        "deposit_date": "2026-09-14",
-        "source_documented": false
+        "amount": 59000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
       }
-    ],
-    "gifts": []
+    ]
   },
   "expected": {
-    "decision": "approve with conditions",
+    "decision": "decline",
     "reasons": [
-      "Verified funds of $100,256 are short of the $127,856 needed; document the source of $29,000 in large deposits."
+      "Funds of $100,463 are short of the $118,963 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
-      "B3-4.2-02"
+      "B3-4.3-04"
     ]
   }
 }

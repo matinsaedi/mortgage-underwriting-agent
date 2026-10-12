@@ -1,50 +1,51 @@
 {
   "applicant_id": "G114",
-  "name": "Tom Novak",
-  "closing_date": "2026-11-24",
+  "name": "Mei Okafor",
+  "closing_date": "2026-11-19",
   "loan": {
-    "amount": 607500.0,
-    "property_value": 675000.0,
-    "monthly_housing_payment": 4614.0,
-    "estimated_closing_costs": 19048.0,
+    "amount": 367500.0,
+    "property_value": 490000.0,
+    "monthly_housing_payment": 2913.0,
+    "estimated_closing_costs": 12404.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Bluefin Software",
-    "monthly_income": 11800.0,
-    "verified_monthly_income": 11800.0,
-    "years_employed": 11.9,
-    "pay_frequency": "monthly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 13600.0,
+    "verified_monthly_income": 6500.0,
+    "years_employed": 14.9,
+    "pay_frequency": "weekly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 590.0,
+      "balance": 17110.0,
+      "months_remaining": 29
+    }
+  ],
   "credit": {
-    "score": 748,
+    "score": 703,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 19000.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 205000.0,
+    "retirement_balance": 78000.0,
     "large_deposits": [],
-    "gifts": [
-      {
-        "amount": 79876.0,
-        "donor_relationship": "parent",
-        "has_gift_letter": true
-      }
-    ]
+    "gifts": []
   },
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Gifts are used on a second home at 90% LTV, so 5% ($33,750) must come from the borrower's own funds; they have $19,000."
+      "DTI 53.9% exceeds the 50% maximum for DU underwriting."
     ],
     "rule_ids": [
-      "B3-4.3-04"
+      "B3-6-02"
     ]
   }
 }

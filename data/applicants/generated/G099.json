@@ -1,50 +1,46 @@
 {
   "applicant_id": "G099",
-  "name": "Lisa Rossi",
-  "closing_date": "2026-12-20",
+  "name": "Diego Silva",
+  "closing_date": "2026-11-10",
   "loan": {
-    "amount": 258750.0,
-    "property_value": 345000.0,
-    "monthly_housing_payment": 2080.0,
-    "estimated_closing_costs": 9849.0,
+    "amount": 191250.0,
+    "property_value": 255000.0,
+    "monthly_housing_payment": 1564.0,
+    "estimated_closing_costs": 5143.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Bluefin Software",
-    "monthly_income": 7100.0,
-    "verified_monthly_income": 7100.0,
-    "years_employed": 14.2,
-    "pay_frequency": "monthly",
+    "employer": "Cedar School Board",
+    "monthly_income": 4500.0,
+    "verified_monthly_income": 4500.0,
+    "years_employed": 5.4,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [],
   "credit": {
-    "score": 714,
+    "score": 743,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 105779.0,
+    "bank_balance": 68793.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 27000.0,
-        "donor_relationship": "parent",
+        "amount": 25000.0,
+        "donor_relationship": "other relative",
         "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Funds of $105,779 are short of the $108,579 needed; $27,000 in gifts can't be used because the donor or property type isn't allowed."
-    ],
-    "rule_ids": [
-      "B3-4.3-04"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

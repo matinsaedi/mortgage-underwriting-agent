@@ -1,52 +1,46 @@
 {
   "applicant_id": "G004",
-  "name": "Ana Okafor",
-  "closing_date": "2026-11-01",
+  "name": "Raj Haddad",
+  "closing_date": "2026-11-27",
   "loan": {
-    "amount": 245000.0,
-    "property_value": 350000.0,
-    "monthly_housing_payment": 1998.0,
-    "estimated_closing_costs": 9742.0,
+    "amount": 552000.0,
+    "property_value": 690000.0,
+    "monthly_housing_payment": 4279.0,
+    "estimated_closing_costs": 15806.0,
     "property_type": "1-unit",
-    "occupancy": "principal residence",
+    "occupancy": "investment property",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Bluefin Software",
-    "monthly_income": 7900.0,
-    "verified_monthly_income": 7900.0,
-    "years_employed": 13.5,
-    "pay_frequency": "weekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 15000.0,
+    "verified_monthly_income": 15000.0,
+    "years_employed": 8.8,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "student loan",
-      "monthly_payment": 470.0,
-      "balance": 17860.0,
-      "months_remaining": 38
-    },
-    {
-      "kind": "student loan",
-      "monthly_payment": 240.0,
-      "balance": 10800.0,
-      "months_remaining": 45
+      "kind": "credit card",
+      "monthly_payment": 50.0,
+      "balance": 1200.0,
+      "months_remaining": null
     }
   ],
   "credit": {
-    "score": 786,
+    "score": 728,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 101842.0,
+    "bank_balance": 84680.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 25000.0,
-        "donor_relationship": "interested party",
+        "amount": 100000.0,
+        "donor_relationship": "parent",
         "has_gift_letter": true
       }
     ]
@@ -54,7 +48,7 @@
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Funds of $101,842 are short of the $114,742 needed; $25,000 in gifts can't be used because the donor or property type isn't allowed."
+      "Funds of $84,680 are short of the $179,480 needed; $100,000 in gifts can't be used because the donor or property type isn't allowed."
     ],
     "rule_ids": [
       "B3-4.3-04"

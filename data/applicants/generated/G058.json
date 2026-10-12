@@ -1,51 +1,47 @@
 {
   "applicant_id": "G058",
-  "name": "Raj Patel",
-  "closing_date": "2026-12-26",
+  "name": "Hana Nguyen",
+  "closing_date": "2026-11-23",
   "loan": {
-    "amount": 572000.0,
-    "property_value": 715000.0,
-    "monthly_housing_payment": 4430.0,
-    "estimated_closing_costs": 17459.0,
+    "amount": 326250.0,
+    "property_value": 435000.0,
+    "monthly_housing_payment": 2597.0,
+    "estimated_closing_costs": 11912.0,
     "property_type": "1-unit",
-    "occupancy": "investment property",
+    "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Maple Health",
-    "monthly_income": 14500.0,
-    "verified_monthly_income": 14500.0,
-    "years_employed": 13.9,
+    "employer": "Lakeshore Bank",
+    "monthly_income": 9700.0,
+    "verified_monthly_income": 9700.0,
+    "years_employed": 14.4,
     "pay_frequency": "semimonthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "credit card",
-      "monthly_payment": 70.0,
-      "balance": 1960.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 600.0,
+      "balance": 34800.0,
+      "months_remaining": 58
     }
   ],
   "credit": {
-    "score": 769,
+    "score": 694,
     "bankruptcy_chapter": 13,
-    "bankruptcy_discharge_date": "2025-11-23",
+    "bankruptcy_discharge_date": "2022-12-11",
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 241000.0,
-    "retirement_balance": 41000.0,
+    "bank_balance": 160000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Chapter 13 bankruptcy discharged 2025-11-23; the 2-year wait ends 2027-11-23, after the 2026-12-26 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

@@ -1,57 +1,40 @@
 {
   "applicant_id": "G066",
-  "name": "Nina Rossi",
-  "closing_date": "2026-12-11",
+  "name": "Tom Kim",
+  "closing_date": "2026-12-01",
   "loan": {
-    "amount": 232000.0,
-    "property_value": 290000.0,
-    "monthly_housing_payment": 1856.0,
-    "estimated_closing_costs": 7526.0,
+    "amount": 495000.0,
+    "property_value": 660000.0,
+    "monthly_housing_payment": 3888.0,
+    "estimated_closing_costs": 15597.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Lakeshore Bank",
-    "monthly_income": 7100.0,
-    "verified_monthly_income": 7100.0,
-    "years_employed": 4.0,
-    "pay_frequency": "monthly",
+    "employer": "Harbor Engineering",
+    "monthly_income": 15200.0,
+    "verified_monthly_income": 15200.0,
+    "years_employed": 9.7,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "student loan",
-      "monthly_payment": 490.0,
-      "balance": 7350.0,
-      "months_remaining": 15
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 80.0,
-      "balance": 2160.0,
-      "months_remaining": null
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 730,
+    "score": 782,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
-    "foreclosure_date": "2020-08-21"
+    "foreclosure_date": "2017-11-25"
   },
   "assets": {
-    "bank_balance": 86000.0,
-    "retirement_balance": 63000.0,
+    "bank_balance": 216000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Foreclosure completed 2020-08-21; the 7-year wait ends 2027-08-21, after the 2026-12-11 closing."
-    ],
-    "rule_ids": [
-      "B3-5.3-07"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

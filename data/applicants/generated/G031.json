@@ -1,45 +1,45 @@
 {
   "applicant_id": "G031",
-  "name": "Kofi Nguyen",
-  "closing_date": "2026-11-30",
+  "name": "Mark Haddad",
+  "closing_date": "2026-11-24",
   "loan": {
-    "amount": 607500.0,
-    "property_value": 675000.0,
-    "monthly_housing_payment": 4614.0,
-    "estimated_closing_costs": 15392.0,
+    "amount": 310500.0,
+    "property_value": 345000.0,
+    "monthly_housing_payment": 2407.0,
+    "estimated_closing_costs": 9112.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 15000.0,
-    "verified_monthly_income": 15000.0,
-    "years_employed": 2.7,
-    "pay_frequency": "biweekly",
+    "employer": "Maple Health",
+    "monthly_income": 6300.0,
+    "verified_monthly_income": 6300.0,
+    "years_employed": 8.1,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "auto loan",
-      "monthly_payment": 230.0,
-      "balance": 6670.0,
-      "months_remaining": 29
+      "kind": "credit card",
+      "monthly_payment": 25.0,
+      "balance": 725.0,
+      "months_remaining": null
     }
   ],
   "credit": {
-    "score": 767,
+    "score": 699,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 52300.0,
+    "bank_balance": 22200.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 39920.0,
+        "amount": 26526.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }

@@ -1,57 +1,51 @@
 {
   "applicant_id": "G093",
-  "name": "Mei Okafor",
-  "closing_date": "2026-11-03",
+  "name": "Elena Garcia",
+  "closing_date": "2026-12-14",
   "loan": {
-    "amount": 490000.0,
-    "property_value": 700000.0,
-    "monthly_housing_payment": 3897.0,
-    "estimated_closing_costs": 18299.0,
+    "amount": 348000.0,
+    "property_value": 435000.0,
+    "monthly_housing_payment": 2734.0,
+    "estimated_closing_costs": 8752.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Harbor Engineering",
-    "monthly_income": 15800.0,
-    "verified_monthly_income": 15800.0,
-    "years_employed": 8.1,
-    "pay_frequency": "biweekly",
+    "employer": "Northwind Logistics",
+    "monthly_income": 11600.0,
+    "verified_monthly_income": 5400.0,
+    "years_employed": 11.8,
+    "pay_frequency": "monthly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "student loan",
-      "monthly_payment": 340.0,
-      "balance": 9520.0,
-      "months_remaining": 28
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 125.0,
-      "balance": 4250.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 330.0,
+      "balance": 11880.0,
+      "months_remaining": 36
     }
   ],
   "credit": {
-    "score": 602,
+    "score": 714,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 287000.0,
-    "retirement_balance": 0.0,
+    "bank_balance": 124000.0,
+    "retirement_balance": 50000.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Credit score 602 is below the 620 minimum."
+      "DTI 56.7% exceeds the 50% maximum for DU underwriting."
     ],
     "rule_ids": [
-      "B3-5.1-01"
+      "B3-6-02"
     ]
   }
 }

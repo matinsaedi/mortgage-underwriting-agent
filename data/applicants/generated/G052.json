@@ -1,63 +1,53 @@
 {
   "applicant_id": "G052",
-  "name": "Sarah Patel",
-  "closing_date": "2026-11-16",
+  "name": "Mei Kim",
+  "closing_date": "2026-12-26",
   "loan": {
-    "amount": 463500.0,
-    "property_value": 515000.0,
-    "monthly_housing_payment": 3544.0,
-    "estimated_closing_costs": 12511.0,
+    "amount": 468000.0,
+    "property_value": 520000.0,
+    "monthly_housing_payment": 3578.0,
+    "estimated_closing_costs": 13639.0,
     "property_type": "1-unit",
     "occupancy": "second home",
     "underwriting": "DU"
   },
   "income": {
-    "employer": "Bluefin Software",
-    "monthly_income": 13300.0,
-    "verified_monthly_income": 13300.0,
-    "years_employed": 10.0,
-    "pay_frequency": "monthly",
+    "employer": "Maple Health",
+    "monthly_income": 11100.0,
+    "verified_monthly_income": 11100.0,
+    "years_employed": 3.4,
+    "pay_frequency": "biweekly",
     "self_employed": false
   },
   "debts": [
     {
-      "kind": "student loan",
-      "monthly_payment": 300.0,
-      "balance": 14100.0,
-      "months_remaining": 47
-    },
-    {
-      "kind": "credit card",
-      "monthly_payment": 85.0,
-      "balance": 2635.0,
-      "months_remaining": null
+      "kind": "auto loan",
+      "monthly_payment": 500.0,
+      "balance": 24500.0,
+      "months_remaining": 49
     }
   ],
   "credit": {
-    "score": 784,
+    "score": 702,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 11900.0,
+    "bank_balance": 41600.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": [
       {
-        "amount": 62599.0,
+        "amount": 32195.0,
         "donor_relationship": "parent",
         "has_gift_letter": true
       }
     ]
   },
   "expected": {
-    "decision": "decline",
-    "reasons": [
-      "Gifts are used on a second home at 90% LTV, so 5% ($25,750) must come from the borrower's own funds; they have $11,900."
-    ],
-    "rule_ids": [
-      "B3-4.3-04"
-    ]
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
   }
 }

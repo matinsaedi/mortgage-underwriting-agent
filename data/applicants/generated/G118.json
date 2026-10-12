@@ -1,47 +1,44 @@
 {
   "applicant_id": "G118",
-  "name": "Liam Silva",
-  "closing_date": "2026-11-06",
+  "name": "Elena Haddad",
+  "closing_date": "2026-11-03",
   "loan": {
-    "amount": 412500.0,
-    "property_value": 550000.0,
-    "monthly_housing_payment": 3257.0,
-    "estimated_closing_costs": 13568.0,
-    "property_type": "1-unit",
+    "amount": 285000.0,
+    "property_value": 380000.0,
+    "monthly_housing_payment": 2281.0,
+    "estimated_closing_costs": 9334.0,
+    "property_type": "2-4 unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Bluefin Software",
-    "monthly_income": 13200.0,
-    "verified_monthly_income": 13200.0,
-    "years_employed": 9.6,
-    "pay_frequency": "biweekly",
+    "monthly_income": 7700.0,
+    "verified_monthly_income": 7700.0,
+    "years_employed": 8.1,
+    "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [
-    {
-      "kind": "credit card",
-      "monthly_payment": 70.0,
-      "balance": 2170.0,
-      "months_remaining": null
-    }
-  ],
+  "debts": [],
   "credit": {
-    "score": 797,
-    "bankruptcy_chapter": 7,
-    "bankruptcy_discharge_date": "2021-08-07",
+    "score": 768,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 197000.0,
+    "bank_balance": 95000.0,
     "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
-    "decision": "approve",
-    "reasons": [],
-    "rule_ids": []
+    "decision": "decline",
+    "reasons": [
+      "Funds of $95,000 are short of the $118,020 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
   }
 }

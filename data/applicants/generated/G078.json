@@ -1,44 +1,51 @@
 {
   "applicant_id": "G078",
-  "name": "Ben Garcia",
-  "closing_date": "2026-11-01",
+  "name": "Omar Okafor",
+  "closing_date": "2026-12-16",
   "loan": {
-    "amount": 185500.0,
-    "property_value": 265000.0,
-    "monthly_housing_payment": 1537.0,
-    "estimated_closing_costs": 6656.0,
+    "amount": 356000.0,
+    "property_value": 445000.0,
+    "monthly_housing_payment": 2795.0,
+    "estimated_closing_costs": 13285.0,
     "property_type": "1-unit",
     "occupancy": "principal residence",
     "underwriting": "DU"
   },
   "income": {
     "employer": "Maple Health",
-    "monthly_income": 5000.0,
-    "verified_monthly_income": 5000.0,
-    "years_employed": 14.3,
+    "monthly_income": 11700.0,
+    "verified_monthly_income": 6300.0,
+    "years_employed": 13.7,
     "pay_frequency": "semimonthly",
     "self_employed": false
   },
-  "debts": [],
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 590.0,
+      "balance": 26550.0,
+      "months_remaining": 45
+    }
+  ],
   "credit": {
-    "score": 565,
+    "score": 731,
     "bankruptcy_chapter": null,
     "bankruptcy_discharge_date": null,
     "foreclosure_date": null
   },
   "assets": {
-    "bank_balance": 117000.0,
-    "retirement_balance": 60000.0,
+    "bank_balance": 145000.0,
+    "retirement_balance": 0.0,
     "large_deposits": [],
     "gifts": []
   },
   "expected": {
     "decision": "decline",
     "reasons": [
-      "Credit score 565 is below the 620 minimum."
+      "DTI 53.7% exceeds the 50% maximum for DU underwriting."
     ],
     "rule_ids": [
-      "B3-5.1-01"
+      "B3-6-02"
     ]
   }
 }
