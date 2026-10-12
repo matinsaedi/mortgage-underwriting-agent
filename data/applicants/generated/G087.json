@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G087",
+  "name": "Priya Rossi",
+  "closing_date": "2026-11-19",
+  "loan": {
+    "amount": 621000.0,
+    "property_value": 690000.0,
+    "monthly_housing_payment": 4715.0,
+    "estimated_closing_costs": 16509.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 14100.0,
+    "verified_monthly_income": 14100.0,
+    "years_employed": 13.2,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 310.0,
+      "balance": 8060.0,
+      "months_remaining": 26
+    }
+  ],
+  "credit": {
+    "score": 688,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 8200.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 91239.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($34,500) must come from the borrower's own funds; they have $8,200."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

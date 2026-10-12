@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G067",
+  "name": "Ben Patel",
+  "closing_date": "2026-11-19",
+  "loan": {
+    "amount": 510000.0,
+    "property_value": 680000.0,
+    "monthly_housing_payment": 4003.0,
+    "estimated_closing_costs": 14089.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 13400.0,
+    "verified_monthly_income": 13400.0,
+    "years_employed": 13.4,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 340.0,
+      "balance": 6800.0,
+      "months_remaining": 20
+    }
+  ],
+  "credit": {
+    "score": 799,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2021-01-06"
+  },
+  "assets": {
+    "bank_balance": 217000.0,
+    "retirement_balance": 17000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2021-01-06; the 7-year wait ends 2028-01-06, after the 2026-11-19 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

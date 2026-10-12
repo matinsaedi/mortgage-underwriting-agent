@@ -1,0 +1,50 @@
+{
+  "applicant_id": "G049",
+  "name": "Sarah Smith",
+  "closing_date": "2026-11-14",
+  "loan": {
+    "amount": 326250.0,
+    "property_value": 435000.0,
+    "monthly_housing_payment": 2597.0,
+    "estimated_closing_costs": 12259.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 7500.0,
+    "verified_monthly_income": 7500.0,
+    "years_employed": 11.3,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 708,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 130809.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 19000.0,
+        "deposit_date": "2026-10-17",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $111,809 are short of the $121,009 needed; document the source of $19,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  }
+}

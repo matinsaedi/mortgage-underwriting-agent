@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G016",
+  "name": "Priya Rossi",
+  "closing_date": "2026-12-28",
+  "loan": {
+    "amount": 432000.0,
+    "property_value": 540000.0,
+    "monthly_housing_payment": 3370.0,
+    "estimated_closing_costs": 15182.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 16000.0,
+    "verified_monthly_income": 16000.0,
+    "years_employed": 12.6,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 70.0,
+      "balance": 1820.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 550.0,
+      "balance": 20900.0,
+      "months_remaining": 38
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 4810.0,
+      "balance": 28860.0,
+      "months_remaining": 6
+    }
+  ],
+  "credit": {
+    "score": 781,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 154000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

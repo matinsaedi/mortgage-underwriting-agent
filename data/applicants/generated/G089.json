@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G089",
+  "name": "Mei Patel",
+  "closing_date": "2026-11-03",
+  "loan": {
+    "amount": 484000.0,
+    "property_value": 605000.0,
+    "monthly_housing_payment": 3764.0,
+    "estimated_closing_costs": 14559.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 15800.0,
+    "verified_monthly_income": 15800.0,
+    "years_employed": 14.1,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 210.0,
+      "balance": 6720.0,
+      "months_remaining": 32
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 280.0,
+      "balance": 5040.0,
+      "months_remaining": 18
+    }
+  ],
+  "credit": {
+    "score": 702,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 144559.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 16000.0,
+        "deposit_date": "2026-08-22",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $128,559 are short of the $135,559 needed; document the source of $16,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  }
+}

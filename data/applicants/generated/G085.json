@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G085",
+  "name": "Diego Brown",
+  "closing_date": "2026-12-31",
+  "loan": {
+    "amount": 220500.0,
+    "property_value": 315000.0,
+    "monthly_housing_payment": 1809.0,
+    "estimated_closing_costs": 7028.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 10000.0,
+    "verified_monthly_income": 10000.0,
+    "years_employed": 8.1,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 360.0,
+      "balance": 8280.0,
+      "months_remaining": 23
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 520.0,
+      "balance": 18200.0,
+      "months_remaining": 35
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 2820.0,
+      "balance": 28200.0,
+      "months_remaining": 10
+    }
+  ],
+  "credit": {
+    "score": 797,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 142000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

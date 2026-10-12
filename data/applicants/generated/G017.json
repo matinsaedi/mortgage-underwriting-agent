@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G017",
+  "name": "Raj Silva",
+  "closing_date": "2026-11-03",
+  "loan": {
+    "amount": 536250.0,
+    "property_value": 715000.0,
+    "monthly_housing_payment": 4204.0,
+    "estimated_closing_costs": 15286.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 14400.0,
+    "verified_monthly_income": 14400.0,
+    "years_employed": 9.0,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 160.0,
+      "balance": 7360.0,
+      "months_remaining": 46
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 590.0,
+      "balance": 28910.0,
+      "months_remaining": 49
+    }
+  ],
+  "credit": {
+    "score": 745,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2017-10-14"
+  },
+  "assets": {
+    "bank_balance": 241000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

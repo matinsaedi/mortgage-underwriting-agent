@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G119",
+  "name": "Nina Smith",
+  "closing_date": "2026-11-21",
+  "loan": {
+    "amount": 416250.0,
+    "property_value": 555000.0,
+    "monthly_housing_payment": 3286.0,
+    "estimated_closing_costs": 12845.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 9800.0,
+    "verified_monthly_income": 5700.0,
+    "years_employed": 6.2,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 743,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 231000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 57.6% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G040",
+  "name": "Nina Okafor",
+  "closing_date": "2026-12-26",
+  "loan": {
+    "amount": 438750.0,
+    "property_value": 585000.0,
+    "monthly_housing_payment": 3458.0,
+    "estimated_closing_costs": 16290.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 12200.0,
+    "verified_monthly_income": 12200.0,
+    "years_employed": 6.6,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 480.0,
+      "balance": 15360.0,
+      "months_remaining": 32
+    }
+  ],
+  "credit": {
+    "score": 747,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 138156.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 40000.0,
+        "donor_relationship": "fiance",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

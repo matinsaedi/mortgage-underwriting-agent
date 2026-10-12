@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G038",
+  "name": "Omar Brown",
+  "closing_date": "2026-12-25",
+  "loan": {
+    "amount": 182000.0,
+    "property_value": 260000.0,
+    "monthly_housing_payment": 1510.0,
+    "estimated_closing_costs": 7147.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 4500.0,
+    "verified_monthly_income": 4500.0,
+    "years_employed": 4.0,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 585,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 113000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Credit score 585 is below the 620 minimum."
+    ],
+    "rule_ids": [
+      "B3-5.1-01"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "applicant_id": "G033",
+  "name": "Diego Novak",
+  "closing_date": "2026-11-28",
+  "loan": {
+    "amount": 238500.0,
+    "property_value": 265000.0,
+    "monthly_housing_payment": 1872.0,
+    "estimated_closing_costs": 6634.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 5700.0,
+    "verified_monthly_income": 5700.0,
+    "years_employed": 5.1,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 707,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 19000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 20778.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

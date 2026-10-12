@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G097",
+  "name": "Liam Patel",
+  "closing_date": "2026-11-08",
+  "loan": {
+    "amount": 442500.0,
+    "property_value": 590000.0,
+    "monthly_housing_payment": 3487.0,
+    "estimated_closing_costs": 14218.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 16400.0,
+    "verified_monthly_income": 16400.0,
+    "years_employed": 8.7,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 600.0,
+      "balance": 30600.0,
+      "months_remaining": 51
+    }
+  ],
+  "credit": {
+    "score": 732,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 203218.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 42000.0,
+        "deposit_date": "2026-10-11",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $161,218 are short of the $161,718 needed; document the source of $42,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  }
+}

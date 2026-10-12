@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G060",
+  "name": "Raj Haddad",
+  "closing_date": "2026-12-05",
+  "loan": {
+    "amount": 388500.0,
+    "property_value": 555000.0,
+    "monthly_housing_payment": 3110.0,
+    "estimated_closing_costs": 13099.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 11100.0,
+    "verified_monthly_income": 11100.0,
+    "years_employed": 12.0,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 530.0,
+      "balance": 6890.0,
+      "months_remaining": 13
+    }
+  ],
+  "credit": {
+    "score": 713,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 107800.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $107,800 are short of the $179,599 needed to close and hold 0 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  }
+}

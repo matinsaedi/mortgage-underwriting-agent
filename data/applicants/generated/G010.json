@@ -1,0 +1,50 @@
+{
+  "applicant_id": "G010",
+  "name": "Nina Garcia",
+  "closing_date": "2026-11-05",
+  "loan": {
+    "amount": 217500.0,
+    "property_value": 290000.0,
+    "monthly_housing_payment": 1765.0,
+    "estimated_closing_costs": 8502.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 7100.0,
+    "verified_monthly_income": 7100.0,
+    "years_employed": 7.4,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 687,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 58802.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 27000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $58,802 are short of the $81,002 needed; $27,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

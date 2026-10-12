@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G074",
+  "name": "Sarah Novak",
+  "closing_date": "2026-11-19",
+  "loan": {
+    "amount": 461250.0,
+    "property_value": 615000.0,
+    "monthly_housing_payment": 3630.0,
+    "estimated_closing_costs": 18137.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 11100.0,
+    "verified_monthly_income": 11100.0,
+    "years_employed": 14.1,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 130.0,
+      "balance": 3640.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 715,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 252000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 42000.0,
+        "deposit_date": "2026-10-22",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

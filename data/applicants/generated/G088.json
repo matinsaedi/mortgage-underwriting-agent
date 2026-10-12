@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G088",
+  "name": "Lisa Novak",
+  "closing_date": "2026-11-08",
+  "loan": {
+    "amount": 210000.0,
+    "property_value": 280000.0,
+    "monthly_housing_payment": 1707.0,
+    "estimated_closing_costs": 6142.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 7700.0,
+    "verified_monthly_income": 7700.0,
+    "years_employed": 4.9,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 190.0,
+      "balance": 11020.0,
+      "months_remaining": 58
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 145.0,
+      "balance": 5075.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 689,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 112000.0,
+    "retirement_balance": 96000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

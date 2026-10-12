@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G076",
+  "name": "Hana Chen",
+  "closing_date": "2026-11-13",
+  "loan": {
+    "amount": 196000.0,
+    "property_value": 280000.0,
+    "monthly_housing_payment": 1619.0,
+    "estimated_closing_costs": 7261.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 5000.0,
+    "verified_monthly_income": 5000.0,
+    "years_employed": 4.0,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 562,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 106000.0,
+    "retirement_balance": 105000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Credit score 562 is below the 620 minimum."
+    ],
+    "rule_ids": [
+      "B3-5.1-01"
+    ]
+  }
+}

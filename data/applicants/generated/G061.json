@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G061",
+  "name": "Ben Garcia",
+  "closing_date": "2026-11-09",
+  "loan": {
+    "amount": 206500.0,
+    "property_value": 295000.0,
+    "monthly_housing_payment": 1700.0,
+    "estimated_closing_costs": 6421.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 9400.0,
+    "verified_monthly_income": 9400.0,
+    "years_employed": 5.0,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 540.0,
+      "balance": 24840.0,
+      "months_remaining": 46
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 210.0,
+      "balance": 11550.0,
+      "months_remaining": 55
+    }
+  ],
+  "credit": {
+    "score": 796,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 94721.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 25000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": false
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $94,721 are short of the $94,921 needed; obtain a signed gift letter for $25,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

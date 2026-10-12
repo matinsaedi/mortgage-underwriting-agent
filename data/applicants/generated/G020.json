@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G020",
+  "name": "Lisa Okafor",
+  "closing_date": "2026-11-17",
+  "loan": {
+    "amount": 576000.0,
+    "property_value": 640000.0,
+    "monthly_housing_payment": 4380.0,
+    "estimated_closing_costs": 13610.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 12200.0,
+    "verified_monthly_income": 12200.0,
+    "years_employed": 3.5,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 210.0,
+      "balance": 12180.0,
+      "months_remaining": 58
+    }
+  ],
+  "credit": {
+    "score": 796,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 48000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 42670.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G080",
+  "name": "Ana Smith",
+  "closing_date": "2026-12-02",
+  "loan": {
+    "amount": 508000.0,
+    "property_value": 635000.0,
+    "monthly_housing_payment": 3946.0,
+    "estimated_closing_costs": 13800.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 16100.0,
+    "verified_monthly_income": 16100.0,
+    "years_employed": 14.9,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 50.0,
+      "balance": 1300.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 105.0,
+      "balance": 2310.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 745,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2023-01-18"
+  },
+  "assets": {
+    "bank_balance": 224000.0,
+    "retirement_balance": 41000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2023-01-18; the 7-year wait ends 2030-01-18, after the 2026-12-02 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

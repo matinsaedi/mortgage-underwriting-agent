@@ -1,0 +1,50 @@
+{
+  "applicant_id": "G107",
+  "name": "Mark Rossi",
+  "closing_date": "2026-12-11",
+  "loan": {
+    "amount": 283500.0,
+    "property_value": 405000.0,
+    "monthly_housing_payment": 2297.0,
+    "estimated_closing_costs": 11299.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 8500.0,
+    "verified_monthly_income": 8500.0,
+    "years_employed": 7.0,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 752,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 115081.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 61000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $115,081 are short of the $146,581 needed; $61,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

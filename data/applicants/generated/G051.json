@@ -1,0 +1,40 @@
+{
+  "applicant_id": "G051",
+  "name": "Elena Haddad",
+  "closing_date": "2026-11-20",
+  "loan": {
+    "amount": 228000.0,
+    "property_value": 285000.0,
+    "monthly_housing_payment": 1826.0,
+    "estimated_closing_costs": 6575.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 5500.0,
+    "verified_monthly_income": 5500.0,
+    "years_employed": 14.8,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 782,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2023-06-01",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 108000.0,
+    "retirement_balance": 99000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

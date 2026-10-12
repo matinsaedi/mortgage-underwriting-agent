@@ -1,0 +1,40 @@
+{
+  "applicant_id": "G035",
+  "name": "Nina Garcia",
+  "closing_date": "2026-12-18",
+  "loan": {
+    "amount": 364000.0,
+    "property_value": 520000.0,
+    "monthly_housing_payment": 2920.0,
+    "estimated_closing_costs": 13244.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 10200.0,
+    "verified_monthly_income": 10200.0,
+    "years_employed": 8.2,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 793,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 216000.0,
+    "retirement_balance": 100000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

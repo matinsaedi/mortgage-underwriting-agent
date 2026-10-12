@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G046",
+  "name": "Nina Smith",
+  "closing_date": "2026-11-08",
+  "loan": {
+    "amount": 412000.0,
+    "property_value": 515000.0,
+    "monthly_housing_payment": 3219.0,
+    "estimated_closing_costs": 13219.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 12300.0,
+    "verified_monthly_income": 12300.0,
+    "years_employed": 14.3,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 200.0,
+      "balance": 11800.0,
+      "months_remaining": 59
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 115.0,
+      "balance": 2300.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 719,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 107619.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 32000.0,
+        "donor_relationship": "other relative",
+        "has_gift_letter": false
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $107,619 are short of the $116,219 needed; obtain a signed gift letter for $32,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G037",
+  "name": "Hana Silva",
+  "closing_date": "2026-12-01",
+  "loan": {
+    "amount": 437500.0,
+    "property_value": 625000.0,
+    "monthly_housing_payment": 3490.0,
+    "estimated_closing_costs": 12939.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 11700.0,
+    "verified_monthly_income": 11700.0,
+    "years_employed": 13.7,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 40.0,
+      "balance": 1280.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 683,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 239000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 18000.0,
+        "deposit_date": "2026-10-08",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

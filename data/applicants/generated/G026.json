@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G026",
+  "name": "Raj Patel",
+  "closing_date": "2026-12-07",
+  "loan": {
+    "amount": 381500.0,
+    "property_value": 545000.0,
+    "monthly_housing_payment": 3056.0,
+    "estimated_closing_costs": 14203.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 10500.0,
+    "verified_monthly_income": 5800.0,
+    "years_employed": 10.9,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 693,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 203000.0,
+    "retirement_balance": 79000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 52.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  }
+}

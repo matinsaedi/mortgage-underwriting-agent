@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G034",
+  "name": "Ana Brown",
+  "closing_date": "2026-11-13",
+  "loan": {
+    "amount": 490000.0,
+    "property_value": 700000.0,
+    "monthly_housing_payment": 3897.0,
+    "estimated_closing_costs": 20779.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 15700.0,
+    "verified_monthly_income": 15700.0,
+    "years_employed": 6.6,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 95.0,
+      "balance": 3515.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 100.0,
+      "balance": 2200.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 694,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 282000.0,
+    "retirement_balance": 62000.0,
+    "large_deposits": [
+      {
+        "amount": 22000.0,
+        "deposit_date": "2026-08-28",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

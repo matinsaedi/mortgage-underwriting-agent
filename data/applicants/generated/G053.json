@@ -1,0 +1,40 @@
+{
+  "applicant_id": "G053",
+  "name": "Hana Silva",
+  "closing_date": "2026-11-23",
+  "loan": {
+    "amount": 217000.0,
+    "property_value": 310000.0,
+    "monthly_housing_payment": 1781.0,
+    "estimated_closing_costs": 6874.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 5700.0,
+    "verified_monthly_income": 5700.0,
+    "years_employed": 3.3,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 721,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2017-05-26"
+  },
+  "assets": {
+    "bank_balance": 131000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

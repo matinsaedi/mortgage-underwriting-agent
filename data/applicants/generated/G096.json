@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G096",
+  "name": "Kofi Patel",
+  "closing_date": "2026-11-27",
+  "loan": {
+    "amount": 476000.0,
+    "property_value": 680000.0,
+    "monthly_housing_payment": 3788.0,
+    "estimated_closing_costs": 16846.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 12100.0,
+    "verified_monthly_income": 12100.0,
+    "years_employed": 2.8,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 115.0,
+      "balance": 3680.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 685,
+    "bankruptcy_chapter": 7,
+    "bankruptcy_discharge_date": "2022-12-15",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 278000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2022-12-15; the 4-year wait ends 2026-12-15, after the 2026-11-27 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

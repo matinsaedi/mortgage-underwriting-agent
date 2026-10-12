@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G065",
+  "name": "Tom Nguyen",
+  "closing_date": "2026-11-13",
+  "loan": {
+    "amount": 416500.0,
+    "property_value": 595000.0,
+    "monthly_housing_payment": 3327.0,
+    "estimated_closing_costs": 16004.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 11200.0,
+    "verified_monthly_income": 11200.0,
+    "years_employed": 3.6,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 80.0,
+      "balance": 1920.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 755,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 199004.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 19000.0,
+        "deposit_date": "2026-08-25",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $180,004 are short of the $194,504 needed; document the source of $19,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G104",
+  "name": "Kofi Okafor",
+  "closing_date": "2026-11-03",
+  "loan": {
+    "amount": 318500.0,
+    "property_value": 455000.0,
+    "monthly_housing_payment": 2568.0,
+    "estimated_closing_costs": 13218.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 11000.0,
+    "verified_monthly_income": 11000.0,
+    "years_employed": 2.4,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 150.0,
+      "balance": 2850.0,
+      "months_remaining": 19
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 300.0,
+      "balance": 4800.0,
+      "months_remaining": 16
+    }
+  ],
+  "credit": {
+    "score": 794,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 151654.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 69000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $151,654 are short of the $154,854 needed; $69,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

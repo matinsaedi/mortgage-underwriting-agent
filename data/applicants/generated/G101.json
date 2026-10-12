@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G101",
+  "name": "Tom Nguyen",
+  "closing_date": "2026-11-30",
+  "loan": {
+    "amount": 269500.0,
+    "property_value": 385000.0,
+    "monthly_housing_payment": 2188.0,
+    "estimated_closing_costs": 7980.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 8700.0,
+    "verified_monthly_income": 8700.0,
+    "years_employed": 8.8,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 600.0,
+      "balance": 22200.0,
+      "months_remaining": 37
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 90.0,
+      "balance": 3420.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 702,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 129256.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 29000.0,
+        "deposit_date": "2026-09-14",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $100,256 are short of the $127,856 needed; document the source of $29,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  }
+}

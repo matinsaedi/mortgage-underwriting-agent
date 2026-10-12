@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G012",
+  "name": "Elena Garcia",
+  "closing_date": "2026-12-17",
+  "loan": {
+    "amount": 332500.0,
+    "property_value": 475000.0,
+    "monthly_housing_payment": 2676.0,
+    "estimated_closing_costs": 12993.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 8700.0,
+    "verified_monthly_income": 8700.0,
+    "years_employed": 5.9,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 330.0,
+      "balance": 18480.0,
+      "months_remaining": 56
+    }
+  ],
+  "credit": {
+    "score": 720,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 100993.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 66000.0,
+        "donor_relationship": "grandparent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

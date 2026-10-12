@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G008",
+  "name": "Hana Novak",
+  "closing_date": "2026-11-22",
+  "loan": {
+    "amount": 217000.0,
+    "property_value": 310000.0,
+    "monthly_housing_payment": 1781.0,
+    "estimated_closing_costs": 6917.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 6200.0,
+    "verified_monthly_income": 3300.0,
+    "years_employed": 4.4,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 725,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 124000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 54.0% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  }
+}

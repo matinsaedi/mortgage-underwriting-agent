@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G063",
+  "name": "Ana Garcia",
+  "closing_date": "2026-12-18",
+  "loan": {
+    "amount": 382500.0,
+    "property_value": 510000.0,
+    "monthly_housing_payment": 3027.0,
+    "estimated_closing_costs": 12450.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 11600.0,
+    "verified_monthly_income": 11600.0,
+    "years_employed": 4.0,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 150.0,
+      "balance": 4500.0,
+      "months_remaining": 30
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 230.0,
+      "balance": 8970.0,
+      "months_remaining": 39
+    }
+  ],
+  "credit": {
+    "score": 700,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 192000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

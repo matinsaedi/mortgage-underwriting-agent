@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G023",
+  "name": "Nina Garcia",
+  "closing_date": "2026-12-07",
+  "loan": {
+    "amount": 397500.0,
+    "property_value": 530000.0,
+    "monthly_housing_payment": 3142.0,
+    "estimated_closing_costs": 11370.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 13300.0,
+    "verified_monthly_income": 13300.0,
+    "years_employed": 7.2,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 290.0,
+      "balance": 9570.0,
+      "months_remaining": 33
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 500.0,
+      "balance": 9500.0,
+      "months_remaining": 19
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 3390.0,
+      "balance": 30510.0,
+      "months_remaining": 9
+    }
+  ],
+  "credit": {
+    "score": 766,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 210000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

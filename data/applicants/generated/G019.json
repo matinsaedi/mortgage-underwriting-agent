@@ -1,0 +1,40 @@
+{
+  "applicant_id": "G019",
+  "name": "Omar Haddad",
+  "closing_date": "2026-12-13",
+  "loan": {
+    "amount": 360000.0,
+    "property_value": 450000.0,
+    "monthly_housing_payment": 2825.0,
+    "estimated_closing_costs": 9651.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 8400.0,
+    "verified_monthly_income": 8400.0,
+    "years_employed": 12.0,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 688,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2018-06-17"
+  },
+  "assets": {
+    "bank_balance": 154000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

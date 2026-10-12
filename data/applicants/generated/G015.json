@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G015",
+  "name": "Priya Brown",
+  "closing_date": "2026-12-28",
+  "loan": {
+    "amount": 584000.0,
+    "property_value": 730000.0,
+    "monthly_housing_payment": 4521.0,
+    "estimated_closing_costs": 16918.0,
+    "property_type": "2-4 unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 15600.0,
+    "verified_monthly_income": 15600.0,
+    "years_employed": 14.7,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 550.0,
+      "balance": 14850.0,
+      "months_remaining": 27
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 180.0,
+      "balance": 4680.0,
+      "months_remaining": 26
+    }
+  ],
+  "credit": {
+    "score": 751,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 236000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [
+      {
+        "amount": 33000.0,
+        "deposit_date": "2026-11-16",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G084",
+  "name": "Omar Haddad",
+  "closing_date": "2026-12-04",
+  "loan": {
+    "amount": 600000.0,
+    "property_value": 750000.0,
+    "monthly_housing_payment": 4642.0,
+    "estimated_closing_costs": 20980.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 15900.0,
+    "verified_monthly_income": 15900.0,
+    "years_employed": 7.8,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 80.0,
+      "balance": 1680.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 180.0,
+      "balance": 9540.0,
+      "months_remaining": 53
+    }
+  ],
+  "credit": {
+    "score": 695,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2017-05-17"
+  },
+  "assets": {
+    "bank_balance": 255000.0,
+    "retirement_balance": 40000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

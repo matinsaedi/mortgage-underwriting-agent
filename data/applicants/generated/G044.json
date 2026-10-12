@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G044",
+  "name": "Tom Smith",
+  "closing_date": "2026-11-11",
+  "loan": {
+    "amount": 382500.0,
+    "property_value": 510000.0,
+    "monthly_housing_payment": 3027.0,
+    "estimated_closing_costs": 13035.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 10300.0,
+    "verified_monthly_income": 10300.0,
+    "years_employed": 11.8,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 120.0,
+      "balance": 3000.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 715,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 114335.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 30000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $114,335 are short of the $140,535 needed; $30,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

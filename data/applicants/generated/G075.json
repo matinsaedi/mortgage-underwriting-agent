@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G075",
+  "name": "Mei Haddad",
+  "closing_date": "2026-12-15",
+  "loan": {
+    "amount": 378000.0,
+    "property_value": 420000.0,
+    "monthly_housing_payment": 2909.0,
+    "estimated_closing_costs": 8433.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 12200.0,
+    "verified_monthly_income": 12200.0,
+    "years_employed": 2.0,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 540.0,
+      "balance": 18900.0,
+      "months_remaining": 35
+    }
+  ],
+  "credit": {
+    "score": 793,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 13600.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 42751.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($21,000) must come from the borrower's own funds; they have $13,600."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

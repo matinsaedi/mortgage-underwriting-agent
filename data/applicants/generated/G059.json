@@ -1,0 +1,40 @@
+{
+  "applicant_id": "G059",
+  "name": "Kofi Okafor",
+  "closing_date": "2026-12-19",
+  "loan": {
+    "amount": 436000.0,
+    "property_value": 545000.0,
+    "monthly_housing_payment": 3401.0,
+    "estimated_closing_costs": 12951.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 10700.0,
+    "verified_monthly_income": 10700.0,
+    "years_employed": 6.2,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 725,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2022-09-30",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 150000.0,
+    "retirement_balance": 101000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

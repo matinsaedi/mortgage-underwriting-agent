@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G116",
+  "name": "Liam Haddad",
+  "closing_date": "2026-11-22",
+  "loan": {
+    "amount": 296000.0,
+    "property_value": 370000.0,
+    "monthly_housing_payment": 2341.0,
+    "estimated_closing_costs": 10689.0,
+    "property_type": "2-4 unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 11000.0,
+    "verified_monthly_income": 11000.0,
+    "years_employed": 13.6,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 135.0,
+      "balance": 5400.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 460.0,
+      "balance": 6900.0,
+      "months_remaining": 15
+    }
+  ],
+  "credit": {
+    "score": 779,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 125000.0,
+    "retirement_balance": 142000.0,
+    "large_deposits": [
+      {
+        "amount": 11000.0,
+        "deposit_date": "2026-10-02",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

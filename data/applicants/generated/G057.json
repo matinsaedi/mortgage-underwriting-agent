@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G057",
+  "name": "Tom Haddad",
+  "closing_date": "2026-11-27",
+  "loan": {
+    "amount": 311250.0,
+    "property_value": 415000.0,
+    "monthly_housing_payment": 2482.0,
+    "estimated_closing_costs": 10072.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 9800.0,
+    "verified_monthly_income": 9800.0,
+    "years_employed": 9.9,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 70.0,
+      "balance": 1890.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 120.0,
+      "balance": 4320.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 717,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2017-12-03"
+  },
+  "assets": {
+    "bank_balance": 166000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

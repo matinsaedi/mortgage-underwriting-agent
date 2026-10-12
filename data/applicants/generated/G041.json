@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G041",
+  "name": "Ana Chen",
+  "closing_date": "2026-11-17",
+  "loan": {
+    "amount": 224000.0,
+    "property_value": 320000.0,
+    "monthly_housing_payment": 1836.0,
+    "estimated_closing_costs": 8977.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 6200.0,
+    "verified_monthly_income": 6200.0,
+    "years_employed": 8.8,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 150.0,
+      "balance": 4050.0,
+      "months_remaining": 27
+    }
+  ],
+  "credit": {
+    "score": 690,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 86277.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 51000.0,
+        "donor_relationship": "grandparent",
+        "has_gift_letter": false
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $86,277 are short of the $104,977 needed; obtain a signed gift letter for $51,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G009",
+  "name": "Omar Garcia",
+  "closing_date": "2026-11-07",
+  "loan": {
+    "amount": 484000.0,
+    "property_value": 605000.0,
+    "monthly_housing_payment": 3764.0,
+    "estimated_closing_costs": 16522.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 12700.0,
+    "verified_monthly_income": 12700.0,
+    "years_employed": 3.4,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 510.0,
+      "balance": 14790.0,
+      "months_remaining": 29
+    },
+    {
+      "kind": "credit card",
+      "monthly_payment": 110.0,
+      "balance": 2640.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 777,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 114350.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 59000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $114,350 are short of the $145,050 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

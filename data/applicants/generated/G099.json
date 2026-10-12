@@ -1,0 +1,50 @@
+{
+  "applicant_id": "G099",
+  "name": "Lisa Rossi",
+  "closing_date": "2026-12-20",
+  "loan": {
+    "amount": 258750.0,
+    "property_value": 345000.0,
+    "monthly_housing_payment": 2080.0,
+    "estimated_closing_costs": 9849.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 7100.0,
+    "verified_monthly_income": 7100.0,
+    "years_employed": 14.2,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 714,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 105779.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 27000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $105,779 are short of the $108,579 needed; $27,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

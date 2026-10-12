@@ -1,0 +1,47 @@
+{
+  "applicant_id": "G025",
+  "name": "Hana Haddad",
+  "closing_date": "2026-11-18",
+  "loan": {
+    "amount": 502500.0,
+    "property_value": 670000.0,
+    "monthly_housing_payment": 3946.0,
+    "estimated_closing_costs": 15588.0,
+    "property_type": "2-4 unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 12700.0,
+    "verified_monthly_income": 12700.0,
+    "years_employed": 3.0,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 3040.0,
+      "balance": 21280.0,
+      "months_remaining": 7
+    }
+  ],
+  "credit": {
+    "score": 748,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 215000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

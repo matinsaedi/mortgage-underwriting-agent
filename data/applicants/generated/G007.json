@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G007",
+  "name": "Tom Garcia",
+  "closing_date": "2026-11-30",
+  "loan": {
+    "amount": 273750.0,
+    "property_value": 365000.0,
+    "monthly_housing_payment": 2195.0,
+    "estimated_closing_costs": 8296.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 8900.0,
+    "verified_monthly_income": 8900.0,
+    "years_employed": 5.7,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 200.0,
+      "balance": 7200.0,
+      "months_remaining": 36
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 260.0,
+      "balance": 8840.0,
+      "months_remaining": 34
+    }
+  ],
+  "credit": {
+    "score": 721,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 85346.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 41000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": false
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,346 are short of the $99,546 needed; obtain a signed gift letter for $41,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

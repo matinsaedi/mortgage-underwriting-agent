@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G021",
+  "name": "Liam Garcia",
+  "closing_date": "2026-11-17",
+  "loan": {
+    "amount": 465000.0,
+    "property_value": 620000.0,
+    "monthly_housing_payment": 3659.0,
+    "estimated_closing_costs": 12912.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 11300.0,
+    "verified_monthly_income": 6300.0,
+    "years_employed": 4.2,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 744,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 234000.0,
+    "retirement_balance": 92000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 58.1% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  }
+}

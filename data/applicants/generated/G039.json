@@ -1,0 +1,50 @@
+{
+  "applicant_id": "G039",
+  "name": "Tom Rossi",
+  "closing_date": "2026-11-13",
+  "loan": {
+    "amount": 337500.0,
+    "property_value": 450000.0,
+    "monthly_housing_payment": 2683.0,
+    "estimated_closing_costs": 9186.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 8300.0,
+    "verified_monthly_income": 8300.0,
+    "years_employed": 8.2,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 741,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 89986.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 71000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $89,986 are short of the $121,686 needed; $71,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

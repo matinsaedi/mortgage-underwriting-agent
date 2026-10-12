@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G079",
+  "name": "Ben Patel",
+  "closing_date": "2026-12-27",
+  "loan": {
+    "amount": 508500.0,
+    "property_value": 565000.0,
+    "monthly_housing_payment": 3879.0,
+    "estimated_closing_costs": 13205.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 10600.0,
+    "verified_monthly_income": 10600.0,
+    "years_employed": 7.7,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 520.0,
+      "balance": 14040.0,
+      "months_remaining": 27
+    }
+  ],
+  "credit": {
+    "score": 780,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 28600.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 50963.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

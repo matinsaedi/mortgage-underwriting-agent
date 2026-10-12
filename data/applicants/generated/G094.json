@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G094",
+  "name": "Diego Chen",
+  "closing_date": "2026-11-22",
+  "loan": {
+    "amount": 195000.0,
+    "property_value": 260000.0,
+    "monthly_housing_payment": 1592.0,
+    "estimated_closing_costs": 6694.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 6000.0,
+    "verified_monthly_income": 6000.0,
+    "years_employed": 4.9,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 150.0,
+      "balance": 7200.0,
+      "months_remaining": 48
+    }
+  ],
+  "credit": {
+    "score": 745,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 56394.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 39000.0,
+        "donor_relationship": "fiance",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G113",
+  "name": "Nina Brown",
+  "closing_date": "2026-11-25",
+  "loan": {
+    "amount": 413000.0,
+    "property_value": 590000.0,
+    "monthly_housing_payment": 3300.0,
+    "estimated_closing_costs": 17222.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 11400.0,
+    "verified_monthly_income": 11400.0,
+    "years_employed": 4.2,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 595,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 221000.0,
+    "retirement_balance": 57000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Credit score 595 is below the 620 minimum."
+    ],
+    "rule_ids": [
+      "B3-5.1-01"
+    ]
+  }
+}

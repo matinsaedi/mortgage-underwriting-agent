@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G022",
+  "name": "Mei Smith",
+  "closing_date": "2026-11-10",
+  "loan": {
+    "amount": 381500.0,
+    "property_value": 545000.0,
+    "monthly_housing_payment": 3056.0,
+    "estimated_closing_costs": 15617.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 11800.0,
+    "verified_monthly_income": 11800.0,
+    "years_employed": 10.5,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 410.0,
+      "balance": 20090.0,
+      "months_remaining": 49
+    }
+  ],
+  "credit": {
+    "score": 735,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2021-08-27"
+  },
+  "assets": {
+    "bank_balance": 229000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2021-08-27; the 7-year wait ends 2028-08-27, after the 2026-11-10 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G069",
+  "name": "Lisa Novak",
+  "closing_date": "2026-12-12",
+  "loan": {
+    "amount": 300000.0,
+    "property_value": 375000.0,
+    "monthly_housing_payment": 2371.0,
+    "estimated_closing_costs": 11016.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 8800.0,
+    "verified_monthly_income": 8800.0,
+    "years_employed": 7.6,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 105.0,
+      "balance": 3255.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 490.0,
+      "balance": 29400.0,
+      "months_remaining": 60
+    }
+  ],
+  "credit": {
+    "score": 762,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2023-10-26",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 108000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

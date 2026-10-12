@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G030",
+  "name": "Elena Kim",
+  "closing_date": "2026-12-12",
+  "loan": {
+    "amount": 517500.0,
+    "property_value": 575000.0,
+    "monthly_housing_payment": 3946.0,
+    "estimated_closing_costs": 16052.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 11500.0,
+    "verified_monthly_income": 11500.0,
+    "years_employed": 11.4,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 100.0,
+      "balance": 2400.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 699,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 21800.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 63844.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($28,750) must come from the borrower's own funds; they have $21,800."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

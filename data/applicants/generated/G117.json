@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G117",
+  "name": "Sarah Patel",
+  "closing_date": "2026-12-07",
+  "loan": {
+    "amount": 406000.0,
+    "property_value": 580000.0,
+    "monthly_housing_payment": 3246.0,
+    "estimated_closing_costs": 13962.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 13600.0,
+    "verified_monthly_income": 13600.0,
+    "years_employed": 12.8,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 270.0,
+      "balance": 5400.0,
+      "months_remaining": 20
+    }
+  ],
+  "credit": {
+    "score": 706,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 247000.0,
+    "retirement_balance": 126000.0,
+    "large_deposits": [
+      {
+        "amount": 11000.0,
+        "deposit_date": "2026-10-28",
+        "source_documented": false
+      }
+    ],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

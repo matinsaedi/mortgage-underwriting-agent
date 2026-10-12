@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G103",
+  "name": "Kofi Silva",
+  "closing_date": "2026-12-31",
+  "loan": {
+    "amount": 216000.0,
+    "property_value": 270000.0,
+    "monthly_housing_payment": 1735.0,
+    "estimated_closing_costs": 6553.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 7000.0,
+    "verified_monthly_income": 7000.0,
+    "years_employed": 2.4,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 350.0,
+      "balance": 4200.0,
+      "months_remaining": 12
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 190.0,
+      "balance": 5700.0,
+      "months_remaining": 30
+    }
+  ],
+  "credit": {
+    "score": 726,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 62763.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 15000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $62,763 are short of the $70,963 needed; $15,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

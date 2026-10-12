@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G031",
+  "name": "Kofi Nguyen",
+  "closing_date": "2026-11-30",
+  "loan": {
+    "amount": 607500.0,
+    "property_value": 675000.0,
+    "monthly_housing_payment": 4614.0,
+    "estimated_closing_costs": 15392.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 15000.0,
+    "verified_monthly_income": 15000.0,
+    "years_employed": 2.7,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 230.0,
+      "balance": 6670.0,
+      "months_remaining": 29
+    }
+  ],
+  "credit": {
+    "score": 767,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 52300.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 39920.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

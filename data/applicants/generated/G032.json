@@ -1,0 +1,46 @@
+{
+  "applicant_id": "G032",
+  "name": "Hana Novak",
+  "closing_date": "2026-12-18",
+  "loan": {
+    "amount": 431250.0,
+    "property_value": 575000.0,
+    "monthly_housing_payment": 3400.0,
+    "estimated_closing_costs": 16606.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 11700.0,
+    "verified_monthly_income": 11700.0,
+    "years_employed": 3.9,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 740,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 116656.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 70000.0,
+        "donor_relationship": "sibling",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

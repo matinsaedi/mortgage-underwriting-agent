@@ -1,0 +1,47 @@
+{
+  "applicant_id": "G003",
+  "name": "Liam Brown",
+  "closing_date": "2026-12-17",
+  "loan": {
+    "amount": 336000.0,
+    "property_value": 420000.0,
+    "monthly_housing_payment": 2644.0,
+    "estimated_closing_costs": 11582.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 8200.0,
+    "verified_monthly_income": 8200.0,
+    "years_employed": 4.9,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 150.0,
+      "balance": 4800.0,
+      "months_remaining": 32
+    }
+  ],
+  "credit": {
+    "score": 756,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 160000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

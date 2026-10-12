@@ -1,0 +1,50 @@
+{
+  "applicant_id": "G114",
+  "name": "Tom Novak",
+  "closing_date": "2026-11-24",
+  "loan": {
+    "amount": 607500.0,
+    "property_value": 675000.0,
+    "monthly_housing_payment": 4614.0,
+    "estimated_closing_costs": 19048.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 11800.0,
+    "verified_monthly_income": 11800.0,
+    "years_employed": 11.9,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 748,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 19000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 79876.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($33,750) must come from the borrower's own funds; they have $19,000."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

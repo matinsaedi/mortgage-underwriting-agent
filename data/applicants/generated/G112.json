@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G112",
+  "name": "Ana Silva",
+  "closing_date": "2026-12-14",
+  "loan": {
+    "amount": 416000.0,
+    "property_value": 520000.0,
+    "monthly_housing_payment": 3249.0,
+    "estimated_closing_costs": 13700.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 10400.0,
+    "verified_monthly_income": 10400.0,
+    "years_employed": 14.4,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 210.0,
+      "balance": 6090.0,
+      "months_remaining": 29
+    }
+  ],
+  "credit": {
+    "score": 777,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2025-06-12",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 154000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-06-12; the 2-year wait ends 2027-06-12, after the 2026-12-14 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

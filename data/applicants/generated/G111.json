@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G111",
+  "name": "Sarah Garcia",
+  "closing_date": "2026-12-18",
+  "loan": {
+    "amount": 600000.0,
+    "property_value": 750000.0,
+    "monthly_housing_payment": 4642.0,
+    "estimated_closing_costs": 18894.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 14500.0,
+    "verified_monthly_income": 14500.0,
+    "years_employed": 5.5,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 115.0,
+      "balance": 2530.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 785,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 104000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $104,000 are short of the $168,894 needed to close and hold 0 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  }
+}

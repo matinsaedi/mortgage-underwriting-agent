@@ -1,0 +1,47 @@
+{
+  "applicant_id": "G118",
+  "name": "Liam Silva",
+  "closing_date": "2026-11-06",
+  "loan": {
+    "amount": 412500.0,
+    "property_value": 550000.0,
+    "monthly_housing_payment": 3257.0,
+    "estimated_closing_costs": 13568.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 13200.0,
+    "verified_monthly_income": 13200.0,
+    "years_employed": 9.6,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 70.0,
+      "balance": 2170.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 797,
+    "bankruptcy_chapter": 7,
+    "bankruptcy_discharge_date": "2021-08-07",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 197000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

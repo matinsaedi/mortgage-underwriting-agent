@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G014",
+  "name": "Sarah Garcia",
+  "closing_date": "2026-12-05",
+  "loan": {
+    "amount": 476000.0,
+    "property_value": 595000.0,
+    "monthly_housing_payment": 3703.0,
+    "estimated_closing_costs": 15202.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 13500.0,
+    "verified_monthly_income": 13500.0,
+    "years_employed": 14.5,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 290.0,
+      "balance": 3770.0,
+      "months_remaining": 13
+    }
+  ],
+  "credit": {
+    "score": 800,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2025-05-29",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 172000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-05-29; the 2-year wait ends 2027-05-29, after the 2026-12-05 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

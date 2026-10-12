@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G083",
+  "name": "Priya Brown",
+  "closing_date": "2026-12-17",
+  "loan": {
+    "amount": 406000.0,
+    "property_value": 580000.0,
+    "monthly_housing_payment": 3246.0,
+    "estimated_closing_costs": 14921.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 13800.0,
+    "verified_monthly_income": 13800.0,
+    "years_employed": 4.0,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 150.0,
+      "balance": 3750.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 480.0,
+      "balance": 27840.0,
+      "months_remaining": 58
+    }
+  ],
+  "credit": {
+    "score": 697,
+    "bankruptcy_chapter": 13,
+    "bankruptcy_discharge_date": "2025-12-07",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 254000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-12-07; the 2-year wait ends 2027-12-07, after the 2026-12-17 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

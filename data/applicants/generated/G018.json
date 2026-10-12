@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G018",
+  "name": "Raj Kim",
+  "closing_date": "2026-11-09",
+  "loan": {
+    "amount": 450000.0,
+    "property_value": 600000.0,
+    "monthly_housing_payment": 3544.0,
+    "estimated_closing_costs": 13863.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Northwind Logistics",
+    "monthly_income": 11600.0,
+    "verified_monthly_income": 11600.0,
+    "years_employed": 14.7,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 130.0,
+      "balance": 3380.0,
+      "months_remaining": null
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 330.0,
+      "balance": 9900.0,
+      "months_remaining": 30
+    }
+  ],
+  "credit": {
+    "score": 788,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 146263.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 44000.0,
+        "donor_relationship": "fiance",
+        "has_gift_letter": false
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $146,263 are short of the $163,863 needed; obtain a signed gift letter for $44,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

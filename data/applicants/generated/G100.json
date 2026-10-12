@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G100",
+  "name": "Ana Garcia",
+  "closing_date": "2026-11-20",
+  "loan": {
+    "amount": 428000.0,
+    "property_value": 535000.0,
+    "monthly_housing_payment": 3340.0,
+    "estimated_closing_costs": 11547.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 13400.0,
+    "verified_monthly_income": 13400.0,
+    "years_employed": 14.7,
+    "pay_frequency": "monthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 590.0,
+      "balance": 20650.0,
+      "months_remaining": 35
+    }
+  ],
+  "credit": {
+    "score": 736,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 93347.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 27000.0,
+        "donor_relationship": "interested party",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $93,347 are short of the $118,547 needed; $27,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

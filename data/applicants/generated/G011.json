@@ -1,0 +1,47 @@
+{
+  "applicant_id": "G011",
+  "name": "Ben Okafor",
+  "closing_date": "2026-11-21",
+  "loan": {
+    "amount": 461250.0,
+    "property_value": 615000.0,
+    "monthly_housing_payment": 3630.0,
+    "estimated_closing_costs": 14237.0,
+    "property_type": "2-4 unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Cedar School Board",
+    "monthly_income": 12100.0,
+    "verified_monthly_income": 12100.0,
+    "years_employed": 8.0,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 125.0,
+      "balance": 5000.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 767,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 237000.0,
+    "retirement_balance": 138000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

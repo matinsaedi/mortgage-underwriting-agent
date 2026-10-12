@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G002",
+  "name": "Diego Nguyen",
+  "closing_date": "2026-11-29",
+  "loan": {
+    "amount": 388500.0,
+    "property_value": 555000.0,
+    "monthly_housing_payment": 3110.0,
+    "estimated_closing_costs": 14699.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 9800.0,
+    "verified_monthly_income": 9800.0,
+    "years_employed": 2.0,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 210.0,
+      "balance": 5040.0,
+      "months_remaining": 24
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 2070.0,
+      "balance": 4140.0,
+      "months_remaining": 2
+    }
+  ],
+  "credit": {
+    "score": 758,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 225000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

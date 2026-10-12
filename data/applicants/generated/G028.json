@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G028",
+  "name": "Raj Smith",
+  "closing_date": "2026-12-08",
+  "loan": {
+    "amount": 307500.0,
+    "property_value": 410000.0,
+    "monthly_housing_payment": 2453.0,
+    "estimated_closing_costs": 9015.0,
+    "property_type": "1-unit",
+    "occupancy": "investment property",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Bluefin Software",
+    "monthly_income": 10200.0,
+    "verified_monthly_income": 10200.0,
+    "years_employed": 13.2,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "credit card",
+      "monthly_payment": 140.0,
+      "balance": 4480.0,
+      "months_remaining": null
+    }
+  ],
+  "credit": {
+    "score": 741,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 110033.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 50000.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $110,033 are short of the $126,233 needed; $50,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  }
+}

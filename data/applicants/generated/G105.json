@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G105",
+  "name": "Lisa Chen",
+  "closing_date": "2026-11-08",
+  "loan": {
+    "amount": 483750.0,
+    "property_value": 645000.0,
+    "monthly_housing_payment": 3802.0,
+    "estimated_closing_costs": 13316.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 12400.0,
+    "verified_monthly_income": 12400.0,
+    "years_employed": 11.3,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 800,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 113400.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $113,400 are short of the $182,170 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  }
+}

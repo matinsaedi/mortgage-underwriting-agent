@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G056",
+  "name": "Raj Garcia",
+  "closing_date": "2026-12-20",
+  "loan": {
+    "amount": 409500.0,
+    "property_value": 585000.0,
+    "monthly_housing_payment": 3273.0,
+    "estimated_closing_costs": 14184.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 10400.0,
+    "verified_monthly_income": 10400.0,
+    "years_employed": 11.0,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 150.0,
+      "balance": 3150.0,
+      "months_remaining": 21
+    }
+  ],
+  "credit": {
+    "score": 596,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 223000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Credit score 596 is below the 620 minimum."
+    ],
+    "rule_ids": [
+      "B3-5.1-01"
+    ]
+  }
+}

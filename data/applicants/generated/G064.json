@@ -1,0 +1,40 @@
+{
+  "applicant_id": "G064",
+  "name": "Sarah Kim",
+  "closing_date": "2026-12-07",
+  "loan": {
+    "amount": 346500.0,
+    "property_value": 495000.0,
+    "monthly_housing_payment": 2785.0,
+    "estimated_closing_costs": 11679.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 8800.0,
+    "verified_monthly_income": 8800.0,
+    "years_employed": 9.2,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 723,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2018-06-04"
+  },
+  "assets": {
+    "bank_balance": 205000.0,
+    "retirement_balance": 33000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

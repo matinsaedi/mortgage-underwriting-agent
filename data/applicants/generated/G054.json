@@ -1,0 +1,59 @@
+{
+  "applicant_id": "G054",
+  "name": "Liam Kim",
+  "closing_date": "2026-12-09",
+  "loan": {
+    "amount": 418500.0,
+    "property_value": 465000.0,
+    "monthly_housing_payment": 3210.0,
+    "estimated_closing_costs": 10001.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 12700.0,
+    "verified_monthly_income": 12700.0,
+    "years_employed": 6.5,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 210.0,
+      "balance": 11130.0,
+      "months_remaining": 53
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 270.0,
+      "balance": 12690.0,
+      "months_remaining": 47
+    }
+  ],
+  "credit": {
+    "score": 736,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 33800.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": [
+      {
+        "amount": 29921.0,
+        "donor_relationship": "parent",
+        "has_gift_letter": true
+      }
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

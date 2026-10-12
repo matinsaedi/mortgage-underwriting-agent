@@ -1,0 +1,47 @@
+{
+  "applicant_id": "G073",
+  "name": "Mei Haddad",
+  "closing_date": "2026-12-03",
+  "loan": {
+    "amount": 455000.0,
+    "property_value": 650000.0,
+    "monthly_housing_payment": 3626.0,
+    "estimated_closing_costs": 14793.0,
+    "property_type": "2-4 unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 14400.0,
+    "verified_monthly_income": 14400.0,
+    "years_employed": 7.4,
+    "pay_frequency": "weekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 590.0,
+      "balance": 9440.0,
+      "months_remaining": 16
+    }
+  ],
+  "credit": {
+    "score": 769,
+    "bankruptcy_chapter": 7,
+    "bankruptcy_discharge_date": "2022-03-25",
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 268000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

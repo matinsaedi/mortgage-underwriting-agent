@@ -1,0 +1,44 @@
+{
+  "applicant_id": "G092",
+  "name": "Raj Okafor",
+  "closing_date": "2026-12-04",
+  "loan": {
+    "amount": 493500.0,
+    "property_value": 705000.0,
+    "monthly_housing_payment": 3924.0,
+    "estimated_closing_costs": 16635.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 12400.0,
+    "verified_monthly_income": 6200.0,
+    "years_employed": 10.8,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [],
+  "credit": {
+    "score": 697,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 315000.0,
+    "retirement_balance": 120000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 63.3% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  }
+}

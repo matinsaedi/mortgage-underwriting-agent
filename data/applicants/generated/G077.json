@@ -1,0 +1,51 @@
+{
+  "applicant_id": "G077",
+  "name": "Omar Okafor",
+  "closing_date": "2026-12-16",
+  "loan": {
+    "amount": 356000.0,
+    "property_value": 445000.0,
+    "monthly_housing_payment": 2795.0,
+    "estimated_closing_costs": 13285.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Maple Health",
+    "monthly_income": 11700.0,
+    "verified_monthly_income": 11700.0,
+    "years_employed": 13.7,
+    "pay_frequency": "semimonthly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 590.0,
+      "balance": 26550.0,
+      "months_remaining": 45
+    }
+  ],
+  "credit": {
+    "score": 731,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2020-05-29"
+  },
+  "assets": {
+    "bank_balance": 145000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2020-05-29; the 7-year wait ends 2027-05-29, after the 2026-12-16 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}

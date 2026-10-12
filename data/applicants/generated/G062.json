@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G062",
+  "name": "Hana Smith",
+  "closing_date": "2026-12-30",
+  "loan": {
+    "amount": 504000.0,
+    "property_value": 720000.0,
+    "monthly_housing_payment": 4005.0,
+    "estimated_closing_costs": 19846.0,
+    "property_type": "1-unit",
+    "occupancy": "second home",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Lakeshore Bank",
+    "monthly_income": 17200.0,
+    "verified_monthly_income": 17200.0,
+    "years_employed": 3.9,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "student loan",
+      "monthly_payment": 380.0,
+      "balance": 17860.0,
+      "months_remaining": 47
+    },
+    {
+      "kind": "auto loan",
+      "monthly_payment": 5080.0,
+      "balance": 45720.0,
+      "months_remaining": 9
+    }
+  ],
+  "credit": {
+    "score": 757,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": null
+  },
+  "assets": {
+    "bank_balance": 316000.0,
+    "retirement_balance": 0.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  }
+}

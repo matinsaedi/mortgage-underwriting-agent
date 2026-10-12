@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G082",
+  "name": "Lisa Nguyen",
+  "closing_date": "2026-11-18",
+  "loan": {
+    "amount": 423750.0,
+    "property_value": 565000.0,
+    "monthly_housing_payment": 3343.0,
+    "estimated_closing_costs": 15743.0,
+    "property_type": "1-unit",
+    "occupancy": "principal residence",
+    "underwriting": "DU"
+  },
+  "income": {
+    "employer": "Harbor Engineering",
+    "monthly_income": 15200.0,
+    "verified_monthly_income": 15200.0,
+    "years_employed": 14.9,
+    "pay_frequency": "biweekly",
+    "self_employed": false
+  },
+  "debts": [
+    {
+      "kind": "auto loan",
+      "monthly_payment": 350.0,
+      "balance": 17150.0,
+      "months_remaining": 49
+    },
+    {
+      "kind": "student loan",
+      "monthly_payment": 270.0,
+      "balance": 7560.0,
+      "months_remaining": 28
+    }
+  ],
+  "credit": {
+    "score": 728,
+    "bankruptcy_chapter": null,
+    "bankruptcy_discharge_date": null,
+    "foreclosure_date": "2022-02-06"
+  },
+  "assets": {
+    "bank_balance": 211000.0,
+    "retirement_balance": 67000.0,
+    "large_deposits": [],
+    "gifts": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-02-06; the 7-year wait ends 2029-02-06, after the 2026-11-18 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  }
+}
