@@ -1,0 +1,52 @@
+{
+  "applicant_id": "G107",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit history: No bankruptcy, foreclosure, or significant derogatory events; waiting periods not applicable. (B3-5.3-07)  \nDTI: 28.4% \u2264 50% maximum for DU underwritten loans. (B3-6-02)  \nFunds to close and reserves: Funds to close $129,905 covered by bank balance $106,805 plus gift $57,000; excess $33,900 yields 12.0 months reserves; no minimum reserve required for 1-unit principal residence. (B3-4.1-01)  \nLarge deposits: None reported.  \nGift funds: Sibling donor is acceptable relative; LTV 75% \u226480% requires no borrower contribution; gift letter provided. (B3-4.3-04)  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements principal residence 1-unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds sibling principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 24344,
+  "seconds": 56.7,
+  "finish_reason": "stop"
+}

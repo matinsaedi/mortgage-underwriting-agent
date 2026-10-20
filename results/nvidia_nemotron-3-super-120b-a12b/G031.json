@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G031",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score: DU loan casefile has no minimum; 699 acceptable. [B3-5.1-01]  \nDTI: 38.6% \u2264 50% DU limit. [B3-6.02]  \nLTV 90% triggers 5% own\u2011funds contribution for second home. [B3-4.3-04]  \nGift from parent with letter is eligible donor. [B3-4.3-04]  \nBorrower own funds 22,200 \u2265 5% of purchase price (17,250). [B3-4.3-04]  \nReserves: second home needs 2 months; available funds after closing 5,114 \u00f7 2,407 = 2.12 months. [B3-4.1-01]  \nNo large deposits; assets verified. [B3-4.2-02]  \nNo bankruptcy or foreclosure; waiting periods satisfied. [B3-5.3-07]  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI requirements DU loan casefiles"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home eligibility"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-01",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 46263,
+  "seconds": 84.8,
+  "finish_reason": "stop"
+}

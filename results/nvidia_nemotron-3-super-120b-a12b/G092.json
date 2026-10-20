@@ -1,0 +1,110 @@
+{
+  "applicant_id": "G092",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-07-31; the 7-year wait ends 2029-07-31, after the 2026-11-09 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Foreclosure: closing date 2026-11-09 is >3yr and <7yr after foreclosure 2022-07-31; LTV 70% \u226490% and purchase principal residence meets additional requirements per B3-5.3-07.  \n- DTI: 26.8% \u226450% DU limit per B3-6-02.  \n- Funds to close: $191,946 required; available assets $268,000 sufficient per B3-4.4-01.  \n- Reserves: No minimum reserve required for 1-unit principal residence per B3-4.1-01.  \n- Large deposits: none; no documentation needed per B3-4.2-02.  \n- Gifts: none; no documentation needed per B3-4.3-04.  \n- Credit score: DU loan casefile, no minimum score required per B3-5.1-01.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 409500,
+        "property_value": 585000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3273,
+        "monthly_debts": [
+          550,
+          380
+        ],
+        "monthly_income": 15700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 585000,
+        "loan_amount": 409500,
+        "closing_costs": 16446
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves assets"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserve requirements purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-6-02",
+    "B3-6-06",
+    "B3-6-07"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 81945,
+  "seconds": 81.3,
+  "finish_reason": "stop"
+}

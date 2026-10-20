@@ -1,0 +1,118 @@
+{
+  "applicant_id": "G069",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-12-21; the 7-year wait ends 2029-12-21, after the 2026-12-07 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Credit score: DU loan casefile, no minimum required (B3-5.1-01) \u2013 OK.  \nForeclosure waiting period: Foreclosure date 2022-12-21, closing 2026-12-07 (<7 years, no extenuating circumstances) \u2013 fails (B3-5.3-07).  \nDTI: 31.92% \u2264 50% max for DU (B3-6-02) \u2013 OK.  \nFunds to close: Bank balance $202,000 \u2265 funds to close $134,563 (B3-4.4-01) \u2013 OK.  \nReserves: 18.21 months \u2265 6 months required for 2\u20114 unit principal residence (B3-4.1-01) \u2013 OK.  \nLarge deposits: None reported (B3-4.2-02) \u2013 OK.  \nGifts: None reported (B3-4.3-04) \u2013 OK.  \nBorrower contribution: LTV 80% \u2264 80%, no minimum required (B3-4.3-06) \u2013 OK.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio DU maximum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserve requirements 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 476000,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3703,
+        "monthly_debts": [],
+        "monthly_income": 11600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 476000,
+        "closing_costs": 15563
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 202000,
+        "cash_to_close": 134563,
+        "monthly_pitia": 3703
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.2-05",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 13,
+  "input_tokens": 124061,
+  "seconds": 81.9,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,109 @@
+{
+  "applicant_id": "G028",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04",
+      "B3-5.1-01",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($25,500) must come from the borrower's own funds; they have $18,700."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefiles have no minimum credit score requirement (B3-5.1-01); score 726 is acceptable.  \n- DTI: 36.63% (housing payment + debts / income) is within typical DU risk assessment (B3-6-02).  \n- LTV: 90% (>80%) triggers 5% minimum borrower own funds requirement for second home with gifts (B3-4.3-04).  \n- Own funds: bank_balance $18,700 < 5% of purchase price ($25,500); shortfall $6,800.  \n- Gift funds: $56,524 from parent with gift letter is an acceptable donor and can be used for down payment, closing costs, and reserves (B3-4.3-04).  \n- Reserves: required 2 months for second home DU (B3-4.1-01); available funds $75,224 minus cash to close $64,902 = $10,322 yields 2.94 months reserves (reserves_months tool), sufficient.  \n- Large deposits: none reported.  \n- Bankruptcy/foreclosure: none.  \n- Funds to close: $64,902 (funds_to_close tool); covered by bank balance plus gift.  \n\nCondition: borrower must document additional own funds of at least $6,800 to meet the 5% minimum borrower contribution requirement.  \n\nDECISION: approve with conditions  \nRULES: B3-5.1-01, B3-6-02, B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home credit score minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home eligibility requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU DTI limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home LTV >80%"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 459000,
+        "property_value": 510000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3511,
+        "monthly_debts": [
+          105,
+          450
+        ],
+        "monthly_income": 11100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 510000,
+        "loan_amount": 459000,
+        "closing_costs": 13902
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 75224,
+        "cash_to_close": 64902,
+        "monthly_pitia": 3511
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 82031,
+  "seconds": 59.9,
+  "finish_reason": "stop"
+}

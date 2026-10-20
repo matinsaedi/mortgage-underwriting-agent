@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G048",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2021-01-21; the 7-year wait ends 2028-01-21, after the 2026-11-29 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit history: foreclosure 2021-01-21 requires 7\u2011year waiting period (B3-5.3-07); eligible 2028-01-21 > closing 2026-11-29 \u2192 insufficient.  \n- DTI: (2712+430)/9700\u00d7100 = 32.39% \u2264 50% DU limit (B3-6-02) \u2192 acceptable.  \n- Funds to close: $126,534 required; bank balance $162,000 sufficient.  \n- Reserves: (162,000\u2011126,534)/2712 = 13.08 months available \u2192 meets DU reserve needs.  \n- Large deposits: none reported.  \n- Gifts: none reported.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 455000,
+        "loan_amount": 341250,
+        "closing_costs": 12784
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 162000,
+        "cash_to_close": 126534,
+        "monthly_pitia": 2712
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2712,
+        "monthly_debts": [
+          430
+        ],
+        "monthly_income": 9700
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2021-01-21",
+        "years": 7
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 42530,
+  "seconds": 60.0,
+  "finish_reason": "stop"
+}

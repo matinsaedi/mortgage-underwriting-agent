@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G024",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $110,164 are short of the $160,364 needed; obtain a signed gift letter for $54,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefiles have no minimum score requirement (B3-5.1-01); score 696 is acceptable.  \n- DTI: 26.67% \u2264 50% max for DU (B3-6-02).  \n- Funds to close: $151,988 (down payment $135,000 + closing costs $16,988).  \n- Available funds: $110,164 bank balance + $54,000 gift = $164,164.  \n- Gift funds: eligible for second home at LTV \u226480% (B3-4.3-04); requires signed gift letter and verification of donor funds transfer.  \n- Reserves: 2 months required for second home DU (B3-4.1-01); available reserves after closing = 2.91 months (>2).  \n- Large deposits: none.  \n- Credit events: none.  \n- Employment: 9.3 years verified.  \n- Property: 1-unit second home.  \n\nAll requirements met pending gift documentation.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4188,
+        "monthly_debts": [
+          560
+        ],
+        "monthly_income": 17800
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 164164,
+        "cash_to_close": 151988,
+        "monthly_pitia": 4188
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 61205,
+  "seconds": 80.3,
+  "finish_reason": "stop"
+}

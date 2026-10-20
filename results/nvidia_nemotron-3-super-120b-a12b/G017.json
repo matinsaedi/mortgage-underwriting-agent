@@ -1,0 +1,105 @@
+{
+  "applicant_id": "G017",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $118,477 are short of the $132,477 needed; document the source of $31,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "- Credit: No bankruptcy/foreclosure; waiting periods not applicable (B3-5.3-07).  \n- DTI: 34.53% \u2264 50% max for DU loans (B3-6-02).  \n- Funds to close: $132,477 required; bank balance $149,477 includes large deposit.  \n- Large deposit: $31,000 > 50% of monthly income ($5,500) \u2192 large deposit; source undocumented (B3-4.2-02). Funds needed for down payment/closing costs; without sourcing, insufficient assets (reserves -3.78 months). Condition: provide source documentation.  \n- Reserves: No minimum reserve requirement for 1-unit principal residence (B3-4.1-01).  \n- Gifts: none.  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3703,
+        "monthly_debts": [
+          40,
+          55
+        ],
+        "monthly_income": 11000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "primary residence 1 unit reserves DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 476000,
+        "closing_costs": 13477
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 149477,
+        "cash_to_close": 132477,
+        "monthly_pitia": 3703
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 118477,
+        "cash_to_close": 132477,
+        "monthly_pitia": 3703
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 82248,
+  "seconds": 72.8,
+  "finish_reason": "stop"
+}

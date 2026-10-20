@@ -1,0 +1,134 @@
+{
+  "applicant_id": "G114",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.9% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "Credit score: DU loan casefile, no minimum score required (B3-5.1-01)  \nNo bankruptcy or foreclosure; waiting periods not applicable (B3-5.3-07)  \nDTI ratio 53.89% > 50% max for DU loan casefile (B3-6-02)  \nFunds to close $134,904; available funds $283,000 sufficient (B3-4.1-01)  \nReserves 50.84 months > 2 months required for second home (B3-4.1-01)  \nNo large deposits requiring documentation (B3-4.2-02)  \nNo gift funds; documentation not needed (B3-4.3-04)  \nOccupancy second home; reserves requirement satisfied (B3-4.1-01)  \nProperty type 1-unit; eligible  \nLTV 75% (ltv calculation) but Eligibility Matrix not consulted per assumption  \n\nDECISION: decline  \nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score requirements purchase loan Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "B3-5.1-01 Minimum Credit Score Requirements table"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI calculation verified income Fannie Mae"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2913,
+        "monthly_debts": [
+          590
+        ],
+        "monthly_income": 6500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU second home"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 490000,
+        "loan_amount": 367500,
+        "closing_costs": 12404
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves retirement funds Fannie Mae"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 283000,
+        "cash_to_close": 134904,
+        "monthly_pitia": 2913
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation Fannie Mae"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 367500,
+        "property_value": 490000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-13",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.3-07",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 15,
+  "input_tokens": 133757,
+  "seconds": 73.7,
+  "finish_reason": "stop"
+}

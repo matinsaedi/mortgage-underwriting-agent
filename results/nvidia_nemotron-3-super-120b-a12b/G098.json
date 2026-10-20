@@ -1,0 +1,99 @@
+{
+  "applicant_id": "G098",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- LTV 75% (calculated; no Eligibility Matrix check per instructions)  \n- DTI 24.94% \u2264 50% maximum for DU loan casefiles (B3-6-02)  \n- Funds to close $146,140 (down payment + closing costs)  \n- Reserves 18.73 months \u2265 6 months required for 2\u20114\u2011unit principal residence DU (B3-4.1-01)  \n- Large deposit $40,000 > 50% of monthly income ($6,300) \u2192 undocumented large deposit; verified assets reduced by $40,000 to $164,992, which covers down payment, closing costs, and required reserves (B3-4.2-02)  \n- Borrower minimum own\u2011funds contribution 3% of purchase price ($15,900) satisfied using verified assets (B3-4.3-06)  \n- Credit score 732, no bankruptcy or foreclosure  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 397500,
+        "property_value": 530000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3142,
+        "monthly_debts": [],
+        "monthly_income": 12600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 530000,
+        "loan_amount": 397500,
+        "closing_costs": 13640
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 204992,
+        "cash_to_close": 146140,
+        "monthly_pitia": 3142
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "5% minimum borrower contribution two to four unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution 3% two to four unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution definition"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-6-02"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 67154,
+  "seconds": 114.9,
+  "finish_reason": "stop"
+}

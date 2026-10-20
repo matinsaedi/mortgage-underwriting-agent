@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G008",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-10-06; the 4-year wait ends 2027-10-06, after the 2026-11-22 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Bankruptcy waiting period: Chapter 7 discharge 2023-10-06 requires 4 years; closing 2026-11-22 is before 2027-10-06, waiting period not met (B3-5.3-07).  \n- DTI: 28.73% (calculated).  \n- Funds to close: $99,917; available funds $124,000 sufficient.  \n- Reserves: 13.52 months > 2 months required for second home (B3-4.1-01).  \n- Large deposits: none.  \n- Gifts: none.  \n- Credit score: DU loan casefile, no minimum required (B3-5.1-01).  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1781,
+        "monthly_debts": [],
+        "monthly_income": 6200
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 310000,
+        "loan_amount": 217000,
+        "closing_costs": 6917
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 124000,
+        "cash_to_close": 99917,
+        "monthly_pitia": 1781
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 30192,
+  "seconds": 56.0,
+  "finish_reason": "stop"
+}

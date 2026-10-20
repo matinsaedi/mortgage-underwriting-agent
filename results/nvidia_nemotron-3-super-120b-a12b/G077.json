@@ -1,0 +1,87 @@
+{
+  "applicant_id": "G077",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-02",
+      "B3-5.1-01",
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit score: DU loan casefiles require no minimum score (B3-5.1-01); score 708 is acceptable.  \n- Foreclosure: 7\u2011year waiting period required (B3-5.3-07); foreclosure 2019-11-17, closing 2026-12-20 > 7 years, satisfied.  \n- DTI: 25.38% (housing + debts / income); DU will assess risk, no manual limit applied.  \n- Funds to close: $230,015; bank balance $266,000 covers closing (B3-4.2-02).  \n- Reserves: No minimum required for 1\u2011unit principal residence (B3-4.1-01).  \n- Large deposits: none; defined as >50% monthly income (B3-4.2-02).  \n- Gifts: none.  \n\nDECISION: approve  \nRULES: B3-5.1-01, B3-5.3-07, B3-4.2-02, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 493500,
+        "property_value": 705000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3924,
+        "monthly_debts": [
+          160,
+          180
+        ],
+        "monthly_income": 16800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 705000,
+        "loan_amount": 493500,
+        "closing_costs": 18515
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements assets acceptable"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements 1-unit principal residence purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 42331,
+  "seconds": 80.7,
+  "finish_reason": "stop"
+}

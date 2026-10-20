@@ -1,0 +1,35 @@
+{
+  "applicant_id": "G026",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-04-14; the 2-year wait ends 2027-04-14, after the 2026-11-02 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Bankruptcy waiting period: Chapter 13 discharged 2025\u201104\u201114 requires 2\u2011year wait; closing 2026\u201111\u201102 is before 2027\u201104\u201114 \u2192 insufficient (B3\u20115.3\u201107).  \n- DTI: (2401\u202f+\u202f800)\u202f/\u202f11600\u202f=\u202f27.6% \u2013 acceptable.  \n- Funds to close: $86,158 required; bank balance $142,000 sufficient.  \n- Reserves: >6 months of PITIA available after closing.  \n- Large deposits: none.  \n- Gifts: none.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 2,
+  "input_tokens": 4834,
+  "seconds": 22.2,
+  "finish_reason": "stop"
+}

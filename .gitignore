@@ -4,3 +4,5 @@ data/raw/
 data/qdrant*/
 .ipynb_checkpoints/
 __pycache__/
+*:Zone.Identifier
+notebooks/.../

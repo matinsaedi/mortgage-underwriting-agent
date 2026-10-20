@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G103",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,360 are short of the $87,660 needed; $26,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "LTV 80% \u2013 within standard limits (no matrix check).  \nCredit score 740, no bankruptcy/foreclosure \u2013 acceptable.  \nDTI 28.61% (verified income) \u2013 below typical DU threshold.  \nFunds to close $75,072 covered by bank balance $78,360 \u2013 sufficient.  \nReserves required 6 months PITIA ($12,588) for investment property per B3-4.1-01; available reserves after closing $3,288 = 1.57 months \u2013 insufficient.  \nGift $26,000 from parent \u2013 B3-4.3-04 prohibits gifts on investment property.  \nNo large deposits identified.  \n\nDECISION: decline  \nRULES: B3-4.1-01, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 264000,
+        "property_value": 330000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2098,
+        "monthly_debts": [
+          240,
+          180
+        ],
+        "monthly_income": 8800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 330000,
+        "loan_amount": 264000,
+        "closing_costs": 9072
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 3288,
+        "cash_to_close": 75072,
+        "monthly_pitia": 2098
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 78360,
+        "cash_to_close": 75072,
+        "monthly_pitia": 2098
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 40455,
+  "seconds": 68.7,
+  "finish_reason": "stop"
+}

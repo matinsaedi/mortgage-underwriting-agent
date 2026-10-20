@@ -1,0 +1,92 @@
+{
+  "applicant_id": "G082",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "LTV 75% (no matrix check per assumption).  \nDTI 34.5% \u2264 DU max 50% (B3-6-02).  \nForeclosure 2017-05-15; 7\u2011year waiting period satisfied by closing 2026-11-26 (B3-5-3-07).  \nFunds to close $140,510; available funds $210,000 sufficient (B3-4-1-01).  \nReserves after closing 23.2 months; no minimum for 1\u2011unit principal residence (B3-4-1-01).  \nNo large deposits; evaluation not required (B3-4-2-02).  \nNo gifts; documentation not needed (B3-4-3-04).  \nCredit score 730, no bankruptcy, meets standards.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 378750,
+        "property_value": 505000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2999,
+        "monthly_debts": [
+          490
+        ],
+        "monthly_income": 10100
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 505000,
+        "loan_amount": 378750,
+        "closing_costs": 14260
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 210000,
+        "cash_to_close": 140510,
+        "monthly_pitia": 2999
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserves requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 46793,
+  "seconds": 43.5,
+  "finish_reason": "stop"
+}

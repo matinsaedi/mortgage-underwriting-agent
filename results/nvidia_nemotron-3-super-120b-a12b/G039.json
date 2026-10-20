@@ -1,0 +1,101 @@
+{
+  "applicant_id": "G039",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $162,968 are short of the $171,768 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefile has no minimum required (B3-5.1-01) \u2013 OK.  \n- DTI: 32.07% \u2264 50% limit for DU (B3-6-02) \u2013 OK.  \n- LTV: 75% (ltv tool) \u2013 no max LTV check per assumption.  \n- Funds to close: $171,768 (funds_to_close); bank balance $162,968; gift $53,000 from interested party. Per B3-4.3-04, donor may not be an interested party unless it is a gift of equity from a seller meeting specific conditions. Gift not documented as equity, so likely ineligible. Without gift, funds shortfall $8,800 \u2013 condition: verify sufficient funds to close (additional borrower funds or eligible gift).  \n- Reserves: No minimum reserve required for 1\u2011unit principal residence (B3\u20114.1\u201101) \u2013 OK.  \n- Large deposits: none; B3\u20114.2\u201102 satisfied.  \n- Gift documentation: gift letter present (B3\u20114.3\u201104) but donor eligibility pending.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 468750,
+        "property_value": 625000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3688,
+        "monthly_debts": [],
+        "monthly_income": 11500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 468750,
+        "closing_costs": 15518
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift funds not allowed"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 78126,
+  "seconds": 79.7,
+  "finish_reason": "stop"
+}

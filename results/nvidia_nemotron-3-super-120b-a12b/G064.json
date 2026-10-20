@@ -1,0 +1,98 @@
+{
+  "applicant_id": "G064",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $170,912 are short of the $175,312 needed; document the source of $9,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "Credit score: DU loan casefile, no minimum required; score 689 acceptable. (B3-5.1-01)  \nBankruptcy/foreclosure: none; no waiting period needed.  \nDTI: 25.22%; within DU limits (no specific limit).  \nLTV: 70%; Eligibility Matrix not checked per instructions.  \nLarge deposit: $9,000 exceeds 50% of monthly income ($7,350) \u2192 large deposit; source undocumented. For purchase, must document source or reduce assets. (B3-4.2-02)  \nFunds to close: $169,416; available funds $179,912 sufficient if deposit documented.  \nReserves: Required 2 months PITIA = $5,896 for second home; available reserves $10,496 (3.56 months) if deposit documented, insufficient (0.51 months) if not. (B3-4.1-01)  \nCondition: Provide documentation of the $9,000 large deposit source to verify reserves and funds to close.  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 367500,
+        "property_value": 525000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2948,
+        "monthly_debts": [
+          480,
+          280
+        ],
+        "monthly_income": 14700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 525000,
+        "loan_amount": 367500,
+        "closing_costs": 11916
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 179912,
+        "cash_to_close": 169416,
+        "monthly_pitia": 2948
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 170912,
+        "cash_to_close": 169416,
+        "monthly_pitia": 2948
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.1-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 67206,
+  "seconds": 72.6,
+  "finish_reason": "stop"
+}

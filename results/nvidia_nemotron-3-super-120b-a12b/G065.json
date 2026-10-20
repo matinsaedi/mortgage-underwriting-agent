@@ -1,0 +1,101 @@
+{
+  "applicant_id": "G065",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score: DU loan, no minimum required (B3-5.1-01) \u2013 OK.  \nBankruptcy/foreclosure: none \u2013 OK.  \nDTI: 31.58% < 50% max for DU (B3-6-02) \u2013 OK.  \nLTV: 80% (not checking matrix) \u2013 OK.  \nFunds to close: $94,430 (funds_to_close) \u2013 OK.  \nReserves: DU requires 6 months for 2\u20114 unit principal residence (B3-4.1-01); adjusted reserves 29.38 months (reserves_months) \u2013 OK.  \nLarge deposit: $13,000 > 50% of monthly income ($4,550) and undocumented (B3-4.2-02) \u2013 condition: provide source documentation.  \nGifts: none \u2013 OK.  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2674,
+        "monthly_debts": [
+          200
+        ],
+        "monthly_income": 9100
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 425000,
+        "loan_amount": 340000,
+        "closing_costs": 9430
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves assets retirement funds"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 186000,
+        "cash_to_close": 94430,
+        "monthly_pitia": 2674
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements 2-4 unit principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 173000,
+        "cash_to_close": 94430,
+        "monthly_pitia": 2674
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-03",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 64777,
+  "seconds": 54.1,
+  "finish_reason": "stop"
+}

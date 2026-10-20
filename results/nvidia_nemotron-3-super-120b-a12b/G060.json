@@ -1,0 +1,108 @@
+{
+  "applicant_id": "G060",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit score: DU loan casefile has no minimum score requirement; 694 is acceptable (B3-5.1-01).  \n- DTI: 31% \u2264 50% maximum for DU loans (B3-6-02).  \n- Bankruptcy/foreclosure: none; no waiting periods apply.  \n- Funds to close: $131,744 required; borrower\u2019s own funds $125,044 + gift $43,000 = $168,044 sufficient (B3-4.3-04).  \n- Gift funds: donor spouse acceptable with gift letter; need verification of donor\u2019s funds and transfer evidence (B3-4.3-04).  \n- Large deposits: none reported.  \n- Reserves: no minimum for 1\u2011unit principal residence; borrower has ~12.8 months reserves after closing (B3-4.1-01).  \n- LTV: 75% (informational).  \n- Income: stable employment 5.8 years; verified income $9,600 supports DTI.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250,
+        "closing_costs": 12994
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift funds"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 356250,
+        "property_value": 475000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirement one-unit principal residence purchase DU"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 168044,
+        "cash_to_close": 131744,
+        "monthly_pitia": 2826
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2826,
+        "monthly_debts": [
+          150
+        ],
+        "monthly_income": 9600
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-3.8-02",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 93620,
+  "seconds": 81.4,
+  "finish_reason": "stop"
+}

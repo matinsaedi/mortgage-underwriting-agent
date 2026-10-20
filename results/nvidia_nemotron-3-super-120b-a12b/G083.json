@@ -1,0 +1,61 @@
+{
+  "applicant_id": "G083",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2023-02-02; the 7-year wait ends 2030-02-02, after the 2026-11-17 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit score 783 meets minimum requirements.  \n- Foreclosure waiting period: foreclosure date 2023-02-02 to closing 2026-11-17 is less than 7 years; purchase of a second home is not permitted until the 7\u2011year foreclosure waiting period has elapsed (B3-5.3-07).  \n- DTI 27.18% (housing payment $3,659 + debts $255 \u00f7 income $14,400) is within acceptable limits.  \n- Funds to close $168,615 (down payment $155,000 + closing costs $13,615) are covered by the bank balance $213,000.  \n- Reserves 12.13 months ($213,000 \u2013 $168,615) \u00f7 $3,659 PITIA exceed the minimum requirement.  \n- No large deposits or gifts requiring documentation.  \n- No bankruptcy or other derogatory credit events.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3659,
+        "monthly_debts": [
+          35,
+          220
+        ],
+        "monthly_income": 14400
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 620000,
+        "loan_amount": 465000,
+        "closing_costs": 13615
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 213000,
+        "cash_to_close": 168615,
+        "monthly_pitia": 3659
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16318,
+  "seconds": 34.6,
+  "finish_reason": "stop"
+}

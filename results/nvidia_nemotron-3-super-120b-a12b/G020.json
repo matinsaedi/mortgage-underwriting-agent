@@ -1,0 +1,43 @@
+{
+  "applicant_id": "G020",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit score 796, no bankruptcy or foreclosure: meets standard credit requirements.  \n- DTI: (4,380\u202f+\u202f210)\u202f/\u202f12,200\u202f=\u202f37.6\u202f% (calculated).  \n- LTV: 576,000\u202f/\u202f640,000\u202f=\u202f90\u202f% (not checked per assumption).  \n- Minimum borrower contribution for LTV\u202f>\u202f80% and second home: 5\u202f% of purchase price (32,000) met by borrower\u2019s own funds (bank balance 48,000) per B3-4.3-04.  \n- Gift funds: 42,670 from parent (acceptable donor) with gift letter; eligible for down payment, closing costs, and reserves per B3-4.3-04.  \n- Funds to close: down payment 64,000\u202f+\u202fclosing costs 13,610\u202f=\u202f77,610; covered by own funds 48,000\u202f+\u202fgift 42,670\u202f=\u202f90,670.  \n- Reserves after closing: (90,670\u202f\u2212\u202f77,610)\u202f/\u202f4,380\u202f=\u202f2.98\u202fmonths; meets DU requirement of 2 months for a second home per B3-4.1-01.  \n- No large deposits requiring explanation.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home LTV greater than 80"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU loan casefiles two months reserves second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-4.3-11"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 18661,
+  "seconds": 54.6,
+  "finish_reason": "stop"
+}

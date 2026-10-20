@@ -1,0 +1,93 @@
+{
+  "applicant_id": "G081",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Foreclosure waiting period: 7 years elapsed since 2017-05-23, meets requirement (B3-5.3-07).  \n- Credit score: DU loan casefiles have no minimum score requirement (B3-5.1-01).  \n- DTI: 25.95% \u2264 50% maximum for DU underwritten loans (B3-6-02).  \n- Funds to close: $207,714 required; available assets $332,000 (bank + vested retirement) sufficient (B3-4.1-01, B3-4.3-03).  \n- Reserves: 34.5 months available; no minimum required for 1-unit principal residence (B3-4.1-01 note).  \n- Large deposits: none reported (B3-4.2-01 not applicable).  \n- Gifts: none reported (B3-4.2-01 not applicable).  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3598,
+        "monthly_debts": [
+          270,
+          180
+        ],
+        "monthly_income": 15600
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU maximum DTI"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 645000,
+        "loan_amount": 451500,
+        "closing_costs": 14214
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves retirement funds"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 332000,
+        "cash_to_close": 207714,
+        "monthly_pitia": 3598
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserves requirement"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 451500,
+        "property_value": 645000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-01",
+    "B3-4.3-03",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 57325,
+  "seconds": 87.2,
+  "finish_reason": "stop"
+}

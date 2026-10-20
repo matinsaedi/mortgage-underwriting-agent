@@ -1,0 +1,98 @@
+{
+  "applicant_id": "G063",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit history: No bankruptcy or foreclosure; waiting periods not applicable (B3-5.3-07).  \n- DTI: 33.03% \u2264 50% maximum for DU loan casefiles (B3-6-02).  \n- LTV: 80% (calculated); eligibility matrix not consulted per instructions.  \n- Funds to close: $96,309 required; borrower has $118,000 verified assets sufficient (B3-4.2-01).  \n- Reserves: No minimum reserve requirement for 1-unit principal residence (B3-4.1-01); borrower has 8.2 months reserves.  \n- Large deposits: No deposits >50% of monthly income ($4,850) identified (B3-4.2-02).  \n- Gifts: No gift funds used; none required.  \n- Income: Verified monthly income $9,700 stable; employment 10.3 years.  \n- Property: 1-unit principal residence, occupancy as stated.  \n- Loan amount: $336,000; property value $420,000.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limit DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2644,
+        "monthly_debts": [
+          530,
+          30
+        ],
+        "monthly_income": 9700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 420000,
+        "loan_amount": 336000,
+        "closing_costs": 12309
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 118000,
+        "cash_to_close": 96309,
+        "monthly_pitia": 2644
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU loan casefile"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "principal residence purchase reserves DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% of monthly income"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 336000,
+        "property_value": 420000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "verification of deposits assets"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 64975,
+  "seconds": 80.4,
+  "finish_reason": "stop"
+}

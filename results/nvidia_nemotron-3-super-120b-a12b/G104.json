@@ -1,0 +1,57 @@
+{
+  "applicant_id": "G104",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $62,763 are short of the $70,963 needed; $15,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit: No bankruptcy/foreclosure; score 726 meets Fannie Mae minimum (no specific rule needed for this check).  \n- DTI: 32.5% \u2264 50% DU maximum (B3-6-02).  \n- Funds to close: Bank balance $62,763 covers cash to close $60,553; gift funds not used (B3-4.3-04).  \n- Reserves: 1.27 months < 6 months required for investment property transaction (B3-4.1-01).  \n- Gift funds: Not allowed on investment property (B3-4.3-04); borrower\u2019s own funds suffice, but gift cannot be used.  \n- Large deposits: None reported.  \n\nDECISION: decline  \nRULES: B3-4.1-01, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds donor relationship parent gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves DU six months"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-3.8-05",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 26623,
+  "seconds": 91.1,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,121 @@
+{
+  "applicant_id": "G035",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score: DU loan casefiles have no minimum credit score requirement (B3-5.1-01); score 739 is acceptable.  \nBankruptcy/foreclosure: No bankruptcy or foreclosure events; waiting periods not applicable (B3-5.3-07).  \nDTI: Calculated DTI 30.56% using verified income and monthly debts; below DU maximum 50% (B3-6-02).  \nReserves: Required 2 months for second home (B3-4.1-01); available funds after closing $74,533 yields 22.04 months reserves, sufficient.  \nAcceptable reserves: Bank balance $274,000 is liquid checking/savings, an acceptable source (B3-4.1-01 Acceptable Sources of Reserves).  \nFunds to close: Down payment $181,500 + closing costs $17,967 = $199,467; bank balance covers (funds_to_close tool).  \nLarge deposits: None reported; no documentation needed (B3-4.2-02).  \nGifts: None reported; no documentation needed (B3-4.3-04).  \nIncome: Verified monthly income $12,800 matches stated; employment 14.6 years stable (B3-3.2-01).  \nDebt: Student loan payment $530 documented; months remaining 52.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves assets second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Acceptable Sources of Reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 423500,
+        "closing_costs": 17967
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3382,
+        "monthly_debts": [
+          530
+        ],
+        "monthly_income": 12800
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 274000,
+        "cash_to_close": 199467,
+        "monthly_pitia": 3382
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "income verification DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "employment income verification"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-3.1-01",
+    "B3-3.2-01",
+    "B3-3.4-18",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-13",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 14,
+  "input_tokens": 130765,
+  "seconds": 85.8,
+  "finish_reason": "stop"
+}

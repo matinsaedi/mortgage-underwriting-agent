@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G079",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "LTV 90% calculated; no LMT limit checked per assumption.  \nDTI 34.3% < 50% maximum for DU loan casefiles (B3-6-02).  \nCredit score 701; DU requires no minimum score (B3-5.1-01).  \nNo bankruptcy or foreclosure events.  \nGift from parent acceptable with letter; LTV>80% needs 5% borrower contribution ($20,250) met by $32,000 own funds (B3-4.3-04).  \nFunds to close $49,573 covered by $32,000 bank + $25,891 gift = $57,891 available.  \nReserves after closing 2.96 months \u2265 2 months required for second home (B3-4.1-01).  \nNo large deposits identified.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU credit score minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home LTV limit"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.4-06",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 23844,
+  "seconds": 50.9,
+  "finish_reason": "stop"
+}

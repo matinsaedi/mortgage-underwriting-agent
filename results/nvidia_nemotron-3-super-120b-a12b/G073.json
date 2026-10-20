@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G073",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2024-01-04; the 7-year wait ends 2031-01-04, after the 2026-12-20 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit: Foreclosure date 2024-01-04 to closing 2026-12-20 = 2 years 11 months, less than the 7\u2011year waiting period required (no extenuating circumstances) \u2013 B3-5.3-07.  \n- DTI: 27.02% (2378 housing payment, 0 debts, 8800 income) \u2013 acceptable.  \n- Funds to close: 134,733 required; bank balance 188,000 sufficient.  \n- Reserves: No minimum reserve requirement for 1\u2011unit principal residence \u2013 B3-4.1-01.  \n- Large deposits: none.  \n- Gifts: none.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period 3 years additional requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 294000,
+        "property_value": 420000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2378,
+        "monthly_debts": [],
+        "monthly_income": 8800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 420000,
+        "loan_amount": 294000,
+        "closing_costs": 8733
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements principal residence 1 unit purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 42780,
+  "seconds": 50.7,
+  "finish_reason": "stop"
+}

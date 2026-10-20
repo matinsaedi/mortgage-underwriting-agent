@@ -1,0 +1,95 @@
+{
+  "applicant_id": "G046",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $123,774 are short of the $131,674 needed; obtain a signed gift letter for $32,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "LTV 70%; Eligibility Matrix not available per project assumptions, so no maximum LTV check.  \nDTI 30.58% \u2264 50% DU max (B3-6-02).  \nCredit score 683; DU loan casefiles have no minimum score (B3-5.1-01).  \nFunds to close $131,674 (down payment $123,000 + closing costs $8,674).  \nLiquid assets $123,774 (bank) + $0 (retirement) = $123,774, short $7,900 vs funds to close.  \nGift $32,000 from fianc\u00e9 (acceptable donor per B3-4.3-04) can cover shortfall, but gift letter missing (B3-4.3-04).  \nWith gift, excess $24,100 yields 10.37 months reserves, satisfying DU reserve requirements (B3-4.1-01, B3-4.4-01).  \nNo large deposits (B3-4.2-02).  \nNo bankruptcy/foreclosure; waiting periods N/A.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "B3-4.1-01 Minimum Reserve Requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 410000,
+        "loan_amount": 287000,
+        "closing_costs": 8674
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2324,
+        "monthly_debts": [],
+        "monthly_income": 7600
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 287000,
+        "property_value": 410000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 72459,
+  "seconds": 109.5,
+  "finish_reason": "stop"
+}

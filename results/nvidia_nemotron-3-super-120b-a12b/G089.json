@@ -1,0 +1,86 @@
+{
+  "applicant_id": "G089",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit history: No bankruptcy or foreclosure events; waiting period not applicable (B3-5.3-07).  \n- DTI: 27.26% \u2264 50% maximum for DU underwritten loans (B3-6-02).  \n- Funds to close: Available assets ($278,000 bank + $19,000 retirement) exceed required funds to close ($198,559); LTV 75% \u226480% so no minimum borrower contribution required (B3-4.3-04).  \n- Reserves: No minimum reserve requirement for 1-unit principal residence (B3-4.1-01); borrower retains 23.58 months reserves after closing.  \n- Large deposits: None reported; no documentation needed.  \n- Gifts: None reported; no documentation needed.  \n- Employment: 2.9 years employment supports income stability.  \n- LTV: 75% calculated (loan amount \u00f7 property value).  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4175,
+        "monthly_debts": [
+          145,
+          560
+        ],
+        "monthly_income": 17900
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements principal residence 1-unit"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 532500,
+        "property_value": 710000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution principal residence purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves eligible assets retirement accounts"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 297000,
+        "cash_to_close": 198559,
+        "monthly_pitia": 4175
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.4-06",
+    "B3-4.1-01",
+    "B3-4.3-03",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 52053,
+  "seconds": 73.3,
+  "finish_reason": "stop"
+}

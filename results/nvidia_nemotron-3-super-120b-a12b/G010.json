@@ -1,0 +1,128 @@
+{
+  "applicant_id": "G010",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($14,500) must come from the borrower's own funds; they have $6,100."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- LTV 90.0% (tool); LTV >80% for second home triggers 5% own funds requirement (B3-4.3-04).  \n- DTI 28.73% \u2264 50% max for DU loan casefiles (B3-6-02).  \n- Funds to close $37,502 (tool); available funds $42,182 (bank $6,100 + gift $36,082) sufficient.  \n- Reserves 2.29 months available \u2265 2 months required for second home (tool; B3-4.1-01).  \n- Gift from parent (relative) with gift letter, eligible for second home (B3-4.3-04).  \n- Minimum borrower contribution: 5% own funds required = $14,500 (tool); borrower own funds $6,100 insufficient (shortfall $8,400) (B3-4.3-04).  \n- Credit score: DU loan casefile, no minimum score required (B3-5.1-01).  \n- No bankruptcy, foreclosure, or large deposits.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home occupancy requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home loan requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum down payment"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift donor relationship second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score second home Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 261000,
+        "property_value": 290000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2040,
+        "monthly_debts": [],
+        "monthly_income": 7100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 290000,
+        "loan_amount": 261000,
+        "closing_costs": 8502
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 42182,
+        "cash_to_close": 37502,
+        "monthly_pitia": 2040
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 14500,
+        "property_value": 290000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.4-06",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 15,
+  "input_tokens": 158637,
+  "seconds": 117.4,
+  "finish_reason": "stop"
+}

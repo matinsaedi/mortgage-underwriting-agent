@@ -1,0 +1,53 @@
+{
+  "applicant_id": "G111",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- DTI: 34.5% \u2264 50% DU limit (B3-6-02) \u2013 OK  \n- Gift funds: LTV 80% \u226480% allows 100% gift for 2\u20114 unit principal residence (B3-4.3-04); gift letter present \u2013 OK  \n- Reserves: 16.67 months available \u2265 6 months required for 2\u20114 unit principal residence (B3-4.1-01) \u2013 OK  \n- Large deposits: none reported; no documentation needed (B3-4.2-02) \u2013 OK  \n- Credit: 768 score, no bankruptcy/foreclosure \u2013 OK  \n- Income: verified $10,900 stable \u2013 OK  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close reserves requirement principal residence 2-4 unit"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 193336,
+        "cash_to_close": 131618,
+        "monthly_pitia": 3703
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 22028,
+  "seconds": 55.6,
+  "finish_reason": "stop"
+}

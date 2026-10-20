@@ -1,0 +1,143 @@
+{
+  "applicant_id": "G033",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($27,000) must come from the borrower's own funds; they have $9,300."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score 725, no bankruptcy/foreclosure: meets requirement.  \n- DTI 38.91% (verified income $9,900, housing $3,712, debt $140) \u226450%: meets requirement (B3-6-02).  \n- Minimum borrower contribution for second home with LTV >80%: borrower must contribute 5% of property value ($27,000) from own funds (B3-4.3-04). Borrower own funds $9,300 insufficient.  \n- Reserves 2.73 months (\u22652 months required for second home): meets requirement (B3-4.1-01).  \n- Gift: gift letter present but details not verified; not needed due to decline.  \n- Large deposits: none.  \n\nDECISION: DECLINE  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio second home"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3712,
+        "monthly_debts": [
+          140
+        ],
+        "monthly_income": 9900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 540000,
+        "loan_amount": 486000,
+        "closing_costs": 14607
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 78731,
+        "cash_to_close": 68607,
+        "monthly_pitia": 3712
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds verification donor account"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home LTV greater than 80 minimum borrower contribution"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "\"minimum borrower contribution\" second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "\"5% minimum borrower contribution\" second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "\"minimum borrower contribution\" \"second home\" 5%"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "\"minimum borrower contribution\" \"second home\" 5%"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum own funds contribution 5 percent"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 540000,
+        "loan_amount": 486000,
+        "closing_costs": 0
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 17,
+  "input_tokens": 171002,
+  "seconds": 116.6,
+  "finish_reason": "stop"
+}

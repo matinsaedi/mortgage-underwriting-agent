@@ -1,0 +1,105 @@
+{
+  "applicant_id": "G018",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $59,830 are short of the $62,130 needed; $22,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan, no minimum required (B3-5.1-01) \u2013 OK.  \n- DTI: 29.92% \u2264 50% limit for DU (B3-6-02) \u2013 OK.  \n- Funds to close: $62,130 required; borrower\u2019s own funds $59,830 insufficient by $2,300; gift from interested party cannot be used for down payment (B3-4.3-04, B3-4.1-02) \u2013 condition: verify additional own funds \u2265 $2,300 or change gift source to acceptable donor.  \n- Reserves: No minimum required for 1\u2011unit principal residence (B3\u20114.1\u201101) \u2013 OK.  \n- Large deposits: none \u2013 OK.  \n- Gift documentation: gift letter present but donor interested party not acceptable (B3\u20114.3\u201104) \u2013 same condition as above.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU loan"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1765,
+        "monthly_debts": [],
+        "monthly_income": 5900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 275000,
+        "loan_amount": 220000,
+        "closing_costs": 7130
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU loan principal residence 1-unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "personal gift Fannie Mae down payment"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable donor personal gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirement Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "down payment requirement Fannie Mae"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-3.4-08",
+    "B3-3.4-16",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 75724,
+  "seconds": 68.8,
+  "finish_reason": "stop"
+}

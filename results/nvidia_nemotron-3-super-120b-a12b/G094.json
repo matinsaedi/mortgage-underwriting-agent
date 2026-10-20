@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G094",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 64.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefiles have no minimum credit score requirement (B3-5.1-01); score 682 acceptable.  \n- DTI: Using verified monthly income $5,000, total monthly obligation $3,237 yields DTI 64.74% > DU maximum 50% (B3-6-02); exceeds limit.  \n- Funds to close: Required $145,226 (down payment $132,500 + closing costs $12,726); available funds $309,000 (bank balance $199,000 + retirement $110,000) sufficient.  \n- Reserves: After closing, reserves 52.12 months > 2 months required for second home DU (B3-4.1-01).  \n- Large deposits: None reported; no sourcing needed.  \n- Gifts: None; no impact.  \n- Bankruptcy/foreclosure: None; no waiting period concerns.  \n\nDECISION: decline  \nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves assets retirement"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 530000,
+        "loan_amount": 397500,
+        "closing_costs": 12726
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 309000,
+        "cash_to_close": 145226,
+        "monthly_pitia": 3142
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-03",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 50204,
+  "seconds": 53.5,
+  "finish_reason": "stop"
+}

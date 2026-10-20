@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G058",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-5.1-01",
+      "B3-5.3-07",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Bankruptcy Chapter 13 discharged 2022-12-11; 2\u2011year waiting period satisfied by closing 2026-11-23 (B3-5.3-07).  \n- DTI 33.0% \u2264 50% DU maximum (B3-6-02).  \n- Funds to close $120,662 covered by bank balance $160,000.  \n- Reserves after closing 15.1 months; no minimum required for 1\u2011unit principal residence (B3-4.1-01).  \n- Credit score 694; DU loan casefiles have no minimum score (B3-5.1-01).  \n- No large deposits or gifts requiring documentation.  \n\nDECISION: approve  \nRULES: B3-5.3-07, B3-6-02, B3-4.1-01, B3-5.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2597,
+        "monthly_debts": [
+          600
+        ],
+        "monthly_income": 9700
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 326250,
+        "closing_costs": 11912
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 160000,
+        "cash_to_close": 120662,
+        "monthly_pitia": 2597
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserves requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 35569,
+  "seconds": 51.6,
+  "finish_reason": "stop"
+}

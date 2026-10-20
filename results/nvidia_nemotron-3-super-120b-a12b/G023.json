@@ -1,0 +1,61 @@
+{
+  "applicant_id": "G023",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-11-20; the 2-year wait ends 2027-11-20, after the 2026-12-07 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Bankruptcy waiting period: Chapter 13 discharge 2025-11-20 requires 2\u2011year wait; closing 2026-12-07 is before 2027-11-20 \u2192 not met (B3-5.3-07).  \n- DTI: 29.56% \u2264 45% threshold \u2192 acceptable.  \n- Funds to close: $143,870 required; available funds $210,000 sufficient.  \n- Reserves: 21.05 months \u2265 2 months required \u2192 sufficient.  \n- Large deposits: none \u2192 no issue.  \n- Gifts: none \u2192 no issue.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-11-20",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3142,
+        "monthly_debts": [
+          290,
+          500
+        ],
+        "monthly_income": 13300
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 210000,
+        "cash_to_close": 143870,
+        "monthly_pitia": 3142
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16029,
+  "seconds": 47.3,
+  "finish_reason": "stop"
+}

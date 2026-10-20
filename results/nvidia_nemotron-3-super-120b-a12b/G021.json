@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G021",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-04-27; the 2-year wait ends 2027-04-27, after the 2026-11-17 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit history: Chapter 13 bankruptcy discharged 2025-04-27 requires a 2\u2011year waiting period; closing 2026-11-17 is before the eligibility date 2027-04-27, so the waiting period is not satisfied. (B3-5.3-07)  \n- Capacity: DTI = 32.38% (monthly housing payment $3,659 \u00f7 verified monthly income $11,300), which is within typical DU limits.  \n- Collateral: LTV = 75% ($465,000 \u00f7 $620,000); per project assumptions, maximum LTV limits are not checked.  \n- Funds to close: Required $167,912 (down payment $155,000 + closing costs $12,912); borrower\u2019s bank balance $234,000 plus retirement balance $92,000 provides sufficient funds.  \n- Reserves: After closing, available funds $326,000 minus cash to close $167,912 leaves $158,088, equating to 43.2 months of reserves, exceeding the 2\u2011month requirement for a second\u2011home transaction.  \n- Large deposits: None reported; no sourcing needed.  \n- Gifts: None reported; no impact.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-04-27",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3659,
+        "monthly_debts": [],
+        "monthly_income": 11300
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 620000,
+        "loan_amount": 465000,
+        "closing_costs": 12912
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable sources of reserves retirement accounts"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 326000,
+        "cash_to_close": 167912,
+        "monthly_pitia": 3659
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-01",
+    "B3-4.3-03",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 33833,
+  "seconds": 51.1,
+  "finish_reason": "stop"
+}

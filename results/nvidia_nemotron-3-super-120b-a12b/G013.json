@@ -1,0 +1,100 @@
+{
+  "applicant_id": "G013",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit score: DU loan casefile, no minimum required; score 764 acceptable. (B3-5.1-01)  \n- DTI: 33.03% \u2264 50% max for DU. (B3-6-02)  \n- Funds to close: required $39,121; available $47,869 (bank balance $21,600 + gift $26,269) sufficient. (B3-4.3-04)  \n- Gift documentation: gift letter present, donor parent acceptable; need verification of donor ability to give and transfer evidence. (B3-4.3-04) \u2192 condition  \n- Minimum borrower contribution: LTV 90% >80%, second home requires 5% own funds ($16,250); borrower own funds $21,600 sufficient. (B3-4.3-04)  \n- Reserves: required 2 months for second home DU; available reserves 3.85 months sufficient. (B3-4.1-01)  \n- Large deposits: none reported; no evaluation needed. (B3-4.2-02)  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home credit score requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU DTI limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU maximum DTI ratio"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift donor ability to give documentation"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2274,
+        "monthly_debts": [
+          530,
+          70
+        ],
+        "monthly_income": 8700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 325000,
+        "loan_amount": 292500,
+        "closing_costs": 6621
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 47869,
+        "cash_to_close": 39121,
+        "monthly_pitia": 2274
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 91199,
+  "seconds": 88.3,
+  "finish_reason": "stop"
+}

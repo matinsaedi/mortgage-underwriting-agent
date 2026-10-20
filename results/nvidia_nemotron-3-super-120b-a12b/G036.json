@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G036",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Foreclosure waiting period: 7 years elapsed (2019-07-27 to 2026-12-30) meets B3-5.3-07 requirement.  \n- Credit score: DU loan casefile has no minimum score per B3-5.1-01; score 758 is acceptable.  \n- DTI: 29.27% \u2264 50% limit for DU per B3-6-02.  \n- Funds to close: $139,550 required; bank balance $197,000 sufficient.  \n- Reserves: 23.36 months available \u2265 2 months required for second home per B3-4.1-01.  \n- Large deposits: none reported; no issue.  \n- Gifts: none reported; no issue.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2019-07-27",
+        "years": 7
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2459,
+        "monthly_debts": [],
+        "monthly_income": 8400
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 197000,
+        "cash_to_close": 139550,
+        "monthly_pitia": 2459
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 39914,
+  "seconds": 42.5,
+  "finish_reason": "stop"
+}

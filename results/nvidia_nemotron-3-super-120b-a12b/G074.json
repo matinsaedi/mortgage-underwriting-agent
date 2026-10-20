@@ -1,0 +1,87 @@
+{
+  "applicant_id": "G074",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $65,100 are short of the $101,567 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "Credit score: DU loan casefile, no minimum required (B3-5.1-01); score 775 acceptable.  \nDTI: 31.8% \u2264 50% DU limit (B3-6-02); OK.  \nFunds to close: Required $96,099; available $65,100; shortfall $30,999 (B3-4.1-01).  \nReserves: Required 2 months ($5,468) for second home (B3-4.1-01); available after closing yields -11.3 months; insufficient.  \nLarge deposits: none; no issue.  \nGifts: none; no issue.  \n\nDECISION: approve with conditions  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits DU Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "sufficient funds to close Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "down payment closing costs required Fannie Mae"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 348000,
+        "closing_costs": 9099
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 65100,
+        "cash_to_close": 96099,
+        "monthly_pitia": 2734
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.4-06",
+    "B3-4.1-01",
+    "B3-4.3-03",
+    "B3-4.3-08",
+    "B3-4.3-20",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 65577,
+  "seconds": 62.2,
+  "finish_reason": "stop"
+}

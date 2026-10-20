@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G115",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($30,000) must come from the borrower's own funds; they have $17,400."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "Credit score 778 acceptable; no bankruptcy/foreclosure.  \nDTI 35.65% < 50% limit for DU (B3-6-02).  \nLTV 90% triggers 5% own\u2011funds minimum for second home (B3-4.3-04); borrower own funds $17,400 < $30,000 required \u2192 condition: verify additional own funds \u2265 $12,600.  \nGift from parent with letter acceptable (B3-4.3-04).  \nFunds to close $76,852 covered by own funds + gift $89,178.  \nReserves after closing 3.0 months \u2265 2 months required for second home (B3-4.1-01).  \nNo large deposits.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU second home"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 89178,
+        "cash_to_close": 76852,
+        "monthly_pitia": 4113
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 540000,
+        "property_value": 600000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 26206,
+  "seconds": 63.4,
+  "finish_reason": "stop"
+}

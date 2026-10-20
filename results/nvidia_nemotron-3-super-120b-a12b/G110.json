@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G110",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.4-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $110,500 are short of the $133,718 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "- Credit score 732 meets DU requirements (no minimum score needed) \u2013 B3-5.1-01. Pass.  \n- No bankruptcy or foreclosure events. Pass.  \n- DTI 27.05% \u2264 50% DU maximum \u2013 B3-6-02. Pass.  \n- Funds to close $114,404 (down payment + closing costs) exceeds available assets $110,500 by $3,904 \u2013 B3-4.4-01. Condition.  \n- Investment property requires 6 months reserves ($19,314) \u2013 B3-4.1-01. After closing, reserves shortfall $19,314 \u2013 B3-4.4-01. Condition.  \n- No large deposits or gifts to review. Pass.  \n- Verified monthly income $11,900 stable; employment 12.3 years. Pass.  \n\nTotal funds needed for closing and reserves: $133,718; available $110,500; shortfall $23,218. Condition: verify additional eligible funds of at least $23,218.  \n\nDECISION: approve with conditions  \nRULES: B3-4.1-01, B3-4.4-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3219,
+        "monthly_debts": [],
+        "monthly_income": 11900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 515000,
+        "loan_amount": 412000,
+        "closing_costs": 11404
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 110500,
+        "cash_to_close": 114404,
+        "monthly_pitia": 3219
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-05",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 39851,
+  "seconds": 71.3,
+  "finish_reason": "stop"
+}

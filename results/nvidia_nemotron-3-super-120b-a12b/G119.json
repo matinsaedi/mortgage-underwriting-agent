@@ -1,0 +1,79 @@
+{
+  "applicant_id": "G119",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-02",
+      "B3-4.3-04",
+      "B3-5.3-07",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period: 2017-11-30 to 2026-12-18 exceeds 7\u2011year requirement (B3-5.3-07).  \nDTI: (3,098 + 0) / 8,900 = 34.8% < 50% maximum for DU loans (B3-6-02).  \nFunds to close: $99,000 down + $14,324 closing = $113,324; available bank balance $163,000 sufficient.  \nReserves: ($163,000 - $113,324) / $3,098 = 16.0 months, meets DU reserve requirements (B3-4.1-01).  \nLarge deposits: none; no issue (B3-4.2-02).  \nGifts: none; no issue (B3-4.3-04).  \nCredit score 741 is acceptable.  \n\nDECISION: approve  \nRULES: B3-5.3-07, B3-6-02, B3-4.1-01, B3-4.2-02, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 495000,
+        "loan_amount": 396000,
+        "closing_costs": 14324
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163000,
+        "cash_to_close": 113324,
+        "monthly_pitia": 3098
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 50288,
+  "seconds": 65.8,
+  "finish_reason": "stop"
+}

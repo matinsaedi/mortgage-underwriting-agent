@@ -1,0 +1,82 @@
+{
+  "applicant_id": "G109",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $146,482 are short of the $156,282 needed; document the source of $32,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "- Credit history: No bankruptcy, foreclosure, or delinquencies; acceptable.  \n- DTI: 28.45% \u2264 50% maximum for DU loan casefiles (B3-6-02).  \n- Income: Verified monthly income $18,700 matches stated income; stable employment 11.7 years.  \n- Funds to close: Down payment $142,000 + closing costs $14,282 = $156,282.  \n- Large deposit: $32,000 deposit on 2026-12-01 exceeds 50% of monthly income ($9,350) and is undocumented; must be sourced or excluded per B3-4.2-02.  \n- Available funds after excluding unsourced deposit: $178,482 - $32,000 = $146,482, which is $9,800 short of funds to close.  \n- Reserves: No minimum reserve requirement for 1\u2011unit principal residence purchase (B3-4.1-01).  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4400,
+        "monthly_debts": [
+          530,
+          390
+        ],
+        "monthly_income": 18700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 710000,
+        "loan_amount": 568000,
+        "closing_costs": 14282
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition percentage of monthly income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements 1-unit principal residence purchase DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 40003,
+  "seconds": 82.6,
+  "finish_reason": "stop"
+}

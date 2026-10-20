@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G042",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.4-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,200 are short of the $97,540 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "Credit score: DU loan casefile \u2013 no minimum score required; 740 acceptable (B3-5.1-01).  \nDTI: 27.45% \u2264 50% maximum for DU underwritten loans (B3-6-02).  \nBankruptcy/foreclosure: none \u2013 no issue.  \nFunds to close: required $88,156 (down payment $81,000 + closing costs $7,156); available assets $77,200; shortfall $10,956 (B3-4.4-01).  \nReserves: 2\u20114 unit principal residence requires 6 months PITIA = $9,384; insufficient funds to close results in negative reserves (B3-4.1-01).  \nLarge deposits: none \u2013 no issue.  \nGifts: none \u2013 no issue.  \n\nDECISION: approve with conditions  \nRULES: B3-4.4-01, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserve requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1564,
+        "monthly_debts": [
+          330
+        ],
+        "monthly_income": 6900
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-05",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 29853,
+  "seconds": 42.1,
+  "finish_reason": "stop"
+}

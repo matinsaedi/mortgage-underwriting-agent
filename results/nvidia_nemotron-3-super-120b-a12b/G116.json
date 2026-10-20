@@ -1,0 +1,65 @@
+{
+  "applicant_id": "G116",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $108,603 are short of the $153,503 needed; obtain a signed gift letter for $52,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- LTV: 75% (no Eligibility Matrix check per instructions).  \n- DTI: 27.9% (<50% DU maximum) \u2013 B3-6-02.  \n- Credit: Score 742, no bankruptcy/foreclosure \u2013 no waiting period needed.  \n- Funds to close: $153,503; available funds $160,603 (bank balance + gift) \u2013 sufficient.  \n- Reserves: No minimum required for 1\u2011unit principal residence \u2013 B3-4.1-01.  \n- Gift: Fianc\u00e9 is an acceptable donor \u2013 B3-4.3-04; missing gift letter (condition).  \n- Large deposits: None reported.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirement 1-unit principal residence purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-4.4-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 30849,
+  "seconds": 50.4,
+  "finish_reason": "stop"
+}

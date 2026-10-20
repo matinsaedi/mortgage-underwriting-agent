@@ -1,0 +1,138 @@
+{
+  "applicant_id": "G001",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Bankruptcy waiting period satisfied: Chapter 7 discharged 2020-03-28, 4\u2011year wait ends 2024-03-28, closing 2026-12-13 > end (B3-5.3-07).  \n- Credit score acceptable: DU loan casefile has no minimum; score 736 (B3-5.1-01).  \n- DTI within limit: 33.76% \u2264 DU maximum 50% (B3-6-02).  \n- LTV 75% \u2264 80% threshold for contribution/MI requirements (B3-4.3-06).  \n- Funds to close $103,847 covered by liquid assets (bank $158,000 + retirement $76,000) = $234,000 (B3-4.3-03, B3-4.4-01).  \n- Reserves sufficient: $130,153 post\u2011closing yields 57.8 months; DU determines requirements, no minimum for 1\u2011unit principal residence (B3-4.1-01).  \n- No large deposits requiring documentation (B3-4.2-02).  \n- No gift funds requiring documentation (B3-4.3-04).  \n- Income verified $7,100, stable employment 6.1 years (B3-3.1-01).  \n- Property 1\u2011unit principal residence, purchase, fixed\u2011rate, DU underwritten (B3-2-01).  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence 1-unit"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 281250,
+        "property_value": 375000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2252,
+        "monthly_debts": [
+          145
+        ],
+        "monthly_income": 7100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 375000,
+        "loan_amount": 281250,
+        "closing_costs": 10097
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "retirement assets reserves"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 234000,
+        "cash_to_close": 103847,
+        "monthly_pitia": 2252
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "mortgage insurance LTV >80%"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "mortgage insurance required LTV greater than 80"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "income assessment general requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "1-unit principal residence property type"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-01",
+    "B3-2-10",
+    "B3-3.1-01",
+    "B3-3.2-02",
+    "B3-3.8-01",
+    "B3-3.8-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-03",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-11",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 16,
+  "input_tokens": 153061,
+  "seconds": 124.1,
+  "finish_reason": "stop"
+}

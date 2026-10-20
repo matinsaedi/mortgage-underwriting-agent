@@ -1,0 +1,95 @@
+{
+  "applicant_id": "G099",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score: DU loan casefiles have no minimum credit score requirement (B3-5.1-01); score 743 is acceptable.  \nDTI: 34.76% \u2264 50% maximum for DU underwritten loans (B3-6-02).  \nLTV: 75%; Eligibility Matrix not used per instructions, no maximum LTV check required.  \nFunds to close: $68,893; available funds $68,793 bank balance + $25,000 gift = $93,793 > required.  \nReserves: No minimum reserve requirement for 1-unit principal residence (B3-4.1-01 note).  \nGift: Donor is other relative, acceptable under B3-4.3-04; LTV \u226480% so no borrower contribution required per B3-4.3-04 table; gift letter provided.  \nLarge deposits: none reported.  \nBankruptcy/foreclosure: none; no waiting periods applicable.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1564,
+        "monthly_debts": [],
+        "monthly_income": 4500
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 191250,
+        "property_value": 255000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 255000,
+        "loan_amount": 191250,
+        "closing_costs": 5143
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU loan casefiles reserve requirements principal residence one unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "principal residence one unit purchase DU reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift funds"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU loan"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 65377,
+  "seconds": 90.7,
+  "finish_reason": "stop"
+}

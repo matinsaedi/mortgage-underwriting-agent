@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G043",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4-1",
+      "B3-4-3",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($29,750) must come from the borrower's own funds; they have $20,100."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- LTV 90% (loan amount $535,500 \u00f7 property value $595,000).  \n- DTI 35.16% (monthly housing payment $4,079 \u00f7 verified monthly income $11,600) \u2013 meets B3-6-02 \u226445% for DU.  \n- Credit score 732, no bankruptcy or foreclosure \u2013 acceptable.  \n- Gift $63,500 from parent with gift letter \u2013 allowed per B3-4-3-04.  \n- Minimum borrower contribution: LTV >80% and second home requires 5% own funds ($29,750) per B3-4-3-04; borrower\u2019s liquid assets $20,100 insufficient \u2013 condition: document additional own funds \u2265$9,650.  \n- Reserves: 2 months PITIA required ($8,158) per B3-4-1-01; with satisfied minimum contribution and gift funds, reserves met.  \n- No large deposits.  \n- Funds to close $74,347 (down payment $59,500 + closing costs $14,847) \u2013 covered by borrower contribution and gift.  \n\nDECISION: approve with conditions  \nRULES: B3-4-3-04, B3-4-1-01, B3-6-02",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 535500,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4079,
+        "monthly_debts": [],
+        "monthly_income": 11600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 535500,
+        "closing_costs": 14847
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 18158,
+  "seconds": 95.4,
+  "finish_reason": "stop"
+}

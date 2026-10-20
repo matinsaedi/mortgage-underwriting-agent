@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G070",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-10-27; the 4-year wait ends 2027-10-27, after the 2026-11-30 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Bankruptcy Chapter 7 discharge 2023-10-27 requires a 4\u2011year waiting period; closing 2026-11-30 is before the 2027-10-27 end date, so the waiting period is not met. (B3-5.3-07)  \n- DTI: (3764\u202f+\u202f145)\u202f/\u202f11400\u202f=\u202f34.3\u202f% \u2264 DU maximum 50\u202f%. (B3-6-02)  \n- Funds to close: down payment 121,000\u202f+\u202fclosing costs 15,275\u202f=\u202f136,275; available assets (bank\u202f+\u202fretirement) 313,000 cover this amount.  \n- Reserves: investment property requires 6 months PITIA (6\u202f\u00d7\u202f3764\u202f=\u202f22,584); reserves after closing = (313,000\u202f\u2212\u202f136,275)\u202f/\u202f3764\u202f=\u202f46.9\u202fmonths, sufficient. (B3-4.1-01)  \n- Large deposits: none reported; no documentation needed. (B3-4.2-02)  \n- Gifts: none reported; gifts are not permitted on investment property anyway. (B3-4.3-04)  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "retirement funds reserves 60 percent"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt to income ratio limit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.4-06",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-01",
+    "B3-4.3-03",
+    "B3-4.3-04",
+    "B3-4.4-02",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 42172,
+  "seconds": 42.5,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G108",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-2-10",
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,736 are short of the $90,936 needed; $24,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefiles have no minimum score requirement (B3-5.1-01); score 733 is acceptable.  \n- DTI: 32.5% \u2264 50% limit for DU casefiles (B3-6-02); acceptable.  \n- Funds to close: Required $80,178 exceeds available bank balance $78,736 (B3-2-10); insufficient funds.  \n- Reserves: Investment property requires six months reserves (B3-4.1-01); available reserves after closing -0.8 months; insufficient.  \n- Gift funds: Gifts not allowed on investment property (B3-4.3-04); $24,000 gift from parent ineligible.  \n- Large deposits: None reported; no issue.  \n- Bankruptcy/foreclosure: None; no waiting period concerns.  \n\nDECISION: decline  \nRULES: B3-2-10,B3-4.1-01,B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits DU loan casefile"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "sufficient funds to close"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 295000,
+        "loan_amount": 221250,
+        "closing_costs": 6428
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 78736,
+        "cash_to_close": 80178,
+        "monthly_pitia": 1793
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-20",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 52430,
+  "seconds": 116.1,
+  "finish_reason": "stop"
+}

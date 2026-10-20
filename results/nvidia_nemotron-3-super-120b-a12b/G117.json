@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G117",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-2-10"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $90,400 are short of the $101,387 needed to close and hold 0 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "Credit score 752 meets DU requirement (no minimum score) \u2013 B3-5.1-01.  \nNo bankruptcy or foreclosure \u2013 no waiting periods needed.  \nDTI 27.78% \u2264 50% DU maximum \u2013 B3-6-02.  \n1\u2011unit principal residence requires no reserves \u2013 B3-4.1-01.  \nFunds to close $101,387 exceeds liquid assets $90,400 \u2013 shortage $10,987 \u2013 B3-2-10 (Assets\u2011Funds Required to Close).  \nNo large deposits to source.  \nNo gift funds needed or provided.  \nVerified income $9,700 with 3.8 years employment is stable and sufficient.  \n\nDECISION: approve with conditions  \nRULES: B3-2-10",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2195,
+        "monthly_debts": [
+          190,
+          310
+        ],
+        "monthly_income": 9700
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements principal residence DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 365000,
+        "loan_amount": 273750,
+        "closing_costs": 10137
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "sufficient funds to close requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 33698,
+  "seconds": 66.7,
+  "finish_reason": "stop"
+}

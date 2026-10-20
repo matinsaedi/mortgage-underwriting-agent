@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G054",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 29.06% \u2264 50% max for DU loans (B3-6-02).  \nReserves 2.25 months \u2265 2 months required for second home (B3-4.1-01).  \nGift from parent acceptable with gift letter (B3-4.3-04).  \nCredit score 736; DU loans have no minimum score requirement (B3-5.1-01).  \nNo bankruptcy or foreclosure events.  \nAvailable funds $63,721 > funds to close $56,501.  \nNo large deposits.  \n1-unit second home property eligible.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3210,
+        "monthly_debts": [
+          210,
+          270
+        ],
+        "monthly_income": 12700
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 418500,
+        "closing_costs": 10001
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds donor relationship parent gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 32551,
+  "seconds": 40.5,
+  "finish_reason": "stop"
+}

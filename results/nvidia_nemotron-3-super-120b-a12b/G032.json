@@ -1,0 +1,107 @@
+{
+  "applicant_id": "G032",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit score: DU loan casefile, no minimum required (B3-5.1-01) \u2013 acceptable.  \n- Bankruptcy/foreclosure: none \u2013 acceptable.  \n- DTI: 31.6% (<50% DU max) (B3-6-02) \u2013 acceptable.  \n- LTV: 80% (informational).  \n- Funds to close: $141,865; available funds $163,465 (bank balance + gift) \u2013 sufficient.  \n- Reserves: 5.56 months; no minimum for 1\u2011unit principal residence (B3-4.1-01) \u2013 acceptable.  \n- Gift: donor sibling acceptable (B3-4.3-04); gift letter present but must meet content and donor\u2011funds verification requirements.  \n- Large deposits: none \u2013 acceptable.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3885,
+        "monthly_debts": [
+          160
+        ],
+        "monthly_income": 12800
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU DTI limits"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 500000,
+        "closing_costs": 16865
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation sibling"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable donor gift sibling"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds reserves"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163465,
+        "cash_to_close": 141865,
+        "monthly_pitia": 3885
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserves requirements principal residence 1-unit"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 500000,
+        "property_value": 625000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 81774,
+  "seconds": 73.9,
+  "finish_reason": "stop"
+}

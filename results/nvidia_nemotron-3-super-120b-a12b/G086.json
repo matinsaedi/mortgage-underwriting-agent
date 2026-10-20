@@ -1,0 +1,119 @@
+{
+  "applicant_id": "G086",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score: DU loan casefile has no minimum score requirement; score 747 is acceptable. (B3-5.1-01)  \nAdverse credit: no bankruptcy, foreclosure, or other derogatory events. (B3-5.4-01)  \nDTI ratio: 34.8% \u2264 50% maximum for DU underwriting. (B3-6-02)  \nFunds to close: $49,870 required; available funds $59,454 (bank balance $28,000 + gift $31,454) sufficient. (B3-4.3-04)  \nGift documentation: gift letter present, donor parent acceptable, includes amount, no repayment, and contact info. (B3-4.3-04)  \nMinimum borrower contribution: 5% of purchase price ($19,750) required from own funds for second home LTV>80%; borrower's own funds $28,000 sufficient. (B3-4.3-04)  \nReserves: DU requires 2 months for second home; borrower has 3.5 months reserves after closing. (B3-4.1-01)  \nLarge deposits: none identified; no documentation needed. (B3-4.2-02)  \nProperty eligibility: 1-unit second home purchase is permitted. (B3-2-03)  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "B3-6-02 Debt-to-Income Ratios"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2742,
+        "monthly_debts": [
+          390
+        ],
+        "monthly_income": 9000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 395000,
+        "loan_amount": 355500,
+        "closing_costs": 10370
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 59454,
+        "cash_to_close": 49870,
+        "monthly_pitia": 2742
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirements donor relationship"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 355500,
+        "property_value": 395000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum borrower contribution LTV greater than 80"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home eligibility"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.4-04",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-4.3-11",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 14,
+  "input_tokens": 107571,
+  "seconds": 104.9,
+  "finish_reason": "stop"
+}

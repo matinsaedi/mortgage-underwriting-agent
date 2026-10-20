@@ -1,0 +1,96 @@
+{
+  "applicant_id": "G029",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04",
+      "B3-4.4-01",
+      "B3-5.1-01",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $94,315 are short of the $128,015 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefile, no minimum required; score 697 acceptable. (B3-5.1-01)  \n- DTI: 32.76% \u2264 50% max for DU; acceptable. (B3-6-02)  \n- Bankruptcy: none; no waiting period needed.  \n- Foreclosure: none.  \n- Gift funds: Not allowed for investment property; $53,000 gift from parent cannot be used. (B3-4.3-04)  \n- Funds to close: Down payment $99,000 + closing costs $10,427 = $109,427 required; borrower\u2019s own funds $94,315 insufficient by $15,112. (B3-4.4-01)  \n- Reserves: Investment property DU requires six months reserves = $18,588; total required funds (down payment + closing + reserves) = $128,015; borrower\u2019s own funds $94,315 insufficient by $33,700. (B3-4.1-01, B3-4.4-01)  \n- Large deposits: none.  \n- Other credit: no derogatory events.  \n\nDECISION: approve with conditions  \nRULES: B3-5.1-01, B3-6-02, B3-4.3-04, B3-4.1-01, B3-4.4-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3098,
+        "monthly_debts": [
+          160,
+          280
+        ],
+        "monthly_income": 10800
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirement"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-05",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.2-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 56130,
+  "seconds": 98.3,
+  "finish_reason": "stop"
+}

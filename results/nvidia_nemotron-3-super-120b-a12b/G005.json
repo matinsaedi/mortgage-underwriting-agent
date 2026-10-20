@@ -1,0 +1,115 @@
+{
+  "applicant_id": "G005",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $129,244 are short of the $192,144 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU evaluates risk; no minimum score required (B3-5.1-01) \u2013 acceptable.  \n- DTI: 28.2% < 50% maximum for DU underwritten loans (B3-6-02) \u2013 acceptable.  \n- Gift: Donor is an interested party, which is prohibited (B3-4.3-04); also IPCs cannot be used for the down payment (B3-4.1-02) \u2013 not acceptable.  \n- Funds to close: Required $184,368 exceeds borrower\u2019s own funds ($129,244) (funds_to_close) \u2013 not acceptable.  \n- Reserves: Required 2 months\u2019 PITIA ($7,776) not met; available reserves after closing are negative (B3-4.1-01, reserves_months) \u2013 not acceptable.  \n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-02, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift donation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "IPC cannot be used for down payment"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 660000,
+        "loan_amount": 495000,
+        "closing_costs": 19368
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 129244,
+        "cash_to_close": 184368,
+        "monthly_pitia": 3888
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 13,
+  "input_tokens": 123904,
+  "seconds": 126.6,
+  "finish_reason": "stop"
+}

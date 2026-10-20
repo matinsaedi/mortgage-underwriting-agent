@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G052",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- DTI ratio 36.7% \u2264 50% max for DU loan casefiles (B3-6-02) \u2013 OK.  \n- Reserves 2.28 months \u2265 2 months required for second home (B3-4.1-01) \u2013 OK.  \n- Borrower\u2019s own funds $41,600 \u2265 5% of purchase price ($26,000) for LTV>80% second home (B3-4.3-04) \u2013 OK.  \n- Gift donor parent is an acceptable relative (B3-4.3-04) \u2013 OK.  \n- Gift transfer documentation (e.g., donor check & borrower deposit slip) not provided; required per B3-4.3-04 \u2013 condition.  \n- No large deposits \u2013 OK.  \n- Credit score acceptable; DU loan casefiles have no minimum score (B3-5.1-01) \u2013 OK.  \n- No bankruptcy or foreclosure \u2013 OK.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift donor verification"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 468000,
+        "property_value": 520000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 520000,
+        "loan_amount": 468000,
+        "closing_costs": 13639
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 73795,
+        "cash_to_close": 65639,
+        "monthly_pitia": 3578
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 60589,
+  "seconds": 62.9,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,92 @@
+{
+  "applicant_id": "G009",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $114,350 are short of the $145,050 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "Credit score: B3-5.1-01 \u2013 DU loan casefiles have no minimum credit score requirement; score 777 acceptable.  \nDTI: B3-6-02 \u2013 DU maximum DTI 50%; calculated DTI 34.52% \u2264 50%.  \nReserves: B3-4.1-01 \u2013 DU requires 2 months reserves for second home; available reserves 9.52 months \u2265 2 months.  \nFunds to close: Available funds (bank balance $114,350 + gift $59,000) = $173,350 \u2265 cash to close $137,522 (calculated).  \nGift eligibility: B3-4.3-04 \u2013 Donor may not be interested party; donor is interested party, so gift funds are not eligible personal gift.  \nIneligible gift reduces available funds to bank balance only ($114,350) < cash to close ($137,522), causing insufficient funds to close and reserves.  \n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "personal gift donor interested party not allowed"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3764,
+        "monthly_debts": [
+          510,
+          110
+        ],
+        "monthly_income": 12700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 484000,
+        "closing_costs": 16522
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 173350,
+        "cash_to_close": 137522,
+        "monthly_pitia": 3764
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 67953,
+  "seconds": 132.5,
+  "finish_reason": "stop"
+}

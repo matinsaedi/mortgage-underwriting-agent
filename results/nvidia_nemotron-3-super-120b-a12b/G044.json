@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G044",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($17,750) must come from the borrower's own funds; they have $14,400."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- LTV: 90% (ltv tool)  \n- DTI: 27.13% \u2264 50% DU limit (dti tool, B3-6-02)  \n- Credit: no bankruptcy/foreclosure, no waiting period needed  \n- Funds to close: $43,308 (funds_to_close tool)  \n- Available funds: $49,156 (bank balance + gift) covers closing  \n- Reserves after closing: 2.36 months \u2265 2 months required for second home (reserves_months tool, B3-4.1-01)  \n- Gift: donor parent, gift letter present, eligible (B3-4.3-04)  \n- Minimum borrower contribution: LTV >80% requires 5% own funds ($17,750); borrower own funds $14,400 insufficient (B3-4.3-04)  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 319500,
+        "property_value": 355000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2474,
+        "monthly_debts": [
+          320
+        ],
+        "monthly_income": 10300
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 355000,
+        "loan_amount": 319500,
+        "closing_costs": 7808
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 49156,
+        "cash_to_close": 43308,
+        "monthly_pitia": 2474
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds eligibility parent"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 37612,
+  "seconds": 58.7,
+  "finish_reason": "stop"
+}

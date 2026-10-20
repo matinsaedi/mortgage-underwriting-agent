@@ -1,0 +1,114 @@
+{
+  "applicant_id": "G019",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $196,860 are short of the $212,860 needed; document the source of $27,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "- LTV calculated 70% (no Eligibility Matrix available).  \n- DTI 26.4% \u2264 50% maximum for DU loan casefiles (B3-6-02).  \n- Credit score 787; DU loan casefiles have no minimum score requirement (B3-5.1-01).  \n- Required reserves for investment property: 6 months PITIA; available 9.33 months (B3-4.1-01).  \n- Funds to close: down payment $177,000 + closing costs $16,060 = $193,060 (funds_to_close).  \n- Large deposit $27,000 exceeds 50% of monthly income ($6,250) and source undocumented (B3-4.2-02).  \n- After excluding unsourced large deposit, available assets $196,860 insufficient for down payment, closing costs, and reserves ($212,860); therefore source documentation required.  \n- No gifts, bankruptcies, foreclosures, or other derogatory credit.  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 413000,
+        "property_value": 590000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3300,
+        "monthly_debts": [],
+        "monthly_income": 12500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 590000,
+        "loan_amount": 413000,
+        "closing_costs": 16060
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 223860,
+        "cash_to_close": 193060,
+        "monthly_pitia": 3300
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property credit score minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits investment property DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU DTI limits"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.2-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 13,
+  "input_tokens": 76357,
+  "seconds": 63.3,
+  "finish_reason": "stop"
+}

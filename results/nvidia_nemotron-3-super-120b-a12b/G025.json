@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G025",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-03-11; the 2-year wait ends 2027-03-11, after the 2026-11-18 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit score 748 meets Fannie Mae minimum (no specific rule needed).  \n- Bankruptcy Chapter 13 discharged 2025-03-11 requires 2\u2011year waiting period; closing 2026-11-18 is before 2027-03-11, fails B3-5.3-07.  \n- DTI 31.0% \u2264 DU maximum 50% (B3-6-02).  \n- Funds to close $213,927; available bank balance $244,000 sufficient (funds_to_close calculation).  \n- Reserves 8.23 months \u2265 2 months required for a second home (B3-4.1-01).  \n- No large deposits or gifts to source.  \n- No foreclosure event.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy chapter 13 waiting period second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU second home"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3653,
+        "monthly_debts": [
+          160
+        ],
+        "monthly_income": 12300
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 655000,
+        "loan_amount": 458500,
+        "closing_costs": 17427
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 244000,
+        "cash_to_close": 213927,
+        "monthly_pitia": 3653
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-03-11",
+        "years": 2
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 41583,
+  "seconds": 38.3,
+  "finish_reason": "stop"
+}

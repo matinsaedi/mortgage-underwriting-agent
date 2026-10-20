@@ -1,0 +1,97 @@
+{
+  "applicant_id": "G105",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $151,654 are short of the $154,854 needed; $69,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit: No bankruptcy or foreclosure; score 794 acceptable (guide does not specify DU minimum).  \n- DTI: 27.4% \u2264 50% maximum for DU loans per B3-6-02.  \n- Funds to close: Down payment $136,500 + closing costs $13,218 = $149,718; borrower\u2019s own funds $151,654 sufficient per B3-4.3-04 (LTV 70% \u226480% second home requires no borrower contribution).  \n- Reserves: Required 2 months \u00d7 $2,568 = $5,136; available after closing $151,654 \u2013 $149,718 = $1,936 (0.75 months) insufficient per B3-4.1-01.  \n- Gift/IPC: Donor is \u201cinterested party\u201d; gift funds not permitted per B3-4.3-04 and exceeds IPC limit of 9% ($40,950) for LTV \u226475% second home per B3-4.1-02.  \n\nDECISION: approve with conditions  \nRULES: B3-4.1-01, B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 151654,
+        "cash_to_close": 149718,
+        "monthly_pitia": 2568
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 220654,
+        "cash_to_close": 149718,
+        "monthly_pitia": 2568
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift second home"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 455000,
+        "loan_amount": 318500,
+        "closing_costs": 13218
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 318500,
+        "property_value": 455000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 67558,
+  "seconds": 80.8,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G047",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-01-16; the 4-year wait ends 2027-01-16, after the 2026-11-27 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Bankruptcy waiting period: Chapter 7 discharge 2023-01-16 requires 4 years; closing 2026-11-27 is before the required 2027-01-16 end date. B3-5.3-07 \u2192 decline.  \n- DTI: (2220+220+150)/7600 = 34.1% < 50% maximum for DU loan casefiles. B3-6-02.  \n- Funds to close: $80,341 (down payment $70,000 + closing costs $10,341); available assets $136,000 (bank $125,000 + retirement $11,000) sufficient. B3-4.1-01.  \n- Reserves after closing: ($136,000 - $80,341) / $2,220 \u2248 25 months reserves available. B3-4.1-01.  \n- Large deposits: none reported; no documentation needed. B3-4.2-02.  \n- Gifts: none reported; no documentation needed. B3-4.3-04.  \n- Credit score: DU loan casefile has no minimum score requirement. B3-5.1-01.  \n- Occupancy and property type: second home, 1-unit permitted.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close reserves assets"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 42718,
+  "seconds": 60.8,
+  "finish_reason": "stop"
+}

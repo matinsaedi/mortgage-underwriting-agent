@@ -1,0 +1,102 @@
+{
+  "applicant_id": "G040",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04",
+      "B3-5.1-01",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $160,818 are short of the $207,518 needed; obtain a signed gift letter for $64,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefile has no minimum credit score requirement (B3-5.1-01).  \n- DTI: 29.4% \u2264 50% maximum for DU underwriting (B3-6-02).  \n- LTV: 70% (informational).  \n- Funds to close: $200,592 required; bank balance $160,818 leaves a shortfall of $39,774 without gift funds.  \n- Gift funds: $64,000 from parent; gift letter missing (has_gift_letter: false); a signed gift letter is required per B3-4.3-04.  \n- With gift funds, total available $224,818 covers funds to close and leaves $24,226 excess.  \n- Reserves: 2 months required for a second home (B3-4.1-01); with gift funds, reserves = 7.0 months \u2265 2 months; without gift, insufficient funds to close (negative reserves).  \n- Large deposits: none reported.  \n- No bankruptcy or foreclosure events.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04, B3-4.1-01, B3-6-02, B3-5.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 434000,
+        "property_value": 620000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3463,
+        "monthly_debts": [
+          480,
+          80
+        ],
+        "monthly_income": 13700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 620000,
+        "loan_amount": 434000,
+        "closing_costs": 14592
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 224818,
+        "cash_to_close": 200592,
+        "monthly_pitia": 3463
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 160818,
+        "cash_to_close": 200592,
+        "monthly_pitia": 3463
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 69069,
+  "seconds": 57.2,
+  "finish_reason": "stop"
+}

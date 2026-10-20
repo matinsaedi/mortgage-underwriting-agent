@@ -1,0 +1,98 @@
+{
+  "applicant_id": "G113",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Bankruptcy waiting period: Chapter 13 discharged 2022-04-11, 2-year waiting period satisfied by closing 2026-11-13. (B3-5.3-07)  \nDTI: 33% \u2264 50% maximum for DU loan casefile. (B3-6-02)  \nFunds to close: $179,622 required, available funds $257,000 sufficient. (B3-4.4-01)  \nReserves: 20.05 months available, no minimum reserve requirement for 1-unit principal residence. (B3-4.1-01)  \nLarge deposits: none identified, no documentation needed. (B3-4.2-02)  \nGifts: none, no documentation needed. (B3-4.3-04)  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3860,
+        "monthly_debts": [],
+        "monthly_income": 11700
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 655000,
+        "loan_amount": 491250,
+        "closing_costs": 15872
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 257000,
+        "cash_to_close": 179622,
+        "monthly_pitia": 3860
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 65949,
+  "seconds": 68.3,
+  "finish_reason": "stop"
+}

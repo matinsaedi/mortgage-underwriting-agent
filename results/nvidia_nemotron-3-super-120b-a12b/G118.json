@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G118",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-2-10",
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $95,000 are short of the $118,020 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefile, no minimum required (B3-5.1-01); score 768 acceptable.  \n- DTI: 29.6% \u2264 50% limit for DU (B3-6-02); acceptable.  \n- Funds to close: Required $104,334 > available $95,000; insufficient liquid assets (B3-2-10); condition.  \n- Reserves: Required six months for 2-4 unit principal residence (B3-4.1-01); available reserves -4.09 months; insufficient; condition.  \n- Large deposits: none; acceptable.  \n- Gifts: none; acceptable.  \n- Income verified matches stated; acceptable.  \n- No bankruptcy/foreclosure; acceptable.  \n\nDECISION: approve with conditions  \nRULES: B3-2-10, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI requirements DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2281,
+        "monthly_debts": [],
+        "monthly_income": 7700
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "sufficient funds to close"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "six months reserves two to four unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds reserves"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-3.8-05",
+    "B3-4.1-01",
+    "B3-4.2-05",
+    "B3-4.3-04",
+    "B3-4.3-20",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 45784,
+  "seconds": 109.0,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G007",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,346 are short of the $99,546 needed; obtain a signed gift letter for $41,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit history: No bankruptcy, foreclosure, or derogatory credit; score 721 meets DU requirements (B3-5.1-01).  \n- DTI: 29.83% \u2264 50% DU limit (B3-6-02).  \n- Funds to close: Required $99,546; available bank balance $85,346 plus gift $41,000 = $126,346 sufficient.  \n- Reserves: No minimum reserve required for 1-unit principal residence (B3-4.1-01).  \n- Large deposits: None reported.  \n- Gift documentation: Missing signed gift letter and donor funds verification (B3-4.3-04).  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 273750,
+        "property_value": 365000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2195,
+        "monthly_debts": [
+          200,
+          260
+        ],
+        "monthly_income": 8900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 365000,
+        "loan_amount": 273750,
+        "closing_costs": 8296
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement principal residence 1-unit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation gift letter required"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 30622,
+  "seconds": 79.6,
+  "finish_reason": "stop"
+}

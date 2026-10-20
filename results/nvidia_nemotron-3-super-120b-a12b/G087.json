@@ -1,0 +1,108 @@
+{
+  "applicant_id": "G087",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,314 are short of the $82,714 needed; $35,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "Credit score: No DU minimum required; score 682 acceptable per B3-5.1-01.  \nDerogatory credit: No bankruptcy/foreclosure; waiting periods not applicable per B3-5-3-07.  \nDTI: 34.2% calculated; DU limit 50% not exceeded per B3-6-02.  \nFunds to close: $70,852 required; bank balance $77,314 sufficient.  \nReserves: Investment property requires six months reserves per B3-4.1-01; borrower has 3.27 months (bank balance only; gift not allowed per B3-4.3-04) \u2013 insufficient.  \nGift funds: Not permitted for investment property per B3-4.3-04.  \nLarge deposits: None reported.  \nDECISION: decline  \nRULES: B3-4.1-01, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU underwriting credit score investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score requirement investment property DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1977,
+        "monthly_debts": [
+          40
+        ],
+        "monthly_income": 5900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 310000,
+        "loan_amount": 248000,
+        "closing_costs": 8852
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 77314,
+        "cash_to_close": 70852,
+        "monthly_pitia": 1977
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements investment property DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds eligibility investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements investment property less than six months"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU investment property reserves credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI DU underwriting"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-1-01",
+    "B3-2-01",
+    "B3-2-11",
+    "B3-3.3-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 73198,
+  "seconds": 86.4,
+  "finish_reason": "stop"
+}

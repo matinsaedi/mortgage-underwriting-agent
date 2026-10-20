@@ -1,0 +1,117 @@
+{
+  "applicant_id": "G093",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 56.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "- Credit history: No bankruptcy/foreclosure; DU loan casefile has no minimum credit score requirement (B3-5.1-01). Pass  \n- DTI: Using verified monthly income $5,400, DTI = 56.74% exceeds DU maximum of 50% (B3-6-02). Fail  \n- Funds to close: Required $95,752; bank balance $124,000 sufficient per asset verification guidance (B3-4.2-01). Pass  \n- Reserves: No minimum reserve required for 1-unit principal residence (B3-4.1-01). Pass  \n- Large deposits/gifts: None reported; no issues. Pass  \n\nDECISION: decline  \nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 348000,
+        "property_value": 435000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2734,
+        "monthly_debts": [
+          330
+        ],
+        "monthly_income": 5400
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2734,
+        "monthly_debts": [
+          330
+        ],
+        "monthly_income": 11600
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio verified income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "qualifying monthly income DTI"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Income Assessment verified monthly income"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 348000,
+        "closing_costs": 8752
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 124000,
+        "cash_to_close": 95752,
+        "monthly_pitia": 2734
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "assets verification funds to close"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserve requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.1-02",
+    "B3-3.3-01",
+    "B3-3.4-15",
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.2-01",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-6-01",
+    "B3-6-02",
+    "B3-6-05"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 66591,
+  "seconds": 74.5,
+  "finish_reason": "stop"
+}

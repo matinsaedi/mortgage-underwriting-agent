@@ -1,0 +1,106 @@
+{
+  "applicant_id": "G057",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,193 are short of the $92,993 needed; document the source of $39,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefile has no minimum score requirement; score 747 is acceptable (B3-5.1-01).  \n- No bankruptcy or foreclosure: no waiting period needed (B3-5.3-07).  \n- DTI: 33.2% \u2264 50% maximum for DU loan casefile (B3-6-02).  \n- Funds to close: $82,235 (property value \u2013 loan amount + closing costs).  \n- Reserves: 23.4 months available \u2265 6 months required for investment property (B3-4.1-01).  \n- Large deposit: $39,000 > 50% of monthly income and undocumented; source must be documented per B3-4.2-02.  \n- No gifts.  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property credit score requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score requirement"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1793,
+        "monthly_debts": [],
+        "monthly_income": 5400
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU loan casefile maximum DTI ratio"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 295000,
+        "loan_amount": 221250,
+        "closing_costs": 8485
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 124193,
+        "cash_to_close": 82235,
+        "monthly_pitia": 1793
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirement DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.2-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 89710,
+  "seconds": 90.2,
+  "finish_reason": "stop"
+}

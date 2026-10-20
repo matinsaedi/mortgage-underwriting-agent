@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G062",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Bankruptcy Chapter 7 discharge 2021-09-11; 4\u2011year waiting period ends 2025-09-11; closing 2026-11-09 satisfies B3-5.3-07.  \n- DTI = 29.34% \u2264 50% maximum for DU loans per B3-6-02.  \n- Funds to close = $227,064 (down payment $207,000 + closing costs $20,064); available bank balance $301,000 covers cash to close.  \n- Reserves after closing = $73,936 / $3,843 PITIA = 19.24 months; no minimum reserve required for 1\u2011unit principal residence per B3-4.1-01.  \n- No large deposits listed; no documentation needed.  \n- No gift funds listed; none required.  \n- Credit score 732 meets DU standards.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3843,
+        "monthly_debts": [],
+        "monthly_income": 13100
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 483000,
+        "closing_costs": 20064
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 301000,
+        "cash_to_close": 227064,
+        "monthly_pitia": 3843
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 29041,
+  "seconds": 36.3,
+  "finish_reason": "stop"
+}

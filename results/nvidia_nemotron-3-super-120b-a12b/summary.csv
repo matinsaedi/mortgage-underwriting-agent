@@ -1,0 +1,121 @@
+id,trap,want,got,correct,needs_rule,rule_hit,cited_unread,used_add_years,used_dti,used_funds,llm_calls,seconds,input_tokens
+G001,old_bankruptcy,approve,approve,True,False,True,False,False,True,True,16,124.1,153061
+G002,recent_bankruptcy,decline,decline,True,True,True,False,False,True,True,5,36.4,16885
+G003,none,approve,approve,True,False,True,False,False,False,False,9,76.8,65002
+G004,gift_rental,decline,decline,True,True,True,False,False,True,True,11,83.1,83073
+G005,gift_bad_donor,decline,decline,True,True,True,False,False,False,True,13,126.6,123904
+G006,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,False,False,8,62.2,54336
+G007,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,True,True,8,79.6,30622
+G008,recent_bankruptcy,decline,decline,True,True,True,False,False,True,True,7,56.0,30192
+G009,gift_bad_donor,decline,decline,True,True,True,False,False,True,True,9,132.5,67953
+G010,min_contribution_short,decline,approve with conditions,False,True,True,False,False,True,True,15,117.4,158637
+G011,none,approve,approve,True,False,True,False,False,True,True,9,68.3,46232
+G012,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,72.4,59748
+G013,min_contribution_met,approve,approve with conditions,False,False,True,False,False,True,True,11,88.3,91199
+G014,recent_foreclosure,decline,decline,True,True,True,False,False,False,True,5,35.9,22329
+G015,short_funds,decline,approve with conditions,False,True,True,False,False,True,True,12,112.3,81564
+G016,old_bankruptcy,approve,approve,True,False,True,False,False,True,True,8,50.3,37085
+G017,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,11,72.8,82248
+G018,gift_bad_donor,decline,approve with conditions,False,True,True,False,False,True,True,11,68.8,75724
+G019,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,13,63.3,76357
+G020,min_contribution_met,approve,approve,True,False,True,False,False,False,False,4,54.6,18661
+G021,recent_bankruptcy,decline,decline,True,True,True,False,True,True,True,8,51.1,33833
+G022,old_foreclosure,approve,approve,True,False,True,False,True,True,True,10,47.3,48051
+G023,recent_bankruptcy,decline,decline,True,True,True,False,True,True,False,5,47.3,16029
+G024,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,True,False,9,80.3,61205
+G025,recent_bankruptcy,decline,decline,True,True,True,False,True,True,True,8,38.3,41583
+G026,recent_bankruptcy,decline,decline,True,True,True,False,False,False,False,2,22.2,4834
+G027,min_contribution_short,decline,decline,True,True,False,True,False,False,False,6,53.5,32909
+G028,min_contribution_short,decline,approve with conditions,False,True,True,False,False,True,True,11,59.9,82031
+G029,gift_rental,decline,approve with conditions,False,True,True,False,False,True,False,9,98.3,56130
+G030,min_contribution_met,approve,approve,True,False,True,False,False,False,False,6,53.8,33344
+G031,min_contribution_met,approve,approve,True,False,True,False,False,False,False,7,84.8,46263
+G032,gift_ok,approve,approve with conditions,False,False,True,False,False,True,True,12,73.9,81774
+G033,min_contribution_short,decline,decline,True,True,True,False,False,True,True,17,116.6,171002
+G034,deposit_not_needed,approve,approve with conditions,False,False,True,False,False,True,True,12,71.9,98348
+G035,none,approve,approve,True,False,True,False,False,True,True,14,85.8,130765
+G036,old_foreclosure,approve,approve,True,False,True,False,True,True,False,8,42.5,39914
+G037,short_funds,decline,decline,True,True,True,False,False,True,True,11,85.2,69703
+G038,high_dti,decline,decline,True,True,True,False,False,True,True,8,44.9,33627
+G039,gift_bad_donor,decline,approve with conditions,False,True,True,False,False,True,True,11,79.7,78126
+G040,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,57.2,69069
+G041,gift_bad_donor,decline,approve with conditions,False,True,True,False,False,False,False,7,54.3,41310
+G042,short_funds,decline,approve with conditions,False,True,True,False,False,True,False,6,42.1,29853
+G043,min_contribution_short,decline,approve with conditions,False,True,False,True,False,True,True,6,95.4,18158
+G044,min_contribution_short,decline,approve with conditions,False,True,True,False,False,True,True,9,58.7,37612
+G045,gift_ok,approve,approve,True,False,True,False,False,False,True,7,57.2,34383
+G046,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,109.5,72459
+G047,recent_bankruptcy,decline,decline,True,True,True,False,False,False,False,7,60.8,42718
+G048,recent_foreclosure,decline,decline,True,True,True,False,True,True,True,8,60.0,42530
+G049,deposit_not_needed,approve,approve,True,False,True,False,False,False,True,10,95.9,73742
+G050,deposit_not_needed,approve,approve with conditions,False,False,True,False,False,True,True,11,119.1,66215
+G051,recent_foreclosure,decline,approve,False,True,False,False,False,True,True,10,84.2,73452
+G052,min_contribution_met,approve,approve with conditions,False,False,True,False,False,False,True,9,62.9,60589
+G053,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,12,107.4,67969
+G054,min_contribution_met,approve,approve,True,False,True,False,False,True,True,7,40.5,32551
+G055,old_bankruptcy,approve,approve,True,False,True,False,False,True,True,14,136.3,116863
+G056,none,approve,approve,True,False,True,False,False,True,True,10,61.5,60170
+G057,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,12,90.2,89710
+G058,old_bankruptcy,approve,approve,True,False,True,False,False,True,True,8,51.6,35569
+G059,recent_foreclosure,decline,decline,True,True,True,False,False,True,True,12,75.4,84440
+G060,gift_ok,approve,approve with conditions,False,False,True,False,False,True,True,12,81.4,93620
+G061,gift_bad_donor,decline,approve with conditions,False,True,True,False,False,True,True,12,130.3,84001
+G062,old_bankruptcy,approve,approve,True,False,True,False,False,True,True,7,36.3,29041
+G063,none,approve,approve,True,False,True,False,False,True,True,11,80.4,64975
+G064,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,72.6,67206
+G065,deposit_not_needed,approve,approve with conditions,False,False,True,False,False,True,True,11,54.1,64777
+G066,old_foreclosure,approve,approve,True,False,True,True,True,True,True,9,56.9,56913
+G067,old_foreclosure,approve,approve,True,False,True,False,False,True,True,9,72.7,44623
+G068,none,approve,approve,True,False,True,False,False,False,True,10,76.1,70809
+G069,recent_foreclosure,decline,decline,True,True,True,False,False,True,True,13,81.9,124061
+G070,recent_bankruptcy,decline,decline,True,True,True,False,False,False,False,7,42.5,42172
+G071,deposit_not_needed,approve,approve with conditions,False,False,True,False,False,True,True,10,74.5,55725
+G072,gift_bad_donor,decline,decline,True,True,True,False,False,False,False,10,69.8,72757
+G073,recent_foreclosure,decline,decline,True,True,True,False,False,True,True,8,50.7,42780
+G074,short_funds,decline,approve with conditions,False,True,True,False,False,False,True,9,62.2,65577
+G075,min_contribution_short,decline,approve with conditions,False,True,True,False,False,True,True,10,82.1,68760
+G076,high_dti,decline,decline,True,True,True,False,False,True,False,7,47.6,38253
+G077,old_foreclosure,approve,approve,True,False,True,False,False,True,True,9,80.7,42331
+G078,high_dti,decline,decline,True,True,True,False,False,True,True,10,62.4,59771
+G079,min_contribution_met,approve,approve,True,False,True,False,False,False,False,5,50.9,23844
+G080,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,87.4,45011
+G081,old_foreclosure,approve,approve,True,False,True,False,False,True,True,10,87.2,57325
+G082,old_foreclosure,approve,approve,True,False,True,False,False,True,True,10,43.5,46793
+G083,recent_foreclosure,decline,decline,True,True,True,False,False,True,True,5,34.6,16318
+G084,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,69.3,50173
+G085,old_bankruptcy,approve,approve,True,False,True,False,False,True,False,9,47.5,55180
+G086,min_contribution_met,approve,approve,True,False,True,False,False,True,True,14,104.9,107571
+G087,gift_rental,decline,decline,True,True,True,False,False,True,True,11,86.4,73198
+G088,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,True,True,10,51.4,58829
+G089,none,approve,approve,True,False,True,False,False,True,False,9,73.3,52053
+G090,deposit_not_needed,approve,approve,True,False,True,False,False,True,True,10,82.3,43382
+G091,high_dti,decline,decline,True,True,True,False,False,True,False,10,74.1,76765
+G092,recent_foreclosure,decline,approve,False,True,False,False,False,True,True,12,81.3,81945
+G093,high_dti,decline,decline,True,True,True,False,False,True,True,12,74.5,66591
+G094,high_dti,decline,decline,True,True,True,False,False,False,True,8,53.5,50204
+G095,gift_ok,approve,approve,True,False,True,False,False,True,True,10,68.8,57373
+G096,none,approve,approve,True,False,True,False,False,True,True,11,59.4,54781
+G097,old_bankruptcy,approve,approve,True,False,True,False,False,False,False,5,54.0,24078
+G098,deposit_not_needed,approve,approve,True,False,True,False,False,True,True,12,114.9,67154
+G099,gift_ok,approve,approve,True,False,True,False,False,True,True,11,90.7,65377
+G100,gift_rental,decline,decline,True,True,True,False,False,True,True,11,101.7,76567
+G101,gift_rental,decline,decline,True,True,True,False,False,True,True,11,62.1,59963
+G102,deposit_not_needed,approve,approve,True,False,True,False,False,False,False,8,112.1,52474
+G103,gift_rental,decline,decline,True,True,True,False,False,True,True,8,68.7,40455
+G104,gift_rental,decline,decline,True,True,True,False,False,False,False,5,91.1,26623
+G105,gift_bad_donor,decline,approve with conditions,False,True,True,False,False,False,True,10,80.8,67558
+G106,short_funds,decline,approve with conditions,False,True,True,False,False,True,True,8,121.4,28748
+G107,gift_ok,approve,approve,True,False,True,False,False,False,False,5,56.7,24344
+G108,gift_rental,decline,decline,True,True,True,False,False,False,True,8,116.1,52430
+G109,deposit_needed,approve with conditions,approve with conditions,True,True,True,False,False,True,True,8,82.6,40003
+G110,short_funds,decline,approve with conditions,False,True,True,False,False,True,True,8,71.3,39851
+G111,gift_ok,approve,approve,True,False,True,False,False,False,False,5,55.6,22028
+G112,gift_ok,approve,approve with conditions,False,False,True,False,False,True,True,9,60.4,52082
+G113,old_bankruptcy,approve,approve,True,False,True,False,False,True,True,11,68.3,65949
+G114,high_dti,decline,decline,True,True,True,False,False,True,True,15,73.7,133757
+G115,min_contribution_short,decline,approve with conditions,False,True,True,False,False,False,False,6,63.4,26206
+G116,gift_no_letter,approve with conditions,approve with conditions,True,True,True,False,False,False,False,6,50.4,30849
+G117,short_funds,decline,approve with conditions,False,True,False,False,False,True,True,7,66.7,33698
+G118,short_funds,decline,approve with conditions,False,True,True,False,False,True,False,8,109.0,45784
+G119,old_foreclosure,approve,approve,True,False,True,False,False,False,True,8,65.8,50288
+G120,high_dti,decline,decline,True,True,True,False,False,True,True,11,65.3,63588

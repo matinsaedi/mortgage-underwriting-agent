@@ -1,0 +1,99 @@
+{
+  "applicant_id": "G080",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-02",
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $117,279 are short of the $126,379 needed; document the source of $46,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "- LTV: 75% (no matrix limit checked).  \n- DTI: 25.8% \u2264 50% DU limit (B3-6-02).  \n- Credit score: 740 meets typical DU minimums.  \n- Bankruptcy/foreclosure: none reported.  \n- Funds to close: $126,379 (down payment + closing costs).  \n- Available funds: $163,279 bank balance includes a $46,000 undocumented large deposit.  \n- Large deposit: $46,000 > 50% of monthly income ($6,500) requires source documentation (B3-4.2-02).  \n- Adjusted funds after removing undocumented deposit: $117,279 < funds to close $126,379 \u2192 $9,100 shortfall.  \n- Reserves: none required for 1\u2011unit principal residence (B3-4.1-01).  \n- Gifts: none.  \n\nDECISION: approve with conditions  \nRULES: B3-6-02, B3-4.2-02, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 348750,
+        "property_value": 465000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2769,
+        "monthly_debts": [
+          170,
+          410
+        ],
+        "monthly_income": 13000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750,
+        "closing_costs": 10129
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163279,
+        "cash_to_close": 126379,
+        "monthly_pitia": 2769
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "no minimum reserve requirement one-unit principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-06",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 45011,
+  "seconds": 87.4,
+  "finish_reason": "stop"
+}

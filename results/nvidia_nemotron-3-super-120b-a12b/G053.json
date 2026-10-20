@@ -1,0 +1,112 @@
+{
+  "applicant_id": "G053",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $95,615 are short of the $100,015 needed; document the source of $5,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "- LTV calculated 75%; no maximum LTV check required per project assumptions (B3-4.1-02).  \n- DTI 28.88% \u2264 50% DU limit (B3-6-02).  \n- Credit score 733; DU does not require minimum score (B3-5.1-01).  \n- No bankruptcy or foreclosure events.  \n- Funds to close $100,015 sufficient given assets after large deposit resolution.  \n- Reserves 0.27 months; no minimum required for 1-unit principal residence (B3-4.1-01).  \n- Large deposit $5,000 > 50% of monthly income ($3,850) requires source documentation (B3-4.2-02).  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 277500,
+        "property_value": 370000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2224,
+        "monthly_debts": [],
+        "monthly_income": 7700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 370000,
+        "loan_amount": 277500,
+        "closing_costs": 7515
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 100615,
+        "cash_to_close": 100015,
+        "monthly_pitia": 2224
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement principal residence 1-unit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU debt-to-income ratio limit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "loan-to-value ratio"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "LTV"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-2-10",
+    "B3-3.1-01",
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-02",
+    "B3-4.3-19",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 67969,
+  "seconds": 107.4,
+  "finish_reason": "stop"
+}

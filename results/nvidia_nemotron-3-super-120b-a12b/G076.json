@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G076",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.0% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "- Credit score: DU loan casefiles have no minimum credit score requirement (B3-5-1-01).  \n- Bankruptcy/foreclosure: none reported.  \n- DTI: 53.03% using verified monthly income exceeds DU maximum of 50% (B3-6-02).  \n- Funds to close: $203,224 required; bank balance $239,000 sufficient.  \n- Reserves: 6 months required for investment property (B3-4.1-01) = $26,256; available after closing $35,776 sufficient.  \n- Large deposits: none.  \n- Gifts: none.  \n- Property occupancy: investment property, 1-unit, acceptable.  \n\nDECISION: decline  \nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property credit score requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirement"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4376,
+        "monthly_debts": [
+          140,
+          45
+        ],
+        "monthly_income": 8600
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU maximum DTI ratio"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.2-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 38253,
+  "seconds": 47.6,
+  "finish_reason": "stop"
+}

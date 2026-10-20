@@ -1,0 +1,93 @@
+{
+  "applicant_id": "G075",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($16,250) must come from the borrower's own funds; they have $13,700."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- LTV 90% (calculated).  \n- DTI 33.44% (calculated) \u2013 meets typical DU limits (B3-6-02).  \n- Credit score 758, no bankruptcy/foreclosure \u2013 acceptable.  \n- Funds to close $39,179 (calculated); available funds $47,327 (bank balance $13,700 + gift $33,627) \u2013 sufficient.  \n- Reserves 3.58 months > 2 months required for second home (B3-4.1-01).  \n- Gift from parent acceptable donor with gift letter (B3-4.3-04).  \n- Minimum borrower contribution: For second home LTV>80%, borrower must contribute 5% own funds ($16,250); own funds $13,700 insufficient \u2013 need additional $2,550 (B3-4.3-04).  \n- Donor verification: Must verify donor has sufficient funds to give gift (B3-4.3-04).  \n- No large deposits.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserves requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds donor ability to give documentation"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 292500,
+        "property_value": 325000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2274,
+        "monthly_debts": [],
+        "monthly_income": 6800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 325000,
+        "loan_amount": 292500,
+        "closing_costs": 6679
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 47327,
+        "cash_to_close": 39179,
+        "monthly_pitia": 2274
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 68760,
+  "seconds": 82.1,
+  "finish_reason": "stop"
+}

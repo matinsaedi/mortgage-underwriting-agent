@@ -1,0 +1,112 @@
+{
+  "applicant_id": "G061",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $112,219 are short of the $121,819 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "- Credit: Score 766, no bankruptcy/foreclosure \u2013 OK per B3-5.1-01 (DU assesses creditworthiness).  \n- DTI: 28.43% \u2264 50% max for DU \u2013 OK per B3-6-02.  \n- LTV: 70% \u2013 no matrix check needed.  \n- Funds to close: $121,819; available funds $143,219 (bank balance + gift) \u2013 sufficient per B3-4.4-01.  \n- Reserves: 9.9 months; no minimum required for 1-unit principal residence \u2013 OK per B3-4.1-01.  \n- Large deposits: none \u2013 OK per B3-4.2-02.  \n- Gift: $31,000 from interested party donor \u2013 condition: provide documentation that donor is acceptable (e.g., gift of equity from seller) or that donor is not an interested party per B3-4.3-04 and B3-4.1-02.  \n- Gift letter: present \u2013 OK.  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift donor"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2161,
+        "monthly_debts": [],
+        "monthly_income": 7600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 380000,
+        "loan_amount": 266000,
+        "closing_costs": 7819
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 143219,
+        "cash_to_close": 121819,
+        "monthly_pitia": 2161
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 266000,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements principal residence one-unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.2-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 84001,
+  "seconds": 130.3,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,61 @@
+{
+  "applicant_id": "G002",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-09-05; the 4-year wait ends 2027-09-05, after the 2026-11-29 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "DECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4204,
+        "monthly_debts": [
+          460,
+          270
+        ],
+        "monthly_income": 14500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 715000,
+        "loan_amount": 536250,
+        "closing_costs": 21022
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 259000,
+        "cash_to_close": 199772,
+        "monthly_pitia": 4204
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16885,
+  "seconds": 36.4,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,58 @@
+{
+  "applicant_id": "G014",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2023-07-29; the 7-year wait ends 2030-07-29, after the 2026-12-05 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit: Foreclosure waiting period not met (foreclosure 2023-07-29, requires 7 years for second home; closing 2026-12-05 < 2030-07-29) \u2013 fail per B3-5.3-07.  \n- DTI: 29.6% (housing 3,703 + auto 290 / income 13,500) \u2013 acceptable.  \n- Funds to close: 134,202 (down payment 119,000 + closing costs 15,202) \u2013 covered by bank balance 172,000.  \n- Reserves: 10.2 months available (> 2 months required for second home) \u2013 meets B3-4.1-01.  \n- Large deposits: none \u2013 no issue.  \n- Gifts: none \u2013 no issue.  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 476000,
+        "closing_costs": 15202
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 172000,
+        "cash_to_close": 134202,
+        "monthly_pitia": 3703
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 22329,
+  "seconds": 35.9,
+  "finish_reason": "stop"
+}

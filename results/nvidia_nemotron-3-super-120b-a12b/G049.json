@@ -1,0 +1,88 @@
+{
+  "applicant_id": "G049",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "- Credit history: No bankruptcy, foreclosure, or derogatory events; no waiting periods apply. (B3-5.3-07)  \n- DTI: 26% (4089+590)/18000 \u2264 50% maximum for DU underwritten loans. (B3-6-02)  \n- Funds to close: $192,602 required; after subtracting unsourced $45,000 large deposit, assets ($230k bank + $63k retirement) exceed requirement. (B3-4.2-02, B3-4.3-03)  \n- Reserves: No minimum for 1-unit principal residence per B3-4.1-01; borrower retains ample surplus funds.  \n- Large deposit: $45k unsourced >50% of income; excluded from assets, remaining funds sufficient for closing. (B3-4.2-02)  \n- Gifts: None.  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 695000,
+        "loan_amount": 521250,
+        "closing_costs": 18852
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements months of PITIA"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit 50% monthly income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "retirement funds down payment"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit source documentation not needed"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.3-03",
+    "B3-3.4-06",
+    "B3-3.8-05",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-01",
+    "B3-4.3-03",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 73742,
+  "seconds": 95.9,
+  "finish_reason": "stop"
+}

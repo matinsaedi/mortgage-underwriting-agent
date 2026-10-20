@@ -1,0 +1,114 @@
+{
+  "applicant_id": "G059",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2021-11-28; the 7-year wait ends 2028-11-28, after the 2026-11-25 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "- Credit history (foreclosure waiting period): B3-5.3-07 \u2013 waiting period not met (requires 7 years, foreclosure 2021-11-28, closing 2026-11-25) \u2192 fail  \n- DTI: B3-6-02 \u2013 DTI 31.7% \u2264 50% DU limit \u2192 pass  \n- Funds to close: B3-4.1-01 \u2013 bank balance $295,000 \u2265 funds to close $213,930 \u2192 pass  \n- Reserves: B3-4.1-01 \u2013 reserves 22.2 months (bank balance only) > 0 required \u2192 pass  \n- Large deposits: B3-4.2-02 \u2013 no large deposits \u2192 pass  \n- Gifts: B3-4.3-04 \u2013 no gifts \u2192 pass  \n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3653,
+        "monthly_debts": [
+          90
+        ],
+        "monthly_income": 11800
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 655000,
+        "loan_amount": 458500,
+        "closing_costs": 17430
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 388000,
+        "cash_to_close": 213930,
+        "monthly_pitia": 3653
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 295000,
+        "cash_to_close": 213930,
+        "monthly_pitia": 3653
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "sufficient funds to close"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.2-05",
+    "B3-4.3-04",
+    "B3-4.3-20",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 84440,
+  "seconds": 75.4,
+  "finish_reason": "stop"
+}

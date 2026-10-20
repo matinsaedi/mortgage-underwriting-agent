@@ -1,0 +1,112 @@
+{
+  "applicant_id": "G015",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.4-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $130,600 are short of the $164,009 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "- LTV calculated as 75% (loan amount/property value).  \n- DTI ratio 34.65% \u2264 50% maximum for DU underwriting (B3-6-02).  \n- Credit history shows no bankruptcy or foreclosure; no waiting periods applicable.  \n- Funds to close: cash to close $157,209 (funds_to_close); available liquid assets $130,600 (bank balance) insufficient by $26,609 for closing alone (B3-4.4-01).  \n- Reserves required: 2 months PITIA = $6,800 for second home (B3-4.1-01); total funds to be verified $164,009 > available assets $130,600, shortfall $33,409 (B3-4.4-01, B3-4.1-01).  \n- Large deposits: none reported; no documentation needed (B3-4.2-02).  \n- Gifts: none reported; no documentation needed (B3-4.3-04).  \n- Condition: borrower must verify additional liquid assets of at least $33,409 to cover funds to close and reserves.  \n\nDECISION: approve with conditions  \nRULES: B3-4.4-01, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 431250,
+        "property_value": 575000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3400,
+        "monthly_debts": [
+          75,
+          25
+        ],
+        "monthly_income": 10100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 575000,
+        "loan_amount": 431250,
+        "closing_costs": 13459
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "cash to close requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limits DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "\"Total Funds to be Verified\""
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "\"Two months' reserves for a second home transaction\""
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-16",
+    "B3-4.3-20",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 12,
+  "input_tokens": 81564,
+  "seconds": 112.3,
+  "finish_reason": "stop"
+}
