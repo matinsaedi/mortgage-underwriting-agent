@@ -264,7 +264,6 @@ Things I'd do with more time:
 - **Parse tables properly.** The waiting-period mistake came from a PDF table that lost its columns. Keeping column labels in each chunk (for example `Foreclosure | standard: 7 years | with extenuating circumstances: 3 years`) would fix it at the source instead of in the prompt.
 - **Work on the large-deposit rule**, the agent's main remaining weakness.
 - **Model gift-transfer documentation** in the dataset, so the answer key matches the full Selling Guide rule.
-- **Separate the model effect from the prompt effect** by running the v1 prompt on Ultra.
 - **Run each version several times** to measure how much results vary from run to run.
 - **Move the agent and evaluation code** from the notebook into `src/`.
 
