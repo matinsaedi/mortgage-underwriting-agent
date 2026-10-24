@@ -8,6 +8,8 @@ The project has three main parts:
 2. **An agent with tools.** A LangGraph agent that can search the guide and call calculators for LTV, DTI, cash to close, reserves, and date math.
 3. **An evaluation set.** 120 synthetic applicants, each with an answer key produced by a separate rule checker written in plain Python, so the agent's decisions can be graded automatically.
 
+On that set, the final version reaches **93% decision accuracy** and cites the correct rule **99%** of the time, up from 75% and 93% for the first version. See [Evaluation](#7-evaluation) for the full results.
+
 ![Agent graph](docs/agent_graph.png)
 
 ---
@@ -153,17 +155,55 @@ The notebook builds the agent twice. First as a hand-written loop (ask the LLM, 
 
 A system prompt gives the agent its job: review the whole file, look rules up instead of relying on memory, use tools for every number, cite rule IDs, and finish with the `DECISION` and `RULES` lines.
 
-**About the model.** I started with `gpt-oss-120b` on Groq's free tier. It worked, but one applicant takes over a dozen LLM calls, and every call resends the whole conversation, search results included. That adds up to tens of thousands of tokens per applicant, so the free daily token limit ran out after just a handful of applicants. I moved to `nvidia/nemotron-3-super-120b-a12b` through NVIDIA's API catalog, which has a per-minute limit but no daily cap. Since the agent is built with LangChain, switching models was a one-line change.
+**About the model.** I started with `gpt-oss-120b` on Groq's free tier. It worked, but one applicant takes over a dozen LLM calls, and every call resends the whole conversation, search results included. That adds up to tens of thousands of tokens per applicant, so the free daily token limit ran out after just a handful of applicants. I moved to NVIDIA's free API catalog, first with `nvidia/nemotron-3-super-120b-a12b`. NVIDIA retired that model in the middle of the project, so the final runs use `nvidia/nemotron-3-ultra-550b-a55b`. Since the agent is built with LangChain, each switch was a one-line change.
 
-### 7. Evaluation (in progress)
+### 7. Evaluation
 
-The evaluation runs the agent on all 120 applicants and saves one result file per applicant, so a crash or a rate-limit error never loses finished work. It measures:
+The evaluation runs the agent on all 120 applicants and saves one result file per applicant (in `results/`), so a crash or a rate-limit error never loses finished work. The runs are resumable: re-running the loop only picks up applicants that don't have a successful result yet.
 
-- **Decision accuracy**, overall and per scenario
-- **Rule citation**, i.e. whether the cited rule IDs match the answer key
-- **Process checks**, such as whether it called `add_years` on bankruptcy cases, whether it used verified income for DTI, and whether it actually retrieved the rule it cited
+Each result is graded on three levels:
 
-Results will go here once the full run is done.
+- **Outcome:** is the decision right, overall and per scenario?
+- **Rule citation:** did it cite the rule that caused the problem, and only rules it actually read in a search result?
+- **Process:** did it calculate with tools instead of in its head? (`add_years` on bankruptcy and foreclosure cases, `dti` and `funds_to_close` on every file, `reserves_months` whenever reserves are required)
+
+#### Results
+
+| | v1 (Super) | v2 (Ultra) | v3 (Ultra) | **v4 (Ultra)** |
+|---|---|---|---|---|
+| **Decision accuracy** | 75% | 83% | 91% | **93%** |
+| Cited the expected rule | 93% | 100% | 94% | **99%** |
+| Cited a rule it never read | 3 | 0 | 0 | **0** |
+| `add_years` on date cases | 22% | 100% | 100% | **100%** |
+| `dti` / `funds_to_close` used | 75% / 76% | 100% / 100% | 100% / 100% | **100% / 100%** |
+| `reserves_months` when required | 69% | 97% | 97% | **98%** |
+| Avg LLM calls per applicant | 9.3 | 6.4 | 6.3 | **6.2** |
+| Avg input tokens per applicant | 59K | 27K | 27K | **24K** |
+
+Full tables are in `results/comparison.csv` and `results/comparison_by_scenario.csv`.
+
+#### What changed in each version, and why
+
+Every change was aimed at a specific problem I found by reading the agent's write-ups for the cases it got wrong.
+
+**v1 → v2.** In v1, 28 of the 30 errors were "approve with conditions" when the answer was decline or approve. Reading those cases showed the agent knew the facts (for example, "the borrower is $33,409 short") but then wrote a condition like "verify additional assets." It was acting like a helpful advisor instead of an underwriter. The prompt never said the file shows *all* of the borrower's money, or that a condition can only ask for documents about things already in the file. v2 spells both out, makes `dti`, `funds_to_close`, and `add_years` mandatory, and says the shorter waiting periods (which need extenuating circumstances) never apply.
+
+That last line came from a foreclosure case the agent approved 28 days too early. It had called `add_years` correctly, but the Selling Guide's waiting-period **table** was flattened into plain text during PDF extraction. The "with extenuating circumstances" column header ended up far from its numbers, so "3 years" read like a regular option.
+
+This step also switched models (Super was retired), so v1 → v2 isn't a clean prompt-only comparison. From v2 on, the model stays fixed.
+
+**v2 → v3.** 15 of the remaining 19 errors were gift cases where the agent asked the lender to verify that the gift money was actually transferred. That's a real requirement in B3-4.3-04, but our dataset only models the gift letter, and the answer key treats the letter as enough. So this was a gap in the dataset, not in the agent. v3 states the simplification explicitly: a gift with a letter is fully documented.
+
+**v3 → v4.** The v3 wording had a side effect. The agent read "the gift is documented" as "the gift is fine" and started approving gifts that aren't allowed at all (on investment properties, or from an interested party). v4 separates the two ideas: a letter documents a gift, but the agent still has to check the donor and whether gifts are allowed for that property.
+
+#### Where the final version still gets it wrong
+
+v4 makes 8 mistakes out of 120, and 7 of them involve **large deposits** (B3-4.2-02):
+
+- When the borrower **doesn't need** the deposit to close, it sometimes still asks for its source (too cautious).
+- When the borrower **does need** it, it sometimes declines instead of asking for the source (too strict).
+
+Telling those two situations apart is the hardest judgment in the dataset. The last error is a foreclosure that ends just weeks after closing, a close call the model gets right on some runs and wrong on others.
 
 ---
 
@@ -200,6 +240,7 @@ mortgage-underwriting-agent/
 │   ├── 04_scenario_factory.ipynb
 │   ├── 05_generator.ipynb
 │   └── 06_agent.ipynb
+├── results/                  # one JSON per applicant per run, plus comparison tables
 └── src/mortgage_agent/
     ├── schemas.py            # Pydantic applicant models
     ├── calculators.py        # the money math
@@ -223,7 +264,7 @@ mortgage-underwriting-agent/
    pip install pymupdf pydantic python-dotenv jupyter \
        langchain langchain-core langchain-text-splitters langchain-huggingface \
        langchain-qdrant qdrant-client fastembed sentence-transformers \
-       langgraph langchain-nvidia-ai-endpoints
+       langgraph langchain-nvidia-ai-endpoints pandas
    ```
 
 3. **Add an API key.** Create a free key at [build.nvidia.com](https://build.nvidia.com) and put it in a `.env` file in the project root:
@@ -234,7 +275,22 @@ mortgage-underwriting-agent/
 
 4. **Build the index.** Run `notebooks/02_build_documents.ipynb` once. It creates the Qdrant database in `data/qdrant/`. (`b3_rules.json` is already included, so notebook 01 is only needed if you want to re-extract the rules.)
 
-5. **Run the agent.** Open `notebooks/06_agent.ipynb` and run all cells. The last section underwrites Sarah's application step by step.
+5. **Run the agent.** Open `notebooks/06_agent.ipynb` and run the cells through section 5. That section underwrites Sarah's application step by step.
+
+6. **See the results.** The Results cell in section 7 scores the saved runs in `results/` without making any LLM calls. Only run the section 6 loop if you want a fresh run: it makes about 750 LLM calls, so on a free tier it can take a while and may need to pause for rate limits.
+
+---
+
+## Next steps
+
+Things I'd do with more time:
+
+- **Parse tables properly.** The waiting-period mistake came from a PDF table that lost its columns. Keeping column labels in each chunk (for example `Foreclosure | standard: 7 years | with extenuating circumstances: 3 years`) would fix it at the source instead of in the prompt.
+- **Work on the large-deposit rule**, the agent's main remaining weakness.
+- **Model gift-transfer documentation** in the dataset, so the answer key matches the full Selling Guide rule.
+- **Separate the model effect from the prompt effect** by running the v1 prompt on Ultra.
+- **Run each version several times** to measure how much results vary from run to run.
+- **Move the agent and evaluation code** from the notebook into `src/`.
 
 ---
 
