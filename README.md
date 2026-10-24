@@ -182,30 +182,6 @@ Each result is graded on three levels:
 
 Full tables are in `results/comparison.csv` and `results/comparison_by_scenario.csv`.
 
-#### What changed in each version, and why
-
-Every change was aimed at a specific problem I found by reading the agent's write-ups for the cases it got wrong.
-
-**v1 → v2.** In v1, 28 of the 30 errors were "approve with conditions" when the answer was decline or approve. Reading those cases showed the agent knew the facts (for example, "the borrower is $33,409 short") but then wrote a condition like "verify additional assets." It was acting like a helpful advisor instead of an underwriter. The prompt never said the file shows *all* of the borrower's money, or that a condition can only ask for documents about things already in the file. v2 spells both out, makes `dti`, `funds_to_close`, and `add_years` mandatory, and says the shorter waiting periods (which need extenuating circumstances) never apply.
-
-That last line came from a foreclosure case the agent approved 28 days too early. It had called `add_years` correctly, but the Selling Guide's waiting-period **table** was flattened into plain text during PDF extraction. The "with extenuating circumstances" column header ended up far from its numbers, so "3 years" read like a regular option.
-
-This step also switched models (Super was retired), so v1 → v2 isn't a clean prompt-only comparison. From v2 on, the model stays fixed.
-
-**v2 → v3.** 15 of the remaining 19 errors were gift cases where the agent asked the lender to verify that the gift money was actually transferred. That's a real requirement in B3-4.3-04, but our dataset only models the gift letter, and the answer key treats the letter as enough. So this was a gap in the dataset, not in the agent. v3 states the simplification explicitly: a gift with a letter is fully documented.
-
-**v3 → v4.** The v3 wording had a side effect. The agent read "the gift is documented" as "the gift is fine" and started approving gifts that aren't allowed at all (on investment properties, or from an interested party). v4 separates the two ideas: a letter documents a gift, but the agent still has to check the donor and whether gifts are allowed for that property.
-
-#### Where the final version still gets it wrong
-
-v4 makes 8 mistakes out of 120, and 7 of them involve **large deposits** (B3-4.2-02):
-
-- When the borrower **doesn't need** the deposit to close, it sometimes still asks for its source (too cautious).
-- When the borrower **does need** it, it sometimes declines instead of asking for the source (too strict).
-
-Telling those two situations apart is the hardest judgment in the dataset. The last error is a foreclosure that ends just weeks after closing, a close call the model gets right on some runs and wrong on others.
-
----
 
 ## Assumptions
 
