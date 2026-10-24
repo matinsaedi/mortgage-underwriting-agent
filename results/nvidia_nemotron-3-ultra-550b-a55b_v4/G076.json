@@ -1,0 +1,94 @@
+{
+  "applicant_id": "G076",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.0% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Nina Okafor (G076)**\n\n- **DTI (B3-6-02):** 53.0% using verified income ($8,600). DU maximum is 50%. **Exceeds limit.**\n- **Funds to close:** $203,224 (down payment $186,250 + closing costs $16,974). Bank balance $239,000 covers this.\n- **Reserves (B3-4.1-01):** 8.2 months after closing. Investment property requires 6 months. **Met.**\n- **Credit score:** 776. Well above any minimum for investment property purchase.\n- **No bankruptcy, foreclosure, large deposits, or gifts to verify.**\n\nThe DTI exceeds the 50% DU maximum and cannot be corrected by documentation.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property DTI requirements Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirements Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property Fannie Mae"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          140,
+          45
+        ],
+        "housing_payment": 4376,
+        "monthly_income": 8600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 745000,
+        "loan_amount": 558750,
+        "closing_costs": 16974
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 239000,
+        "cash_to_close": 203224,
+        "monthly_pitia": 4376
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score investment property purchase Fannie Mae"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-02",
+    "B3-3.8-04",
+    "B3-3.8-05",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 37046,
+  "seconds": 89.5,
+  "finish_reason": "stop"
+}

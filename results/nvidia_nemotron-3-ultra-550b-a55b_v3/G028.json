@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G028",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($25,500) must come from the borrower's own funds; they have $18,700."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 36.63% \u2264 50% DU limit (B3-6-02). LTV 90%. Funds to close $64,902; available $18,700 own + $56,524 gift = $75,224. Reserves 2.94 months \u2265 2 months required for second home (B3-4.1-01). Gift from parent with letter, fully documented (B3-4.3-04). No bankruptcy/foreclosure. Credit score 726.\n\nFor second home with LTV > 80%, borrower must contribute 5% of property value ($25,500) from own funds (B3-4.3-04). Borrower has only $18,700 own funds \u2014 short $6,800. Cannot be cured by condition (no additional funds allowed).\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3511,
+        "monthly_debts": [
+          105,
+          450
+        ],
+        "monthly_income": 11100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13902,
+        "loan_amount": 459000,
+        "property_value": 510000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 64902,
+        "monthly_pitia": 3511,
+        "available_funds": 75224
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation gift letter"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 459000,
+        "property_value": 510000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 30609,
+  "seconds": 34.7,
+  "finish_reason": "stop"
+}

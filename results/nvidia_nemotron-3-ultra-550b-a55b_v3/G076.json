@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G076",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.0% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 53.03% (verified income $8,600; housing $4,376 + debts $185) exceeds 50% DU maximum per B3-6-02.\nFunds to close: $203,224; bank balance $239,000 \u2014 sufficient.\nReserves: 8.18 months after closing; meets 6-month investment property requirement per B3-4.1-01.\nCredit: 776 score; no bankruptcy/foreclosure.\nNo large deposits or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          140,
+          45
+        ],
+        "housing_payment": 4376,
+        "monthly_income": 8600
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property DU"
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 745000,
+        "loan_amount": 558750,
+        "closing_costs": 16974
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 239000,
+        "cash_to_close": 203224,
+        "monthly_pitia": 4376
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio 50% DU loan casefile limit"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 27909,
+  "seconds": 27.1,
+  "finish_reason": "stop"
+}

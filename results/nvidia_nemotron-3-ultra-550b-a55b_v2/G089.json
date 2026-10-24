@@ -1,0 +1,86 @@
+{
+  "applicant_id": "G089",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Tom Garcia (G089)**\n\n- **DTI**: 27.26% (housing $4,175 + debts $705 \u00f7 income $17,900) \u2013 well under the 50% DU maximum (B3-6-02).\n- **Funds to close**: $198,559 (down payment $177,500 + closing costs $21,059) \u2013 covered by $278,000 bank balance (funds_to_close tool).\n- **Reserves**: 23.58 months ($297,000 total assets \u2013 $198,559 cash to close \u00f7 $4,175 PITIA) \u2013 no minimum required for 1-unit principal residence (B3-4.1-01).\n- **LTV**: 75% \u2013 acceptable for purchase.\n- **Credit score**: 750 \u2013 no minimum for DU loans (B3-5.1-01).\n- **Employment**: 2.9 years \u2013 exceeds two-year history guideline (B3-3.2-02).\n- **Income**: Verified monthly income matches stated ($17,900).\n- **Derogatory credit**: None (no bankruptcy, foreclosure, or large deposits).\n- **Gifts**: None.\n\nAll requirements met with documented file data.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4175,
+        "monthly_debts": [
+          145,
+          560
+        ],
+        "monthly_income": 17900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 532500,
+        "closing_costs": 21059,
+        "property_value": 710000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 198559,
+        "monthly_pitia": 4175,
+        "available_funds": 297000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 710000,
+        "loan_amount": 532500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "employment history two years"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.2-02",
+    "B3-3.3-02",
+    "B3-3.4-19",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 20787,
+  "seconds": 41.2,
+  "finish_reason": "stop"
+}

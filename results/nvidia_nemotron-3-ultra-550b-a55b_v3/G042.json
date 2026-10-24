@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G042",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,200 are short of the $97,540 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 27.45% (under 50% DU limit per B3-6-02). Funds to close: $88,156. Available funds: $77,200 (bank balance). Shortfall: $10,956. Reserves: -7.01 months (insufficient to close). No gifts or other assets. Credit score 740 meets requirements. No bankruptcy/foreclosure.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6900,
+        "housing_payment": 1564,
+        "monthly_debts": [
+          330
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 189000,
+        "closing_costs": 7156,
+        "property_value": 270000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 77200,
+        "cash_to_close": 88156,
+        "monthly_pitia": 1564
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves 2-4 unit principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 11172,
+  "seconds": 30.6,
+  "finish_reason": "stop"
+}

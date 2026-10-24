@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G095",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.02% \u2264 50% DU limit (B3-6-02). Funds to close $164,923 covered by $151,323 bank balance + $75,000 gift = $226,323. Reserves 21.4 months after closing, well above DU minimum for 1-unit principal residence (B3-4.1-01). Gift from parent with gift letter; donor is acceptable relative, and project assumptions confirm gift letter fully documents transfer (B3-4.3-04). No large deposits (B3-4.2-02). Credit score 749, no bankruptcy/foreclosure. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8600,
+        "housing_payment": 2866,
+        "monthly_debts": [
+          60
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11923,
+        "property_value": 510000,
+        "loan_amount": 357000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2866,
+        "available_funds": 226323,
+        "cash_to_close": 164923
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 17936,
+  "seconds": 29.5,
+  "finish_reason": "stop"
+}

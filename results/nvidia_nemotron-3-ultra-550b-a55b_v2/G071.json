@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G071",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 34.14% (housing $1,966 + auto $560 = $2,526 / $7,400 income) \u2014 within DU limits.  \nLTV: 75% \u2014 acceptable for second home.  \nReserves: 13.16 months ($114,000 \u2212 $88,133 cash to close = $25,867 / $1,966) \u2014 exceeds 2-month requirement for second home (B3-4.1-01).  \nCredit: 724 score, no derogatory events.  \nLarge deposit: $17,000 on 2026-09-27 exceeds 50% of monthly income ($3,700). For a purchase, source must be documented if funds are needed (B3-4.2-02). Bank balance includes this deposit; reducing by $17,000 leaves $97,000, which still covers $88,133 cash to close + $3,932 reserves = $92,065. However, the undocumented deposit requires either source documentation or use of reduced verified funds.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1966,
+        "monthly_income": 7400,
+        "monthly_debts": [
+          560
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 6883,
+        "property_value": 325000,
+        "loan_amount": 243750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 88133,
+        "monthly_pitia": 1966,
+        "available_funds": 114000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit threshold definition"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 243750,
+        "property_value": 325000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 23965,
+  "seconds": 49.0,
+  "finish_reason": "stop"
+}

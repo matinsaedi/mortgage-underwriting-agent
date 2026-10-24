@@ -1,0 +1,88 @@
+{
+  "applicant_id": "G061",
+  "parsed": {
+    "decision": null,
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $112,219 are short of the $121,819 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI:** 28.43% (housing $2,161 \u00f7 income $7,600) \u2014 well under DU 50% max (B3-6-02). \u2713\n\n**LTV:** 70% ($266K \u00f7 $380K) \u2014 \u226480%, so no minimum borrower contribution required for 1-unit principal residence (B3-4.3-04). \u2713\n\n**Funds to close:** $121,819 (down payment $114,000 + closing costs $7,819).\n\n**Available own funds:** $112,219 (bank balance; gifts excluded). **Shortfall: $9,600.**\n\n**Gift:** $31,000 from \"interested party\" with gift letter. B3-4.3-04 states: \"The donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" An interested party is not an acceptable donor for a personal gift. This is not a gift of equity (which requires the seller to be an acceptable donor and the gift to be a credit in the transaction). The gift cannot be used.\n\n**Reserves:** No minimum required for 1-unit principal residence DU loan (B3-4.1-01), but borrower cannot close without the ineligible gift.\n\n**Credit:** 766 score, no bankruptcy/foreclosure. \u2713\n\n**Decision:** Decline \u2014 insufficient eligible funds to close; gift from interested party not permitted per B3-4.3-04.\n\nDECISION: decline\nRULES: B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserves required DU purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2161,
+        "monthly_income": 7600,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 266000,
+        "property_value": 380000,
+        "closing_costs": 7819
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 380000,
+        "loan_amount": 266000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 112219,
+        "cash_to_close": 121819,
+        "monthly_pitia": 2161
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions IPCs gift"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 28675,
+  "seconds": 36.1,
+  "finish_reason": "stop"
+}

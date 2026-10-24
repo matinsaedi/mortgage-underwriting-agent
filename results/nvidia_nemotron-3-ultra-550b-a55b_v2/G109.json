@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G109",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $146,482 are short of the $156,282 needed; document the source of $32,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 28.45% (\u226450% DU limit per B3-6-02) \u2713  \nLTV: 80% \u2713  \nFunds to close: $156,282 (down payment $142,000 + closing costs $14,282)  \nAvailable funds: $178,482 (bank balance includes $32,000 large deposit)  \nReserves after closing: 5.05 months (sufficient for DU 1-unit principal residence) \u2713  \nCredit: 776, no bankruptcy/foreclosure \u2713  \nIncome verified matches stated \u2713  \n\nLarge deposit: $32,000 on 2026-12-01, source not documented. Since $178,482 \u2212 $32,000 = $146,482 < $156,282 needed to close, the deposit funds are required for the transaction. B3-4.2-02 requires documentation of the source for purchase transactions when large deposit funds are needed for down payment, closing costs, or reserves.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4400,
+        "monthly_income": 18700,
+        "monthly_debts": [
+          530,
+          390
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 710000,
+        "loan_amount": 568000,
+        "closing_costs": 14282
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 568000,
+        "property_value": 710000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 156282,
+        "monthly_pitia": 4400,
+        "available_funds": 178482
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 20959,
+  "seconds": 34.7,
+  "finish_reason": "stop"
+}

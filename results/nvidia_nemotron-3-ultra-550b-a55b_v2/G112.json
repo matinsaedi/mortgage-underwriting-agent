@@ -1,0 +1,79 @@
+{
+  "applicant_id": "G112",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 32.8% (B3-6-02: DU limit 50%) \u2713  \nLTV 80% \u2713  \nCredit score 785 \u2713  \nNo bankruptcy/foreclosure \u2713  \nFunds to close $168,894; available $254,094 (bank $154,094 + gift $100,000) \u2713  \nReserves 18.4 months (B3-4.1-01: DU determines; gift funds eligible) \u2713  \nGift letter present but contents not verified; donor fund verification not documented (B3-4.3-04) \u2192 condition\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          115
+        ],
+        "monthly_income": 14500,
+        "housing_payment": 4642
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 750000,
+        "closing_costs": 18894,
+        "loan_amount": 600000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 254094,
+        "cash_to_close": 168894,
+        "monthly_pitia": 4642
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 750000,
+        "loan_amount": 600000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 23067,
+  "seconds": 33.3,
+  "finish_reason": "stop"
+}

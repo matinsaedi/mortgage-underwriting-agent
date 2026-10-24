@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G079",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.26% (\u226445% DU limit) \u2014 B3-6-02. Credit score 701 (DU no minimum; well above 620) \u2014 B3-5.1-01. Reserves 2.96 months (\u22652 months for second home) \u2014 B3-4.1-01. Funds to close $49,573; available $57,891 (bank $32,000 + gift $25,891) \u2014 sufficient. Gift from parent with gift letter meets documentation \u2014 B3-4.3-04. No bankruptcy, foreclosure, or large deposits. LTV 90%.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8200,
+        "housing_payment": 2809,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 364500,
+        "closing_costs": 9073,
+        "property_value": 405000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2809,
+        "cash_to_close": 49573,
+        "available_funds": 57891
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 620 second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 405000,
+        "loan_amount": 364500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 30818,
+  "seconds": 28.4,
+  "finish_reason": "stop"
+}

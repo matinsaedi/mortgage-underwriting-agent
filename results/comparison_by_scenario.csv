@@ -1,0 +1,16 @@
+trap,Super v1,Ultra v2,Ultra v3,Ultra v4
+deposit_needed,1.0,1.0,1.0,0.75
+deposit_not_needed,0.5,0.5,0.5,0.375
+gift_bad_donor,0.375,0.875,0.875,1.0
+gift_no_letter,1.0,1.0,1.0,1.0
+gift_ok,0.625,0.125,1.0,1.0
+gift_rental,0.875,1.0,0.625,1.0
+high_dti,1.0,1.0,1.0,1.0
+min_contribution_met,0.75,0.0,0.875,1.0
+min_contribution_short,0.25,1.0,0.875,1.0
+none,1.0,1.0,1.0,1.0
+old_bankruptcy,1.0,1.0,1.0,1.0
+old_foreclosure,1.0,1.0,1.0,1.0
+recent_bankruptcy,1.0,1.0,1.0,1.0
+recent_foreclosure,0.75,1.0,0.875,0.875
+short_funds,0.125,1.0,1.0,1.0

@@ -1,0 +1,105 @@
+{
+  "applicant_id": "G027",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($20,500) must come from the borrower's own funds; they have $8,500."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 36.98% \u2264 50% DU max (B3-6-02) \u2713  \nFunds to close: $52,821 needed; $62,205 available ($8,500 own + $53,705 gift) \u2713  \nReserves: 3.3 months after closing \u2265 2 months required for second home (B3-4.1-01) \u2713  \nGift: Parent donor, gift letter present, eligible for second home down payment/closing/reserves (B3-4.3-04) \u2713  \nCredit: 705 score, no DU minimum (B3-5.1-01) \u2713  \nNo bankruptcy/foreclosure \u2713  \nNo large deposits \u2713  \n\nLTV: 90% > 80%. For second home with LTV > 80%, borrower must contribute 5% of property value ($20,500) from own funds (B3-4.3-04). Borrower has only $8,500 own funds \u2014 short $12,000. Cannot be cured by condition (no additional funds allowed).\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          560
+        ],
+        "monthly_income": 9200,
+        "housing_payment": 2842
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11821,
+        "loan_amount": 369000,
+        "property_value": 410000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 52821,
+        "monthly_pitia": 2842,
+        "available_funds": 62205
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 410000,
+        "loan_amount": 369000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 63441,
+  "seconds": 67.0,
+  "finish_reason": "stop"
+}

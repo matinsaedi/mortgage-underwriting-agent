@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G062",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Bankruptcy (Ch. 7): 4-yr wait from 2021-09-11 discharge ends 2025-09-11; closing 2026-11-09 passes. B3-5.3-07  \nDTI: 29.3% (housing only, no other debts) \u2014 within DU limits. B3-6-02  \nFunds to close: $227,064; bank balance $301,000 covers it. B3-4.1-01  \nReserves: 19.2 months after closing \u2014 exceeds any requirement. B3-4.1-01  \nLTV: 70% \u2014 acceptable.  \nNo large deposits, no gifts, credit score 732, stable employment.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2021-09-11"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 3843,
+        "monthly_income": 13100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 483000,
+        "closing_costs": 20064
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 227064,
+        "available_funds": 301000,
+        "monthly_pitia": 3843
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 483000,
+        "property_value": 690000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22704,
+  "seconds": 20.9,
+  "finish_reason": "stop"
+}

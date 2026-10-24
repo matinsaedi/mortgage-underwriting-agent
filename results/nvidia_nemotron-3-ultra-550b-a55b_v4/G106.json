@@ -1,0 +1,60 @@
+{
+  "applicant_id": "G106",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $113,400 are short of the $182,170 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 30.66% (within 45% DU limit) \u2014 B3-6-02  \nFunds to close: $174,566 required; available assets $113,400 (bank balance only) \u2014 shortfall $61,166 \u2014 B3-4.1-01  \nReserves: negative after closing \u2014 B3-4.1-01  \nCredit: 800 score, no derogatory events \u2014 meets requirements  \nNo gifts, retirement funds, or other assets to supplement\n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 12400,
+        "housing_payment": 3802
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 645000,
+        "loan_amount": 483750,
+        "closing_costs": 13316
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 174566,
+        "monthly_pitia": 3802,
+        "available_funds": 113400
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close insufficient cash to close decline"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-03",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 9867,
+  "seconds": 20.7,
+  "finish_reason": "stop"
+}

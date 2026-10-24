@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G016",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit History:** Chapter 7 bankruptcy discharged 2022-09-16; 4-year waiting period ends 2026-09-16 per B3-5.3-07. Closing 2026-12-11 is after waiting period. Credit score 784.\n\n**DTI:** 28.96% (housing $2,252 + debts $615 \u00f7 income $9,900) \u2014 well within DU limit (B3-6-02).\n\n**LTV:** 75% ($281,250 \u00f7 $375,000).\n\n**Funds to Close:** $102,597 (down payment $93,750 + closing costs $8,847). Bank balance $157,000 covers this.\n\n**Reserves:** 24.2 months ($157,000 \u2212 $102,597 \u00f7 $2,252) \u2014 exceeds any DU requirement.\n\n**Large Deposits/Gifts:** None listed.\n\nAll requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-09-16",
+        "years": 4
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          500,
+          115
+        ],
+        "monthly_income": 9900,
+        "housing_payment": 2252
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 375000,
+        "closing_costs": 8847,
+        "loan_amount": 281250
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2252,
+        "cash_to_close": 102597,
+        "available_funds": 157000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 375000,
+        "loan_amount": 281250
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 23000,
+  "seconds": 31.0,
+  "finish_reason": "stop"
+}

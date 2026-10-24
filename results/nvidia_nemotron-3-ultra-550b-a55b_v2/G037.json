@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G037",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.4-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $94,700 are short of the $111,386 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI 27.4% (\u226445% limit, B3-6-02). LTV 70%. Credit score 776. Funds to close $107,552 (down payment $100,500 + closing costs $7,052). Bank balance $94,700 \u2014 short $12,852. No gifts or other assets listed. Second home requires 2 months reserves (B3-4.1-01) but borrower cannot even cover cash to close.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.4-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 1917,
+        "monthly_income": 7000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7052,
+        "property_value": 335000,
+        "loan_amount": 234500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 1917,
+        "available_funds": 94700,
+        "cash_to_close": 107552
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum down payment"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-4.4-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 28900,
+  "seconds": 16.6,
+  "finish_reason": "stop"
+}

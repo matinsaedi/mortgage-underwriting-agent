@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G108",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,736 are short of the $90,936 needed; $24,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.5% (housing $1,793 + credit card $60) / $5,700 income \u2014 within limits.  \nFunds to close: $80,178 (down payment $73,750 + closing costs $6,428).  \nAvailable funds: Bank balance $78,736 only \u2014 gift of $24,000 from parent is **not allowed** on investment property (B3-4.3-04: \u201cGifts are not allowed on an investment property\u201d).  \nShortfall: $1,442 to close. Reserves: negative without gift; investment property requires 6 months PITIA (B3-4-1-01).  \nNo bankruptcy/foreclosure. Credit score 733 acceptable.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum borrower contribution gift"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1793,
+        "monthly_income": 5700,
+        "monthly_debts": [
+          60
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 295000,
+        "loan_amount": 221250,
+        "closing_costs": 6428
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 78736,
+        "monthly_pitia": 1793,
+        "cash_to_close": 80178
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-03"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 21363,
+  "seconds": 32.0,
+  "finish_reason": "stop"
+}

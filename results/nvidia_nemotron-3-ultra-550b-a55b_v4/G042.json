@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G042",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,200 are short of the $97,540 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 27.45% (housing $1,564 + auto $330 = $1,894 / $6,900 income) \u2014 within DU limits.\nFunds to close: $88,156 (down payment $81,000 + closing costs $7,156).\nAvailable funds: $77,200 bank balance only \u2014 short $10,956 to close.\nReserves: 6 months required for 2\u20134 unit principal residence (B3-4.1-01); borrower has \u20137.01 months after closing.\nCredit: 740 score, no derogatory events.\nProperty: 2\u20134 unit principal residence \u2014 eligible per B3-3.8-02.\n\nThe borrower lacks sufficient funds to cover the down payment and closing costs. No gifts or other assets are available. This shortfall cannot be cured by documentation.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1564,
+        "monthly_debts": [
+          330
+        ],
+        "monthly_income": 6900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7156,
+        "property_value": 270000,
+        "loan_amount": 189000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 1564,
+        "cash_to_close": 88156,
+        "available_funds": 77200
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit principal residence eligibility"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves required 2-4 unit principal residence DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-02",
+    "B3-4.1-01",
+    "B3-4.3-08",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 14896,
+  "seconds": 86.4,
+  "finish_reason": "stop"
+}

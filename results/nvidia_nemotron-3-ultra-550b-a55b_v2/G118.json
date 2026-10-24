@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G118",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $95,000 are short of the $118,020 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 29.62% (\u226450% DU limit per B3-6-02) \u2713  \nFunds to close: $104,334 needed (down payment $95,000 + closing costs $9,334); bank balance $95,000 \u2192 shortfall $9,334 \u2717  \nReserves: negative after closing (-4.09 months) \u2717  \nCredit score: 768 \u2713  \nNo bankruptcy/foreclosure \u2713  \nNo large deposits/gifts \u2713  \n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 7700,
+        "housing_payment": 2281
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 285000,
+        "closing_costs": 9334,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2281,
+        "available_funds": 95000,
+        "cash_to_close": 104334
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves 2-4 unit principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 11065,
+  "seconds": 15.3,
+  "finish_reason": "stop"
+}

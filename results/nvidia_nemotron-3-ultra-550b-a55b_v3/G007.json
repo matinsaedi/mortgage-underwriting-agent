@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G007",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,346 are short of the $99,546 needed; obtain a signed gift letter for $41,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 29.8% (housing $2,195 + debts $460 \u00f7 income $8,900) \u2014 well within 45% limit (B3-6-02).  \nLTV 75% \u2014 acceptable.  \nFunds to close $99,546; available $85,346 bank + $41,000 gift = $126,346 \u2014 sufficient.  \nReserves 12.2 months after closing \u2014 exceeds any requirement.  \nCredit score 721; no bankruptcy/foreclosure.  \nNo large deposits to source.  \nGift of $41,000 from parent lacks gift letter (has_gift_letter: false) \u2014 required per B3-4.3-04.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2195,
+        "monthly_income": 8900,
+        "monthly_debts": [
+          200,
+          260
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 273750,
+        "closing_costs": 8296,
+        "property_value": 365000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 99546,
+        "available_funds": 126346,
+        "monthly_pitia": 2195
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 365000,
+        "loan_amount": 273750
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 10321,
+  "seconds": 19.6,
+  "finish_reason": "stop"
+}

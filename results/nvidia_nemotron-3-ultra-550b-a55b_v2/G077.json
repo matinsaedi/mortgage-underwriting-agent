@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G077",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Foreclosure waiting period (B3-5.3-07):** 7-year standard period from 2019-11-17 ends 2026-11-17; closing 2026-12-20 is after. Additional 3\u20137 year requirements: LTV \u226490% (actual 70%), principal residence purchase \u2014 both met.\n\n**DTI (B3-6-02):** 25.38% using verified income $16,800; well under 50% DU maximum.\n\n**Funds to close:** $230,015 needed; available $371,000 (bank $266,000 + retirement $105,000) \u2014 sufficient.\n\n**Reserves (B3-4.1-01):** 35.9 months post-closing; no minimum required for 1-unit principal residence DU loan.\n\n**Credit score:** 708 \u2014 acceptable.\n\n**Large deposits/gifts:** None.\n\nAll requirements satisfied.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 16800,
+        "housing_payment": 3924,
+        "monthly_debts": [
+          160,
+          180
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 18515,
+        "property_value": 705000,
+        "loan_amount": 493500
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 7,
+        "start_date": "2019-11-17"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 230015,
+        "monthly_pitia": 3924,
+        "available_funds": 371000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 705000,
+        "loan_amount": 493500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 19410,
+  "seconds": 27.1,
+  "finish_reason": "stop"
+}

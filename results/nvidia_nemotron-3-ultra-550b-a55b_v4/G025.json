@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G025",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-03-11; the 2-year wait ends 2027-03-11, after the 2026-11-18 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Chapter 13 bankruptcy discharged 2025-03-11; standard 2-year wait ends 2027-03-11 (B3-5.3-07). Closing 2026-11-18 is before wait period ends. DTI 31% (B3-6-02). Funds to close $213,927 covered by $244,000 bank balance. Reserves 8.2 months > 2-month minimum for second home (B3-4.1-01). No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-03-11",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12300,
+        "monthly_debts": [
+          160
+        ],
+        "housing_payment": 3653
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 655000,
+        "closing_costs": 17427,
+        "loan_amount": 458500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 244000,
+        "cash_to_close": 213927,
+        "monthly_pitia": 3653
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 24465,
+  "seconds": 62.5,
+  "finish_reason": "stop"
+}

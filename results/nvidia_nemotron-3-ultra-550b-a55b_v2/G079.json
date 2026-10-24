@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G079",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 34.26% \u2014 within 45% DU limit (B3-6-02).  \nCredit: 701 \u2014 DU has no minimum score requirement (B3-5.1-01).  \nLTV: 90% \u2014 second home >80% LTV requires 5% borrower contribution ($20,250); borrower has $32,000 own funds (B3-4-3-04).  \nReserves: 2.96 months \u2014 meets 2-month second-home requirement (B3-4.1-01).  \nFunds to close: $49,573 needed; $57,891 available ($32,000 bank + $25,891 gift).  \nGift: Parent donor is acceptable; gift letter present. However, donor fund availability/transfer not yet verified (B3-4.3-04).  \nNo bankruptcy, foreclosure, or large deposits.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8200,
+        "housing_payment": 2809,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9073,
+        "loan_amount": 364500,
+        "property_value": 405000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 57891,
+        "cash_to_close": 49573,
+        "monthly_pitia": 2809
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 620 second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home purchase minimum down payment"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds verification donor account transfer"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 40800,
+  "seconds": 29.7,
+  "finish_reason": "stop"
+}

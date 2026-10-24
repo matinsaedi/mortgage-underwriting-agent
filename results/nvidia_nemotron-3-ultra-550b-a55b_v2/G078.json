@@ -1,0 +1,60 @@
+{
+  "applicant_id": "G078",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 53.73% (verified income $6,300; housing $2,795 + student loan $590) exceeds 50% DU maximum per B3-6-02.  \nFunds to close: $102,285; bank balance $145,000 covers it.  \nReserves: 15.3 months after closing.  \nNo bankruptcy, foreclosure, large deposits, or gifts.  \nIncome discrepancy noted but DTI uses verified income.\n\nDECISION: decline  \nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6300,
+        "monthly_debts": [
+          590
+        ],
+        "housing_payment": 2795
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 356000,
+        "closing_costs": 13285,
+        "property_value": 445000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 102285,
+        "monthly_pitia": 2795,
+        "available_funds": 145000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-6-02"
+  ],
+  "llm_calls": 3,
+  "input_tokens": 7682,
+  "seconds": 9.1,
+  "finish_reason": "stop"
+}

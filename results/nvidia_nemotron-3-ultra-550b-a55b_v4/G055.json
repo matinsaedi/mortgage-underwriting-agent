@@ -1,0 +1,89 @@
+{
+  "applicant_id": "G055",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Hana Rossi (G055)**\n\n- **Chapter 13 bankruptcy**: Discharged 2022-11-06; 2-year waiting period per B3-5.3-07 ended 2024-11-06. Closing 2026-11-04 is well after \u2014 **pass**.\n- **DTI**: 29.43% (housing $4,032 \u00f7 verified income $13,700) \u2014 within DU limits per B3-6-02.\n- **Funds to close**: $187,848 (down payment $171,250 + closing costs $16,598) per funds_to_close. Bank balance $241,000 covers this \u2014 **pass**.\n- **Reserves**: 13.18 months remaining ($53,152 \u00f7 $4,032). No minimum required for 1-unit principal residence per B3-4.1-01 \u2014 **pass**.\n- **Credit score**: 732; DU imposes no minimum per B3-5.1-01 \u2014 **pass**.\n- **LTV**: 75% (loan $513,750 \u00f7 value $685,000). Eligibility Matrix not available for max-LTV check.\n- **Large deposits / gifts**: None listed \u2014 no documentation needed.\n\nAll requirements satisfied with current file.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 2,
+        "start_date": "2022-11-06"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 4032,
+        "monthly_income": 13700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 685000,
+        "loan_amount": 513750,
+        "closing_costs": 16598
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 241000,
+        "cash_to_close": 187848,
+        "monthly_pitia": 4032
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements principal residence 1-unit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU loan"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 685000,
+        "loan_amount": 513750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "re-establishing credit after bankruptcy Chapter 13"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 43100,
+  "seconds": 90.8,
+  "finish_reason": "stop"
+}

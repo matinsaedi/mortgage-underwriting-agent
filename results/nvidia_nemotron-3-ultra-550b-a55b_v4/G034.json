@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G034",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 28.6% (B3-6-02) \u2014 well within DU limits.  \nFunds to close: $169,244 (down payment $156,000 + closing costs $13,244).  \nAvailable funds: $316,000 (bank $216,000 + retirement $100,000).  \nLarge deposit: $15,000 on 2026-11-22 exceeds 50% of monthly income ($5,100); unsourced per B3-4.2-02, so reduce available funds to $301,000.  \nReserves after closing: 45.1 months (B3-4.1-01 \u2014 no minimum for 1-unit principal residence).  \nLTV: 70%. Credit score 793. No derogatory events. Income verified. No gifts.\n\nOnly the undocumented large deposit requires a condition.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 10200,
+        "housing_payment": 2920
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 520000,
+        "loan_amount": 364000,
+        "closing_costs": 13244
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 169244,
+        "available_funds": 316000,
+        "monthly_pitia": 2920
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2920,
+        "available_funds": 301000,
+        "cash_to_close": 169244
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 364000,
+        "property_value": 520000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 22440,
+  "seconds": 45.8,
+  "finish_reason": "stop"
+}

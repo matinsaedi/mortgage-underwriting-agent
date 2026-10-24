@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G026",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-04-14; the 2-year wait ends 2027-04-14, after the 2026-11-02 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Chapter 13 bankruptcy discharged 2025-04-14; 2-year waiting period ends 2027-04-14 per B3-5.3-07. Closing 2026-11-02 is before waiting period expires. DTI 27.59% (B3-6-02). Funds to close $86,158; available $239,000. Reserves 63.7 months, exceeds 6-month investment property requirement (B3-4.1-01). Credit score 800. No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 2,
+        "start_date": "2025-04-14"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2401,
+        "monthly_income": 11600,
+        "monthly_debts": [
+          200,
+          600
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 304000,
+        "property_value": 380000,
+        "closing_costs": 10158
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2401,
+        "cash_to_close": 86158,
+        "available_funds": 239000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 25587,
+  "seconds": 78.0,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,91 @@
+{
+  "applicant_id": "G064",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $170,912 are short of the $175,312 needed; document the source of $9,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis \u2013 Tom Brown (G064)**\n\n- **DTI**: 25.22% (housing $2,948 + debts $760 \u00f7 income $14,700). Well under the 50% DU maximum. **B3-6-02** \u2713  \n- **Funds to close**: $169,416 (down payment $157,500 + closing costs $11,916). **B3-4.2-02** \u2713  \n- **Available funds**: $179,912 (bank balance, includes $9,000 large deposit).  \n- **Reserves**: 3.56 months ($10,496 remaining \u00f7 $2,948 PITIA). Exceeds the 2-month requirement for a second home. **B3-4.1-01** \u2713  \n- **Credit score**: 689. DU loan casefiles have no minimum score; DU assesses creditworthiness. **B3-5.1-01** \u2713  \n- **Large deposit**: $9,000 on 2026-09-24, source not documented. For purchase transactions, if large-deposit funds are needed for down payment, closing costs, or reserves, the source must be documented. Without this deposit, post-closing funds would be only $1,496 (0.5 months reserves), below the 2-month requirement. Therefore the deposit is needed and its source must be documented. **B3-4.2-02** \u2192 condition.  \n- **No bankruptcy/foreclosure** \u2013 no waiting periods to check.  \n- **Income verified** matches stated.  \n- **LTV**: 70% (367,500 \u00f7 525,000) \u2013 acceptable for second home.\n\n**Condition**: Document the source of the $9,000 large deposit (2026-09-24).\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DTI Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score Fannie Mae"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          480,
+          280
+        ],
+        "housing_payment": 2948,
+        "monthly_income": 14700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 525000,
+        "loan_amount": 367500,
+        "closing_costs": 11916
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 169416,
+        "available_funds": 179912,
+        "monthly_pitia": 2948
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 620 DU loan"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 31116,
+  "seconds": 90.8,
+  "finish_reason": "stop"
+}

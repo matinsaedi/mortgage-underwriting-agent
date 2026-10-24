@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G109",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $146,482 are short of the $156,282 needed; document the source of $32,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 G109 Kofi Haddad**\n\n- **DTI**: 28.45% (housing $4,400 + debts $920 \u00f7 income $18,700) \u2013 well under DU 50% limit. **B3-6-02**\n- **LTV**: 80% ($568k \u00f7 $710k) \u2013 acceptable for 1-unit principal residence.\n- **Funds to close**: $156,282 (down payment $142k + closing costs $14,282).\n- **Available funds**: $178,482 bank balance (includes $32k large deposit).\n- **Large deposit**: $32,000 on 2026-12-01 exceeds 50% of monthly income ($9,350). Source not documented. Per **B3-4.2-02**, unsourced amount must be deducted from verified funds. Reduced funds = $146,482 \u2013 **$9,800 short of cash to close**. Documentation of the deposit source would restore full balance and cover the shortfall.\n- **Reserves**: 5.05 months with full balance; no minimum reserve requirement for 1-unit principal residence. **B3-4.1-01**\n- **Credit**: Score 776, no bankruptcy/foreclosure \u2013 no waiting-period concerns.\n\n**Condition**: Provide source documentation for the $32,000 deposit dated 2026-12-01.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 18700,
+        "monthly_debts": [
+          530,
+          390
+        ],
+        "housing_payment": 4400
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 14282,
+        "loan_amount": 568000,
+        "property_value": 710000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 156282,
+        "available_funds": 178482,
+        "monthly_pitia": 4400
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 710000,
+        "loan_amount": 568000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves DU principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 28721,
+  "seconds": 85.8,
+  "finish_reason": "stop"
+}

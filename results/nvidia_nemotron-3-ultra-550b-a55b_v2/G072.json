@@ -1,0 +1,99 @@
+{
+  "applicant_id": "G072",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $108,699 are short of the $112,899 needed; $48,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**DTI:** 28.7% (housing $2,166 + student loan $420) \u00f7 $9,000 income = 28.7% \u2014 under 50% DU limit (B3-6-02). \u2713  \n**Funds to close:** $99,903 (down payment $90,000 + closing costs $9,903). Borrower has $108,699 own funds \u2014 sufficient. \u2713  \n**Reserves:** 2\u20134 unit principal residence requires 6 months PITIA (B3-4-1-01). Own funds after closing: $108,699 \u2013 $99,903 = $8,796 \u00f7 $2,166 = **4.06 months** \u2014 **insufficient**.  \n**Gift:** $48,000 from \u201cinterested party.\u201d B3-4.3-04: donor may not be an interested party (seller, builder, agent, etc.). Exception only if seller is also an acceptable donor (relative/familial) and not a builder/developer/agent. File lists relationship as \u201cinterested party,\u201d not a relative \u2014 **ineligible gift**. IPCs cannot fund reserves or down payment (B3-4.1-02).  \n**Credit:** Score 713, no bankruptcy/foreclosure \u2014 eligible. \u2713  \n\nWithout the ineligible gift, reserves fall short of the 6-month requirement. No other funds are available.\n\nDECISION: decline  \nRULES: B3-4.1-01, B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds interested party documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions gift funds"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9000,
+        "housing_payment": 2166,
+        "monthly_debts": [
+          420
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 270000,
+        "closing_costs": 9903,
+        "property_value": 360000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2166,
+        "available_funds": 156699,
+        "cash_to_close": 99903
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 99903,
+        "available_funds": 108699,
+        "monthly_pitia": 2166
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "seller gift funds acceptable donor interested party"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 45479,
+  "seconds": 50.9,
+  "finish_reason": "stop"
+}

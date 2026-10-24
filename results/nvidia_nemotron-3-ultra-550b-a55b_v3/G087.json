@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G087",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,314 are short of the $82,714 needed; $35,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Omar Smith (G087)**\n\n- **Credit Score**: 682 \u2013 DU loan casefile; no minimum score required (B3-5.1-01). \u2713  \n- **DTI**: 34.19% (housing $1,977 + $40 credit card \u00f7 $5,900 income) \u2013 under 50% DU limit (B3-6-02). \u2713  \n- **LTV**: 80% (248,000 \u00f7 310,000).  \n- **Gift Funds**: $35,000 from parent \u2013 **not allowed on investment property** (B3-4.3-04: \u201cGifts are not allowed on an investment property\u201d). \u2717  \n- **Funds to Close**: $70,852 (down payment $62,000 + closing costs $8,852). Borrower\u2019s own bank balance $77,314 covers this. \u2713  \n- **Reserves**: Investment property requires 6 months (B3-4.1-01). After closing, borrower\u2019s own funds leave $6,462 \u00f7 $1,977 = **3.27 months** \u2013 insufficient. \u2717  \n\nThe gift cannot be used, and without it reserves fall short of the 6-month requirement. No condition can cure this because a condition cannot add funds or change the gift donor.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score DTI reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score 620"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds investment property eligible"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5900,
+        "housing_payment": 1977,
+        "monthly_debts": [
+          40
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 310000,
+        "closing_costs": 8852,
+        "loan_amount": 248000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 70852,
+        "available_funds": 77314,
+        "monthly_pitia": 1977
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 33681,
+  "seconds": 34.8,
+  "finish_reason": "stop"
+}

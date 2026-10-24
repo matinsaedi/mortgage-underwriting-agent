@@ -1,0 +1,62 @@
+{
+  "applicant_id": "G015",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $130,600 are short of the $164,009 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 34.65% (housing $3,400 + debts $100 \u00f7 income $10,100) \u2014 within typical DU limit.\nFunds to close: $157,209 (down payment $143,750 + closing costs $13,459).\nAvailable funds: $130,600 bank balance (no gifts, no large deposits).\nReserves after closing: \u20137.8 months (shortfall $26,609).\nLTV: 75% (431,250 \u00f7 575,000) \u2014 second home, \u226480% so no minimum borrower contribution if gifts existed, but none listed.\nCredit: 798 score, no bankruptcy/foreclosure.\n\nThe borrower lacks sufficient funds to close. No gifts or other assets are available to cover the shortfall.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3400,
+        "monthly_debts": [
+          75,
+          25
+        ],
+        "monthly_income": 10100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13459,
+        "property_value": 575000,
+        "loan_amount": 431250
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 157209,
+        "monthly_pitia": 3400,
+        "available_funds": 130600
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close reserves second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 10138,
+  "seconds": 26.0,
+  "finish_reason": "stop"
+}

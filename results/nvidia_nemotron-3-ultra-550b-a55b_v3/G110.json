@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G110",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $110,500 are short of the $133,718 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 27.05% (within limits). Funds to close: $114,404 needed; borrower has $110,500 bank balance \u2014 short $3,904. Investment property requires 6 months reserves (B3-4.1-01) and gifts are not allowed (B3-4.3-04). Borrower cannot close with available funds.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11900,
+        "monthly_debts": [],
+        "housing_payment": 3219
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11404,
+        "property_value": 515000,
+        "loan_amount": 412000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3219,
+        "cash_to_close": 114404,
+        "available_funds": 110500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum borrower contribution reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment borrower contribution"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 14633,
+  "seconds": 48.7,
+  "finish_reason": "stop"
+}

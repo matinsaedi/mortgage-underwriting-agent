@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G031",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "LTV: 90% (second home, >80% LTV) \u2014 B3-4.3-04  \nGift: $26,526 from parent (acceptable donor) with gift letter; allowed for second home \u2014 B3-4.3-04  \nMin borrower contribution: 5% \u00d7 $345,000 = $17,250; borrower has $22,200 own funds \u2014 MET \u2014 B3-4.3-04  \nDTI: 38.6% (within DU limits) \u2014 B3-6-02  \nReserves: 2.12 months (meets 2-month requirement for second home) \u2014 B3-4.1-01  \nFunds to close: $43,612 needed; $48,726 available (own $22,200 + gift $26,526) \u2014 SUFFICIENT  \nCredit: 699 score; DU loan, no minimum required \u2014 B3-5.1-01  \nNo bankruptcy/foreclosure  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home gift funds eligibility"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 310500,
+        "property_value": 345000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9112,
+        "property_value": 345000,
+        "loan_amount": 310500
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          25
+        ],
+        "monthly_income": 6300,
+        "housing_payment": 2407
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2407,
+        "available_funds": 48726,
+        "cash_to_close": 43612
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score 620"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home purchase minimum down payment"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 46661,
+  "seconds": 96.7,
+  "finish_reason": "stop"
+}

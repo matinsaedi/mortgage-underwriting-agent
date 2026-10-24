@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G033",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($27,000) must come from the borrower's own funds; they have $9,300."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 38.91% (under 45% DU limit) \u2014 B3-6-02  \nLTV: 90% (>80%) \u2014 B3-4.3-04  \nFunds to close: $68,607; available own funds $9,300 + gift $69,431 = $78,731 (covers closing)  \nReserves: 2.73 months (meets 2-month second-home DU requirement) \u2014 B3-4.1-01  \nGift: parent donor, gift letter present \u2014 acceptable donor per B3-4.3-04  \nMinimum borrower contribution: second home with LTV >80% requires 5% ($27,000) from borrower\u2019s own funds; borrower has only $9,300 \u2014 B3-4.3-04  \n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3712,
+        "monthly_debts": [
+          140
+        ],
+        "monthly_income": 9900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 540000,
+        "closing_costs": 14607,
+        "loan_amount": 486000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 78731,
+        "monthly_pitia": 3712,
+        "cash_to_close": 68607
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift second home occupancy requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 486000,
+        "property_value": 540000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift second home LTV greater than 80"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-11"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18067,
+  "seconds": 49.6,
+  "finish_reason": "stop"
+}

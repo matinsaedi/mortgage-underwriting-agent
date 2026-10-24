@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G061",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $112,219 are short of the $121,819 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 28.4% (B3-6-02: \u226445% for DU). LTV 70% (\u226480%, so no minimum borrower contribution required for gifts per B3-4.3-04). Funds to close $121,819. Bank balance $112,219 + gift $31,000 = $143,219 available. Reserves 9.9 months.\n\nGift donor is an \"interested party\" \u2014 B3-4.3-04 prohibits gifts from any interested party to the transaction (builder, developer, real estate agent, or other interested party). The gift letter does not cure this; the donor is ineligible. Without the gift, the borrower has only $112,219, which is $9,600 short of the $121,819 needed to close. A condition cannot require additional funds or a different donor.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 7600,
+        "monthly_debts": [],
+        "housing_payment": 2161
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7819,
+        "property_value": 380000,
+        "loan_amount": 266000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party donor principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 380000,
+        "loan_amount": 266000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 143219,
+        "cash_to_close": 121819,
+        "monthly_pitia": 2161
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15238,
+  "seconds": 40.9,
+  "finish_reason": "stop"
+}

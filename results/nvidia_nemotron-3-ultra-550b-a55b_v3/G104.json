@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G104",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $62,763 are short of the $70,963 needed; $15,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.5% (within DU limits). Funds to close: $60,553; available funds (bank $62,763 + gift $15,000) = $77,763 \u2014 sufficient. Reserves: 9.92 months after closing; DU requires 6 months for investment property (B3-4.1-01) \u2014 met. Gift: $15,000 from parent with gift letter; acceptable donor and documented (B3-4.3-04). No bankruptcy/foreclosure. Credit score 726. All requirements satisfied.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 7000,
+        "housing_payment": 1735,
+        "monthly_debts": [
+          350,
+          190
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 270000,
+        "closing_costs": 6553,
+        "loan_amount": 216000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 1735,
+        "cash_to_close": 60553,
+        "available_funds": 77763
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 11255,
+  "seconds": 23.7,
+  "finish_reason": "stop"
+}

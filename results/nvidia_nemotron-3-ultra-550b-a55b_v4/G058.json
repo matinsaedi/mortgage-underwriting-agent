@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G058",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit (B3-5.3-07):** Chapter 13 discharge 2022-12-11; 2-year wait ends 2024-12-11. Closing 2026-11-23 passes. Re-establishing credit met via DU and 694 score.  \n**DTI (B3-6-02):** 32.96% ($2,597 housing + $600 auto \u00f7 $9,700 income) \u2014 within DU limits.  \n**Funds to close:** $120,662 needed; $160,000 bank balance covers it.  \n**Reserves:** 15.15 months post-closing ($39,338 \u00f7 $2,597) \u2014 exceeds any requirement.  \n**LTV:** 75% ($326,250 \u00f7 $435,000).  \n**Credit score:** 694; DU casefile \u2014 no minimum score required.  \n**Large deposits/gifts:** None listed.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period Fannie Mae"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 2,
+        "start_date": "2022-12-11"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9700,
+        "housing_payment": 2597,
+        "monthly_debts": [
+          600
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11912,
+        "loan_amount": 326250,
+        "property_value": 435000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 120662,
+        "available_funds": 160000,
+        "monthly_pitia": 2597
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 326250
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 620 DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "re-establishing credit after bankruptcy requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-5.4-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 41659,
+  "seconds": 79.1,
+  "finish_reason": "stop"
+}

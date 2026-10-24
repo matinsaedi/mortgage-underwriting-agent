@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G087",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,314 are short of the $82,714 needed; $35,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Omar Smith (G087)**\n\n- **Credit Score**: 682 \u2013 DU loan casefile; no minimum score required (B3-5.1-01).  \n- **DTI**: 34.19% \u2013 housing $1,977 + credit card $40 \u00f7 verified income $5,900; under 50% DU limit (B3-6-02).  \n- **LTV**: 80% \u2013 loan $248,000 \u00f7 value $310,000.  \n- **Funds to Close**: $70,852 \u2013 down payment $62,000 + closing costs $8,852 (funds_to_close).  \n- **Available Funds**: Bank balance $77,314 + gift $35,000 = $112,314.  \n- **Reserves (with gift)**: 20.97 months \u2013 exceeds 6-month investment-property requirement (B3-4.1-01).  \n\n**Critical Finding**: B3-4.3-04 states \u201cGifts are not allowed on an investment property.\u201d The $35,000 parent gift cannot be used. Without it, available funds drop to $77,314; after $70,852 cash to close, only $6,462 remains, yielding 3.27 months\u2019 reserves\u2014below the 6-month minimum. No other assets exist to cover the shortfall.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score DTI reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score 620"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1977,
+        "monthly_debts": [
+          40
+        ],
+        "monthly_income": 5900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 8852,
+        "property_value": 310000,
+        "loan_amount": 248000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 112314,
+        "cash_to_close": 70852,
+        "monthly_pitia": 1977
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation gift letter parent investment property"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 248000,
+        "property_value": 310000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 32256,
+  "seconds": 87.5,
+  "finish_reason": "stop"
+}

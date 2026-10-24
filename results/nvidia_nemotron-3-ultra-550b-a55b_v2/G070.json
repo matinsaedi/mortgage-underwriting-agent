@@ -1,0 +1,99 @@
+{
+  "applicant_id": "G070",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-10-27; the 4-year wait ends 2027-10-27, after the 2026-11-30 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Sarah Okafor (G070)**\n\n- **Chapter 7 bankruptcy waiting period (B3-5.3-07):** Discharge 2023-10-27; standard 4-year wait ends 2027-10-27. Closing 2026-11-30 is before the waiting period expires. The 7-year investment-property restriction cited in the guide applies to foreclosure, not bankruptcy, but the 4-year bankruptcy wait is not yet satisfied. **Fail.**\n- **DTI (B3-6-02):** 34.3% (housing $3,764 + credit card $145 \u00f7 $11,400 income). Within 45% limit. **Pass.**\n- **Funds to close (B3-4.1-01):** $136,275 needed (down payment $121,000 + closing costs $15,275). Available: bank $182,000 + retirement $131,000 = $313,000. **Pass.**\n- **Reserves (B3-4.1-01):** Investment property requires 6 months PITIA. Post-close reserves = 47 months. **Pass.**\n- **LTV:** 80%. No matrix check required per assumptions.\n- **Large deposits / gifts:** None listed. **Pass.**\n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period investment property Chapter 7"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2023-10-27",
+        "years": 4
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy investment property waiting period 7 years"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          145
+        ],
+        "monthly_income": 11400,
+        "housing_payment": 3764
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 484000,
+        "closing_costs": 15275
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3764,
+        "cash_to_close": 136275,
+        "available_funds": 313000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy investment property occupancy"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 484000,
+        "property_value": 605000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 63730,
+  "seconds": 74.7,
+  "finish_reason": "stop"
+}

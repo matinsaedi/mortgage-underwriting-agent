@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G049",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 25.99% (B3-6-02: max 50% for DU) \u2014 pass.  \nLTV 75% \u2014 pass.  \nCash to close $192,602; verified funds $338,000 (bank $275,000 + retirement $63,000).  \nReserves 35.6 months; required 0 months for 1-unit principal residence purchase (B3-4.1-01) \u2014 pass.  \nLarge deposit $45,000 undocumented; reducing verified funds by that amount leaves $293,000, still sufficient for cash to close and reserves (B3-4.2-02) \u2014 pass, no borrower condition needed.  \nCredit score 762, no derogatory events \u2014 pass.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4089,
+        "monthly_debts": [
+          590
+        ],
+        "monthly_income": 18000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 18852,
+        "property_value": 695000,
+        "loan_amount": 521250
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 192602,
+        "monthly_pitia": 4089,
+        "available_funds": 338000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit not needed for closing reserves documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU purchase"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 695000,
+        "loan_amount": 521250
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-16",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 34929,
+  "seconds": 50.0,
+  "finish_reason": "stop"
+}

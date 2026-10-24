@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G040",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $160,818 are short of the $207,518 needed; obtain a signed gift letter for $64,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 29.4% (B3-6-02) \u2014 within 45% DU limit.  \nFunds to close $200,592; available funds $160,818 (bank) + $64,000 (gift) = $224,818 \u2014 sufficient.  \nReserves 7 months after closing (B3-4.1-01) \u2014 exceeds 2-month second-home requirement.  \nGift of $64,000 from parent listed but no gift letter (B3-4.3-04) \u2014 letter required.  \nNo bankruptcy, foreclosure, or large deposits. Credit score 731.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 13700,
+        "monthly_debts": [
+          480,
+          80
+        ],
+        "housing_payment": 3463
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 434000,
+        "closing_costs": 14592,
+        "property_value": 620000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 224818,
+        "cash_to_close": 200592,
+        "monthly_pitia": 3463
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirement second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter documentation requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 17748,
+  "seconds": 22.7,
+  "finish_reason": "stop"
+}

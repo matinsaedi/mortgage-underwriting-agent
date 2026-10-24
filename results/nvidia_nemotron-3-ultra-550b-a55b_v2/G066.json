@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G066",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period: 7 years standard per B3-5.3-07; foreclosure 2017-11-25, waiting period ended 2024-11-25, closing 2026-12-01 \u2014 satisfied.  \nDTI: 25.58% (housing $3,888 / income $15,200) \u2014 within limits.  \nLTV: 75% \u2014 below 90% max that applied during years 3\u20137 post-foreclosure; now past 7 years so standard limits apply.  \nFunds to close: $180,597; bank balance $216,000 \u2014 sufficient.  \nReserves: 9.11 months after closing; no minimum required for 1-unit principal residence per B3-4.1-01.  \nCredit score 782 \u2014 meets requirements.  \nNo large deposits or gifts to document.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2017-11-25",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 15200,
+        "housing_payment": 3888,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 660000,
+        "loan_amount": 495000,
+        "closing_costs": 15597
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 180597,
+        "monthly_pitia": 3888,
+        "available_funds": 216000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements 1-unit principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 660000,
+        "loan_amount": 495000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-06",
+    "B3-5.3-07"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 28537,
+  "seconds": 20.5,
+  "finish_reason": "stop"
+}

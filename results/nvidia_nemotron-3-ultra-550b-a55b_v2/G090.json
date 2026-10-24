@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G090",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 25.17% (housing $1,510 \u00f7 income $6,000) \u2014 well within DU limits. **B3-6-02**\n- **Credit Score**: 702 \u2014 DU loan casefile, no minimum score required. **B3-5.1-01**\n- **LTV**: 70% ($182,000 \u00f7 $260,000) \u2014 acceptable.\n- **Funds to Close**: $84,044 (down payment $78,000 + closing costs $6,044). **B3-4.1-01**\n- **Available Funds**: $113,000 (bank balance includes $10,000 large deposit).\n- **Reserves**: 19.18 months after closing ($28,956 \u00f7 $1,510) \u2014 exceeds 6-month requirement for investment property. **B3-4.1-01**\n- **Large Deposit**: $10,000 on 2026-09-24, source not documented. Purchase transaction; per **B3-4.2-02**, if funds from a large deposit are used for down payment, closing costs, or reserves, the source must be documented. Although reserves would be met without this deposit, the funds are commingled in the account used for the transaction. DU validation may waive this, but the file shows `source_documented: false` with no DU finding noted.\n\n**Condition**: Document the source of the $10,000 large deposit (e.g., borrower explanation, sale of asset, etc.) or provide DU validation message confirming no documentation required.\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6000,
+        "housing_payment": 1510,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 6044,
+        "loan_amount": 182000,
+        "property_value": 260000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 113000,
+        "cash_to_close": 84044,
+        "monthly_pitia": 1510
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 260000,
+        "loan_amount": 182000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 23797,
+  "seconds": 71.2,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G086",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 34.8% (\u226450% DU max per B3-6-02). LTV: 90%. Credit score: 747 (exceeds 620 minimum). Cash to close: $49,870. Available funds: $28,000 bank + $31,454 gift = $59,454. Reserves after closing: 3.5 months (\u22652 months required for second home per B3-4.1-01). Gift from parent with gift letter, fully documented per project assumptions. No bankruptcy/foreclosure. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2742,
+        "monthly_debts": [
+          390
+        ],
+        "monthly_income": 9000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 395000,
+        "loan_amount": 355500,
+        "closing_costs": 10370
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2742,
+        "available_funds": 59454,
+        "cash_to_close": 49870
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 355500,
+        "property_value": 395000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 35123,
+  "seconds": 47.5,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G109",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $146,482 are short of the $156,282 needed; document the source of $32,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 G109 Kofi Haddad**\n\n- **DTI:** 28.45% (housing $4,400 + debts $920 \u00f7 income $18,700) \u2013 well within DU limits.  \n- **LTV:** 80.0% ($568k \u00f7 $710k) \u2013 no MI required.  \n- **Funds to close:** $156,282 (down payment $142k + closing costs $14,282).  \n- **Reserves after closing:** 5.05 months (($178,482 \u2013 $156,282) \u00f7 $4,400) \u2013 adequate.  \n- **Credit:** 776 score; no bankruptcy or foreclosure.  \n- **Large deposit:** $32,000 deposited 2026-12-01, source not documented. Bank balance includes this deposit; without it, funds ($146,482) fall short of cash to close ($156,282). Per B3-4.2-02, purchase transactions require documentation of large deposits used for closing.\n\n**Condition:** Provide acceptable source documentation for the $32,000 large deposit dated 2026-12-01.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 18700,
+        "housing_payment": 4400,
+        "monthly_debts": [
+          530,
+          390
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 710000,
+        "loan_amount": 568000,
+        "closing_costs": 14282
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 568000,
+        "property_value": 710000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 178482,
+        "cash_to_close": 156282,
+        "monthly_pitia": 4400
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 3,
+  "input_tokens": 7647,
+  "seconds": 31.6,
+  "finish_reason": "stop"
+}

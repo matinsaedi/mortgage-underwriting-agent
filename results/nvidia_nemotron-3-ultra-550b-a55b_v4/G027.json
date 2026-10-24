@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G027",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($20,500) must come from the borrower's own funds; they have $8,500."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Credit:** Score 705, no bankruptcy/foreclosure \u2014 meets DU requirements.  \n**DTI:** 36.98% (housing $2,842 + auto $560 \u00f7 income $9,200) \u2014 within DU limits.  \n**LTV:** 90% \u2014 triggers minimum borrower contribution rule for second home.  \n**Funds to close:** $52,821 (down payment $41,000 + closing costs $11,821).  \n**Available funds:** $8,500 (bank) + $53,705 (gift from parent, acceptable donor, gift letter present) = $62,205.  \n**Reserves:** 3.3 months after closing \u2014 exceeds 2-month requirement for second home (B3-4.1-01).  \n**Minimum borrower contribution:** For second home with LTV > 80%, borrower must contribute 5% of property value ($20,500) from own funds (B3-4.3-04). Borrower has only $8,500 own funds \u2014 short $12,000. Gift cannot fill this gap. A condition cannot require additional funds.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home gift eligibility requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 369000,
+        "property_value": 410000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 369000,
+        "property_value": 410000,
+        "closing_costs": 11821
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          560
+        ],
+        "monthly_income": 9200,
+        "housing_payment": 2842
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 62205,
+        "cash_to_close": 52821,
+        "monthly_pitia": 2842
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home LTV greater than 80 percent"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 25185,
+  "seconds": 84.7,
+  "finish_reason": "stop"
+}

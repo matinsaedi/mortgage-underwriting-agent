@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G111",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.5% (B3-6-02). LTV 80% (B3-4.3-04). Funds to close $131,618; available $193,336 (bank $134,336 + spouse gift $59,000). Reserves 16.7 months after closing \u2014 exceeds 6-month requirement for 2\u20134 unit principal residence (B3-4.1-01). Gift from spouse is acceptable donor for principal residence; gift letter present; at 80% LTV no minimum borrower contribution required (B3-4.3-04). No bankruptcy, foreclosure, or large deposits. Credit score 768.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3703,
+        "monthly_income": 10900,
+        "monthly_debts": [
+          55
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "closing_costs": 12618,
+        "loan_amount": 476000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 193336,
+        "cash_to_close": 131618,
+        "monthly_pitia": 3703
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from spouse principal residence 2-4 unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement 2-4 unit principal residence DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 476000,
+        "property_value": 595000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16547,
+  "seconds": 44.2,
+  "finish_reason": "stop"
+}

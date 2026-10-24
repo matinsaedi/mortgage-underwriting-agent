@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G120",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 54.3% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI 54.3% exceeds 50% maximum for DU loans (B3-6-02). Funds to close $144,534 covered by $188,000 bank balance. Reserves 17.1 months. Credit score 689 acceptable for DU (B3-5.1-01). No bankruptcy/foreclosure. No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          460,
+          95
+        ],
+        "monthly_income": 5700,
+        "housing_payment": 2541
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 450000,
+        "loan_amount": 315000,
+        "closing_costs": 9534
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 188000,
+        "cash_to_close": 144534,
+        "monthly_pitia": 2541
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit maximum debt-to-income ratio"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15139,
+  "seconds": 32.5,
+  "finish_reason": "stop"
+}

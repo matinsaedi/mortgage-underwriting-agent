@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G018",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $59,830 are short of the $62,130 needed; $22,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Credit**: Score 704, no bankruptcy/foreclosure \u2014 eligible.  \n**DTI**: 29.9% (housing only) \u2014 under 50% DU max (B3-6-02).  \n**LTV**: 80% \u2014 at threshold; no minimum borrower contribution required for 1-unit principal residence (B3-4.3-04).  \n**Gift**: $22,000 from \u201cinterested party\u201d \u2014 **not allowed**; donor may not be an interested party (B3-4.3-04). Gift cannot be used.  \n**Funds to close**: $62,130 needed (down payment $55,000 + closing costs $7,130). Borrower has $59,830 bank balance only. Short $2,300.  \n**Reserves**: No minimum for 1-unit principal residence (B3-4.1-01), but borrower lacks cash to close.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party donor requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5900,
+        "monthly_debts": [],
+        "housing_payment": 1765
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 220000,
+        "property_value": 275000,
+        "closing_costs": 7130
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 275000,
+        "loan_amount": 220000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 62130,
+        "monthly_pitia": 1765,
+        "available_funds": 59830
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 18998,
+  "seconds": 49.4,
+  "finish_reason": "stop"
+}

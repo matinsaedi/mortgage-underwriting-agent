@@ -1,0 +1,86 @@
+{
+  "applicant_id": "G107",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 28.43% (housing $2,826 + auto $540 + credit card $45 \u00f7 verified income $12,000) \u2014 well within DU limits.  \n- **LTV**: 75% ($356,250 \u00f7 $475,000) \u2014 \u2264 80%, so no minimum borrower contribution required for gift funds (B3-4.3-04).  \n- **Funds to close**: $129,905 (down payment $118,750 + closing costs $11,155).  \n- **Available funds**: Bank balance $106,805 + gift $57,000 = $163,805 \u2014 sufficient.  \n- **Reserves**: 12 months post-closing ($33,900 \u00f7 $2,826) \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).  \n- **Gift**: $57,000 from sibling (acceptable donor by blood) with gift letter on file (B3-4.3-04). LTV \u2264 80% allows 100% gift funding.  \n- **Credit**: Score 789; no bankruptcy, foreclosure, or derogatory events.  \n- **Large deposits**: None reported.\n\n**Condition**: Verify donor\u2019s funds availability and transfer of the $57,000 gift per B3-4.3-04 (donor account statement or evidence of transfer to borrower/closing agent).\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12000,
+        "housing_payment": 2826,
+        "monthly_debts": [
+          540,
+          45
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250,
+        "closing_costs": 11155
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation requirements sibling donor"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift principal residence LTV 75"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "verify donor funds gift transfer documentation settlement statement"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 129905,
+        "monthly_pitia": 2826,
+        "available_funds": 163805
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 38937,
+  "seconds": 82.5,
+  "finish_reason": "stop"
+}

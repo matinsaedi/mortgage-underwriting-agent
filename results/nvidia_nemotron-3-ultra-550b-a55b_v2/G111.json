@@ -1,0 +1,100 @@
+{
+  "applicant_id": "G111",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 34.48% \u2264 50% DU max (B3-6-02).  \nLTV: 80% \u2014 no minimum borrower contribution for 2\u20134 unit at \u226480% LTV (B3-4.3-06).  \nFunds to close: $131,618; available $134,336 bank + $59,000 gift = $193,336. \u2713  \nReserves: 16.67 months \u2265 6 months required for 2\u20134 unit principal residence (B3-4.1-01). \u2713  \nCredit: 768 score, no derogatory events. \u2713  \nGift: Spouse is acceptable donor (B3-4.3-04); gift letter present. However, lender must verify donor\u2019s funds availability and transfer (B3-4.3-04) \u2014 not yet documented.  \nLarge deposits: None. \u2713  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3703,
+        "monthly_debts": [
+          55
+        ],
+        "monthly_income": 10900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 476000,
+        "property_value": 595000,
+        "closing_costs": 12618
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 193336,
+        "cash_to_close": 131618,
+        "monthly_pitia": 3703
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation spouse donor"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 476000,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds verification donor account transfer documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit threshold documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 58048,
+  "seconds": 55.7,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G074",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $65,100 are short of the $101,567 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Nina Rossi (G074)**\n\n- **DTI**: 31.79% (housing $2,734 \u00f7 income $8,600) \u2013 within 45% DU limit.  \n- **LTV**: 80.0% ($348k \u00f7 $435k) \u2013 eligible for second home.  \n- **Credit**: 775 score; no bankruptcy/foreclosure.  \n- **Funds to close**: $96,099 (down payment $87,000 + closing costs $9,099).  \n- **Available funds**: $65,100 bank balance (no gifts, no other assets).  \n- **Shortfall**: $30,999 \u2013 borrower cannot close with documented assets.  \n- **Reserves**: 2 months PITIA ($5,468) required for second home per B3-4.1-01; moot due to closing shortfall.  \n\nThe file fails the funds-to-close requirement. No condition can cure a lack of funds.\n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2734,
+        "monthly_debts": [],
+        "monthly_income": 8600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 348000,
+        "closing_costs": 9099,
+        "property_value": 435000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 65100,
+        "cash_to_close": 96099,
+        "monthly_pitia": 2734
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 348000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum borrower contribution funds to close"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserves requirement DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 18012,
+  "seconds": 35.5,
+  "finish_reason": "stop"
+}

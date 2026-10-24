@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G117",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $90,400 are short of the $101,387 needed to close and hold 0 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 27.78% (housing $2,195 + student loans $500 \u00f7 income $9,700) \u2014 well under 50% DU max (B3-6-02).\n- **LTV**: 75% ($273,750 \u00f7 $365,000) \u2014 acceptable.\n- **Credit**: Score 752; no bankruptcy or foreclosure.\n- **Funds to close**: $101,387 (down payment $91,250 + closing costs $10,137).\n- **Available funds**: $90,400 (bank balance only; no gifts, retirement $0).\n- **Shortfall**: $10,987 \u2014 borrower cannot cover cash to close.\n- **Reserves**: -5.01 months after closing (B3-4.1-01 notes no minimum reserve requirement for 1-unit principal residence, but borrower must still have funds to close).\n\n**Finding**: Insufficient funds to close. The file shows all assets; no additional sources exist.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9700,
+        "housing_payment": 2195,
+        "monthly_debts": [
+          190,
+          310
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 273750,
+        "closing_costs": 10137,
+        "property_value": 365000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 365000,
+        "loan_amount": 273750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 90400,
+        "cash_to_close": 101387,
+        "monthly_pitia": 2195
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close insufficient cash to close"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserves DU purchase principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 22297,
+  "seconds": 41.3,
+  "finish_reason": "stop"
+}

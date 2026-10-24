@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G095",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.02% (\u226445% DU limit) \u2014 B3-6-02  \nLTV 70% (\u226480%, no minimum borrower contribution for gifts) \u2014 B3-4.3-04  \nGift $75,000 from parent (acceptable donor) with gift letter, allowed for principal residence \u2014 B3-4.3-04  \nFunds to close $164,923; available $151,323 bank + $75,000 gift = $226,323 \u2014 sufficient  \nReserves 21.4 months after closing \u2014 exceeds any DU requirement  \nCredit score 749, no derogatory events \u2014 eligible  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8600,
+        "housing_payment": 2866,
+        "monthly_debts": [
+          60
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 510000,
+        "loan_amount": 357000,
+        "closing_costs": 11923
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2866,
+        "available_funds": 226323,
+        "cash_to_close": 164923
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds principal residence donor requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 510000,
+        "loan_amount": 357000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-6-02",
+    "B3-6-05"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19563,
+  "seconds": 40.9,
+  "finish_reason": "stop"
+}

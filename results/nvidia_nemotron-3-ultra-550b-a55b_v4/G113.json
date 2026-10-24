@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G113",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Chapter 13 bankruptcy discharged 2022-04-11; 2-year wait per B3-5.3-07 ends 2024-04-11, closing 2026-11-13 passes. DTI 33.0% (housing 3860 / income 11700) well within DU limits. Funds to close 179,622; bank balance 257,000 covers it. Reserves 20.1 months after closing. LTV 75%. Credit score 715; DU has no minimum per B3-5.1-01. No large deposits or gifts. Verified income matches stated. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period Fannie Mae"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 2,
+        "start_date": "2022-04-11"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3860,
+        "monthly_debts": [],
+        "monthly_income": 11700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 15872,
+        "loan_amount": 491250,
+        "property_value": 655000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3860,
+        "available_funds": 257000,
+        "cash_to_close": 179622
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 491250,
+        "property_value": 655000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU Fannie Mae"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.3-07"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 27958,
+  "seconds": 47.5,
+  "finish_reason": "stop"
+}

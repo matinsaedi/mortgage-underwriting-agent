@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G036",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period: 7 years required for second home; foreclosure 2019-07-27, waiting period ends 2026-07-27, closing 2026-12-30 \u2014 satisfied (B3-5.3-07). DTI 29.3% using verified income \u2014 within limits (B3-6-02). LTV 70% \u2014 acceptable. Funds to close $139,550; bank balance $197,000 \u2014 sufficient. Reserves 23.4 months \u2014 exceeds requirements. No large deposits or gifts. Credit score 758 \u2014 meets minimum.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period second home"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2019-07-27",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 8400,
+        "housing_payment": 2459
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 304500,
+        "closing_costs": 9050
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 139550,
+        "available_funds": 197000,
+        "monthly_pitia": 2459
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 304500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22746,
+  "seconds": 26.6,
+  "finish_reason": "stop"
+}

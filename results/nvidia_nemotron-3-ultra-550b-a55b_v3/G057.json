@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G057",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,193 are short of the $92,993 needed; document the source of $39,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 33.2% (within DU limits). Funds to close: $82,235. Reserves: 23.4 months (exceeds 6-month investment property requirement per B3-4.1-01). Credit score 747, no derogatory events. Large deposit of $39,000 (2026-10-23) lacks source documentation; purchase transactions require documentation when funds are needed for the transaction per B3-4.2-02.\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits investment property"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5400,
+        "housing_payment": 1793,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 221250,
+        "closing_costs": 8485,
+        "property_value": 295000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 124193,
+        "monthly_pitia": 1793,
+        "cash_to_close": 82235
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 17608,
+  "seconds": 20.1,
+  "finish_reason": "stop"
+}

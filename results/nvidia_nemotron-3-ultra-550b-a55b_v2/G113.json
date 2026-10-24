@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G113",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score 715 \u2265 620 minimum. Chapter 13 discharged 2022-04-11; 2-year wait ends 2024-04-11 per B3-5.3-07, closing 2026-11-13 is well past. DTI 32.99% \u2264 45% DU limit. Funds to close $179,622; bank balance $257,000 covers it with $77,378 remaining (\u224820 months reserves). No minimum reserve requirement for 1-unit principal residence per B3-4.1-01. No large deposits or gifts to document. LTV 75%.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-04-11",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11700,
+        "housing_payment": 3860,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 491250,
+        "closing_costs": 15872,
+        "property_value": 655000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 655000,
+        "loan_amount": 491250
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 23815,
+  "seconds": 28.7,
+  "finish_reason": "stop"
+}

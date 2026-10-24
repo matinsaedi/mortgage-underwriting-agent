@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G006",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $70,432 are short of the $128,332 needed; obtain a signed gift letter for $72,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 30.35% \u2264 50% DU limit (B3-6-02). LTV 75% on 1-unit principal residence. Funds to close $128,332; available $70,432 bank + $72,000 gift = $142,432. Reserves 5.09 months post-close. Credit score 741, no derogatory events. Gift donor is fianc\u00e9 \u2014 acceptable per B3-4.3-04 (\"individual engaged to marry the borrower\"). LTV \u2264 80% on principal residence \u2192 no minimum borrower contribution required; gift can cover all funds. However, gift letter is missing (has_gift_letter: false); B3-4.3-04 requires a signed gift letter specifying amount, no-repayment statement, and donor details.\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          35,
+          170
+        ],
+        "monthly_income": 9800,
+        "housing_payment": 2769
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 348750,
+        "closing_costs": 12082,
+        "property_value": 465000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 128332,
+        "monthly_pitia": 2769,
+        "available_funds": 142432
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements fianc\u00e9 donor gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable donor gift fianc\u00e9 relationship"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift principal residence LTV"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 32287,
+  "seconds": 25.2,
+  "finish_reason": "stop"
+}

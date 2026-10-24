@@ -1,0 +1,89 @@
+{
+  "applicant_id": "G046",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $123,774 are short of the $131,674 needed; obtain a signed gift letter for $32,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 30.6% (\u226450% DU max) \u2014 B3-6-02  \nFunds to close: $131,674; available $123,774 bank + $32,000 gift = $155,774 \u2014 sufficient  \nReserves after close: 10.4 months \u2014 B3-4.1-01 (DU determines; gift funds eligible)  \nCredit score: 683 \u2014 no minimum for DU \u2014 B3-5.1-01  \nGift: fianc\u00e9 is acceptable donor (engaged to marry) \u2014 B3-4.3-04, but gift letter missing (has_gift_letter: false) \u2014 B3-4.3-04 requires signed gift letter  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2324,
+        "monthly_debts": [],
+        "monthly_income": 7600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 287000,
+        "property_value": 410000,
+        "closing_costs": 8674
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2324,
+        "available_funds": 155774,
+        "cash_to_close": 131674
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation gift letter requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable donor gift fianc\u00e9"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-01",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 41582,
+  "seconds": 36.9,
+  "finish_reason": "stop"
+}

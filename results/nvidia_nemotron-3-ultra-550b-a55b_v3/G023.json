@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G023",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-11-20; the 2-year wait ends 2027-11-20, after the 2026-12-07 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "**Credit (B3-5.3-07):** Chapter 13 discharged 2025-11-20; 2-year wait ends 2027-11-20. Closing 2026-12-07 is before wait expires \u2192 **fail**.  \n**DTI:** 29.6% (housing $3,142 + debts $790 \u00f7 income $13,300) \u2192 pass.  \n**Funds to close:** $143,870 needed; $210,000 bank balance \u2192 pass.  \n**Reserves:** 21.1 months after closing \u2192 pass.  \n**Large deposits/gifts:** none listed \u2192 pass.\n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period Fannie Mae"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-11-20",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 13300,
+        "housing_payment": 3142,
+        "monthly_debts": [
+          290,
+          500
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 530000,
+        "loan_amount": 397500,
+        "closing_costs": 11370
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3142,
+        "available_funds": 210000,
+        "cash_to_close": 143870
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19591,
+  "seconds": 53.8,
+  "finish_reason": "stop"
+}

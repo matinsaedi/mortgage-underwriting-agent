@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G098",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit**: Score 732, no bankruptcy/foreclosure \u2013 eligible.  \n**Income**: Verified $12,600/month matches stated; 8.7 years employment \u2013 stable.  \n**DTI**: 24.94% (housing $3,142 / income $12,600) \u2013 well under 50% DU limit (B3-6-02).  \n**Funds to close**: $146,140 ($132,500 down + $13,640 costs).  \n**Assets**: Bank balance $204,992 includes $40,000 large deposit (2026-08-29, undocumented).  \n**Large deposit**: Exceeds 50% of monthly income ($6,300 threshold). For purchase loans, if funds are needed for down payment, closing costs, or reserves, source must be documented (B3-4.2-02). Excluding the $40,000, verified funds = $164,992. After closing, $18,852 remains = exactly 6 months PITIA ($3,142 \u00d7 6). Minimum reserve requirement for 2\u20134 unit principal residence is 6 months (B3-4.1-01). Reduced funds are sufficient; large deposit not needed to qualify.  \n**Reserves**: 18.73 months with full balance; 6 months minimum met even without large deposit.  \n**Property**: 2\u20134 unit principal residence \u2013 25% down payment meets standard requirements.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12600,
+        "housing_payment": 3142,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13640,
+        "loan_amount": 397500,
+        "property_value": 530000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3142,
+        "available_funds": 204992,
+        "cash_to_close": 146140
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit threshold 50% monthly income"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-06",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 29032,
+  "seconds": 103.2,
+  "finish_reason": "stop"
+}

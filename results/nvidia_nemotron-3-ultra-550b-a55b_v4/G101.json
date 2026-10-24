@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G101",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $100,463 are short of the $118,963 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**DTI**: 30% (housing $2,310 + debts $360 \u00f7 income $8,900) \u2014 within DU limits.  \n**Funds to close**: $105,103 (down payment $96,250 + closing costs $8,853).  \n**Available funds**: Bank balance $100,463 + gift $59,000 = $159,463.  \n**Reserves with gift**: 23.5 months \u2014 exceeds 6-month investment-property minimum (B3-4.1-01).  \n\n**Critical finding**: B3-4.3-04 states \u201cGifts are not allowed on an investment property.\u201d The $59,000 parent gift is ineligible for this occupancy. Without it, the borrower has only $100,463 \u2014 $4,640 short of the $105,103 needed to close. This shortfall cannot be cured by documentation.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8900,
+        "monthly_debts": [
+          130,
+          230
+        ],
+        "housing_payment": 2310
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 385000,
+        "loan_amount": 288750,
+        "closing_costs": 8853
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 159463,
+        "cash_to_close": 105103,
+        "monthly_pitia": 2310
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift investment property eligible donor"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15362,
+  "seconds": 79.0,
+  "finish_reason": "stop"
+}

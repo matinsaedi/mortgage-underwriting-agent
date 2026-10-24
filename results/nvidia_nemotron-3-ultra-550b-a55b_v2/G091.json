@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G091",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 54.8% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 54.82% (verified income $2,800; housing $1,535; no other debts) \u2014 exceeds 50% DU maximum (B3-6-02).  \nFunds to close: $69,945; available assets $171,000 (bank $107,000 + retirement $64,000) \u2014 sufficient.  \nReserves: 65.8 months after closing \u2014 exceeds 2-month second-home requirement (B3-4.1-01).  \nCredit: 783 score, no derogatory events \u2014 meets requirements.  \nNo large deposits or gifts to document.\n\nDECISION: decline  \nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 2800,
+        "monthly_debts": [],
+        "housing_payment": 1535
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7445,
+        "loan_amount": 187500,
+        "property_value": 250000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio second home purchase"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 171000,
+        "cash_to_close": 69945,
+        "monthly_pitia": 1535
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 20872,
+  "seconds": 17.6,
+  "finish_reason": "stop"
+}

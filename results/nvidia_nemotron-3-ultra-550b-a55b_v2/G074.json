@@ -1,0 +1,65 @@
+{
+  "applicant_id": "G074",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $65,100 are short of the $101,567 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 31.79% (within limits). LTV: 80%. Funds to close: $96,099. Available funds: $65,100 (bank balance). Shortfall: $30,999. No gifts or other assets. Second home requires 2 months reserves per B3-4.1-01, but borrower cannot even cover cash to close. Credit score 775, no derogatory events.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2734,
+        "monthly_income": 8600,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 348000,
+        "property_value": 435000,
+        "closing_costs": 9099
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 65100,
+        "cash_to_close": 96099,
+        "monthly_pitia": 2734
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 348000,
+        "property_value": 435000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 14751,
+  "seconds": 16.0,
+  "finish_reason": "stop"
+}

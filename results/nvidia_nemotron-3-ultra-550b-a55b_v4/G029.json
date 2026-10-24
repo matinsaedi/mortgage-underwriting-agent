@@ -1,0 +1,71 @@
+{
+  "applicant_id": "G029",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $94,315 are short of the $128,015 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.76% (under 50% DU limit per B3-6-02). Credit score 697 meets minimum. Funds to close: $109,427. Borrower's own funds: $94,315 bank balance. Gift of $53,000 from parent is not allowed on investment property per B3-4.3-04 (\"Gifts are not allowed on an investment property\"). Without the gift, borrower is short $15,112 to close. Reserves requirement for investment property is 6 months PITIA ($18,588) per B3-4.1-01, but borrower cannot meet cash to close.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property gift funds eligibility"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          160,
+          280
+        ],
+        "monthly_income": 10800,
+        "housing_payment": 3098
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 396000,
+        "closing_costs": 10427,
+        "property_value": 495000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 94315,
+        "cash_to_close": 109427,
+        "monthly_pitia": 3098
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16947,
+  "seconds": 37.1,
+  "finish_reason": "stop"
+}

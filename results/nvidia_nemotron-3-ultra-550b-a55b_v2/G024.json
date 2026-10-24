@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G024",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $110,164 are short of the $160,364 needed; obtain a signed gift letter for $54,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Ben Okafor (G024)**\n\n- **DTI**: 26.67% (housing $4,188 + student loan $560 \u00f7 income $17,800) \u2013 well within DU limits. **B3-6-02**\n- **Credit score**: 696 \u2013 DU loan casefile; no minimum score required, DU assesses creditworthiness. **B3-5.1-01**\n- **LTV**: 80% ($540,000 \u00f7 $675,000) \u2013 eligible for second home.\n- **Funds to close**: $151,988 needed (down payment $135,000 + closing costs $16,988). Available: $110,164 bank + $54,000 spouse gift = $164,164 \u2013 sufficient.\n- **Reserves**: 2.91 months ($164,164 \u2013 $151,988 \u00f7 $4,188) \u2013 meets 2-month requirement for second home. **B3-4.1-01**\n- **Gift**: $54,000 from spouse (acceptable donor). LTV \u2264 80% on second home \u2192 no minimum borrower contribution required. **B3-4.3-04**  \n  **Missing gift letter** \u2013 must be signed by donor, state amount, confirm no repayment, and include donor\u2019s name, address, phone, and relationship. **B3-4.3-04**\n- **No bankruptcy, foreclosure, or large deposits** \u2013 no further action.\n\n**Condition**: Obtain executed gift letter from spouse per B3-4.3-04.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4188,
+        "monthly_debts": [
+          560
+        ],
+        "monthly_income": 17800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 675000,
+        "loan_amount": 540000,
+        "closing_costs": 16988
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 151988,
+        "monthly_pitia": 4188,
+        "available_funds": 164164
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirements spouse"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 24296,
+  "seconds": 77.3,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G037",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.4-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $94,700 are short of the $111,386 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 27.4% (within DU limits). Credit: 776, no derogatory events. LTV: 70%. Cash to close: $107,552 (down payment $100,500 + closing costs $7,052). Available funds: $94,700 bank balance only. Shortfall: $12,852. Reserves: -6.7 months (fails 2-month second-home minimum per B3-4.1-01). No gifts or other assets listed. Borrower cannot close.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.4-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 1917,
+        "monthly_income": 7000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 234500,
+        "property_value": 335000,
+        "closing_costs": 7052
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 107552,
+        "monthly_pitia": 1917,
+        "available_funds": 94700
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-6-07"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15012,
+  "seconds": 86.9,
+  "finish_reason": "stop"
+}

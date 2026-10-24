@@ -1,0 +1,100 @@
+{
+  "applicant_id": "G105",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $151,654 are short of the $154,854 needed; $69,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 27.44% (housing $2,568 + auto loans $450 \u00f7 income $11,000) \u2014 within DU 50% limit (B3-6-02). \u2713\n- **LTV**: 70% \u2014 \u2264 80%, so no minimum borrower contribution required for second home (B3-4.3-04). \u2713\n- **Funds to close**: $149,718 (down payment $136,500 + closing costs $13,218).\n- **Reserves with gift**: 27.6 months \u2014 exceeds 2-month requirement for second home (B3-4-1-01). \u2713\n- **Reserves without gift**: 0.75 months \u2014 below 2-month requirement. \u2717\n- **Gift**: $69,000 from an \"interested party\" with gift letter. B3-4.3-04 states: \"The donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" This gift is not permitted as a personal gift.\n\nWithout the ineligible gift, the borrower lacks sufficient reserves. A condition cannot require a different donor or additional funds.\n\nDECISION: decline\nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserves second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions gift second home"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11000,
+        "housing_payment": 2568,
+        "monthly_debts": [
+          150,
+          300
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 318500,
+        "closing_costs": 13218,
+        "property_value": 455000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 149718,
+        "available_funds": 220654,
+        "monthly_pitia": 2568
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2568,
+        "available_funds": 151654,
+        "cash_to_close": 149718
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 455000,
+        "loan_amount": 318500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 41661,
+  "seconds": 63.7,
+  "finish_reason": "stop"
+}

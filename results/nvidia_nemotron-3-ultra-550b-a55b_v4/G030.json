@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G030",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 36.14% (housing $4,113 + debts $260 \u00f7 income $12,100) \u2014 within DU limits (B3-6-02).\n- **LTV**: 90% \u2014 >80% triggers 5% minimum borrower contribution for second home (B3-4.3-04).\n- **Reserves**: 3.17 months (($42,500 + $48,405 \u2013 $77,879) \u00f7 $4,113) \u2014 exceeds 2-month requirement for second home (B3-4.1-01).\n- **Funds to close**: $77,879 needed; $90,905 available (bank $42,500 + gift $48,405) \u2014 sufficient.\n- **Gift**: $48,405 from parent with gift letter \u2014 acceptable donor; borrower\u2019s own funds ($42,500) exceed 5% minimum contribution ($30,000) (B3-4.3-04).\n- **Credit score**: 696 \u2014 no minimum for DU loans (B3-5.1-01).\n- **Derogatory events**: None.\n- **Large deposits**: None.\n\nAll requirements met as presented.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          230,
+          30
+        ],
+        "housing_payment": 4113,
+        "monthly_income": 12100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 600000,
+        "loan_amount": 540000,
+        "closing_costs": 17879
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 90905,
+        "cash_to_close": 77879,
+        "monthly_pitia": 4113
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift second home occupancy"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 540000,
+        "property_value": 600000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 27105,
+  "seconds": 90.8,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,101 @@
+{
+  "applicant_id": "G094",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 64.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 64.74% using verified income $5,000/mo (B3-6-02 max 50% for DU) \u2014 exceeds limit\nFunds to close: $145,226; available $309,000 (bank $199k + retirement $110k) \u2014 sufficient\nReserves: 52.1 months after closing \u2014 exceeds 2-month second-home requirement (B3-4.1-01)\nCredit: 682 score, no bankruptcy/foreclosure \u2014 acceptable for DU\nLTV: 75% \u2014 within typical limits\nIncome: Stated $11,200/mo vs verified $5,000/mo; must use verified for qualifying (B3-3.3-01)\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio second home purchase DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5000,
+        "housing_payment": 3142,
+        "monthly_debts": [
+          95
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 530000,
+        "loan_amount": 397500,
+        "closing_costs": 12726
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 309000,
+        "cash_to_close": 145226,
+        "monthly_pitia": 3142
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "verified income vs stated income qualifying"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "qualifying income verified monthly income requirement"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 397500,
+        "property_value": 530000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.3-01",
+    "B3-3.3-02",
+    "B3-3.4-07",
+    "B3-3.4-16",
+    "B3-3.4-18",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 52321,
+  "seconds": 80.2,
+  "finish_reason": "stop"
+}

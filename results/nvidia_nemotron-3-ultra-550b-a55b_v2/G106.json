@@ -1,0 +1,65 @@
+{
+  "applicant_id": "G106",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $113,400 are short of the $182,170 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 30.66% (within 45% limit). LTV: 75%. Credit score: 800 (meets minimum). No bankruptcy/foreclosure. Funds to close: $174,566 required (down payment $161,250 + closing costs $13,316). Available funds: $113,400 bank balance only. Shortfall: $61,166. Reserves: negative 16.09 months after closing (need 2 months for second home per B3-4.1-01). Borrower lacks sufficient funds to close and meet reserve requirements.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12400,
+        "housing_payment": 3802,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 483750,
+        "property_value": 645000,
+        "closing_costs": 13316
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3802,
+        "cash_to_close": 174566,
+        "available_funds": 113400
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 483750,
+        "property_value": 645000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 9858,
+  "seconds": 14.6,
+  "finish_reason": "stop"
+}

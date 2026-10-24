@@ -1,0 +1,82 @@
+{
+  "applicant_id": "G099",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.76% (B3-6-02: \u226445% for DU) \u2713  \nFunds to close $68,893; available $93,793 (bank $68,793 + gift $25,000) \u2713  \nReserves 15.92 months; no minimum for 1-unit principal residence (B3-4.1-01) \u2713  \nGift from \"other relative\" = acceptable donor; gift letter present; project assumes transfer documented (B3-4.3-04) \u2713  \nCredit score 743; no bankruptcy/foreclosure \u2713  \nLTV 75% \u2713  \n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 4500,
+        "housing_payment": 1564
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 191250,
+        "closing_costs": 5143,
+        "property_value": 255000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 68893,
+        "available_funds": 93793,
+        "monthly_pitia": 1564
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 255000,
+        "loan_amount": 191250
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift donor other relative documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds verification transfer documentation required"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU purchase principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.4-02",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-05"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 28551,
+  "seconds": 57.6,
+  "finish_reason": "stop"
+}

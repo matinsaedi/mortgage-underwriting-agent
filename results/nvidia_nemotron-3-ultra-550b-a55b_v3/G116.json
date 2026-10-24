@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G116",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $108,603 are short of the $153,503 needed; obtain a signed gift letter for $52,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**DTI**: 27.85% (housing only) \u2014 well within DU limits.  \n**Funds to close**: $153,503 needed (down payment $140,000 + closing costs $13,503). Borrower has $108,603 bank balance + $52,000 gift = $160,603 total \u2014 sufficient.  \n**Reserves**: 1-unit principal residence DU loan has no minimum reserve requirement (B3-4.1-01); 2.14 months remaining after closing is acceptable.  \n**Credit**: Score 742, no bankruptcy/foreclosure \u2014 eligible.  \n**Gift**: Fianc\u00e9 is an acceptable donor (B3-4.3-04), but no gift letter on file. Gift letter required documenting amount, no-repayment statement, donor details, and relationship.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 3314,
+        "monthly_income": 11900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13503,
+        "property_value": 560000,
+        "loan_amount": 420000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 153503,
+        "available_funds": 160603,
+        "monthly_pitia": 3314
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirements fianc\u00e9"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves DU principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 11285,
+  "seconds": 35.9,
+  "finish_reason": "stop"
+}

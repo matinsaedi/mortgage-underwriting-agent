@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G107",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Ben Novak (G107)**\n\n- **DTI**: 28.43% (housing $2,826 + debts $585 \u00f7 verified income $12,000) \u2013 well under the 50% DU limit (B3-6-02).\n- **LTV**: 75% (loan $356,250 \u00f7 value $475,000) \u2013 \u2264 80%, so no minimum borrower contribution required for gifts (B3-4.3-04).\n- **Gift**: $57,000 from sibling with gift letter \u2013 sibling is an acceptable donor (relative by blood); gift letter documents the gift (B3-4.3-04).\n- **Funds to close**: $129,905 (down payment $118,750 + closing costs $11,155). Available funds = bank balance $106,805 + gift $57,000 = $163,805 \u2013 sufficient.\n- **Reserves**: 12.0 months after closing ($163,805 \u2013 $129,905 \u00f7 $2,826) \u2013 no minimum required for 1-unit principal residence (B3-4.1-01).\n- **Credit**: Score 789; no bankruptcy, foreclosure, or derogatory events.\n- **Income**: Verified monthly income $12,000 matches stated; 13.1 years employment.\n- **Large deposits**: None listed.\n\nAll requirements met as presented.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12000,
+        "monthly_debts": [
+          540,
+          45
+        ],
+        "housing_payment": 2826
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250,
+        "closing_costs": 11155
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2826,
+        "available_funds": 163805,
+        "cash_to_close": 129905
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds principal residence sibling donor eligibility"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 27058,
+  "seconds": 49.0,
+  "finish_reason": "stop"
+}

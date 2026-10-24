@@ -1,0 +1,95 @@
+{
+  "applicant_id": "G050",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI**: 31.09% (housing $4,061 + auto $260 \u00f7 income $13,900) \u2014 well within DU limits. **B3-6-03**\n\n**Funds to close**: $188,699 (down payment $172,500 + closing costs $16,199). **B3-4.1-01**\n\n**Assets**: Bank $262,065 + retirement $123,000 = $385,065 total. Large deposit $49,000 (2026-10-28) exceeds 50% of monthly qualifying income ($6,950) and is undocumented. Per **B3-4.2-02**, unsourced large deposit must be deducted from verified funds. Adjusted available funds = $336,065.\n\n**Reserves**: ($336,065 \u2212 $188,699) \u00f7 $4,061 = 36.3 months. Investment property requires 6 months per **B3-4.1-01** \u2014 met.\n\n**Credit**: 765 score, no bankruptcy/foreclosure. **B3-5.1-01**\n\n**Occupancy**: Investment property, 1-unit, DU underwriting \u2014 eligible.\n\n**Condition**: The $49,000 large deposit lacks source documentation. Funds are sufficient after deduction, but the deposit must be sourced per **B3-4.2-02**.\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment LTV"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4061,
+        "monthly_income": 13900,
+        "monthly_debts": [
+          260
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 517500,
+        "closing_costs": 16199
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "retirement funds reserves eligible"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 188699,
+        "monthly_pitia": 4061,
+        "available_funds": 336065
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-3.4-06",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-02",
+    "B3-4.2-03",
+    "B3-4.3-08",
+    "B3-6-03"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 42288,
+  "seconds": 128.2,
+  "finish_reason": "stop"
+}

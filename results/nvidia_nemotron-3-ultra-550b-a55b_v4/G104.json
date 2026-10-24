@@ -1,0 +1,71 @@
+{
+  "applicant_id": "G104",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $62,763 are short of the $70,963 needed; $15,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.5% (housing $1,735 + debts $540) / $7,000 income \u2014 within DU limits.  \nFunds to close: $60,553 (down payment $54,000 + closing costs $6,553).  \nAvailable funds: $62,763 bank + $15,000 gift = $77,763.  \nReserves with gift: 9.9 months ($77,763 \u2013 $60,553) / $1,735.\n\n**Gift eligibility**: B3-4.3-04 states \u201cGifts are not allowed on an investment property.\u201d The $15,000 parent gift is ineligible.\n\n**Reserves without gift**: ($62,763 \u2013 $60,553) / $1,735 = 1.27 months. B3-4.1-01 requires 6 months\u2019 reserves for investment property DU loans. The borrower falls short by 4.73 months.\n\nNo bankruptcy, foreclosure, or credit issues. The gift cannot be used and the borrower lacks sufficient reserves without it \u2014 a deficiency documentation cannot cure.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1735,
+        "monthly_debts": [
+          350,
+          190
+        ],
+        "monthly_income": 7000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 270000,
+        "loan_amount": 216000,
+        "closing_costs": 6553
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 60553,
+        "monthly_pitia": 1735,
+        "available_funds": 77763
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift investment property eligibility"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves investment property DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 11398,
+  "seconds": 29.4,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G010",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($14,500) must come from the borrower's own funds; they have $6,100."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 28.73% (B3-6-02) \u2014 within DU limits.  \nFunds to close: $37,502 (down payment $29,000 + closing costs $8,502).  \nAvailable funds: $6,100 bank + $36,082 gift = $42,182.  \nReserves after closing: 2.29 months (B3-4.1-01) \u2014 meets 2-month second-home requirement.  \nGift: $36,082 from parent with gift letter (B3-4.3-04) \u2014 fully documented per project assumptions.  \nCredit score 687 \u2014 meets DU minimum.  \nNo bankruptcy, foreclosure, or large deposits.  \nAll requirements satisfied.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 7100,
+        "housing_payment": 2040
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 290000,
+        "loan_amount": 261000,
+        "closing_costs": 8502
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 42182,
+        "cash_to_close": 37502,
+        "monthly_pitia": 2040
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 19426,
+  "seconds": 28.6,
+  "finish_reason": "stop"
+}

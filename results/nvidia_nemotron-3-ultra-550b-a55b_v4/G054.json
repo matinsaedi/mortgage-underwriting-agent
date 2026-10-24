@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G054",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit**: Score 736, no bankruptcy/foreclosure \u2014 meets requirements.  \n**DTI**: 29.06% (housing $3,210 + debts $480 \u00f7 income $12,700) \u2014 well within DU limits.  \n**LTV**: 90% (loan $418,500 \u00f7 value $465,000).  \n**Gift**: $29,921 from parent (acceptable donor per B3-4.3-04), gift letter present. For second home with LTV > 80%, borrower must contribute 5% ($23,250) from own funds; bank balance $33,800 satisfies this.  \n**Funds to close**: $56,501 (down payment $46,500 + closing costs $10,001). Available funds $63,721 (bank $33,800 + gift $29,921) \u2014 sufficient.  \n**Reserves**: 2 months required for second home per DU (B3-4.1-01); post-close reserves 2.25 months ($7,220 \u00f7 $3,210) \u2014 meets requirement.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12700,
+        "housing_payment": 3210,
+        "monthly_debts": [
+          210,
+          270
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 418500,
+        "closing_costs": 10001
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home occupancy"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 418500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 56501,
+        "monthly_pitia": 3210,
+        "available_funds": 63721
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 14617,
+  "seconds": 54.1,
+  "finish_reason": "stop"
+}

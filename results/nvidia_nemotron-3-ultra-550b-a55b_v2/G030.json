@@ -1,0 +1,94 @@
+{
+  "applicant_id": "G030",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis \u2013 Nina Garcia (G030)**\n\n- **DTI**: 36.14% (housing $4,113 + debts $260 \u00f7 income $12,100) \u2013 within DU limits. **B3-6-02**\n- **Credit**: 696 score; DU has no minimum score requirement for DU casefiles. **B3-5.1-01**\n- **LTV**: 90% ($540K \u00f7 $600K) \u2013 exceeds 80%, triggering 5% minimum borrower contribution.\n- **Min. Borrower Contribution**: 5% \u00d7 $600K = $30K required from own funds. Borrower has $42.5K bank balance \u2013 **MET**. **B3-4.3-04**\n- **Funds to Close**: $77,879 (down payment $60K + closing costs $17,879). **funds_to_close**\n- **Available Funds**: $42,500 (bank) + $48,405 (gift) = $90,905 \u2013 sufficient to close.\n- **Reserves**: 3.17 months ($90,905 \u2013 $77,879 \u00f7 $4,113). DU requires 2 months for second home \u2013 **MET**. **B3-4.1-01**\n- **Gift**: $48,405 from parent (acceptable donor), gift letter present. Must verify donor\u2019s funds availability and transfer per guide. **B3-4.3-04** \u2013 **CONDITION**\n- **Large Deposits**: None listed \u2013 no documentation needed.\n- **Derogatory Credit**: No bankruptcy or foreclosure.\n\n**Only open item**: Gift fund verification (donor account statement or transfer evidence).\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          230,
+          30
+        ],
+        "monthly_income": 12100,
+        "housing_payment": 4113
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 540000,
+        "property_value": 600000,
+        "closing_costs": 17879
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 4113,
+        "available_funds": 90905,
+        "cash_to_close": 77879
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 620 second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 37590,
+  "seconds": 18.3,
+  "finish_reason": "stop"
+}

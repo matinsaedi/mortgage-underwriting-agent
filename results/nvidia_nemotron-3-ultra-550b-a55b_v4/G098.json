@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G098",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 24.9% (12,600 income, 3,142 housing, no other debts) \u2014 well within 45% limit.  \nFunds to close $146,140 (530k value \u2013 397.5k loan + 13,640 costs). Bank balance $204,992 includes $40k large deposit (2026-08-29).  \nLarge deposit definition: >50% of monthly qualifying income (12,600 \u00d7 50% = 6,300). $40k exceeds threshold; source undocumented. Per B3-4.2-02, verified funds must be reduced by the undocumented amount: $204,992 \u2013 $40,000 = $164,992 available. After closing, $18,852 remains = 6.0 months PITIA.  \nReserve requirement for 2-4 unit principal residence (DU): 6 months (B3-4.1-01). Reduced funds meet exactly 6 months.  \nCredit score 732, no derogatory events, income verified, stable employment.  \nBecause the large deposit is listed but unsourced, the file meets requirements only after the lender documents the rationale for using the reduced asset amount (or sources the deposit) per B3-4.2-02.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12600,
+        "monthly_debts": [],
+        "housing_payment": 3142
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 530000,
+        "closing_costs": 13640,
+        "loan_amount": 397500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3142,
+        "available_funds": 204992,
+        "cash_to_close": 146140
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit principal residence reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition threshold"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-06"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 21144,
+  "seconds": 82.7,
+  "finish_reason": "stop"
+}

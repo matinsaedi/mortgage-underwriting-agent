@@ -1,0 +1,102 @@
+{
+  "applicant_id": "G018",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $59,830 are short of the $62,130 needed; $22,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI**: 29.92% \u2014 well under the 50% DU limit (B3-6-02).  \n**Credit score**: 704 \u2014 no minimum for DU; well above 620 (B3-5.1-01).  \n**LTV**: 80% (220,000/275,000).  \n**Funds to close**: $62,130 (down payment $55,000 + closing costs $7,130).  \n**Available funds**: Bank balance $59,830 + $22,000 gift = $81,830.  \n**Reserves**: 11.16 months after closing \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).  \n**No bankruptcy/foreclosure** \u2014 clean credit history.\n\n**Critical issue**: The $22,000 gift is from an \"interested party\" with a gift letter. Per B3-4.3-04, personal gifts cannot come from interested parties (builder, developer, real estate agent, or any other party to the transaction). This must be treated as an Interested Party Contribution (IPC) under B3-4.1-02.\n\nFor principal residence at 80% LTV (75.01%\u201390% range), maximum financing concessions = 6% of property value ($16,500), but limited to actual closing costs ($7,130). The borrower\u2019s own funds ($59,830) fall $2,300 short of the $62,130 cash to close. The IPC can cover this $2,300 shortfall as a financing concession (within the $7,130 limit). The remaining $19,700 of the $22,000 becomes a sales concession, reducing the effective sales price to $255,300 (LTV 86.2%).\n\nThe file fails the gift requirement without reclassification. With proper IPC treatment, the borrower has sufficient funds to close.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1765,
+        "monthly_debts": [],
+        "monthly_income": 5900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 275000,
+        "loan_amount": 220000,
+        "closing_costs": 7130
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions IPC limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party not allowed personal gift"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 275000,
+        "loan_amount": 220000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 62130,
+        "available_funds": 81830,
+        "monthly_pitia": 1765
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 94582,
+  "seconds": 310.5,
+  "finish_reason": "stop"
+}

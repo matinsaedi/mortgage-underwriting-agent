@@ -1,0 +1,71 @@
+{
+  "applicant_id": "G008",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-10-06; the 4-year wait ends 2027-10-06, after the 2026-11-22 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "**Credit (B3-5.3-07):** Chapter 7 bankruptcy discharged 2023-10-06; standard 4-year waiting period ends 2027-10-06. Closing is 2026-11-22 \u2014 before the waiting period expires. No extenuating circumstances.\n\n**DTI (B3-6-02):** 28.7% (housing $1,781 / income $6,200) \u2014 within limit.\n\n**Funds to close:** $99,917 needed (down payment $93,000 + closing costs $6,917). Bank balance $124,000 \u2014 sufficient.\n\n**Reserves:** 13.5 months remaining after closing \u2014 exceeds any requirement.\n\n**Credit score:** 725 \u2014 meets minimum.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period second home purchase"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2023-10-06"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6200,
+        "housing_payment": 1781,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 310000,
+        "closing_costs": 6917,
+        "loan_amount": 217000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 124000,
+        "monthly_pitia": 1781,
+        "cash_to_close": 99917
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 29360,
+  "seconds": 64.9,
+  "finish_reason": "stop"
+}

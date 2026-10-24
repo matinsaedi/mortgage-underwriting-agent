@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G062",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score 732 meets DU requirements. Chapter 7 bankruptcy discharged 2021-09-11; 4-year waiting period ended 2025-09-11, closing 2026-11-09 satisfies B3-5.3-07. DTI 29.34% (housing only) well within limits. Funds to close $227,064 covered by $301,000 bank balance. Reserves 19.24 months after closing. LTV 70%. No large deposits or gifts to document.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2021-09-11",
+        "years": 4
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 13100,
+        "housing_payment": 3843
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 483000,
+        "closing_costs": 20064
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 301000,
+        "monthly_pitia": 3843,
+        "cash_to_close": 227064
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 483000,
+        "property_value": 690000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22827,
+  "seconds": 68.0,
+  "finish_reason": "stop"
+}

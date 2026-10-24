@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G050",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 31.09% (housing $4,061 + auto $260 \u00f7 income $13,900) \u2014 under DU 50% max (B3-6-02)\n- **LTV**: 75% \u2014 no matrix check required per assumptions\n- **Funds to close**: $188,699 (down payment $172,500 + closing costs $16,199)\n- **Available funds**: $385,065 (bank $262,065 + retirement $123,000) \u2014 exceeds cash to close\n- **Reserves**: 48.35 months \u2014 exceeds 6-month investment property requirement (B3-4.1-01)\n- **Credit**: 765 score, no bankruptcy/foreclosure \u2014 no waiting periods\n- **Large deposit**: $49,000 (2026-10-28) not sourced. Borrower has $336,065 without it, well above the $213,065 needed for closing + 6 months reserves. Since funds are not needed for down payment, closing costs, or reserves, source documentation not required (B3-4.2-02)\n\nAll requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          260
+        ],
+        "housing_payment": 4061,
+        "monthly_income": 13900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 517500,
+        "closing_costs": 16199,
+        "property_value": 690000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 188699,
+        "available_funds": 385065,
+        "monthly_pitia": 4061
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 517500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 20993,
+  "seconds": 54.0,
+  "finish_reason": "stop"
+}

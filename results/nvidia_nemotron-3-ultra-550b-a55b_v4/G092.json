@@ -1,0 +1,96 @@
+{
+  "applicant_id": "G092",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-07-31; the 7-year wait ends 2029-07-31, after the 2026-11-09 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Foreclosure waiting period: 7 years standard (no extenuating circumstances per project assumptions). Foreclosure date 2022-07-31 + 7 years = 2029-07-31. Closing date 2026-11-09 is before waiting period ends. B3-5.3-07.\nDTI: 26.77% (housing $3,273 + debts $930) / $15,700 income. Under 50% DU max. B3-6-02.\nFunds to close: $191,946. Available funds $414,000 (bank $268,000 + retirement $146,000). Sufficient.\nReserves: 67.8 months after closing. No minimum for 1-unit principal residence. B3-4.1-01.\nLTV: 70%. Would meet 90% max if between 3-7 years, but 7-year wait not satisfied.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure 3 years 7 years additional requirements LTV 90%"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-07-31",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3273,
+        "monthly_debts": [
+          550,
+          380
+        ],
+        "monthly_income": 15700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 585000,
+        "closing_costs": 16446,
+        "loan_amount": 409500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3273,
+        "available_funds": 414000,
+        "cash_to_close": 191946
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 585000,
+        "loan_amount": 409500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 31576,
+  "seconds": 116.5,
+  "finish_reason": "stop"
+}

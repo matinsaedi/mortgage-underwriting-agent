@@ -1,0 +1,82 @@
+{
+  "applicant_id": "G056",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 30.7% \u2264 50% DU limit (B3-6-02). Credit score 780; no minimum for DU (B3-5.1-01). Reserves 38.85 months; no minimum for 1-unit principal residence (B3-4.1-01). Funds to close $109,791; available $204,000 (bank $137,000 + retirement $67,000). No bankruptcy, foreclosure, large deposits, or gifts. LTV 75%.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 7900,
+        "housing_payment": 2425,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 8541,
+        "property_value": 405000,
+        "loan_amount": 303750
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 405000,
+        "loan_amount": 303750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2425,
+        "available_funds": 204000,
+        "cash_to_close": 109791
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "asset verification source of funds large deposits"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.3-09",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 28146,
+  "seconds": 83.9,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G062",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Mei Chen (G062)**\n\n- **Chapter 7 bankruptcy waiting period (B3-5.3-07):** 4\u2011year standard wait from discharge 2021\u201109\u201111 ends 2025\u201109\u201111; closing 2026\u201111\u201109 is after wait period. \u2713  \n- **Credit score:** 732 meets DU minimums. \u2713  \n- **DTI (B3-6-02):** 29.34% (housing $3,843 / verified income $13,100; no other debts) \u2264 45% DU limit. \u2713  \n- **LTV:** 70% ($483k / $690k). \u2713  \n- **Funds to close (B3-4.1-01):** $227,064 needed; $301,000 bank balance covers it. \u2713  \n- **Reserves (B3-4.1-01):** 19.24 months PITIA remaining after closing ($301k \u2013 $227k) / $3,843. \u2713  \n- **Large deposits / gifts:** None listed. \u2713  \n\nAll requirements satisfied with documented file data.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2021-09-11"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3843,
+        "monthly_income": 13100,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 20064,
+        "loan_amount": 483000,
+        "property_value": 690000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 227064,
+        "monthly_pitia": 3843,
+        "available_funds": 301000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 483000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22938,
+  "seconds": 59.0,
+  "finish_reason": "stop"
+}

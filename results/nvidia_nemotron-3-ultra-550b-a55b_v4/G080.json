@@ -1,0 +1,82 @@
+{
+  "applicant_id": "G080",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $117,279 are short of the $126,379 needed; document the source of $46,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**DTI:** 25.76% (housing $2,769 + debts $580 \u00f7 income $13,000) \u2014 well within DU limits.  \n**LTV:** 75% ($348,750 \u00f7 $465,000) \u2014 acceptable.  \n**Funds to close:** $126,379 (down payment $116,250 + closing costs $10,129).  \n**Available funds:** $163,279 (bank balance, includes $46,000 large deposit).  \n**Reserves after close:** 13.33 months ($36,900 \u00f7 $2,769) \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).  \n**Credit:** 740 score, no bankruptcy/foreclosure.  \n**Large deposit:** $46,000 on 2026-11-15 exceeds 50% of monthly income ($6,500). For a purchase, the source must be documented because the funds are needed to close (B3-4.2-02). Source is not documented; without it, verified funds drop to $117,279, which is short of the $126,379 needed.  \n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 13000,
+        "monthly_debts": [
+          170,
+          410
+        ],
+        "housing_payment": 2769
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750,
+        "closing_costs": 10129
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2769,
+        "available_funds": 163279,
+        "cash_to_close": 126379
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit threshold definition"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements principal residence DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18833,
+  "seconds": 62.2,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G028",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($25,500) must come from the borrower's own funds; they have $18,700."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 36.6% (\u226445% DU limit) \u2014 B3-6-02  \nLTV 90% (>80%) \u2014 second home requires 5% minimum borrower contribution from own funds \u2014 B3-4.3-04  \nBorrower own funds: $18,700; required 5% \u00d7 $510,000 = $25,500 \u2014 short $6,800  \nGift from parent (acceptable donor) with letter allowed for second home \u2014 B3-4.3-04  \nFunds to close $64,902; total available $75,224 (own + gift) \u2014 sufficient to close  \nReserves 2.94 months after closing; 2 months required for second home \u2014 B3-4.1-01  \nCredit score 726; no minimum for DU \u2014 B3-5.1-01  \n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          105,
+          450
+        ],
+        "monthly_income": 11100,
+        "housing_payment": 3511
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 510000,
+        "loan_amount": 459000,
+        "closing_costs": 13902
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home occupancy"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 459000,
+        "property_value": 510000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 64902,
+        "available_funds": 75224,
+        "monthly_pitia": 3511
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 28664,
+  "seconds": 57.0,
+  "finish_reason": "stop"
+}

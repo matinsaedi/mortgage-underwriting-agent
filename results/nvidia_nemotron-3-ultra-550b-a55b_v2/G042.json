@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G042",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,200 are short of the $97,540 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Tom Novak (G042)**\n\n- **DTI**: 27.45% (housing $1,564 + auto $330 \u00f7 income $6,900) \u2013 within DU 50% limit (B3-6-02).  \n- **LTV**: 70% ($189,000 \u00f7 $270,000) \u2013 acceptable.  \n- **Credit**: 740 score; no bankruptcy/foreclosure.  \n- **Funds to close**: $88,156 (down payment $81,000 + closing costs $7,156).  \n- **Available assets**: $77,200 bank balance (retirement $0, no gifts).  \n- **Shortfall**: $10,956 \u2013 borrower cannot cover cash to close.  \n- **Reserves**: 2\u20134 unit principal residence requires 6 months reserves (B3-4.1-01); reserves are negative (\u22127.01 months) after cash to close.  \n\nThe file shows all assets; no additional funds or gifts exist. The shortfall cannot be cured by documentation.\n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6900,
+        "monthly_debts": [
+          330
+        ],
+        "housing_payment": 1564
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 270000,
+        "loan_amount": 189000,
+        "closing_costs": 7156
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 77200,
+        "cash_to_close": 88156,
+        "monthly_pitia": 1564
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 270000,
+        "loan_amount": 189000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit property reserves requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close insufficient assets decline"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-03",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 20975,
+  "seconds": 31.4,
+  "finish_reason": "stop"
+}

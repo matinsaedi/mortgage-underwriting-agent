@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G048",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2021-01-21; the 7-year wait ends 2028-01-21, after the 2026-11-29 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Foreclosure waiting period (B3-5.3-07): 7-year standard wait from 2021-01-21 ends 2028-01-21; closing 2026-11-29 is before wait ends \u2014 decline.\nDTI: 32.4% (housing $2,712 + student loan $430 \u00f7 income $9,700) \u2014 passes.\nFunds to close: $126,534 needed; $162,000 bank balance \u2014 passes.\nReserves: 13.1 months after closing \u2014 passes.\nCredit score: 784 \u2014 passes.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2021-01-21",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9700,
+        "housing_payment": 2712,
+        "monthly_debts": [
+          430
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 455000,
+        "loan_amount": 341250,
+        "closing_costs": 12784
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 126534,
+        "monthly_pitia": 2712,
+        "available_funds": 162000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19392,
+  "seconds": 22.6,
+  "finish_reason": "stop"
+}

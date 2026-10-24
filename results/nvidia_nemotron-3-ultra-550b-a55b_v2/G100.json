@@ -1,0 +1,89 @@
+{
+  "applicant_id": "G100",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $104,514 are short of the $130,914 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Findings:**\n\n- **DTI**: 26.48% (housing $2,540 + student loan $320 \u00f7 income $10,800) \u2014 under 50% DU limit (B3-6-02) \u2713\n- **LTV**: 75% ($318,750 \u00f7 $425,000) \u2713\n- **Funds to close**: $115,674 (down payment $106,250 + closing costs $9,424) (funds_to_close)\n- **Available funds**: Bank balance $104,514 + gift $31,000 = $135,514\n- **Reserves**: 7.81 months with gift; **without gift, funds are insufficient to close** (reserves_months)\n- **Credit**: 795 score, no bankruptcy/foreclosure \u2713\n- **Gift on investment property**: **Not allowed** \u2014 B3-4.3-04 states \"Gifts are not allowed on an investment property.\" The $31,000 parent gift cannot be used. Without it, the borrower is $11,160 short to close.\n\n**DECISION: decline**  \n**RULES: B3-4.3-04**",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2540,
+        "monthly_debts": [
+          320
+        ],
+        "monthly_income": 10800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9424,
+        "property_value": 425000,
+        "loan_amount": 318750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 115674,
+        "available_funds": 135514,
+        "monthly_pitia": 2540
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum borrower contribution gift"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 318750,
+        "property_value": 425000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 32851,
+  "seconds": 100.1,
+  "finish_reason": "stop"
+}

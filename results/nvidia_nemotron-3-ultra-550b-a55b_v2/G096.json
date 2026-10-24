@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G096",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 27.2% \u2014 under 50% DU limit (B3-6-02).  \nFunds to close: $112,338; borrower has $264,000 total liquid assets (bank + retirement) \u2014 sufficient.  \nReserves: 61.8 months after closing; no minimum required for 1-unit principal residence (B3-4.1-01).  \nCredit score: 766 \u2014 exceeds minimum (B3-5.1-01).  \nNo bankruptcy, foreclosure, large deposits, or gifts.  \nLTV: 75% \u2014 Eligibility Matrix not checked per assumptions.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2453,
+        "monthly_debts": [
+          170,
+          260
+        ],
+        "monthly_income": 10600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9838,
+        "property_value": 410000,
+        "loan_amount": 307500
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 307500,
+        "property_value": 410000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2453,
+        "cash_to_close": 112338,
+        "available_funds": 264000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements Fannie Mae DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score Fannie Mae"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 21518,
+  "seconds": 20.7,
+  "finish_reason": "stop"
+}

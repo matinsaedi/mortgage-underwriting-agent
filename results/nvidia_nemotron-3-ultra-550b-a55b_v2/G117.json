@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G117",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $90,400 are short of the $101,387 needed to close and hold 0 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Ana Okafor (G117)**\n\n- **DTI**: 27.78% (housing $2,195 + student loans $500 \u00f7 verified income $9,700) \u2013 within DU limits.  \n- **LTV**: 75% ($273,750 \u00f7 $365,000) \u2013 acceptable.  \n- **Funds to close**: $101,387 (down payment $91,250 + closing costs $10,137).  \n- **Available funds**: $90,400 (bank balance only; no gifts, no other assets).  \n- **Shortfall**: $10,987 \u2013 borrower cannot cover cash to close with documented assets.  \n- **Reserves**: No minimum reserve requirement for 1-unit principal residence (B3-4.1-01).  \n- **Credit**: Score 752; no bankruptcy, foreclosure, or large deposits.  \n- **Income**: Verified monthly income matches stated; 3.8 years employed.\n\n**Finding**: Borrower lacks sufficient funds to close. No gifts or additional assets are available to cure the shortfall.\n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          190,
+          310
+        ],
+        "monthly_income": 9700,
+        "housing_payment": 2195
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 273750,
+        "closing_costs": 10137,
+        "property_value": 365000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 101387,
+        "available_funds": 90400,
+        "monthly_pitia": 2195
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 365000,
+        "loan_amount": 273750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close borrower own funds minimum contribution"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves required months PITIA DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves principal residence DU minimum"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.3-03",
+    "B3-3.8-05",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-06"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 25140,
+  "seconds": 26.7,
+  "finish_reason": "stop"
+}

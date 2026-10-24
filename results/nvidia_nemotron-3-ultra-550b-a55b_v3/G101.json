@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G101",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $100,463 are short of the $118,963 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 30% (housing $2,310 + debts $360 \u00f7 income $8,900) \u2014 within DU limits. B3-6-03  \nLTV: 75% ($288,750 \u00f7 $385,000) \u2014 acceptable for investment property.  \nFunds to close: $105,103 (down payment $96,250 + closing costs $8,853).  \nAvailable funds: $159,463 (bank $100,463 + gift $59,000).  \nReserves after closing: 23.5 months ($54,360 \u00f7 $2,310) \u2014 exceeds 6-month requirement for investment property. B3-4.1-01  \nCredit: 707 score, no bankruptcy/foreclosure.  \nGift: $59,000 from parent with gift letter. B3-4.3-04 requires letter to specify amount, state no repayment, and include donor name, address, phone, relationship; lender must also verify donor funds availability and transfer. File notes letter exists but contents and fund verification not confirmed.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8900,
+        "housing_payment": 2310,
+        "monthly_debts": [
+          130,
+          230
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 8853,
+        "property_value": 385000,
+        "loan_amount": 288750
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 385000,
+        "loan_amount": 288750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 105103,
+        "monthly_pitia": 2310,
+        "available_funds": 159463
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-03"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 18468,
+  "seconds": 33.7,
+  "finish_reason": "stop"
+}

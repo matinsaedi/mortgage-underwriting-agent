@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G018",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $59,830 are short of the $62,130 needed; $22,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis \u2013 Tom Garcia (G018)**\n\n- **DTI**: 29.92% (housing $1,765 \u00f7 income $5,900) \u2013 well within DU limits.  \n- **LTV**: 80.0% ($220,000 \u00f7 $275,000).  \n- **Funds to close**: $62,130 (down payment $55,000 + closing costs $7,130).  \n- **Available funds**: Bank balance $59,830 + gift $22,000 = $81,830.  \n- **Reserves**: 11.16 months ($81,830 \u2013 $62,130 \u00f7 $1,765) \u2013 exceeds requirements.  \n- **Credit**: 704 score; no bankruptcy or foreclosure.  \n- **Gift**: $22,000 from an \u201cinterested party\u201d donor with gift letter. **B3-4.3-04** prohibits gifts from any interested party to the transaction (builder, developer, real estate agent, etc.). The gift is therefore ineligible.  \n- Without the gift, the borrower has only $59,830 \u2013 a $2,300 shortfall to close. Conditions cannot require additional funds or a different donor.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5900,
+        "housing_payment": 1765,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 275000,
+        "loan_amount": 220000,
+        "closing_costs": 7130
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 81830,
+        "cash_to_close": 62130,
+        "monthly_pitia": 1765
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party donor requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 275000,
+        "loan_amount": 220000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift LTV 80% principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-02",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 18985,
+  "seconds": 18.4,
+  "finish_reason": "stop"
+}

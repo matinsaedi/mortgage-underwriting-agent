@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G097",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Bankruptcy Ch.7 discharge 2021-04-21; 4-yr wait ends 2025-04-21 per B3-5.3-07 \u2014 closing 2026-12-06 passes. DTI 30.1% (housing $3,688 + $70 debt \u00f7 $12,500 income) within limits. Funds to close $170,962 (down $156,250 + costs $14,712) covered by $249,000 bank balance. Reserves 21.2 months ($78,038 remaining \u00f7 $3,688 PITIA). LTV 75%. Credit score 753. No large deposits or gifts. DU underwriting.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2021-04-21"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3688,
+        "monthly_debts": [
+          70
+        ],
+        "monthly_income": 12500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 468750,
+        "property_value": 625000,
+        "closing_costs": 14712
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 170962,
+        "available_funds": 249000,
+        "monthly_pitia": 3688
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 468750,
+        "property_value": 625000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22906,
+  "seconds": 48.3,
+  "finish_reason": "stop"
+}

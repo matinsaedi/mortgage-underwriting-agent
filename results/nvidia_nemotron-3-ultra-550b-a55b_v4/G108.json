@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G108",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,736 are short of the $90,936 needed; $24,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Mei Novak (G108)**\n\n- **DTI**: 32.5% (housing $1,793 + credit card $60 \u00f7 verified income $5,700) \u2013 within typical 45% limit for investment property.  \n- **LTV**: 75% (loan $221,250 \u00f7 value $295,000).  \n- **Cash to close**: $80,178 (down payment $73,750 + closing costs $6,428).  \n- **Available funds**: Bank balance $78,736 only. The $24,000 gift from a parent **cannot be used** because gifts are not permitted on investment properties (B3-4.3-04).  \n- **Funds shortfall**: $78,736 \u2013 $80,178 = \u2013$1,442; borrower cannot cover cash to close.  \n- **Reserves**: Investment property requires 6 months PITIA (B3-4.1-01); with negative post-closing funds, reserves are not met.  \n- **Credit**: Score 733, no derogatory events \u2013 acceptable.\n\n**Conclusion**: The gift is ineligible for this occupancy type, leaving the borrower unable to meet the cash-to-close requirement. No documentation can cure this.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property gift funds eligibility"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          60
+        ],
+        "monthly_income": 5700,
+        "housing_payment": 1793
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 295000,
+        "loan_amount": 221250,
+        "closing_costs": 6428
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 80178,
+        "available_funds": 78736,
+        "monthly_pitia": 1793
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum borrower contribution own funds"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 295000,
+        "loan_amount": 221250
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-06"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 22111,
+  "seconds": 51.1,
+  "finish_reason": "stop"
+}

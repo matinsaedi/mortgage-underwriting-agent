@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G035",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 30.6% (B3-6-02) \u2014 well under 45% limit.  \nLTV 70% \u2014 acceptable.  \nCredit score 739 \u2014 DU has no minimum score requirement (B3-5.1-01).  \nReserves 22.0 months \u2014 exceeds 2-month requirement for second home (B3-4.1-01).  \nFunds to close $199,467 \u2014 covered by $274,000 bank balance.  \nNo bankruptcy, foreclosure, large deposits, or gifts.  \nIncome verified at $12,800/month with 14.6 years employment.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3382,
+        "monthly_debts": [
+          530
+        ],
+        "monthly_income": 12800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 423500,
+        "closing_costs": 17967
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3382,
+        "cash_to_close": 199467,
+        "available_funds": 274000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 423500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home credit score minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score 620"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 20644,
+  "seconds": 31.3,
+  "finish_reason": "stop"
+}

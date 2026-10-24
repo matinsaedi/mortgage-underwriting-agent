@@ -1,0 +1,82 @@
+{
+  "applicant_id": "G041",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $125,138 are short of the $156,438 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI:** 31.03% (housing $2,731 \u00f7 income $8,800) \u2014 within DU limits.  \n**LTV:** 70% ($339,500 \u00f7 $485,000) \u2014 eligible.  \n**Credit:** 750 score, no bankruptcy/foreclosure \u2014 eligible.  \n**Funds to close:** $156,438 (down payment $145,500 + closing costs $10,938).  \n**Available funds:** Bank balance $125,138 only (gift excluded \u2014 see below). **Shortfall: $31,300.**  \n**Reserves (own funds only):** ($125,138 \u2013 $156,438) \u00f7 $2,731 = negative \u2014 insufficient.\n\n**Gift issue:** The $84,000 gift is from an \"interested party.\" Per **B3-4.3-04**, a personal gift donor \"may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" This gift is therefore not an acceptable personal gift.\n\nTreating it as an IPC under **B3-4.1-02**: for a principal residence at 70% LTV, maximum financing concessions = 9% of property value = $43,650. The $84,000 gift exceeds this limit. Moreover, IPCs cannot be used for down payment, reserves, or minimum borrower contribution \u2014 only for closing costs (here $10,938). Even if the allowable $10,938 were applied, the borrower would still be short $20,362 to close.\n\n**Conclusion:** Borrower lacks sufficient verified funds to close. The interested-party gift cannot cure the shortfall.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8800,
+        "housing_payment": 2731,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 339500,
+        "property_value": 485000,
+        "closing_costs": 10938
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 339500,
+        "property_value": 485000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 156438,
+        "monthly_pitia": 2731,
+        "available_funds": 209138
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions IPC limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift LTV 70%"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-02",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-11"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18903,
+  "seconds": 94.4,
+  "finish_reason": "stop"
+}

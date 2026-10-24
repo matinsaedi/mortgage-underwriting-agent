@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G031",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 38.6% (under 45% DU limit) \u2014 B3-6-02  \nLTV: 90% \u2014 B3-5.1-01  \nCredit score: 699 (no minimum for DU) \u2014 B3-5.1-01  \nFunds to close: $43,612; available $22,200 + $26,526 gift = $48,726 \u2014 B3-4.1-01  \nReserves after closing: $5,114 \u00f7 $2,407 = 2.12 months (meets 2-month second-home requirement) \u2014 B3-4.1-01  \nGift: $26,526 from parent with gift letter, fully documented \u2014 B3-4.3-04  \nNo bankruptcy, foreclosure, or large deposits.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6300,
+        "monthly_debts": [
+          25
+        ],
+        "housing_payment": 2407
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 345000,
+        "closing_costs": 9112,
+        "loan_amount": 310500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation requirements parent"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 345000,
+        "loan_amount": 310500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 24501,
+  "seconds": 32.8,
+  "finish_reason": "stop"
+}

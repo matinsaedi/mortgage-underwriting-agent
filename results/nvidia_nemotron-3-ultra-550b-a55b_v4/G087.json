@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G087",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $77,314 are short of the $82,714 needed; $35,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 34.19% (under 45% limit, B3-6-02). Funds to close: $70,852. Available funds (bank only, gift not allowed on investment property): $77,314. Reserves after close: 3.27 months. Investment property requires 6 months reserves (B3-4.1-01). Gift funds not allowed on investment property (B3-4.3-04). Credit score 682 acceptable for DU (B3-5.1-01). No bankruptcy/foreclosure.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property gift funds eligibility"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          40
+        ],
+        "housing_payment": 1977,
+        "monthly_income": 5900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 8852,
+        "loan_amount": 248000,
+        "property_value": 310000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 70852,
+        "monthly_pitia": 1977,
+        "available_funds": 77314
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 17009,
+  "seconds": 46.3,
+  "finish_reason": "stop"
+}

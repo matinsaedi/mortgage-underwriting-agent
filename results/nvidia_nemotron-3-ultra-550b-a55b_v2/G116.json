@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G116",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $108,603 are short of the $153,503 needed; obtain a signed gift letter for $52,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 27.85% (\u226445% DU limit) \u2014 B3-6-02.  \nFunds to close $153,503; available $108,603 bank + $52,000 gift = $160,603 \u2014 sufficient.  \nReserves 2.14 months; no minimum required for 1-unit principal residence \u2014 B3-4.1-01.  \nLTV 75% (\u226480%); no minimum borrower contribution required \u2014 B3-4.3-04.  \nCredit score 742; no derogatory events.  \nGift from fianc\u00e9 (acceptable donor per B3-4.3-04) but no gift letter on file \u2014 B3-4.3-04 requires signed gift letter specifying amount, no repayment, donor details, and relationship.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3314,
+        "monthly_debts": [],
+        "monthly_income": 11900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 420000,
+        "property_value": 560000,
+        "closing_costs": 13503
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3314,
+        "cash_to_close": 153503,
+        "available_funds": 160603
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation fianc\u00e9 non-relative gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves required DU principal residence 1-unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter required documentation B3-4.3-04"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift principal residence LTV 80"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 27907,
+  "seconds": 56.7,
+  "finish_reason": "stop"
+}

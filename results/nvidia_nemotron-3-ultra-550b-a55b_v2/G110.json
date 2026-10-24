@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G110",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $110,500 are short of the $133,718 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 27.05% (housing $3,219 / income $11,900) \u2014 within limits.  \nLTV: 80% ($412,000 / $515,000) \u2014 acceptable.  \nCredit score: 732 \u2014 meets minimum.  \nCash to close: $114,404 (down payment $103,000 + closing costs $11,404).  \nAvailable funds: $110,500 (bank balance).  \nReserves after closing: \u20131.21 months (B3-4.1-01 requires 6 months for investment property).  \nBorrower is short $3,904 to close and has negative reserves; no gifts or other assets to cover the gap.\n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11900,
+        "housing_payment": 3219,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11404,
+        "property_value": 515000,
+        "loan_amount": 412000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3219,
+        "cash_to_close": 114404,
+        "available_funds": 110500
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 515000,
+        "loan_amount": 412000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment LTV"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-03"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15296,
+  "seconds": 15.1,
+  "finish_reason": "stop"
+}

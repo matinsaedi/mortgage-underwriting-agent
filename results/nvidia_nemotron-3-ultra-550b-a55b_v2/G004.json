@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G004",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $84,680 are short of the $179,480 needed; $100,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 28.86% (under 50% DU limit) \u2014 PASS (B3-6-02)\nFunds to close: $153,806 needed; borrower has $84,680 own funds + $100,000 gift = $184,680 total\nGift eligibility: B3-4-3-04 states \"Gifts are not allowed on an investment property\" \u2014 the $100,000 parent gift cannot be used\nWithout gift: only $84,680 available vs. $153,806 required \u2014 short $69,126\nReserves: 6 months required for investment property (B3-4-1-01); without gift, negative reserves after closing\nNo extenuating circumstances; condition cannot add funds\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limits"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4279,
+        "monthly_debts": [
+          50
+        ],
+        "monthly_income": 15000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 690000,
+        "loan_amount": 552000,
+        "closing_costs": 15806
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 184680,
+        "cash_to_close": 153806,
+        "monthly_pitia": 4279
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment minimum"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property gift funds not allowed"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-04",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 28138,
+  "seconds": 22.8,
+  "finish_reason": "stop"
+}

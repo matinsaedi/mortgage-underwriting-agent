@@ -1,0 +1,99 @@
+{
+  "applicant_id": "G030",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 36.14% \u2264 50% DU limit (B3-6-02). Funds to close $77,879 covered by $42,500 bank + $48,405 gift = $90,905. Reserves 3.17 months \u2265 2 months required for second home (B3-4.1-01). LTV 90% > 80% triggers 5% minimum borrower contribution ($30,000); borrower has $42,500 own funds (B3-4.3-04). Gift from parent with gift letter fully documented (B3-4.3-04). Credit score 696; no minimum for DU (B3-5.1-01). No bankruptcy/foreclosure. No large deposits.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limits second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio 45% purchase"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4113,
+        "monthly_debts": [
+          230,
+          30
+        ],
+        "monthly_income": 12100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 540000,
+        "closing_costs": 17879,
+        "property_value": 600000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 77879,
+        "available_funds": 90905,
+        "monthly_pitia": 4113
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation gift letter second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 620 second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 540000,
+        "property_value": 600000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 11,
+  "input_tokens": 63979,
+  "seconds": 44.4,
+  "finish_reason": "stop"
+}

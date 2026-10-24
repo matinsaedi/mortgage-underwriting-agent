@@ -1,0 +1,71 @@
+{
+  "applicant_id": "G086",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "LTV: 90% (B3-4.3-04). DTI: 34.8% (B3-6-02). Funds to close: $49,870. Available funds: $28,000 own + $31,454 gift = $59,454. Reserves: 3.5 months (B3-4.1-01 requires 2 months for second home). Credit score 747 (no minimum for DU per B3-5.1-01). Gift from parent (acceptable donor per B3-4.3-04) with gift letter. Minimum borrower contribution: 5% of $395,000 = $19,750 required from own funds for second home LTV >80%; borrower has $28,000 own funds. No bankruptcy/foreclosure. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home gift funds eligibility"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 395000,
+        "loan_amount": 355500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 10370,
+        "property_value": 395000,
+        "loan_amount": 355500
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2742,
+        "monthly_debts": [
+          390
+        ],
+        "monthly_income": 9000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score DU"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 59454,
+        "cash_to_close": 49870,
+        "monthly_pitia": 2742
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 26351,
+  "seconds": 56.5,
+  "finish_reason": "stop"
+}

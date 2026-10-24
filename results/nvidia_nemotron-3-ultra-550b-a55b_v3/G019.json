@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G019",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $196,860 are short of the $212,860 needed; document the source of $27,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 26.4% (housing only, no other debts) \u2014 well within limits.  \nFunds to close: $193,060 (down payment $177,000 + closing costs $16,060).  \nLTV: 70%.  \nReserves: 9.33 months ($223,860 bank balance \u2212 $193,060 cash to close = $30,800 \u00f7 $3,300 PITIA). Investment property requires 6 months per B3-4.1-01 \u2014 met.  \nLarge deposit: $27,000 on 2026-10-12, source not documented. Without it, reserves drop to 1.15 months, below the 6-month requirement. B3-4.2-02 requires documentation for large deposits used for down payment, closing costs, or reserves in purchase transactions.  \nCredit: 787, no derogatory events. Income verified, stable employment.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limits investment property"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3300,
+        "monthly_debts": [],
+        "monthly_income": 12500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 590000,
+        "closing_costs": 16060,
+        "loan_amount": 413000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 413000,
+        "property_value": 590000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3300,
+        "cash_to_close": 193060,
+        "available_funds": 223860
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 18318,
+  "seconds": 72.9,
+  "finish_reason": "stop"
+}

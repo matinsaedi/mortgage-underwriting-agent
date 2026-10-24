@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G005",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $129,244 are short of the $192,144 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 28.17% \u2014 under 50% DU limit (B3-6-02).  \nFunds to close: $184,368 (down payment $165,000 + closing costs $19,368).  \nAvailable funds: bank balance $129,244 + gift $84,000 = $213,244.  \nReserves: 7.43 months \u2014 exceeds 2-month requirement for second home (B3-4.1-01).  \nLTV: 75% \u2014 \u226480%, so no minimum borrower contribution required for second home (B3-4.3-04).\n\nCritical issue: Gift donor is an \"interested party.\" B3-4.3-04 states \"The donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" Gift from interested party is not allowed. Without the gift, borrower has only $129,244 \u2014 $55,124 short of cash to close. A condition cannot cure this (no additional funds or different donor permitted).\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds interested party second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 13800,
+        "housing_payment": 3888
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 660000,
+        "loan_amount": 495000,
+        "closing_costs": 19368
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 213244,
+        "cash_to_close": 184368,
+        "monthly_pitia": 3888
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 20585,
+  "seconds": 71.3,
+  "finish_reason": "stop"
+}

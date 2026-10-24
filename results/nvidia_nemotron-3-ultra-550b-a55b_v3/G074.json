@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G074",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.4-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $65,100 are short of the $101,567 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 31.8% (within 45% limit, B3-6-02). Funds to close: $96,099. Available funds: $65,100 bank balance. Shortfall: $30,999. No gifts or other assets. Reserves required for second home: 2 months PITIA = $5,468 (B3-4.1-01), but borrower cannot even cover cash to close. LTV = 80% (348,000/435,000). No minimum borrower contribution issue since no gifts (B3-4.3-04). Credit score 775, no bankruptcy/foreclosure.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.4-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 8600,
+        "housing_payment": 2734
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 348000,
+        "closing_costs": 9099,
+        "property_value": 435000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 65100,
+        "cash_to_close": 96099,
+        "monthly_pitia": 2734
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum borrower contribution"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserve requirements second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-4.4-01",
+    "B3-6-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 20527,
+  "seconds": 35.1,
+  "finish_reason": "stop"
+}

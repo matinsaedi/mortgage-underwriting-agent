@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G120",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 54.3% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 54.32% (verified income $5,700; housing $2,541 + debts $555) exceeds 50% DU maximum per B3-6-02.\nCredit score: 689 \u2014 no minimum for DU per B3-5.1-01.\nFunds to close: $144,534 needed; $188,000 available \u2014 sufficient.\nReserves: 17.1 months after closing; no minimum for 1-unit principal residence per B3-4.1-01.\nNo bankruptcy, foreclosure, large deposits, or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          460,
+          95
+        ],
+        "housing_payment": 2541,
+        "monthly_income": 5700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 450000,
+        "closing_costs": 9534,
+        "loan_amount": 315000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 144534,
+        "monthly_pitia": 2541,
+        "available_funds": 188000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU purchase principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18593,
+  "seconds": 24.5,
+  "finish_reason": "stop"
+}

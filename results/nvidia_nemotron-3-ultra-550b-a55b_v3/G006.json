@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G006",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $70,432 are short of the $128,332 needed; obtain a signed gift letter for $72,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 30.35% (housing $2,769 + debts $205 \u00f7 income $9,800) \u2014 within DU limits.  \nLTV 75% ($348,750 \u00f7 $465,000).  \nFunds to close $128,332 (down payment $116,250 + closing costs $12,082).  \nAvailable funds $142,432 (bank $70,432 + gift $72,000).  \nReserves 5.09 months ($14,100 remaining \u00f7 $2,769 PITIA) \u2014 meets DU requirements.  \nCredit score 741; no bankruptcy or foreclosure.  \nGift of $72,000 from fianc\u00e9 (acceptable donor per B3-4.3-04) lacks gift letter (has_gift_letter: false). Gift letter required per B3-4.3-04.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2769,
+        "monthly_debts": [
+          35,
+          170
+        ],
+        "monthly_income": 9800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750,
+        "closing_costs": 12082
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2769,
+        "available_funds": 142432,
+        "cash_to_close": 128332
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 348750,
+        "property_value": 465000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable donor gift fianc\u00e9 domestic partner"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU underwriting"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-01",
+    "B3-4.4-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 21554,
+  "seconds": 39.1,
+  "finish_reason": "stop"
+}

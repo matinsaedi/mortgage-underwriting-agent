@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G110",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $110,500 are short of the $133,718 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI 27.05% (B3-6-02: \u226445% limit met). LTV 80%. Funds to close $114,404; available $110,500 \u2192 short $3,904. Investment property requires 6 months reserves (B3-4.1-01) but borrower cannot even cover cash to close. No gifts allowed on investment property (B3-4.3-04). Credit score 732 acceptable. No derogatory credit.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3219,
+        "monthly_debts": [],
+        "monthly_income": 11900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 412000,
+        "closing_costs": 11404,
+        "property_value": 515000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 114404,
+        "monthly_pitia": 3219,
+        "available_funds": 110500
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 412000,
+        "property_value": 515000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment minimum"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-04",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15528,
+  "seconds": 40.3,
+  "finish_reason": "stop"
+}

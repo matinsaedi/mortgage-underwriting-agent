@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G075",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($16,250) must come from the borrower's own funds; they have $13,700."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 33.44% (housing $2,274 \u00f7 income $6,800) \u2014 within DU limits.  \n- **LTV**: 90% ($292,500 \u00f7 $325,000) \u2014 exceeds 80%.  \n- **Funds to close**: $39,179 (down payment $32,500 + closing costs $6,679).  \n- **Available funds**: $47,327 (bank $13,700 + gift $33,627).  \n- **Reserves**: 3.58 months post-closing \u2014 meets 2-month requirement for second home (B3-4.1-01).  \n- **Gift**: $33,627 from parent with gift letter \u2014 acceptable donor for second home (B3-4.3-04).  \n\n**Critical finding**: For a second home with LTV > 80%, the borrower must contribute a minimum 5% of property value from own funds (B3-4.3-04). Required: $16,250 (5% \u00d7 $325,000). Borrower\u2019s own funds: $13,700. Shortfall: $2,550. Gift funds cannot satisfy this minimum contribution.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 2274,
+        "monthly_income": 6800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 292500,
+        "closing_costs": 6679,
+        "property_value": 325000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home eligibility"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 325000,
+        "loan_amount": 292500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 39179,
+        "available_funds": 47327,
+        "monthly_pitia": 2274
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 19915,
+  "seconds": 72.9,
+  "finish_reason": "stop"
+}

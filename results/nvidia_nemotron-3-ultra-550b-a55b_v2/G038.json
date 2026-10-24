@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G038",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 62.9% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 62.86% using verified income ($5,000/mo) exceeds 50% DU maximum (B3-6-02). Funds to close: $177,772; bank balance $218,000 covers closing + 13 months reserves. No bankruptcy/foreclosure. Credit score 756. No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3083,
+        "monthly_debts": [
+          60
+        ],
+        "monthly_income": 5000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12772,
+        "property_value": 550000,
+        "loan_amount": 385000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3083,
+        "available_funds": 218000,
+        "cash_to_close": 177772
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "income verification stable monthly income"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.1-01",
+    "B3-3.4-05",
+    "B3-3.4-16",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12589,
+  "seconds": 12.4,
+  "finish_reason": "stop"
+}

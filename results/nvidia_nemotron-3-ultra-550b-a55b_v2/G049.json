@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G049",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 25.99% (\u226450% DU max per B3-6-02). Funds to close: $192,602; available funds $338,000 (bank $275k + retirement $63k) \u2014 sufficient. Reserves: 35.6 months; no minimum required for 1-unit principal residence (B3-4.1-01). LTV: 75%. Large deposit $45k not needed for closing (bank balance without it $230k > $192.6k), so no documentation required (B3-4.2-02). Credit score 762, no derogatory events. Income verified.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4089,
+        "monthly_income": 18000,
+        "monthly_debts": [
+          590
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 521250,
+        "property_value": 695000,
+        "closing_costs": 18852
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 695000,
+        "loan_amount": 521250
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 338000,
+        "cash_to_close": 192602,
+        "monthly_pitia": 4089
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit not needed for transaction documentation not required"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 25279,
+  "seconds": 22.9,
+  "finish_reason": "stop"
+}

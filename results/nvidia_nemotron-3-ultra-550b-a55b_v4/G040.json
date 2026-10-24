@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G040",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $160,818 are short of the $207,518 needed; obtain a signed gift letter for $64,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 29.36% (within DU limits). Funds to close: $200,592. Available: $160,818 bank + $64,000 gift = $224,818. Reserves: 7 months (2 required for second home per B3-4.1-01). LTV: 70% \u2014 at \u226480% for second home, no minimum borrower contribution required (B3-4.3-04). Gift donor is parent (acceptable relative). Credit: 731, no derogatory events. Gift letter missing \u2014 required by B3-4.3-04.\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3463,
+        "monthly_debts": [
+          480,
+          80
+        ],
+        "monthly_income": 13700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 434000,
+        "closing_costs": 14592,
+        "property_value": 620000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3463,
+        "available_funds": 224818,
+        "cash_to_close": 200592
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift second home occupancy donor requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15135,
+  "seconds": 67.3,
+  "finish_reason": "stop"
+}

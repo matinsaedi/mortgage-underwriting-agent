@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G007",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,346 are short of the $99,546 needed; obtain a signed gift letter for $41,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 29.83% (limit 50% for DU per B3-6-02). LTV 75% \u2014 no minimum borrower contribution required (B3-4.3-04). Reserves 12.2 months after closing. Credit score 721, no derogatory events. Gift from parent (acceptable donor) for principal residence, 1-unit \u2014 allowed per B3-4.3-04. Gift letter not yet provided (has_gift_letter: false); B3-4.3-04 requires a signed gift letter documenting the gift and transfer of funds.\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8900,
+        "housing_payment": 2195,
+        "monthly_debts": [
+          200,
+          260
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 273750,
+        "closing_costs": 8296,
+        "property_value": 365000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2195,
+        "cash_to_close": 99546,
+        "available_funds": 126346
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements parent donor principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU loan"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.4-01",
+    "B3-5.4-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 27411,
+  "seconds": 52.0,
+  "finish_reason": "stop"
+}

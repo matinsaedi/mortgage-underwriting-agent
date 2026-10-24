@@ -1,0 +1,63 @@
+{
+  "applicant_id": "G090",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 25.17% (housing $1,510 \u00f7 income $6,000) \u2014 under 45% limit (B3-6-02).  \nFunds to close: $84,044 (down payment $78,000 + closing costs $6,044).  \nAvailable funds: $113,000 bank balance (includes $10,000 large deposit).  \nReserves after closing: 19.18 months \u2014 exceeds 6 months required for investment property (B3-4.1-01).  \nCredit score 702 \u2014 no minimum for DU casefiles (B3-5.1-01).  \nLarge deposit: $10,000 on 2026-09-24 exceeds 50% of monthly income ($3,000); for purchase transactions, source must be documented when funds are needed for the transaction (B3-4.2-02). Source is not documented.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score DTI requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements source"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1510,
+        "monthly_debts": [],
+        "monthly_income": 6000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 182000,
+        "property_value": 260000,
+        "closing_costs": 6044
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 1510,
+        "available_funds": 113000,
+        "cash_to_close": 84044
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18413,
+  "seconds": 43.1,
+  "finish_reason": "stop"
+}

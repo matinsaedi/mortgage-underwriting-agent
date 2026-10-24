@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G114",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.9% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 53.89% using verified income ($6,500) exceeds 50% DU maximum (B3-6-02). Funds to close: $134,904; bank balance $205,000 covers it. Reserves: 24.06 months, well above 2-month second-home requirement (B3-4.1-01). Credit score 703 acceptable. No bankruptcy, foreclosure, large deposits, or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio second home purchase DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2913,
+        "monthly_debts": [
+          590
+        ],
+        "monthly_income": 6500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12404,
+        "property_value": 490000,
+        "loan_amount": 367500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2913,
+        "available_funds": 205000,
+        "cash_to_close": 134904
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 23387,
+  "seconds": 25.2,
+  "finish_reason": "stop"
+}

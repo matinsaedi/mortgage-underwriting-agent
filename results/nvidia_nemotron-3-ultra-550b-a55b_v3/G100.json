@@ -1,0 +1,135 @@
+{
+  "applicant_id": "G100",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $104,514 are short of the $130,914 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "LTV: 75% (loan $318,750 / value $425,000)\nDTI: 26.5% (housing $2,540 + student loan $320 = $2,860 / income $10,800) \u2014 well under 45% limit (B3-6-02)\nFunds to close: $115,674 (down payment $106,250 + closing costs $9,424)\nAvailable funds without gift: $104,514 (bank balance only) \u2014 short $11,160 to close\nGift: $31,000 from parent with gift letter, but **gifts are not allowed on investment properties** (B3-4.3-04)\nReserves: N/A \u2014 insufficient funds to close even before reserves\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment requirements reserves"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment LTV"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment 15% 20% 25%"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment 1-unit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property maximum LTV 1-unit purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property 1-unit minimum down payment 15% 20% 25% LTV"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property purchase 1-unit minimum down payment 20% 25%"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property eligibility requirements down payment"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property 1-unit minimum down payment 25% LTV 75%"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 318750,
+        "property_value": 425000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 10800,
+        "housing_payment": 2540,
+        "monthly_debts": [
+          320
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 425000,
+        "loan_amount": 318750,
+        "closing_costs": 9424
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds investment property minimum borrower contribution"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 104514,
+        "monthly_pitia": 2540,
+        "cash_to_close": 115674
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-3.1-01",
+    "B3-3.4-10",
+    "B3-3.8-02",
+    "B3-3.8-03",
+    "B3-3.8-04",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 15,
+  "input_tokens": 148276,
+  "seconds": 93.8,
+  "finish_reason": "stop"
+}

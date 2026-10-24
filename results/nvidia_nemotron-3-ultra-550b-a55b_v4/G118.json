@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G118",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $95,000 are short of the $118,020 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI 29.6% (\u226450% DU limit) \u2014 B3-6-02. Credit score 768 \u2014 no minimum issue. LTV 75% (\u226480%). No bankruptcy/foreclosure. Funds to close $104,334; available $95,000 (bank balance only, no gifts) \u2014 short $9,334. Reserves negative. B3-4.1-01 requires 6 months reserves for 2\u20134 unit principal residence, but borrower cannot even cover cash to close. Per project rules, cannot condition for additional funds.\n\nDECISION: decline\nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2281,
+        "monthly_income": 7700,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9334,
+        "loan_amount": 285000,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 95000,
+        "monthly_pitia": 2281,
+        "cash_to_close": 104334
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum reserves 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution 2-4 unit principal residence purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score 2-4 unit principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 28820,
+  "seconds": 57.7,
+  "finish_reason": "stop"
+}

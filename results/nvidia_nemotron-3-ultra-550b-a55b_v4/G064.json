@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G064",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $170,912 are short of the $175,312 needed; document the source of $9,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 25.22% (housing $2,948 + debts $760 \u00f7 verified income $14,700) \u2014 well within 45% DU limit. B3-6-02  \nReserves: 3.56 months ($179,912 bank balance \u2212 $169,416 cash to close = $10,496 remaining \u00f7 $2,948 PITIA) \u2014 exceeds 2-month second-home requirement. B3-4.1-01  \nLarge deposit: $9,000 on 2026-09-24 is included in bank balance and needed for closing/reserves; purchase transactions require documentation of source when funds are used for the transaction. Source is not documented. B3-4.2-02  \nCredit: 689 score, no bankruptcy/foreclosure \u2014 meets minimum.  \nLTV: 70% (367,500 \u00f7 525,000) \u2014 acceptable for second home.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 14700,
+        "housing_payment": 2948,
+        "monthly_debts": [
+          480,
+          280
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 525000,
+        "closing_costs": 11916,
+        "loan_amount": 367500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 169416,
+        "monthly_pitia": 2948,
+        "available_funds": 179912
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 17229,
+  "seconds": 66.9,
+  "finish_reason": "stop"
+}

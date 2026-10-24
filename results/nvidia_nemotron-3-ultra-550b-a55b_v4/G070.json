@@ -1,0 +1,88 @@
+{
+  "applicant_id": "G070",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-10-27; the 4-year wait ends 2027-10-27, after the 2026-11-30 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Chapter 7 bankruptcy discharge 2023-10-27; standard 4-year wait ends 2027-10-27 per B3-5.3-07. Closing 2026-11-30 is before wait ends. DTI 34.3% (B3-6-02). Funds to close $136,275 covered by $313,000 assets. Reserves 47 months > 6-month investment property minimum (B3-4.1-01). No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "bankruptcy waiting period investment property purchase"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2023-10-27"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy investment property waiting period 4 years"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          145
+        ],
+        "monthly_income": 11400,
+        "housing_payment": 3764
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 484000,
+        "closing_costs": 15275
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 136275,
+        "monthly_pitia": 3764,
+        "available_funds": 313000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 50080,
+  "seconds": 98.6,
+  "finish_reason": "stop"
+}

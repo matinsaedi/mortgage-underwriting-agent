@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G102",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 30.09% (B3-6-02) \u2014 well within 45% limit.  \nLTV: 70% \u2014 acceptable.  \nFunds to close: $206,107.  \nAvailable funds: $320,000 (bank $287,000 + retirement $33,000).  \nReserves: 32.63 months (30.34 months after reducing for undocumented large deposit) \u2014 ample.  \nLarge deposit: $8,000 exceeds 50% of monthly income ($5,800), so it is a large deposit (B3-4.2-02). For purchase transactions, documentation is required only if the funds are needed for down payment, closing costs, or reserves. Even after subtracting the $8,000, remaining funds ($312,000) cover cash to close ($206,107) and leave 30+ months reserves, so the deposit is not needed. No documentation required; reduced asset amount used for underwriting.  \nNo bankruptcy, foreclosure, or gift issues.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 3490,
+        "monthly_income": 11600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 18607,
+        "property_value": 625000,
+        "loan_amount": 437500
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 437500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3490,
+        "available_funds": 320000,
+        "cash_to_close": 206107
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition threshold"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 13126,
+  "seconds": 66.5,
+  "finish_reason": "stop"
+}

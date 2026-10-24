@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G049",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 25.99% (housing $4,089 + auto $590 \u00f7 income $18,000) \u2014 under 50% DU limit (B3-6-02).  \nLTV: 75% ($521,250 \u00f7 $695,000).  \nCash to close: $192,602 (down payment $173,750 + closing costs $18,852).  \nAvailable funds: $338,000 (bank $275,000 + retirement $63,000).  \nReserves after closing: 35.6 months \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).  \nLarge deposit $45,000 (2026-10-29) is not needed for down payment, closing costs, or reserves; borrower has ample other funds. No documentation required per B3-4.2-02.  \nNo bankruptcy, foreclosure, or gift issues. Credit score 762.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements principal residence DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          590
+        ],
+        "housing_payment": 4089,
+        "monthly_income": 18000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 521250,
+        "closing_costs": 18852,
+        "property_value": 695000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 521250,
+        "property_value": 695000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 338000,
+        "monthly_pitia": 4089,
+        "cash_to_close": 192602
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 18409,
+  "seconds": 61.9,
+  "finish_reason": "stop"
+}

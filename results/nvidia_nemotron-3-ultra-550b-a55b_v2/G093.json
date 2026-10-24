@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G093",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 56.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 56.74% (verified income $5,400; housing $2,734 + auto $330) exceeds 50% DU maximum per B3-6-02.\nFunds to close: $95,752; available funds $174,000 (bank $124,000 + retirement $50,000) leaves 28.6 months reserves \u2014 no minimum required for 1-unit principal residence per B3-4.1-01.\nCredit: 714 score, no bankruptcy/foreclosure.\nIncome: verified $5,400 used; stated $11,600 not supported.\nNo large deposits or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5400,
+        "monthly_debts": [
+          330
+        ],
+        "housing_payment": 2734
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 348000,
+        "property_value": 435000,
+        "closing_costs": 8752
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2734,
+        "available_funds": 174000,
+        "cash_to_close": 95752
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12424,
+  "seconds": 11.8,
+  "finish_reason": "stop"
+}

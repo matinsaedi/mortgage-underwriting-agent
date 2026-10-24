@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G017",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $118,477 are short of the $132,477 needed; document the source of $31,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI 34.5% (B3-6-02: under 50% DU limit). LTV 80%. Credit 745, no derogatory events. Funds to close $132,477. Bank balance $149,477 includes $31,000 large deposit (2026-09-09) not documented. Large deposit threshold = 50% \u00d7 $11,000 = $5,500 (B3-4.2-02). $31,000 exceeds threshold; unsourced amount must be deducted. Available funds net of large deposit = $118,477, leaving $14,000 shortfall. If deposit is documented, full $149,477 covers closing with 4.6 months reserves (no minimum required for 1-unit principal residence per B3-4.1-01).\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11000,
+        "housing_payment": 3703,
+        "monthly_debts": [
+          40,
+          55
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "closing_costs": 13477,
+        "loan_amount": 476000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 149477,
+        "cash_to_close": 132477,
+        "monthly_pitia": 3703
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU loan"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 476000,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit 50% monthly income definition"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 38142,
+  "seconds": 105.1,
+  "finish_reason": "stop"
+}

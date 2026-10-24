@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G065",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 31.6% (housing $2,674 + student loan $200 \u00f7 $9,100 income) \u2014 well within DU limits.  \nFunds to close $94,430 (down payment $85,000 + closing costs $9,430).  \nBank balance $127,000 (includes $13,000 large deposit 2026-09-22) covers cash to close with $32,570 remaining = 12.2 months reserves, exceeding the 6-month requirement for 2\u20134 unit principal residence (B3-4.1-01).  \nCredit score 701 \u2014 no minimum for DU (B3-5.1-01).  \nNo bankruptcy, foreclosure, or other derogatory events.  \nLarge deposit of $13,000 is part of funds needed for closing/reserves; purchase transactions require source documentation (B3-4.2-02). File shows source not documented.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2674,
+        "monthly_debts": [
+          200
+        ],
+        "monthly_income": 9100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 425000,
+        "loan_amount": 340000,
+        "closing_costs": 9430
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 127000,
+        "cash_to_close": 94430,
+        "monthly_pitia": 2674
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16624,
+  "seconds": 29.6,
+  "finish_reason": "stop"
+}

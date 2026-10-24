@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G066",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period: 7 years from 2017-11-25 ends 2024-11-25; closing 2026-12-01 satisfies standard wait (B3-5.3-07). LTV 75% \u2264 90% max for 3\u20137 years post-foreclosure (B3-5.3-07). DTI 25.6% well within DU limits. Funds to close $180,597 covered by $216,000 bank balance; reserves 9.1 months after closing. Credit score 782. No large deposits, no gifts, no other debts. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2017-11-25",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 15200,
+        "housing_payment": 3888
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 660000,
+        "loan_amount": 495000,
+        "closing_costs": 15597
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 180597,
+        "monthly_pitia": 3888,
+        "available_funds": 216000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 495000,
+        "property_value": 660000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22833,
+  "seconds": 45.5,
+  "finish_reason": "stop"
+}

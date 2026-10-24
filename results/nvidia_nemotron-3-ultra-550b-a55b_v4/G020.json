@@ -1,0 +1,61 @@
+{
+  "applicant_id": "G020",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 37.6% (B3-6-02). Credit 796. LTV 90% > 80% on second home requires 5% minimum borrower contribution ($32,000); borrower has $48,000 own funds (B3-4.3-04). Gift of $42,670 from parent is acceptable donor with gift letter (B3-4.3-04). Funds to close $77,610; available $90,670 (bank $48,000 + gift $42,670). Reserves: 2 months required for second home (B3-4.1-01) = $8,760; post-close $13,060 remains. No bankruptcy/foreclosure.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          210
+        ],
+        "housing_payment": 4380,
+        "monthly_income": 12200
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 640000,
+        "loan_amount": 576000,
+        "closing_costs": 13610
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift second home donor parent"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 15568,
+  "seconds": 47.3,
+  "finish_reason": "stop"
+}

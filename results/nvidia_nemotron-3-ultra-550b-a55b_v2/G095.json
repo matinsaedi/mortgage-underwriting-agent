@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G095",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Ana Haddad (G095)**\n\n- **DTI**: 34.02% (housing $2,866 + credit card $60 \u00f7 income $8,600). Well under the 50% DU maximum. **B3-6-02**\n- **Funds to close**: $164,923 (down payment $153,000 + closing costs $11,923). Borrower has $151,323 bank balance + $75,000 gift = $226,323 total. Sufficient. **B3-4.1-01**\n- **Reserves**: 21.4 months ($226,323 \u2013 $164,923 \u00f7 $2,866). Exceeds any DU requirement. **B3-4.1-01**\n- **Credit score**: 749. No minimum for DU loans. **B3-5.1-01**\n- **Gift**: $75,000 from parent with gift letter. Acceptable donor. However, guide requires verification that donor funds are available and transferred (donor check/deposit slip, withdrawal slip, electronic transfer, or settlement statement). File shows letter only. **B3-4.3-04**\n- **Large deposits**: None listed.\n- **Derogatory events**: None.\n\n**Condition**: Provide documentation verifying donor\u2019s gift funds availability and transfer (e.g., donor\u2019s check and borrower\u2019s deposit slip, electronic transfer record, or settlement statement showing receipt).\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2866,
+        "monthly_debts": [
+          60
+        ],
+        "monthly_income": 8600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11923,
+        "property_value": 510000,
+        "loan_amount": 357000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 164923,
+        "monthly_pitia": 2866,
+        "available_funds": 226323
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18156,
+  "seconds": 25.4,
+  "finish_reason": "stop"
+}

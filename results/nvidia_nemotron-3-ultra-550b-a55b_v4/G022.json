@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G022",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period: 7 years from 2018-12-18 ends 2025-12-18; closing 2026-11-10 is after \u2014 B3-5.3-07 satisfied.  \nDTI: 29.37% (housing $3,056 + student loan $410 \u00f7 $11,800 income) \u2014 within DU limits.  \nFunds to close: $179,117 (down payment $163,500 + closing costs $15,617); bank balance $229,000 covers it.  \nReserves: 16.3 months after closing \u2014 exceeds any requirement.  \nLTV: 70% \u2014 no restriction post-7-year foreclosure seasoning.  \nCredit score 735; no large deposits or gifts to document.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2018-12-18",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11800,
+        "housing_payment": 3056,
+        "monthly_debts": [
+          410
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 15617,
+        "property_value": 545000,
+        "loan_amount": 381500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3056,
+        "available_funds": 229000,
+        "cash_to_close": 179117
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 545000,
+        "loan_amount": 381500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 23777,
+  "seconds": 63.6,
+  "finish_reason": "stop"
+}

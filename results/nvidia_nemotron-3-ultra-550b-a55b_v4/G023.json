@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G023",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-11-20; the 2-year wait ends 2027-11-20, after the 2026-12-07 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "**Credit (B3-5.3-07):** Chapter 13 discharged 2025-11-20; 2-year wait ends 2027-11-20. Closing 2026-12-07 is before wait ends \u2192 **fail**.  \n**DTI (B3-6-02):** 29.6% (housing $3,142 + debts $790 \u00f7 income $13,300) \u2192 pass.  \n**Funds to close:** $143,870 needed; $210,000 available \u2192 pass.  \n**Reserves:** 21 months after closing \u2192 pass.  \n**Large deposits / gifts:** none listed \u2192 pass.\n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 2,
+        "start_date": "2025-11-20"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          290,
+          500
+        ],
+        "monthly_income": 13300,
+        "housing_payment": 3142
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 530000,
+        "loan_amount": 397500,
+        "closing_costs": 11370
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3142,
+        "cash_to_close": 143870,
+        "available_funds": 210000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19264,
+  "seconds": 57.1,
+  "finish_reason": "stop"
+}

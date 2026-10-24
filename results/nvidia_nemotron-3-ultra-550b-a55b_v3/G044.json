@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G044",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($17,750) must come from the borrower's own funds; they have $14,400."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Tom Rossi (G044)**\n\n- **DTI**: 27.1% (housing $2,474 + student loan $320 \u00f7 verified income $10,300) \u2013 well within 45% limit. **B3-6-02**\n- **LTV**: 90% ($319,500 \u00f7 $355,000). **B3-4.3-04**\n- **Funds to close**: $43,308 (down payment $35,500 + closing costs $7,808). **B3-4.1-01**\n- **Available funds**: $14,400 (bank) + $34,756 (gift) = $49,156. Covers cash to close with $5,848 remaining.\n- **Reserves**: 2.36 months ($5,848 \u00f7 $2,474) \u2013 meets 2-month requirement for DU second home. Gift funds eligible for reserves. **B3-4.1-01**\n- **Credit score**: 800 \u2013 DU requires no minimum; score is excellent. **B3-5.1-01**\n- **Gift**: From parent (acceptable donor) with gift letter \u2013 fully documented. **B3-4.3-04**\n- **Minimum borrower contribution**: Second home, LTV > 80% requires 5% from borrower\u2019s own funds = $17,750. Borrower has only $14,400. **B3-4.3-04** \u2013 **FAIL**\n\nThe borrower\u2019s own funds fall $3,350 short of the 5% minimum contribution. A condition cannot require additional funds.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          320
+        ],
+        "housing_payment": 2474,
+        "monthly_income": 10300
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7808,
+        "property_value": 355000,
+        "loan_amount": 319500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 43308,
+        "available_funds": 49156,
+        "monthly_pitia": 2474
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home parent donor"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 355000,
+        "loan_amount": 319500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score 620"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 33555,
+  "seconds": 36.1,
+  "finish_reason": "stop"
+}

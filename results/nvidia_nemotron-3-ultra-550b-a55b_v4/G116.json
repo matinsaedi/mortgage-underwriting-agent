@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G116",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $108,603 are short of the $153,503 needed; obtain a signed gift letter for $52,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Kofi Kim (G116)**\n\n- **LTV**: 75% (\u226480%; 1-unit principal residence \u2013 no minimum borrower contribution required; all funds may come from gift) \u2013 *B3-4.3-04*  \n- **DTI**: 27.85% (housing $3,314 \u00f7 verified income $11,900; no other debts) \u2013 well within limits  \n- **Funds to close**: $153,503 (down payment $140,000 + closing costs $13,503) \u2013 *funds_to_close*  \n- **Available funds**: $108,603 (bank) + $52,000 (gift) = $160,603 \u2192 sufficient to close  \n- **Reserves**: 2.14 months post-closing; no minimum reserve requirement for 1-unit principal residence \u2013 *B3-4.1-01*  \n- **Gift donor**: Fianc\u00e9 \u2013 acceptable donor (individual engaged to marry borrower) \u2013 *B3-4.3-04*  \n- **Gift letter**: **Missing** (has_gift_letter: false); required per *B3-4.3-04* (must specify amount, no-repayment statement, donor details)  \n- **Credit**: 742 score; no bankruptcy/foreclosure  \n\n**Condition**: Obtain signed gift letter from fianc\u00e9 documenting the $52,000 gift.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds principal residence fiance donor eligibility"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 420000,
+        "property_value": 560000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 3314,
+        "monthly_income": 11900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13503,
+        "property_value": 560000,
+        "loan_amount": 420000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DU reserve requirements 1-unit principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter documentation requirements"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 153503,
+        "monthly_pitia": 3314,
+        "available_funds": 160603
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 32692,
+  "seconds": 96.2,
+  "finish_reason": "stop"
+}

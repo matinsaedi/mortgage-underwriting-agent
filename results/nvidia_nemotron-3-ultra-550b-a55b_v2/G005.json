@@ -1,0 +1,93 @@
+{
+  "applicant_id": "G005",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $129,244 are short of the $192,144 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 G005 Sarah Haddad**\n\n- **DTI**: 28.17% (housing $3,888 \u00f7 income $13,800) \u2013 well within DU limits.  \n- **LTV**: 75.0% ($495,000 \u00f7 $660,000).  \n- **Cash to close**: $184,368 (down payment $165,000 + closing costs $19,368).  \n- **Available funds**: $129,244 (bank) + $84,000 (gift) = $213,244.  \n- **Reserves after closing**: 7.43 months \u2013 exceeds 2-month requirement for second home (B3-4.1-01).  \n- **Credit**: 743 score, no bankruptcy/foreclosure.  \n\n**Critical issue \u2013 Gift from interested party**:  \nThe $84,000 gift is from an \u201cinterested party.\u201d Per B3-4.3-04, personal gift donors may not be interested parties. The gift must be treated as an IPC. For a second home at 75% LTV, maximum financing concessions (IPCs) are 9% of property value = $59,400 (B3-4.1-02). The $84,000 gift exceeds this by $24,600, which becomes a sales concession, reducing the sales price and increasing LTV, which further lowers the IPC limit \u2013 a circular reduction that cannot accommodate the full gift.  \n\nBorrower\u2019s own funds ($129,244) are $55,124 short of cash to close. The gift cannot be fully used under IPC rules, and no other funds are available.  \n\n**DECISION: decline**  \n**RULES: B3-4.3-04, B3-4.1-02**",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 13800,
+        "housing_payment": 3888
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 660000,
+        "loan_amount": 495000,
+        "closing_costs": 19368
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 213244,
+        "monthly_pitia": 3888,
+        "cash_to_close": 184368
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift funds second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions limits second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 495000,
+        "property_value": 660000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "IPC financing concessions limit 75% LTV second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 42414,
+  "seconds": 59.1,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G115",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($30,000) must come from the borrower's own funds; they have $17,400."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 35.65% (within DU limits). LTV: 90% (>80%). Funds to close: $76,852. Available funds: $17,400 (bank) + $71,778 (gift) = $89,178. Reserves: 3.0 months (meets 2-month second-home requirement). Gift from parent with letter: acceptable donor per B3-4.3-04. However, for second home with LTV > 80%, B3-4.3-04 requires a 5% minimum borrower contribution from own funds ($30,000 on $600,000). Borrower's own funds are only $17,400. This requirement cannot be satisfied by the gift.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 13500,
+        "housing_payment": 4113,
+        "monthly_debts": [
+          550,
+          150
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 600000,
+        "loan_amount": 540000,
+        "closing_costs": 16852
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home occupancy"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 540000,
+        "property_value": 600000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 76852,
+        "monthly_pitia": 4113,
+        "available_funds": 89178
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home LTV greater than 80"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-4.3-11"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 21526,
+  "seconds": 51.1,
+  "finish_reason": "stop"
+}

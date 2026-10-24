@@ -1,0 +1,65 @@
+{
+  "applicant_id": "G008",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 7 bankruptcy discharged 2023-10-06; the 4-year wait ends 2027-10-06, after the 2026-11-22 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Chapter 7 bankruptcy discharged 2023-10-06 requires 4-year waiting period per B3-5.3-07; period ends 2027-10-06, after closing date 2026-11-22. DTI 28.7% (B3-6-02). Funds to close $99,917; bank balance $124,000 leaves 13.5 months reserves (B3-4.1-01). No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2023-10-06"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6200,
+        "housing_payment": 1781,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 217000,
+        "property_value": 310000,
+        "closing_costs": 6917
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 99917,
+        "monthly_pitia": 1781,
+        "available_funds": 124000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 18925,
+  "seconds": 17.3,
+  "finish_reason": "stop"
+}

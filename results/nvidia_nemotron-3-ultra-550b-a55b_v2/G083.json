@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G083",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2023-02-02; the 7-year wait ends 2030-02-02, after the 2026-11-17 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "**Foreclosure waiting period (B3-5.3-07):** Foreclosure date 2023-02-02; 7-year wait for second home ends 2030-02-02. Closing 2026-11-17 is before wait ends \u2192 **decline**.\n\n**DTI (B3-6-02):** 27.18% (housing $3,659 + debts $255 \u00f7 income $14,400) \u2014 within limit.\n\n**Funds to close:** $168,615 needed; $213,000 available \u2014 sufficient.\n\n**Reserves (B3-4.1-01):** 12.13 months post-closing \u2014 sufficient for second home.\n\n**Credit score:** 783 \u2014 meets minimum.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period second home"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 7,
+        "start_date": "2023-02-02"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3659,
+        "monthly_debts": [
+          35,
+          220
+        ],
+        "monthly_income": 14400
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 465000,
+        "closing_costs": 13615,
+        "property_value": 620000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 213000,
+        "monthly_pitia": 3659,
+        "cash_to_close": 168615
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19484,
+  "seconds": 42.8,
+  "finish_reason": "stop"
+}

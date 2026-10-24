@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G060",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 31.0% (housing $2,826 + student loan $150 \u00f7 income $9,600) \u2014 under 50% DU limit (B3-6-02).\n- **Credit score**: 694 \u2014 no minimum for DU casefiles (B3-5.1-01).\n- **LTV**: 75% \u2014 not evaluated per project assumptions.\n- **Funds to close**: $131,744 needed (down payment $118,750 + closing costs $12,994). Available: bank balance $125,044 + gift $43,000 = $168,044 \u2014 sufficient.\n- **Reserves**: 12.85 months post-closing ($168,044 \u2212 $131,744 \u00f7 $2,826) \u2014 well above any DU requirement for 1-unit principal residence (B3-4.1-01).\n- **Gift**: $43,000 from spouse with gift letter \u2014 spouse is acceptable donor; letter satisfies documentation (B3-4.3-04).\n- **Large deposits**: none.\n- **Derogatory credit**: no bankruptcy or foreclosure.\n\nAll requirements met with current file.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9600,
+        "housing_payment": 2826,
+        "monthly_debts": [
+          150
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12994,
+        "loan_amount": 356250,
+        "property_value": 475000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 356250,
+        "property_value": 475000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 168044,
+        "cash_to_close": 131744,
+        "monthly_pitia": 2826
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation gift letter spouse"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves months required DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.3-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 13964,
+  "seconds": 40.6,
+  "finish_reason": "stop"
+}

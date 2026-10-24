@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G081",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit (Foreclosure)**: Foreclosure 2017-05-23; 7-year wait ends 2024-05-23 per B3-5.3-07. Closing 2026-12-26 is past the wait; no LTV restriction applies.  \n**DTI**: 25.95% (housing $3,598 + auto $270 + student loan $180 = $4,048 \u00f7 $15,600 income). Under 50% DU limit per B3-6-02.  \n**LTV**: 70% (loan $451,500 \u00f7 value $645,000).  \n**Funds to close**: $207,714 (down payment $193,500 + closing costs $14,214). Bank balance $248,000 alone covers this.  \n**Reserves**: $332,000 total assets \u2212 $207,714 to close = $124,286 remaining \u00f7 $3,598 PITIA = 34.5 months. No minimum required for 1-unit principal residence per B3-4.1-01.  \n**Credit score**: 697 \u2014 acceptable for DU.  \n**Large deposits / gifts**: None.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU purchase"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          270,
+          180
+        ],
+        "monthly_income": 15600,
+        "housing_payment": 3598
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 645000,
+        "closing_costs": 14214,
+        "loan_amount": 451500
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 7,
+        "start_date": "2017-05-23"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 645000,
+        "loan_amount": 451500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 207714,
+        "available_funds": 332000,
+        "monthly_pitia": 3598
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.4-01",
+    "B3-5.3-07",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 19585,
+  "seconds": 65.3,
+  "finish_reason": "stop"
+}

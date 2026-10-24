@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G069",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-12-21; the 7-year wait ends 2029-12-21, after the 2026-12-07 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Credit score 687 meets minimum. DTI 31.92% (B3-6-02). LTV 80%. Funds to close $134,563; bank balance $202,000 covers it. Reserves 18.2 months. Foreclosure date 2022-12-21; standard 7-year wait ends 2029-12-21 (B3-5.3-07). Closing 2026-12-07 is before waiting period expires. No extenuating circumstances per assumptions.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 7,
+        "start_date": "2022-12-21"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11600,
+        "monthly_debts": [],
+        "housing_payment": 3703
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 476000,
+        "closing_costs": 15563,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 476000,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 202000,
+        "cash_to_close": 134563,
+        "monthly_pitia": 3703
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 23503,
+  "seconds": 80.7,
+  "finish_reason": "stop"
+}

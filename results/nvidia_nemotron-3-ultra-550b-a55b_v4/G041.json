@@ -1,0 +1,67 @@
+{
+  "applicant_id": "G041",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $125,138 are short of the $156,438 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 31.0% (verified income, no debts) \u2014 meets requirements.\nLTV: 70% \u2014 \u226480%, so no minimum borrower contribution required for principal residence.\nFunds to close: $156,438 (down payment $145,500 + closing costs $10,938).\nBorrower's own funds: $125,138 \u2014 insufficient to close (short $31,300).\nGift: $84,000 from \"interested party\" with gift letter \u2014 B3-4.3-04 prohibits gifts from any interested party (builder, developer, real estate agent, or other interested party). The donor is explicitly an interested party, so the gift is unacceptable.\nWithout the gift, the borrower cannot cover cash to close. No other assets listed.\nReserves: Not applicable since borrower cannot close.\nCredit: 750 score, no bankruptcy/foreclosure \u2014 eligible.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party seller real estate agent"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 339500,
+        "property_value": 485000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2731,
+        "monthly_income": 8800,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 485000,
+        "loan_amount": 339500,
+        "closing_costs": 10938
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 125138,
+        "cash_to_close": 156438,
+        "monthly_pitia": 2731
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19220,
+  "seconds": 38.9,
+  "finish_reason": "stop"
+}

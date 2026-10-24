@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G067",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period: 7 years from 2018-07-24 ends 2025-07-24; closing 2026-11-26 meets standard wait (B3-5.3-07). LTV 70% \u2264 90% max for 3\u20137 years post-foreclosure (B3-5.3-07). Credit score 695; DU requires no minimum (B3-5.1-01). DTI 33.8% (B3-6-02). Funds to close $215,607; bank balance $275,000 covers it. Reserves 16.3 months PITIA. No large deposits or gifts to document.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2018-07-24",
+        "years": 7
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 458500,
+        "property_value": 655000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 10800,
+        "monthly_debts": [],
+        "housing_payment": 3653
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 19107,
+        "property_value": 655000,
+        "loan_amount": 458500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 215607,
+        "monthly_pitia": 3653,
+        "available_funds": 275000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 27855,
+  "seconds": 33.8,
+  "finish_reason": "stop"
+}

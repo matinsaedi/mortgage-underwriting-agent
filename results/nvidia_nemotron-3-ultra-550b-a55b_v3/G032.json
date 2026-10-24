@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G032",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 31.6% \u2264 50% DU limit (B3-6-02). Reserves 5.56 months; no minimum for 1-unit principal residence DU loan (B3-4.1-01). Funds to close $141,865; available $125,465 bank + $38,000 gift = $163,465. Gift from sibling with letter, fully documented per project assumption (B3-4.3-04). No large deposits, no bankruptcy/foreclosure. Credit score 710. LTV 80%.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12800,
+        "monthly_debts": [
+          160
+        ],
+        "housing_payment": 3885
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 500000,
+        "closing_costs": 16865
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163465,
+        "monthly_pitia": 3885,
+        "cash_to_close": 141865
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 500000,
+        "property_value": 625000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-05",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 14795,
+  "seconds": 34.1,
+  "finish_reason": "stop"
+}

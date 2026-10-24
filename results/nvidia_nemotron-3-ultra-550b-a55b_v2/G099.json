@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G099",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.76% (B3-6-02) \u2014 within limits. LTV 75% (B3-4.1-01) \u2014 no minimum reserves required for 1-unit principal residence; 15.9 months post-close. Cash to close $68,893; available funds $93,793 (bank $68,793 + gift $25,000) \u2014 sufficient. Credit score 743; no bankruptcy/foreclosure. Gift from \"other relative\" is acceptable donor (B3-4.3-04); LTV \u226480% so no minimum borrower contribution. Gift letter present, but lender must verify donor funds availability and transfer per B3-4.3-04 \u2014 not yet documented.\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 4500,
+        "housing_payment": 1564,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 191250,
+        "property_value": 255000,
+        "closing_costs": 5143
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 191250,
+        "property_value": 255000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 93793,
+        "cash_to_close": 68893,
+        "monthly_pitia": 1564
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from other relative documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter requirements documentation donor funds verification"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 28688,
+  "seconds": 49.6,
+  "finish_reason": "stop"
+}

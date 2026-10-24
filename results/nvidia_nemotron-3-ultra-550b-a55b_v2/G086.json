@@ -1,0 +1,94 @@
+{
+  "applicant_id": "G086",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis \u2013 Kofi Brown (G086)**\n\n- **DTI**: 34.8% (housing $2,742 + auto $390 \u00f7 $9,000 income) \u2013 well within DU limits.  \n- **Credit**: 747 score \u2013 no minimum for DU loans (B3-5.1-01).  \n- **LTV**: 90% ($355,500 \u00f7 $395,000).  \n- **Reserves**: 3.5 months post-closing ($59,454 available \u2013 $49,870 to close \u00f7 $2,742 PITIA) \u2013 meets 2-month second-home requirement (B3-4.1-01).  \n- **Funds to Close**: $49,870 needed; $59,454 available ($28,000 own + $31,454 gift) \u2013 sufficient.  \n- **Min. Borrower Contribution**: 5% of $395,000 = $19,750 required from own funds for second home >80% LTV; borrower has $28,000 \u2013 MET (B3-4.3-04).  \n- **Gift**: $31,454 from parent (acceptable donor), gift letter on file. Donor funds availability and transfer must be verified (B3-4.3-04).  \n- **No bankruptcy/foreclosure** \u2013 no waiting periods.  \n- **No large deposits** to source.\n\n**Condition**: Verify donor\u2019s funds availability and transfer of the $31,454 gift (donor account statement, transfer evidence, or settlement statement showing receipt) per B3-4.3-04.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9000,
+        "housing_payment": 2742,
+        "monthly_debts": [
+          390
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 10370,
+        "property_value": 395000,
+        "loan_amount": 355500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2742,
+        "available_funds": 59454,
+        "cash_to_close": 49870
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements DTI limits"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score purchase loan DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift funds"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "verifying donor availability of funds gift transfer"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-03"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 42580,
+  "seconds": 37.2,
+  "finish_reason": "stop"
+}

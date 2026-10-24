@@ -1,0 +1,91 @@
+{
+  "applicant_id": "G055",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Hana Rossi (G055)**\n\n- **Chapter 13 bankruptcy waiting period**: Discharged 2022-11-06; 2-year wait ends 2024-11-06 (B3-5.3-07). Closing 2026-11-04 is well past the wait. \u2713  \n- **Credit score**: 732; DU loan \u2013 no minimum score required (B3-5.1-01). \u2713  \n- **DTI**: 29.43% (housing $4,032 \u00f7 income $13,700); under 50% DU limit (B3-6-02). \u2713  \n- **Funds to close**: $187,848 (down payment $171,250 + closing costs $16,598). Bank balance $241,000 covers it. \u2713  \n- **Reserves**: 13.18 months post-closing ($53,152 \u00f7 $4,032); no minimum for 1-unit principal residence DU loan (B3-4.1-01). \u2713  \n- **LTV**: 75.0%; within conventional limits. \u2713  \n- **Large deposits / gifts**: None listed. \u2713  \n\nAll requirements satisfied as presented.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-11-06",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 4032,
+        "monthly_income": 13700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 513750,
+        "closing_costs": 16598,
+        "property_value": 685000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 241000,
+        "cash_to_close": 187848,
+        "monthly_pitia": 4032
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 685000,
+        "loan_amount": 513750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score conventional loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU loan principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.3-07",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 42038,
+  "seconds": 37.4,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,62 @@
+{
+  "applicant_id": "G034",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 28.6% (housing only, no other debts) \u2014 well within limits.  \nFunds to close: $169,244 (down payment $156,000 + closing costs $13,244).  \nAvailable funds: $316,000 (bank $216,000 + retirement $100,000).  \nReserves after closing: 50.3 months \u2014 exceeds any requirement.  \nLTV: 70%.  \nCredit score: 793. No bankruptcy or foreclosure.\n\nLarge deposit: $15,000 on 2026-11-22, source not documented. Per B3-4.2-02, for purchase transactions, if funds from a large deposit are needed to complete the transaction (down payment, closing costs, or reserves), the lender must document the source. The borrower\u2019s bank balance ($216,000) includes this deposit and is used for the $169,244 cash to close, so documentation is required.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 10200,
+        "monthly_debts": [],
+        "housing_payment": 2920
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13244,
+        "property_value": 520000,
+        "loan_amount": 364000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 364000,
+        "property_value": 520000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 169244,
+        "available_funds": 316000,
+        "monthly_pitia": 2920
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 10043,
+  "seconds": 87.0,
+  "finish_reason": "stop"
+}

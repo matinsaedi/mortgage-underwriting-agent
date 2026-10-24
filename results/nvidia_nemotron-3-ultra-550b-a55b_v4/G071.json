@@ -1,0 +1,79 @@
+{
+  "applicant_id": "G071",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 34.14% (\u226450% DU limit per B3-6-02) \u2713  \nFunds to close: $88,133 (down payment $81,250 + closing costs $6,883)  \nAvailable funds: $114,000 bank balance (includes $17,000 large deposit)  \nReserves after closing: 13.16 months (\u22652 months required for second home per B3-4.1-01) \u2713  \nCredit score: 724 (no minimum for DU per B3-5.1-01) \u2713  \nNo bankruptcy/foreclosure \u2713  \n\nLarge deposit: $17,000 on 2026-09-27, source not documented. Purchase transaction \u2014 funds needed for closing (borrower needs $88,133, has $114,000 total). Per B3-4.2-02, source must be documented for large deposits used for down payment, closing costs, or reserves.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          560
+        ],
+        "monthly_income": 7400,
+        "housing_payment": 1966
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 6883,
+        "loan_amount": 243750,
+        "property_value": 325000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 114000,
+        "monthly_pitia": 1966,
+        "cash_to_close": 88133
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 26297,
+  "seconds": 65.7,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G105",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $151,654 are short of the $154,854 needed; $69,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 G105 Kofi Okafor**\n\n- **DTI**: 27.44% (housing $2,568 + debts $450 \u00f7 income $11,000) \u2013 well within DU limits.  \n- **LTV**: 70% (loan $318,500 \u00f7 value $455,000).  \n- **Cash to close**: $149,718 (down payment $136,500 + closing costs $13,218).  \n- **Reserves with gift**: 27.6 months ($220,654 available \u2212 $149,718 to close \u00f7 $2,568 PITIA).  \n- **Reserves without gift**: 0.75 months ($151,654 bank balance \u2212 $149,718 to close \u00f7 $2,568).  \n- **Minimum reserves for second home (DU)**: 2 months PITIA (B3-4.1-01).  \n- **Gift donor**: listed as \u201cinterested party.\u201d B3-4.3-04 states: \u201cThe donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\u201d Gift from an interested party is not acceptable.  \n- **Credit**: 794 score, no bankruptcy/foreclosure.  \n- **Income/employment**: verified, 2.4 years.\n\nThe gift cannot be used because the donor is an interested party (B3-4.3-04). Without the gift, the borrower has only 0.75 months of reserves, below the 2-month requirement for a second home (B3-4.1-01). A condition cannot substitute a different donor or add funds.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11000,
+        "housing_payment": 2568,
+        "monthly_debts": [
+          150,
+          300
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 455000,
+        "closing_costs": 13218,
+        "loan_amount": 318500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 149718,
+        "monthly_pitia": 2568,
+        "available_funds": 220654
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 318500,
+        "property_value": 455000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution second home gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 25577,
+  "seconds": 51.7,
+  "finish_reason": "stop"
+}

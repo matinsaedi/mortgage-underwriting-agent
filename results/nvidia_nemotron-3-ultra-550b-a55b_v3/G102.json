@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G102",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 30.09% (housing $3,490 \u00f7 income $11,600) \u2014 under 50% DU limit (B3-6-02).\n- **LTV**: 70% \u2014 acceptable.\n- **Funds to close**: $206,107 (down payment $187,500 + closing costs $18,607).\n- **Available funds**: $320,000 (bank $287,000 + retirement $33,000).\n- **Reserves**: 32.6 months after closing \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).\n- **Credit**: 775 score; no bankruptcy or foreclosure.\n- **Large deposit**: $8,000 on 2026-08-30 exceeds 50% of monthly income ($5,800 threshold). Source not documented. For purchase transactions, undocumented large deposits must be sourced or excluded from verified funds (B3-4.2-02). Excluding the $8,000 leaves $312,000, still sufficient for closing and reserves.\n\n**Condition**: Document the source of the $8,000 large deposit (e.g., transfer records, sale proceeds, gift letter) or confirm the reduced asset amount ($312,000) is used for underwriting.\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3490,
+        "monthly_income": 11600,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 437500,
+        "closing_costs": 18607,
+        "property_value": 625000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 206107,
+        "available_funds": 320000,
+        "monthly_pitia": 3490
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit threshold definition"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 437500,
+        "property_value": 625000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 27942,
+  "seconds": 65.0,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,80 @@
+{
+  "applicant_id": "G045",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Applicant G045 (Priya Chen)**\n\n- **DTI**: 28.53% (housing $2,568 \u00f7 income $9,000) \u2013 well within DU limits.  \n- **LTV**: 70% ($318,500 \u00f7 $455,000) \u2013 eligible for gift-funded transaction.  \n- **Credit**: 765 score; no bankruptcy/foreclosure \u2013 no waiting-period concerns.  \n- **Funds to close**: $147,852 needed (down payment $136,500 + closing costs $11,352).  \n- **Available funds**: $141,760 bank + $82,000 gift = $223,760 \u2013 sufficient.  \n- **Reserves**: 29.6 months ($223,760 \u2013 $147,852 \u00f7 $2,568) \u2013 exceeds 6-month requirement for 2\u20134 unit principal residence (B3-4.1-01).  \n- **Gift**: $82,000 from parent (acceptable donor per B3-4.3-04); gift letter present; LTV \u226480% so no minimum borrower contribution required for 2\u20134 unit principal residence (B3-4.3-04).  \n- **Occupancy/property**: 2\u20134 unit principal residence \u2013 eligible for gift funds and DU underwriting.\n\nAll requirements satisfied as presented.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds principal residence 2-4 unit donor parent"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 318500,
+        "property_value": 455000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 2568,
+        "monthly_income": 9000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 318500,
+        "property_value": 455000,
+        "closing_costs": 11352
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2568,
+        "available_funds": 223760,
+        "cash_to_close": 147852
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves 2-4 unit principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter transfer of funds"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit principal residence minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 36915,
+  "seconds": 74.4,
+  "finish_reason": "stop"
+}

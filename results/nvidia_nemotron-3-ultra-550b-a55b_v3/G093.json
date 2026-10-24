@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G093",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 56.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 56.74% (verified income $5,400; housing $2,734 + auto $330) exceeds 50% DU maximum per B3-6-02.\nFunds to close: $95,752; available funds $174,000 (bank $124,000 + retirement $50,000) \u2192 sufficient.\nReserves: 28.6 months after closing \u2192 meets requirements.\nCredit: Score 714; no bankruptcy/foreclosure \u2192 eligible.\nIncome: Verified $5,400 vs stated $11,600; DTI calculated on verified income per B3-2-10.\nNo large deposits or gifts to document.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          330
+        ],
+        "housing_payment": 2734,
+        "monthly_income": 5400
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 435000,
+        "loan_amount": 348000,
+        "closing_costs": 8752
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 95752,
+        "available_funds": 174000,
+        "monthly_pitia": 2734
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "income verification discrepancy stated vs verified"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-10",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12557,
+  "seconds": 54.4,
+  "finish_reason": "stop"
+}

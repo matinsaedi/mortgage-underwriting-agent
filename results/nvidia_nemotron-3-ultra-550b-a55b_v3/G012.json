@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G012",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $100,993 are short of the $155,493 needed; obtain a signed gift letter for $66,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 34.55% (housing $2,676 + auto $330 = $3,006 / $8,700 income) \u2014 within DU limits.  \nLTV: 70% ($332,500 / $475,000) \u2014 acceptable.  \nFunds to close: $155,493 (down payment $142,500 + closing costs $12,993).  \nAvailable funds: bank balance $100,993 + gift $66,000 = $166,993.  \nReserves after closing: 4.3 months ($11,500 / $2,676) \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).  \nCredit: 720 score, no bankruptcy/foreclosure.  \nGift: $66,000 from grandparent (acceptable donor per B3-4.3-04) but **no gift letter** (has_gift_letter: false). Without the gift, borrower is $54,500 short to close. Gift letter is required per B3-4.3-04.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8700,
+        "housing_payment": 2676,
+        "monthly_debts": [
+          330
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 332500,
+        "closing_costs": 12993,
+        "property_value": 475000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 332500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 166993,
+        "monthly_pitia": 2676,
+        "cash_to_close": 155493
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "acceptable donor gift grandparent"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 19105,
+  "seconds": 97.8,
+  "finish_reason": "stop"
+}

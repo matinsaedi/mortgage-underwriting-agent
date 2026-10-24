@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G114",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.9% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 53.89% (housing $2,913 + auto $590 = $3,503 \u00f7 verified income $6,500) exceeds 50% DU maximum (B3-6-02).\nFunds to close: $134,904; available funds $283,000 (bank $205,000 + retirement $78,000) \u2014 sufficient.\nReserves: 50.84 months after closing \u2014 exceeds 2-month second-home requirement (B3-4.1-01).\nCredit score: 703 \u2014 meets minimum for second home.\nNo bankruptcy, foreclosure, or large deposits.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home underwriting requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score DTI reserves"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6500,
+        "monthly_debts": [
+          590
+        ],
+        "housing_payment": 2913
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 490000,
+        "loan_amount": 367500,
+        "closing_costs": 12404
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 134904,
+        "available_funds": 283000,
+        "monthly_pitia": 2913
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limit 50% DU loan casefile"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-01",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.3-09",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 37548,
+  "seconds": 58.9,
+  "finish_reason": "stop"
+}

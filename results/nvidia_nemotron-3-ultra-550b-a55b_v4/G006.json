@@ -1,0 +1,91 @@
+{
+  "applicant_id": "G006",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $70,432 are short of the $128,332 needed; obtain a signed gift letter for $72,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**DTI**: 30.35% (housing $2,769 + debts $205 \u00f7 income $9,800) \u2014 under 50% DU max (B3-6-02).  \n**LTV**: 75% \u2014 \u226480%, so no minimum borrower contribution required for gift on 1-unit principal residence (B3-4.3-04).  \n**Funds to close**: $128,332 (down payment $116,250 + closing costs $12,082).  \n**Available funds**: Bank $70,432 + gift $72,000 = $142,432 \u2014 sufficient.  \n**Reserves after closing**: 5.09 months \u2014 no minimum required for 1-unit principal residence (B3-4.1-01).  \n**Gift donor**: Fianc\u00e9 \u2014 acceptable (individual engaged to marry borrower) per B3-4.3-04.  \n**Gift letter**: Missing (has_gift_letter: false) \u2014 required by B3-4.3-04.  \n**Credit**: Score 741, no bankruptcy/foreclosure.  \n**Large deposits**: None.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds fiance donor eligibility"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9800,
+        "housing_payment": 2769,
+        "monthly_debts": [
+          35,
+          170
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12082,
+        "property_value": 465000,
+        "loan_amount": 348750
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter documentation requirements"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 128332,
+        "monthly_pitia": 2769,
+        "available_funds": 142432
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 26971,
+  "seconds": 46.5,
+  "finish_reason": "stop"
+}

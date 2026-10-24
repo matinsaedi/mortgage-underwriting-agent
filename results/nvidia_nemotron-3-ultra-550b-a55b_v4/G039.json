@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G039",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $162,968 are short of the $171,768 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.07% (within limits). LTV: 75% (\u226480%, no minimum borrower contribution required for 1-unit principal residence). Funds to close: $171,768. Available funds: $162,968 bank + $53,000 gift = $215,968. Reserves: No minimum required for 1-unit principal residence DU loan (B3-4.1-01). Credit score 717 acceptable. No derogatory events.\n\nGift from \"interested party\" is not allowed per B3-4.3-04: \"The donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" Without the gift, borrower has $162,968 but needs $171,768 to close \u2014 short $8,800.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 11500,
+        "housing_payment": 3688
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 15518,
+        "property_value": 625000,
+        "loan_amount": 468750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift donor interested party not allowed"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 468750
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 20578,
+  "seconds": 74.0,
+  "finish_reason": "stop"
+}

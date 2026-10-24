@@ -1,0 +1,92 @@
+{
+  "applicant_id": "G019",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $196,860 are short of the $212,860 needed; document the source of $27,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Tom Kim (G019)**\n\n- **DTI**: 26.4% (housing $3,300 \u00f7 income $12,500) \u2013 within 45% limit. **B3-6-02**\n- **LTV**: 70% ($413K \u00f7 $590K) \u2013 meets 1-unit investment property max (85%). **Eligibility Matrix**\n- **Funds to close**: $193,060 (down payment $177K + closing costs $16,060). **B3-4.1-01**\n- **Available funds**: $223,860 bank balance (includes $27K large deposit). **B3-4.2-02**\n- **Reserves**: 9.33 months ($30,800 remaining \u00f7 $3,300 PITIA) \u2013 exceeds 6-month investment property requirement. **B3-4.1-01**\n- **Credit score**: 787 \u2013 no minimum for DU loans; excellent profile. **B3-5.1-01**\n- **Large deposit**: $27,000 on 2026-10-12, source not documented. Purchase transaction requires documentation because funds are used for down payment, closing costs, and reserves. **B3-4.2-02**\n- **No bankruptcy, foreclosure, or gifts**.\n\n**Condition**: Document source of $27,000 large deposit (e.g., sale of asset, gift letter with donor verification, etc.).\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 3300,
+        "monthly_income": 12500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 590000,
+        "closing_costs": 16060,
+        "loan_amount": 413000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 223860,
+        "monthly_pitia": 3300,
+        "cash_to_close": 193060
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment LTV"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 413000,
+        "property_value": 590000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-02",
+    "B3-4.2-03",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 36392,
+  "seconds": 84.9,
+  "finish_reason": "stop"
+}

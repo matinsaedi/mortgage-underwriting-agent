@@ -1,0 +1,101 @@
+{
+  "applicant_id": "G104",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $62,763 are short of the $70,963 needed; $15,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.5% (\u226445% limit, B3-6-02)  \nLTV: 80%  \nFunds to close: $60,553  \nAvailable funds (bank only): $62,763  \nReserves without gift: 1.27 months  \nRequired reserves for investment property (DU): 6 months (B3-4-1-01)  \nGift: $15,000 from parent with gift letter \u2014 but gifts are not allowed on investment properties (B3-4-3-04)  \n\nWithout the gift, the borrower has only 1.27 months of reserves, well below the 6-month minimum. The gift cannot be used to supplement reserves or down payment on an investment property.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1735,
+        "monthly_debts": [
+          350,
+          190
+        ],
+        "monthly_income": 7000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 6553,
+        "property_value": 270000,
+        "loan_amount": 216000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 77763,
+        "cash_to_close": 60553,
+        "monthly_pitia": 1735
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property DTI limit"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 216000,
+        "property_value": 270000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum borrower contribution gift"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 62763,
+        "cash_to_close": 60553,
+        "monthly_pitia": 1735
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 39293,
+  "seconds": 48.4,
+  "finish_reason": "stop"
+}

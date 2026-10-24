@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G032",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit**: Score 710, no bankruptcy/foreclosure \u2014 eligible.  \n**DTI**: 31.6% (housing $3,885 + student loan $160 \u00f7 income $12,800) \u2014 under 50% DU limit (B3-6-02).  \n**LTV**: 80% \u2014 no MI required.  \n**Funds to close**: $141,865 (down payment $125,000 + closing costs $16,865).  \n**Available funds**: Bank $125,465 + gift $38,000 = $163,465 \u2014 covers cash to close with $21,600 remaining.  \n**Reserves**: 5.6 months \u2014 no minimum required for 1-unit principal residence DU loan (B3-4.1-01).  \n**Gift**: $38,000 from sibling (acceptable donor per B3-4.3-04); gift letter indicated but must confirm it states amount, no-repayment, donor name/address/phone/relationship, and verify donor funds transfer (B3-4.3-04).\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation sibling donor"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3885,
+        "monthly_debts": [
+          160
+        ],
+        "monthly_income": 12800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 16865,
+        "property_value": 625000,
+        "loan_amount": 500000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 500000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3885,
+        "available_funds": 163465,
+        "cash_to_close": 141865
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 25723,
+  "seconds": 54.8,
+  "finish_reason": "stop"
+}

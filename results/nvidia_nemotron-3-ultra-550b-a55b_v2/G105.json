@@ -1,0 +1,93 @@
+{
+  "applicant_id": "G105",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $151,654 are short of the $154,854 needed; $69,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 27.44% (\u226450% DU limit per B3-6-02) \u2713  \nFunds to close: $149,718 (down payment $136,500 + closing costs $13,218)  \nReserves with gift: 27.6 months (\u22652 months required for second home per B3-4.1-01)  \nReserves without gift: 0.75 months (fails 2-month requirement)  \n\nGift of $69,000 is from an \"interested party\" (donor_relationship: \"interested party\"). Per B3-4.3-04, a personal gift donor may not be an interested party to the transaction. Per B3-4.1-02, interested party contributions (IPCs) cannot be used for down payment, reserves, or minimum borrower contribution. This gift is therefore impermissible and cannot be counted. Without it, the borrower has only $151,654 in bank balance, leaving $1,936 after closing \u2014 insufficient for the 2-month reserve requirement (B3-4.1-01). A condition cannot cure this by requesting a different donor or additional funds.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-02, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds interested party documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          150,
+          300
+        ],
+        "housing_payment": 2568,
+        "monthly_income": 11000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 318500,
+        "property_value": 455000,
+        "closing_costs": 13218
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions IPC gift"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 220654,
+        "cash_to_close": 149718,
+        "monthly_pitia": 2568
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 151654,
+        "monthly_pitia": 2568,
+        "cash_to_close": 149718
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 30222,
+  "seconds": 48.2,
+  "finish_reason": "stop"
+}

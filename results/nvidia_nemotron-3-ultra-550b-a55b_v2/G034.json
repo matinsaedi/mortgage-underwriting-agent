@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G034",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI:** 28.63% (housing $2,920 / income $10,200) \u2014 well under the 50% DU maximum (B3-6-02).  \n**LTV:** 70% \u2014 no eligibility matrix check required.  \n**Funds to close:** $169,244 (down payment $156,000 + closing costs $13,244).  \n**Available funds:** $316,000 (bank $216,000 + retirement $100,000).  \n**Reserves:** 50.3 months after closing \u2014 no minimum required for 1-unit principal residence (B3-4-1-01).  \n**Credit:** 793 score; no bankruptcy or foreclosure \u2014 no waiting periods apply.  \n**Large deposit:** $15,000 on 2026-11-22 (50% of monthly income = $5,100; deposit exceeds threshold). For purchase transactions, if large-deposit funds are needed for closing or reserves, the source must be documented (B3-4.2-02). Here the borrower has ample funds without this deposit ($301,000 remaining vs. $169,244 needed), so the deposit is not \u201cneeded.\u201d However, the lender must still evaluate large deposits on statements; a written explanation is acceptable documentation per the guide. Since `source_documented` is false, a condition is required.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation source"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements DU principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 10200,
+        "housing_payment": 2920,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 364000,
+        "property_value": 520000,
+        "closing_costs": 13244
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 364000,
+        "property_value": 520000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2920,
+        "cash_to_close": 169244,
+        "available_funds": 316000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 25354,
+  "seconds": 28.9,
+  "finish_reason": "stop"
+}

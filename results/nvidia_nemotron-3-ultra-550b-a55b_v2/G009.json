@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G009",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $114,350 are short of the $145,050 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**DTI**: 34.5% (housing $3,764 + debts $620 \u00f7 income $12,700) \u2014 under 50% DU limit. **B3-6-02** \u2713  \n**Funds to close**: $137,522 (down payment $121,000 + closing costs $16,522). **funds_to_close**  \n**Available funds**: Bank balance $114,350 only \u2014 gift of $59,000 is from an \"interested party.\" **B3-4.3-04** prohibits interested-party donors for personal gifts.  \n**Shortfall**: $114,350 \u2212 $137,522 = \u2212$23,172 \u2014 cannot close without the gift.  \n**Reserves**: DU requires 2 months for second home (**B3-4.1-01**); moot because funds to close fail.  \n**Credit**: Score 777, no bankruptcy/foreclosure \u2014 eligible.  \n\nThe gift cannot be used because the donor is an interested party. Without it, the borrower lacks sufficient funds to close.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds interested party documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3764,
+        "monthly_debts": [
+          510,
+          110
+        ],
+        "monthly_income": 12700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 484000,
+        "closing_costs": 16522,
+        "property_value": 605000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3764,
+        "available_funds": 114350,
+        "cash_to_close": 137522
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution limits second home"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 26564,
+  "seconds": 26.4,
+  "finish_reason": "stop"
+}

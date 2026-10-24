@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G071",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Nina Smith (G071)**\n\n- **DTI**: 34.14% (housing $1,966 + auto $560 \u00f7 income $7,400) \u2013 within DU 50% limit (B3-6-02).  \n- **Funds to close**: $88,133 (down payment $81,250 + closing costs $6,883).  \n- **Reserves**: 13.16 months ($114,000 bank balance \u2013 $88,133 to close = $25,867 \u00f7 $1,966 PITIA) \u2013 exceeds 2-month second-home requirement (B3-4.1-01).  \n- **Credit**: 724 score; no bankruptcy/foreclosure.  \n- **Large deposit**: $17,000 (2026-09-27) not documented. Borrower has $97,000 without it \u2013 still covers closing + 2 months reserves ($92,065). Since the deposit is not needed for down payment, closing costs, or reserves, documentation is not required per B3-4.2-02 (purchase transactions only require source documentation if funds are needed). DU validation would also waive documentation if no message issued.\n\nAll requirements met.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1966,
+        "monthly_debts": [
+          560
+        ],
+        "monthly_income": 7400
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 243750,
+        "closing_costs": 6883,
+        "property_value": 325000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 88133,
+        "available_funds": 114000,
+        "monthly_pitia": 1966
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 19299,
+  "seconds": 101.3,
+  "finish_reason": "stop"
+}

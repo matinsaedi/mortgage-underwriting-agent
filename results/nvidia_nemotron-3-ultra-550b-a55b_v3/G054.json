@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G054",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI:** 29.06% (housing $3,210 + debts $480 \u00f7 income $12,700) \u2014 within 50% DU limit (B3-6-02). \u2713  \n**Funds to close:** $56,501 (down payment $46,500 + closing costs $10,001). Available: $33,800 bank + $29,921 gift = $63,721. \u2713  \n**Reserves:** 2 months required for second home (B3-4.1-01). Post-close funds $7,220 \u00f7 $3,210 PITIA = 2.25 months. Gift funds eligible for reserves. \u2713  \n**Gift:** Parent donor (acceptable), gift letter present. LTV 90% > 80% \u2192 5% minimum borrower contribution ($23,250) met by borrower\u2019s $33,800 own funds (B3-4.3-04). \u2713  \n**Gift verification:** File lacks evidence of donor fund availability/transfer (donor account statement, transfer records, etc.) \u2014 required by B3-4.3-04. **Condition needed.**  \n**Credit:** Score 736, no bankruptcy/foreclosure. \u2713  \n**Large deposits:** None. \u2713  \n**Income:** Verified matches stated. \u2713  \n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          210,
+          270
+        ],
+        "monthly_income": 12700,
+        "housing_payment": 3210
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 10001,
+        "property_value": 465000,
+        "loan_amount": 418500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 56501,
+        "monthly_pitia": 3210,
+        "available_funds": 63721
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "B3-6-02 maximum DTI ratio"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum borrower contribution gift"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 32711,
+  "seconds": 57.6,
+  "finish_reason": "stop"
+}

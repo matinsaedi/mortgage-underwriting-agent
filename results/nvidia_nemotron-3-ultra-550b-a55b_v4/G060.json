@@ -1,0 +1,98 @@
+{
+  "applicant_id": "G060",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 31% (\u226450% DU limit) \u2014 B3-6-02  \nCredit score: 694 (no minimum for DU) \u2014 B3-5.1-01  \nLTV: 75% (\u226480%, no minimum borrower contribution) \u2014 B3-4.3-04  \nGift: $43,000 from spouse (acceptable donor), gift letter present \u2014 B3-4.3-04  \nFunds to close: $131,744 needed; $168,044 available (bank $125,044 + gift $43,000) \u2014 sufficient  \nReserves: 12.85 months post-closing (no minimum for 1-unit principal residence DU) \u2014 B3-4.1-01  \nNo bankruptcy, foreclosure, or large deposits.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          150
+        ],
+        "monthly_income": 9600,
+        "housing_payment": 2826
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 356250,
+        "property_value": 475000,
+        "closing_costs": 12994
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2826,
+        "cash_to_close": 131744,
+        "available_funds": 168044
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift spouse principal residence eligible donor"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves required DU purchase principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU purchase"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter documentation requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-5.4-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 43023,
+  "seconds": 79.5,
+  "finish_reason": "stop"
+}

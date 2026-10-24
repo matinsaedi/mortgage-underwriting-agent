@@ -1,0 +1,94 @@
+{
+  "applicant_id": "G089",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 27.26% \u2264 50% DU limit (B3-6-02). Reserves 23.6 months; no minimum for 1-unit principal residence (B3-4.1-01). Funds to close $198,559 covered by $297,000 available (bank + vested retirement per B3-4.3-03). Credit score 750; no bankruptcy/foreclosure. Employment 2.9 years meets 2-year history (B3-3.2-02). No large deposits or gifts to source. LTV 75%.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          145,
+          560
+        ],
+        "monthly_income": 17900,
+        "housing_payment": 4175
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 710000,
+        "loan_amount": 532500,
+        "closing_costs": 21059
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 4175,
+        "cash_to_close": 198559,
+        "available_funds": 297000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 532500,
+        "property_value": 710000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "employment history verification two years"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "employment history requirement two years stable income"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "retirement assets reserves funds to close"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.2-02",
+    "B3-3.3-02",
+    "B3-3.3-07",
+    "B3-3.3-08",
+    "B3-4.1-01",
+    "B3-4.3-01",
+    "B3-4.3-03",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 35287,
+  "seconds": 83.1,
+  "finish_reason": "stop"
+}

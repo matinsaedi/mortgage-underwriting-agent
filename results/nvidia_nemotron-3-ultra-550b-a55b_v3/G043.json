@@ -1,0 +1,87 @@
+{
+  "applicant_id": "G043",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($29,750) must come from the borrower's own funds; they have $20,100."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 35.16% (\u226445% DU limit) \u2014 B3-6-02  \nLTV: 90% \u2014 B3-4.3-04  \nFunds to close: $74,347; available $83,605 (bank $20,100 + gift $63,505) \u2014 sufficient  \nReserves: 2.27 months (\u22652 months required for second home) \u2014 B3-4.1-01  \nGift: parent donor, gift letter present \u2014 acceptable per B3-4.3-04  \nCredit: 732 score, no derogatory events \u2014 meets requirements  \n\nMinimum borrower contribution: For second home with LTV >80%, borrower must contribute 5% of property value ($29,750) from own funds. Borrower has only $20,100 \u2014 short $9,650. B3-4.3-04\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4079,
+        "monthly_debts": [],
+        "monthly_income": 11600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 535500,
+        "closing_costs": 14847
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 83605,
+        "cash_to_close": 74347,
+        "monthly_pitia": 4079
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home parent gift letter"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 535500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 33309,
+  "seconds": 45.2,
+  "finish_reason": "stop"
+}

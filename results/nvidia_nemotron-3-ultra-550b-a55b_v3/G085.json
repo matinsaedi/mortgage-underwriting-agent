@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G085",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Bankruptcy Ch.7 discharge 2020-08-16; 4-yr wait ends 2024-08-16, closing 2026-12-04 \u2014 satisfied (B3-5.3-07). DTI 30.8% \u2264 45% (B3-6-02). Funds to close $125,230; available $227,000 (bank $187k + retirement $40k) \u2192 reserves 29.9 mo (B3-4.1-01). LTV 80%. Credit score 695; DU requires no minimum (B3-5.1-01). No large deposits or gifts.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2020-08-16",
+        "years": 4
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12700,
+        "monthly_debts": [
+          125,
+          390
+        ],
+        "housing_payment": 3401
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 436000,
+        "closing_costs": 16230,
+        "property_value": 545000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3401,
+        "cash_to_close": 125230,
+        "available_funds": 227000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 545000,
+        "loan_amount": 436000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 28299,
+  "seconds": 69.8,
+  "finish_reason": "stop"
+}

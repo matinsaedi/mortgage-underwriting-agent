@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G111",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 34.48% \u2264 50% DU maximum (B3-6-02).  \nFunds to close: $131,618. Available funds: $134,336 bank + $59,000 gift = $193,336.  \nReserves: 16.67 months \u2265 6 months required for 2\u20134 unit principal residence (B3-4.1-01).  \nGift: $59,000 from spouse, acceptable donor with gift letter; fully documented per project assumptions (B3-4.3-04).  \nMinimum borrower contribution: 5% of $595,000 = $29,750; borrower\u2019s own $134,336 exceeds this (B3-4.3-06).  \nNo large deposits, no bankruptcy/foreclosure, credit score 768.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation spouse"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          55
+        ],
+        "housing_payment": 3703,
+        "monthly_income": 10900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12618,
+        "loan_amount": 476000,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 193336,
+        "cash_to_close": 131618,
+        "monthly_pitia": 3703
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.4-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 19574,
+  "seconds": 50.2,
+  "finish_reason": "stop"
+}

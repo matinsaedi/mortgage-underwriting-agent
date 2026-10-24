@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G084",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $147,011 are short of the $152,711 needed; document the source of $16,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 33.8% (under 50% DU limit per B3-6-02) \u2014 PASS  \nFunds to close: $152,711; available $163,011 \u2014 PASS  \nReserves: 2.48 months (DU determines; adequate for 1-unit principal residence) \u2014 PASS  \nCredit score: 699 (no minimum for DU per B3-5.1-01) \u2014 PASS  \nLTV: 80% \u2014 PASS  \nLarge deposit: $16,000 on 2026-11-17, source not documented; purchase transaction requires documentation per B3-4.2-02 \u2014 CONDITION\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limit Fannie Mae"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 4158,
+        "monthly_debts": [],
+        "monthly_income": 12300
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 536000,
+        "property_value": 670000,
+        "closing_costs": 18711
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163011,
+        "cash_to_close": 152711,
+        "monthly_pitia": 4158
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU loan"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 536000,
+        "property_value": 670000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 39483,
+  "seconds": 27.3,
+  "finish_reason": "stop"
+}

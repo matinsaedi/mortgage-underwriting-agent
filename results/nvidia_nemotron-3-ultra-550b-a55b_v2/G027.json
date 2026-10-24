@@ -1,0 +1,102 @@
+{
+  "applicant_id": "G027",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($20,500) must come from the borrower's own funds; they have $8,500."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 36.98% \u2264 45% (B3-6-02). LTV 90% \u2014 acceptable for second home fixed-rate. Credit score 705 \u2265 620. Reserves 3.3 months \u2265 2 months required for second home (B3-4.1-01). Funds to close $52,821; total available $62,205 ($8,500 own + $53,705 gift). Gift from parent with letter \u2014 acceptable donor (B3-4.3-04). **However**, for second home with LTV > 80%, borrower must contribute 5% of property value from own funds (B3-4.3-04). 5% \u00d7 $410,000 = $20,500 required; borrower has only $8,500 own funds. Shortfall cannot be cured by documentation or gift.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          560
+        ],
+        "housing_payment": 2842,
+        "monthly_income": 9200
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 410000,
+        "closing_costs": 11821,
+        "loan_amount": 369000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation requirements parent donor"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 410000,
+        "loan_amount": 369000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds verification donor account transfer closing"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home gift"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 52821,
+        "available_funds": 62205,
+        "monthly_pitia": 2842
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 60452,
+  "seconds": 38.8,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G064",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $170,912 are short of the $175,312 needed; document the source of $9,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI 25.22% (B3-6-02) \u2014 well within 45% limit.  \nReserves 3.56 months (B3-4.1-01) \u2014 exceeds 2-month second-home requirement.  \nFunds to close $169,416; bank balance $179,912 covers it.  \nLarge deposit $9,000 (2026-09-24) undocumented; without it reserves drop to 0.51 months, so the deposit is needed for reserves and must be sourced per B3-4.2-02.  \nCredit score 689 \u2014 meets standard minimums.  \nNo bankruptcy, foreclosure, or gifts.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2948,
+        "monthly_debts": [
+          480,
+          280
+        ],
+        "monthly_income": 14700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 11916,
+        "property_value": 525000,
+        "loan_amount": 367500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 179912,
+        "cash_to_close": 169416,
+        "monthly_pitia": 2948
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home DTI limit"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 24113,
+  "seconds": 22.3,
+  "finish_reason": "stop"
+}

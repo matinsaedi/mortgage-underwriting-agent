@@ -1,0 +1,72 @@
+{
+  "applicant_id": "G043",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($29,750) must come from the borrower's own funds; they have $20,100."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 35.16% (within DU limits). LTV 90% (>80% for second home). Funds to close $74,347. Available funds $83,605 ($20,100 own + $63,505 gift). Reserves 2.27 months (meets 2-month requirement for second home per B3-4.1-01). Gift from parent with letter is acceptable donor per B3-4.3-04. However, for second home with LTV >80%, B3-4.3-04 requires 5% minimum borrower contribution from own funds: 5% \u00d7 $595,000 = $29,750. Borrower only has $20,100 own funds \u2014 short $9,650. Cannot condition for additional funds.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11600,
+        "housing_payment": 4079,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 535500,
+        "closing_costs": 14847
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift second home occupancy eligible donor"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 535500,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 74347,
+        "monthly_pitia": 4079,
+        "available_funds": 83605
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 19980,
+  "seconds": 41.5,
+  "finish_reason": "stop"
+}

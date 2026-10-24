@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G041",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $125,138 are short of the $156,438 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Analysis:**\n\n- **DTI:** 31.0% (housing only; no other debts) \u2014 well within DU limits.  \n- **LTV:** 70% \u2014 within standard limits.  \n- **Funds to close:** $156,438 (down payment $145,500 + closing costs $10,938).  \n- **Borrower\u2019s own funds:** $125,138 (bank balance). Shortfall: $31,300.  \n- **Gift:** $84,000 from an \u201cinterested party\u201d with a gift letter.  \n- **Reserves (with gift):** ~19 months; **without gift:** cannot close.\n\n**Key issue:** B3-4.3-04 states a personal gift donor \u201cmay not be, or have any affiliation with\u2026 any other interested party to the transaction.\u201d A gift from an interested party is not an acceptable personal gift. Treated as an interested party contribution (IPC), B3-4.1-02 limits financing concessions to 9% of property value ($43,650) for LTV \u2264 75% on a principal residence. The $84,000 gift exceeds this limit by $40,350. The excess would be a sales concession requiring a reduction in the sales price, which is not permitted under the project assumptions. Without the gift, the borrower lacks sufficient funds to close.\n\n**DECISION: decline**  \n**RULES: B3-4.3-04, B3-4.1-02**",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 8800,
+        "housing_payment": 2731
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 10938,
+        "property_value": 485000,
+        "loan_amount": 339500
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 339500,
+        "property_value": 485000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2731,
+        "cash_to_close": 156438,
+        "available_funds": 125138
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution limits principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12206,
+  "seconds": 21.5,
+  "finish_reason": "stop"
+}

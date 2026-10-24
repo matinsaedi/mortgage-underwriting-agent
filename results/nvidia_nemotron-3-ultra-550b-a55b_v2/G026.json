@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G026",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-04-14; the 2-year wait ends 2027-04-14, after the 2026-11-02 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Chapter 13 bankruptcy discharged 2025-04-14; standard 2-year wait ends 2027-04-14 (B3-5.3-07). Closing 2026-11-02 is before wait ends. DTI 27.6% (B3-6-02). Funds to close $86,158; available $239,000; reserves 63.7 months (B3-4.1-01). No large deposits or gifts.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period investment property"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-04-14",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11600,
+        "housing_payment": 2401,
+        "monthly_debts": [
+          200,
+          600
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 304000,
+        "closing_costs": 10158,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2401,
+        "available_funds": 239000,
+        "cash_to_close": 86158
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19151,
+  "seconds": 13.4,
+  "finish_reason": "stop"
+}

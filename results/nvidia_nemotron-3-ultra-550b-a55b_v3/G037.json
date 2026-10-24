@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G037",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $94,700 are short of the $111,386 needed to close and hold 2 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI: 27.39% (within limits). LTV: 70% (acceptable for second home). Credit score: 776 (exceeds minimum). No bankruptcy/foreclosure. Funds to close: $107,552 required; borrower has $94,700 bank balance, no gifts, no retirement funds \u2014 shortfall of $12,852. Reserves: DU requires 2 months for second home ($3,834), but borrower cannot even cover closing costs. Insufficient assets to close is a fatal deficiency.\n\nDECISION: decline\nRULES: B3-4.2-01, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1917,
+        "monthly_debts": [],
+        "monthly_income": 7000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 335000,
+        "closing_costs": 7052,
+        "loan_amount": 234500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 107552,
+        "available_funds": 94700,
+        "monthly_pitia": 1917
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 335000,
+        "loan_amount": 234500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "funds to close verification borrower funds"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-01",
+    "B3-4.4-01"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 21556,
+  "seconds": 67.2,
+  "finish_reason": "stop"
+}

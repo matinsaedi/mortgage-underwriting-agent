@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G009",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $114,350 are short of the $145,050 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 34.5% (B3-6-02) \u2014 well within limits. LTV 80% \u2014 acceptable. Reserves 9.5 months \u2014 exceeds 2-month requirement for second home (B3-4.1-01). Credit score 777, no derogatory events. Income verified.\n\nGift of $59,000 from an \"interested party\" is not allowed: B3-4.3-04 states the donor may not be an interested party to the transaction. This is a personal gift, not a gift of equity, so the exception for seller gifts does not apply. Without the gift, the borrower has $114,350 but needs $137,522 to close \u2014 a $23,172 shortfall that cannot be cured by documentation.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          510,
+          110
+        ],
+        "monthly_income": 12700,
+        "housing_payment": 3764
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "closing_costs": 16522,
+        "loan_amount": 484000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 484000,
+        "property_value": 605000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 173350,
+        "monthly_pitia": 3764,
+        "cash_to_close": 137522
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution second home gift"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 22041,
+  "seconds": 99.2,
+  "finish_reason": "stop"
+}

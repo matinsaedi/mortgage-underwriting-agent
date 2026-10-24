@@ -1,0 +1,98 @@
+{
+  "applicant_id": "G028",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($25,500) must come from the borrower's own funds; they have $18,700."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Analysis**\n\n- **DTI**: 36.63% (housing $3,511 + debts $555 \u00f7 income $11,100). DU maximum is 50% per B3-6-02. **PASS**\n- **LTV**: 90% ($459,000 \u00f7 $510,000). Second home with LTV >80% triggers minimum borrower contribution rule.\n- **Minimum Borrower Contribution**: B3-4.3-04 requires 5% of property value ($25,500) from borrower's own funds for second home with LTV >80%. Borrower's bank balance is $18,700 \u2014 **$6,800 short**. Gift funds cannot satisfy this requirement. **FAIL**\n- **Reserves**: 2.94 months (($75,224 total funds \u2212 $64,902 cash to close) \u00f7 $3,511 PITIA). DU requires 2 months for second home per B3-4.1-01. **PASS**\n- **Gift**: $56,524 from parent with gift letter \u2014 acceptable donor and documented per B3-4.3-04. **PASS**\n- **Credit**: Score 726, no bankruptcy/foreclosure. **PASS**\n- **Funds to Close**: $64,902 needed; $75,224 available (bank + gift). Total sufficient but composition fails minimum contribution rule.\n\nThe borrower lacks sufficient own funds to meet the 5% minimum contribution for a second home at 90% LTV. Conditions cannot require additional funds.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11100,
+        "housing_payment": 3511,
+        "monthly_debts": [
+          105,
+          450
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 459000,
+        "property_value": 510000,
+        "closing_costs": 13902
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 64902,
+        "available_funds": 75224,
+        "monthly_pitia": 3511
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 459000,
+        "property_value": 510000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU loan"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation requirements second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home LTV greater than 80 percent"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 29735,
+  "seconds": 32.6,
+  "finish_reason": "stop"
+}

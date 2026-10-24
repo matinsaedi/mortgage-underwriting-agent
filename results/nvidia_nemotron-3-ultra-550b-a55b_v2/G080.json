@@ -1,0 +1,85 @@
+{
+  "applicant_id": "G080",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $117,279 are short of the $126,379 needed; document the source of $46,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Applicant G080 (Ben Haddad)**\n\n- **LTV**: 75.0% (loan $348,750 / value $465,000) \u2013 acceptable for 1-unit principal residence.  \n- **DTI**: 25.76% (housing $2,769 + debts $580 \u00f7 income $13,000) \u2013 well under DU 50% max (B3-6-02).  \n- **Cash to close**: $126,379 (down payment $116,250 + closing costs $10,129).  \n- **Reserves**: 13.33 months ($163,279 bank balance \u2013 $126,379 cash to close \u00f7 $2,769 PITIA) \u2013 exceeds any DU requirement (B3-4.1-01).  \n- **Credit**: Score 740; no bankruptcy or foreclosure.  \n- **Large deposit**: $46,000 deposited 2026-11-15 (within 2-month statement window). Source not documented. Because the deposit is needed to meet cash-to-close (balance without it would be $117,279 < $126,379), B3-4.2-02 requires documentation of an acceptable source.\n\n**Condition**: Provide documentation for the $46,000 large deposit (e.g., sale of asset, gift letter, written explanation).\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2769,
+        "monthly_debts": [
+          170,
+          410
+        ],
+        "monthly_income": 13000
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 348750,
+        "property_value": 465000,
+        "closing_costs": 10129
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 348750,
+        "property_value": 465000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2769,
+        "available_funds": 163279,
+        "cash_to_close": 126379
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU loan"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18385,
+  "seconds": 24.4,
+  "finish_reason": "stop"
+}

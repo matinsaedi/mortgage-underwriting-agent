@@ -1,0 +1,99 @@
+{
+  "applicant_id": "G072",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.1-02",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $108,699 are short of the $112,899 needed; $48,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Analysis:**\n\n- **DTI**: 28.73% (housing $2,166 + student loan $420) \u00f7 $9,000 income = 28.73% \u2014 under 50% DU limit. \u2713 (B3-6-02)\n- **LTV**: 75% ($270,000 \u00f7 $360,000) \u2014 at the 75% threshold.\n- **Funds to close**: $99,903 ($90,000 down + $9,903 costs).\n- **Own funds**: $108,699 bank balance \u2014 covers cash to close with $8,799 left.\n- **Reserves (own funds only)**: $8,799 \u00f7 $2,166 = **4.06 months** \u2014 **below the 6 months required** for a 2\u20134 unit principal residence (B3-4.1-01).\n- **Gift**: $48,000 from an \u201cinterested party\u201d with gift letter. Personal gifts **cannot** come from interested parties (builder, developer, agent, seller, etc.) \u2014 only from relatives or familial non-relatives (B3-4.3-04). Treated as an IPC, it exceeds the 9% financing-concession limit for LTV \u2264 75% (9% \u00d7 $360,000 = $32,400) (B3-4.1-02). IPCs also cannot be used for reserves.\n- **Credit**: 713 score, no bankruptcy/foreclosure. \u2713\n\nThe borrower fails the 6-month reserve requirement using only eligible funds, and the only source to cure the shortfall is an impermissible interested-party gift that also breaches IPC limits.\n\n**DECISION: decline**  \n**RULES: B3-4.1-01, B3-4.3-04, B3-4.1-02**",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2166,
+        "monthly_income": 9000,
+        "monthly_debts": [
+          420
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 360000,
+        "closing_costs": 9903,
+        "loan_amount": 270000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution 2-4 unit principal residence gift"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution limits 2-4 unit principal residence"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 99903,
+        "monthly_pitia": 2166,
+        "available_funds": 156699
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 270000,
+        "property_value": 360000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-6-02"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 56238,
+  "seconds": 155.0,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G016",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Bankruptcy waiting period: Chapter 7 discharge 2022-09-16 + 4 years = 2026-09-16; closing 2026-12-11 is after (B3-5.3-07). DTI 28.96% (housing 2252 + debts 615 \u00f7 income 9900). Funds to close $102,597 (down payment $93,750 + closing costs $8,847); bank balance $157,000 covers it. Reserves 24.2 months after closing. Credit score 784. LTV 75%. No large deposits or gifts.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-09-16",
+        "years": 4
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2252,
+        "monthly_debts": [
+          500,
+          115
+        ],
+        "monthly_income": 9900
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 281250,
+        "closing_costs": 8847,
+        "property_value": 375000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2252,
+        "cash_to_close": 102597,
+        "available_funds": 157000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 281250,
+        "property_value": 375000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 23131,
+  "seconds": 87.7,
+  "finish_reason": "stop"
+}

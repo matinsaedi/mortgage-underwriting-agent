@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G092",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-07-31; the 7-year wait ends 2029-07-31, after the 2026-11-09 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Foreclosure waiting period: 7 years standard (no extenuating circumstances) from 2022-07-31 ends 2029-07-31; closing 2026-11-09 is before waiting period ends \u2014 **decline** (B3-5.3-07).  \nDTI: 26.77% \u2014 passes.  \nFunds to close: $191,946 needed; $414,000 available \u2014 passes.  \nReserves: 67.8 months \u2014 passes.  \nCredit score: 706 \u2014 passes.\n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-07-31",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3273,
+        "monthly_debts": [
+          550,
+          380
+        ],
+        "monthly_income": 15700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 16446,
+        "property_value": 585000,
+        "loan_amount": 409500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3273,
+        "available_funds": 414000,
+        "cash_to_close": 191946
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19456,
+  "seconds": 18.1,
+  "finish_reason": "stop"
+}

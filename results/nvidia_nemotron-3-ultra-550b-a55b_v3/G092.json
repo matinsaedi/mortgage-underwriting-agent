@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G092",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Foreclosure completed 2022-07-31; the 7-year wait ends 2029-07-31, after the 2026-11-09 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "Foreclosure waiting period: 7 years required from 2022-07-31 (B3-5.3-07); ends 2029-07-31, closing is 2026-11-09 \u2014 not met.  \nDTI: 26.77% (housing $3,273 + debts $930 \u00f7 income $15,700) \u2014 within limits.  \nFunds to close: $191,946 needed; $414,000 available (bank $268K + retirement $146K) \u2014 sufficient.  \nReserves: 67.8 months after closing \u2014 exceeds requirements.  \nCredit score: 706 \u2014 meets minimum.\n\nDECISION: decline  \nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2022-07-31",
+        "years": 7
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 15700,
+        "housing_payment": 3273,
+        "monthly_debts": [
+          550,
+          380
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 409500,
+        "property_value": 585000,
+        "closing_costs": 16446
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 191946,
+        "available_funds": 414000,
+        "monthly_pitia": 3273
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19540,
+  "seconds": 40.5,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,71 @@
+{
+  "applicant_id": "G103",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,360 are short of the $87,660 needed; $26,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 28.6% (within limits). Funds to close: $75,072. Available funds: $78,360 bank + $26,000 gift = $104,360. Reserves after closing with gift: 14.0 months. LTV: 80%. Credit: 740, no derogatory events.\n\nCritical issue: B3-4.3-04 states \"Gifts are not allowed on an investment property.\" The $26,000 parent gift cannot be used. Without it, bank balance ($78,360) covers closing ($75,072) but leaves only $3,288 (1.6 months PITIA), below the 6-month reserve requirement for investment properties per B3-4.1-01. No other assets exist.\n\nDECISION: decline\nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8800,
+        "housing_payment": 2098,
+        "monthly_debts": [
+          240,
+          180
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 264000,
+        "closing_costs": 9072,
+        "property_value": 330000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 104360,
+        "cash_to_close": 75072,
+        "monthly_pitia": 2098
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift investment property eligibility"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 330000,
+        "loan_amount": 264000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 14310,
+  "seconds": 69.9,
+  "finish_reason": "stop"
+}

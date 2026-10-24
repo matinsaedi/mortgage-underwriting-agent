@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G096",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Elena Okafor (G096)**\n\n- **DTI:** 27.2% (housing $2,453 + debts $430 \u00f7 income $10,600) \u2013 well under the 50% DU maximum (B3-6-02).  \n- **Reserves:** 61.8 months (($264,000 available \u2013 $112,338 cash to close) \u00f7 $2,453 PITIA) \u2013 no minimum required for 1-unit principal residence DU loan (B3-4.1-01).  \n- **Credit score:** 766 \u2013 no minimum for DU casefiles (B3-5.1-01).  \n- **Funds to close:** $112,338; available funds $264,000 (bank + retirement) \u2013 sufficient.  \n- **LTV:** 75% (not evaluated per project assumptions).  \n- **Derogatory events:** None.  \n- **Large deposits / gifts:** None.  \n- **Income verified:** Stated = verified ($10,600/mo); 12.7 years employment.\n\nAll requirements met.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2453,
+        "monthly_debts": [
+          170,
+          260
+        ],
+        "monthly_income": 10600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9838,
+        "loan_amount": 307500,
+        "property_value": 410000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 112338,
+        "monthly_pitia": 2453,
+        "available_funds": 264000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 307500,
+        "property_value": 410000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves required principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU loan"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 18044,
+  "seconds": 83.3,
+  "finish_reason": "stop"
+}

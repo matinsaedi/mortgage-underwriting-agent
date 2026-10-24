@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G080",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $117,279 are short of the $126,379 needed; document the source of $46,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 25.76% (well within limits). LTV: 75%. Funds to close: $126,379. Available funds: $163,279 (includes $46,000 large deposit). Reserves after closing: 13.33 months (no minimum for 1-unit principal residence). Credit: 740, no derogatory events. Income verified, 12.1 years employment.\n\nLarge deposit: $46,000 on 2026-11-15, source not documented. Per B3-4.2-02, for purchase transactions, if large deposit funds are needed for down payment, closing costs, or reserves, the source must be documented. The $46,000 is part of the $163,279 used to cover $126,379 cash to close, so documentation is required.\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 13000,
+        "housing_payment": 2769,
+        "monthly_debts": [
+          170,
+          410
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750,
+        "closing_costs": 10129
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 348750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163279,
+        "cash_to_close": 126379,
+        "monthly_pitia": 2769
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12205,
+  "seconds": 21.6,
+  "finish_reason": "stop"
+}

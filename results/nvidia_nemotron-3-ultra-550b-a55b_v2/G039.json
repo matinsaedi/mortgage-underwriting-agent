@@ -1,0 +1,80 @@
+{
+  "applicant_id": "G039",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $162,968 are short of the $171,768 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.07% (B3-6-02) \u2014 within limit.  \nLTV: 75% \u2014 eligible.  \nFunds to close: $171,768. Available: bank $162,968 + gift $53,000 = $215,968.  \nReserves: 11.98 months \u2014 no minimum for 1-unit principal residence (B3-4.1-01).  \nCredit: 717 \u2014 meets 620 minimum.  \nNo bankruptcy/foreclosure.\n\nGift donor is an \"interested party.\" B3-4.3-04 prohibits personal gifts from interested parties (builder, developer, real estate agent, or any other interested party). The $53,000 gift cannot be used as a personal gift. Without it, the borrower has $162,968 but needs $171,768 \u2014 short $8,800. The gift could be reclassified as an IPC (B3-4.1-02), but IPCs may only cover closing costs ($15,518), not down payment; the excess would be a sales concession requiring price reduction. The file presents it as a gift with a gift letter, not an IPC.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 11500,
+        "housing_payment": 3688
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 15518,
+        "property_value": 625000,
+        "loan_amount": 468750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party donor requirements"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 171768,
+        "monthly_pitia": 3688,
+        "available_funds": 215968
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 468750,
+        "property_value": 625000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution limits IPC"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves DU 1-unit principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 29549,
+  "seconds": 30.5,
+  "finish_reason": "stop"
+}

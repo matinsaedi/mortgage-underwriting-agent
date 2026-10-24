@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G026",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-04-14; the 2-year wait ends 2027-04-14, after the 2026-11-02 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "**Credit History (B3-5.3-07):** Chapter 13 discharged 2025-04-14; standard 2-year wait ends 2027-04-14. Closing 2026-11-02 is before wait ends \u2192 **fail**.\n\n**DTI (B3-6-02):** 27.6% (housing $2,401 + debts $800 \u00f7 income $11,600) \u2192 pass.\n\n**Funds to Close (B3-4.1-01):** $86,158 needed; $239,000 total assets \u2192 pass.\n\n**Reserves (B3-4.1-01):** 63.7 months after closing; investment property requires 6 months \u2192 pass.\n\n**Large Deposits/Gifts:** None listed \u2192 pass.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 2,
+        "start_date": "2025-04-14"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          200,
+          600
+        ],
+        "housing_payment": 2401,
+        "monthly_income": 11600
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 380000,
+        "closing_costs": 10158,
+        "loan_amount": 304000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 86158,
+        "monthly_pitia": 2401,
+        "available_funds": 239000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserves requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 24279,
+  "seconds": 31.3,
+  "finish_reason": "stop"
+}

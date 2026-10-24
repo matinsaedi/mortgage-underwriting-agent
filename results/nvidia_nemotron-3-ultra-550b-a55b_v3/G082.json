@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G082",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure (2017-05-15): 7-year standard waiting period ended 2024-05-15; closing 2026-11-26 is well after \u2014 B3-5.3-07.  \nDTI: 34.5% (housing $2,999 + student loan $490 \u00f7 $10,100 income) \u2014 within DU limits.  \nLTV: 75% \u2014 no restriction after 7-year foreclosure seasoning.  \nFunds to close: $140,510; bank balance $210,000 covers it.  \nReserves: 23.2 months PITIA after closing \u2014 exceeds any minimum.  \nNo large deposits, no gifts, credit score 730, income verified, stable employment.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 7,
+        "start_date": "2017-05-15"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          490
+        ],
+        "housing_payment": 2999,
+        "monthly_income": 10100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 505000,
+        "loan_amount": 378750,
+        "closing_costs": 14260
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 210000,
+        "cash_to_close": 140510,
+        "monthly_pitia": 2999
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 378750,
+        "property_value": 505000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22874,
+  "seconds": 33.6,
+  "finish_reason": "stop"
+}

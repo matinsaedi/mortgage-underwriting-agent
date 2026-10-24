@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G021",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Chapter 13 bankruptcy discharged 2025-04-27; the 2-year wait ends 2027-04-27, after the 2026-11-17 closing."
+    ],
+    "rule_ids": [
+      "B3-5.3-07"
+    ]
+  },
+  "final_answer": "DTI: 32.38% (within limits). Funds to close: $167,912; available funds $326,000 (bank $234,000 + retirement $92,000) \u2014 sufficient. Reserves: 43.2 months (2 months required for second home per B3-4.1-01) \u2014 sufficient. Credit score 744 \u2014 meets minimum.\n\nChapter 13 bankruptcy discharged 2025-04-27. Per B3-5.3-07, standard waiting period is 2 years from discharge date, ending 2027-04-27. Closing date 2026-11-17 is before the waiting period expires. No extenuating circumstances permitted to shorten this period.\n\nDECISION: decline\nRULES: B3-5.3-07",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 13 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2025-04-27",
+        "years": 2
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11300,
+        "monthly_debts": [],
+        "housing_payment": 3659
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12912,
+        "property_value": 620000,
+        "loan_amount": 465000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 326000,
+        "cash_to_close": 167912,
+        "monthly_pitia": 3659
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.3-07",
+    "B3-5.3-09"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 24959,
+  "seconds": 25.0,
+  "finish_reason": "stop"
+}

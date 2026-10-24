@@ -1,0 +1,79 @@
+{
+  "applicant_id": "G053",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $95,615 are short of the $100,015 needed; document the source of $5,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI 28.9% (B3-6-02). LTV 75%. Funds to close $100,015. Bank balance $100,615 includes $5,000 large deposit (2026-08-30). Monthly income $7,700; 50% threshold = $3,850. Deposit exceeds threshold and is undocumented. Per B3-4.2-02, unverified large deposit must be subtracted from verified funds: $100,615 \u2212 $5,000 = $95,615, leaving $4,400 shortfall to close. Reserves after close only 0.27 months. No gifts or other assets. Cannot condition for additional funds.\n\nDECISION: decline\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 2224,
+        "monthly_income": 7700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 370000,
+        "loan_amount": 277500,
+        "closing_costs": 7515
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 100615,
+        "monthly_pitia": 2224,
+        "cash_to_close": 100015
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves required months principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit definition 50% monthly income"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 370000,
+        "loan_amount": 277500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 27451,
+  "seconds": 79.7,
+  "finish_reason": "stop"
+}

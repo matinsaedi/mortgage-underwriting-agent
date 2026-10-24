@@ -1,0 +1,87 @@
+{
+  "applicant_id": "G084",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $147,011 are short of the $152,711 needed; document the source of $16,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 33.8% \u2014 within DU 50% limit (B3-6-02).  \nLTV: 80% \u2014 no PMI required.  \nCredit score: 699 \u2014 no minimum for DU (B3-5.1-01).  \nReserves: 2.48 months after closing \u2014 no minimum for 1-unit principal residence (B3-4.1-01).  \nFunds to close: $152,711; bank balance $163,011 includes $16,000 large deposit (2026-11-17). Without it, $147,011 < $152,711, so the deposit is needed to close. Per B3-4.2-02, purchase transactions require documentation of large deposits used for closing. Source is not documented.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 12300,
+        "housing_payment": 4158
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 536000,
+        "closing_costs": 18711,
+        "property_value": 670000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 152711,
+        "monthly_pitia": 4158,
+        "available_funds": 163011
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 536000,
+        "property_value": 670000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 26737,
+  "seconds": 81.0,
+  "finish_reason": "stop"
+}

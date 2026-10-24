@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G056",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Sarah Nguyen (G056)**\n\n- **DTI**: 30.7% (housing $2,425 \u00f7 income $7,900) \u2013 within DU limit of 50% (B3-6-02).  \n- **Funds to close**: $109,791 (down payment $101,250 + closing costs $8,541). Borrower has $204,000 total liquid assets (bank $137,000 + retirement $67,000) \u2013 sufficient.  \n- **Reserves**: 38.9 months after closing \u2013 no minimum reserve requirement for 1-unit principal residence (B3-4.1-01).  \n- **Credit score**: 780 \u2013 no minimum score required for DU loans (B3-5.1-01).  \n- **LTV**: 75% \u2013 not evaluated per project assumptions.  \n- **Derogatory events**: None (no bankruptcy, foreclosure, large deposits, or gifts).  \n\nAll requirements met with documented income and assets.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2425,
+        "monthly_income": 7900,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 405000,
+        "closing_costs": 8541,
+        "loan_amount": 303750
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 303750,
+        "property_value": 405000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 109791,
+        "monthly_pitia": 2425,
+        "available_funds": 204000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI ratio limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12717,
+  "seconds": 22.5,
+  "finish_reason": "stop"
+}

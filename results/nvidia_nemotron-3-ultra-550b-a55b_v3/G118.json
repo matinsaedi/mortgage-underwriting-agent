@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G118",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $95,000 are short of the $118,020 needed to close and hold 6 months of reserves."
+    ],
+    "rule_ids": [
+      "B3-4.1-01"
+    ]
+  },
+  "final_answer": "DTI 29.6% (verified income, no debts) \u2014 well within limits.  \nLTV 75% \u2014 acceptable.  \nCredit score 768 \u2014 meets minimum.  \nNo bankruptcy, foreclosure, large deposits, or gifts.  \nFunds to close: $104,334 (down payment $95,000 + closing costs $9,334).  \nAvailable funds: $95,000 bank balance.  \nReserves: \u20134.1 months (insufficient to close).  \nB3-4.1-01 requires 6 months\u2019 reserves for 2\u20134 unit principal residence; borrower cannot even cover cash to close.\n\nDECISION: decline  \nRULES: B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 7700,
+        "housing_payment": 2281
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9334,
+        "loan_amount": 285000,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 104334,
+        "monthly_pitia": 2281,
+        "available_funds": 95000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 285000,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit principal residence reserve requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-06"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 10101,
+  "seconds": 34.8,
+  "finish_reason": "stop"
+}

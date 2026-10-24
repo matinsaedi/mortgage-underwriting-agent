@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G013",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 33.03% (B3-6-02) \u2014 within DU limits. LTV 90% (B3-4.3-04) \u2014 second home >80% LTV requires 5% minimum borrower contribution ($16,250); borrower has $21,600 own funds, met. Gift from parent with gift letter is acceptable donor and fully documented (B3-4.3-04). Reserves 3.85 months > 2 months required for second home (B3-4.1-01). Funds to close $39,121; available $47,869 (bank $21,600 + gift $26,269), sufficient. No large deposits, no derogatory credit. All requirements satisfied.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          530,
+          70
+        ],
+        "monthly_income": 8700,
+        "housing_payment": 2274
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 292500,
+        "closing_costs": 6621,
+        "property_value": 325000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 47869,
+        "cash_to_close": 39121,
+        "monthly_pitia": 2274
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home parent donor"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 325000,
+        "loan_amount": 292500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 20583,
+  "seconds": 29.4,
+  "finish_reason": "stop"
+}

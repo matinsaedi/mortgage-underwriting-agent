@@ -1,0 +1,81 @@
+{
+  "applicant_id": "G053",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $95,615 are short of the $100,015 needed; document the source of $5,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Omar Patel (G053)**\n\n- **DTI:** 28.88% (housing $2,224 \u00f7 income $7,700) \u2013 well within limits. **B3-6-02**\n- **LTV:** 75% ($277,500 \u00f7 $370,000) \u2013 acceptable.\n- **Credit:** 733 score; no bankruptcy/foreclosure \u2013 meets DU requirements. **B3-5.1-01**\n- **Funds to close:** $100,015 (down payment $92,500 + closing costs $7,515). Bank balance $100,615 includes a $5,000 deposit (2026-08-30) with **source not documented**.\n- **Large deposit test:** 50% of monthly income ($7,700) = $3,850. The $5,000 deposit exceeds this threshold, so it is a large deposit. Per **B3-4.2-02**, unsourced large deposits must be deducted from verified funds. Without documentation, verified funds drop to $95,615 \u2013 a $4,400 shortfall to close.\n- **Reserves:** 0.27 months remaining after closing, but **B3-4.1-01** imposes no minimum reserve requirement for a 1-unit principal residence.\n\n**Condition required:** Borrower must document the source of the $5,000 deposit dated 2026-08-30. If documented, funds are sufficient; if not, the loan cannot close with current assets.\n\nDECISION: approve with conditions  \nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 7700,
+        "monthly_debts": [],
+        "housing_payment": 2224
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7515,
+        "property_value": 370000,
+        "loan_amount": 277500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 100015,
+        "monthly_pitia": 2224,
+        "available_funds": 100615
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 277500,
+        "property_value": 370000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum DU purchase"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-5.1-01",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 25012,
+  "seconds": 30.3,
+  "finish_reason": "stop"
+}

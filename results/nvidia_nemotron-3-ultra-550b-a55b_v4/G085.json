@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G085",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Credit score 695: DU has no minimum score requirement (B3-5.1-01).  \nChapter 7 bankruptcy discharged 2020-08-16; 4-year waiting period ends 2024-08-16, closing 2026-12-04 is after (B3-5.3-07).  \nDTI 30.83% (housing $3,401 + debts $515 \u00f7 income $12,700) \u2014 well within DU limits.  \nLTV 80% (loan $436,000 \u00f7 value $545,000).  \nFunds to close $125,230 (down $109,000 + costs $16,230); available funds $227,000 (bank $187,000 + retirement $40,000).  \nReserves 29.9 months ($101,770 remaining \u00f7 $3,401 PITIA) \u2014 exceeds any requirement.  \nNo large deposits or gifts to document.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2020-08-16",
+        "years": 4
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          125,
+          390
+        ],
+        "monthly_income": 12700,
+        "housing_payment": 3401
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 16230,
+        "property_value": 545000,
+        "loan_amount": 436000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 436000,
+        "property_value": 545000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 125230,
+        "available_funds": 227000,
+        "monthly_pitia": 3401
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 28571,
+  "seconds": 62.4,
+  "finish_reason": "stop"
+}

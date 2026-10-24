@@ -1,0 +1,69 @@
+{
+  "applicant_id": "G078",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI 53.73% exceeds 50% maximum for DU loans (B3-6-02). Verified income $6,300 used; stated $11,700 not supported. Funds to close $102,285; bank balance $145,000 sufficient. Reserves 15.3 months. No bankruptcy, foreclosure, large deposits, or gifts.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          590
+        ],
+        "housing_payment": 2795,
+        "monthly_income": 6300
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 445000,
+        "loan_amount": 356000,
+        "closing_costs": 13285
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 102285,
+        "available_funds": 145000,
+        "monthly_pitia": 2795
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "income verification stable monthly income"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.1-01",
+    "B3-3.4-05",
+    "B3-3.4-16",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 12444,
+  "seconds": 36.5,
+  "finish_reason": "stop"
+}

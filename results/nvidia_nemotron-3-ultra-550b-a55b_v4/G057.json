@@ -1,0 +1,84 @@
+{
+  "applicant_id": "G057",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,193 are short of the $92,993 needed; document the source of $39,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 33.2% (within DU limits). LTV: 75% (acceptable for investment property). Funds to close: $82,235. Bank balance: $124,193 includes $39,000 large deposit (2026-10-23) with no source documented. Per B3-4.2-02, a deposit exceeding 50% of monthly income ($2,700) is a large deposit; undocumented portion must be subtracted from available funds. Available funds after removal: $85,193. Reserves required: 6 months for investment property (B3-4.1-01). Reserves after closing: ($85,193 - $82,235) / $1,793 = 1.65 months. Shortfall: 4.35 months. No gifts or other assets to cover gap. Condition cannot request additional funds.\n\nDECISION: decline\nRULES: B3-4.1-01, B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation threshold"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 1793,
+        "monthly_income": 5400,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 221250,
+        "property_value": 295000,
+        "closing_costs": 8485
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property minimum down payment LTV"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 1793,
+        "available_funds": 85193,
+        "cash_to_close": 82235
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 221250,
+        "property_value": 295000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.2-02",
+    "B3-4.2-03",
+    "B3-4.3-08"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 18917,
+  "seconds": 99.5,
+  "finish_reason": "stop"
+}

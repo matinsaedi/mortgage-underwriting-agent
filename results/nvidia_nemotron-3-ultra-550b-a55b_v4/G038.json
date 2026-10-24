@@ -1,0 +1,60 @@
+{
+  "applicant_id": "G038",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 62.9% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 62.86% (housing $3,083 + credit card $60) / verified income $5,000 = 62.86%, exceeds 50% DU maximum (B3-6-02).\nFunds to close: $177,772 (down payment $165,000 + closing costs $12,772). Bank balance $218,000 covers this with 13.05 months reserves remaining.\nCredit: Score 756, no bankruptcy/foreclosure.\nNo large deposits or gifts to verify.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 5000,
+        "housing_payment": 3083,
+        "monthly_debts": [
+          60
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 12772,
+        "property_value": 550000,
+        "loan_amount": 385000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 218000,
+        "monthly_pitia": 3083,
+        "cash_to_close": 177772
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15865,
+  "seconds": 62.1,
+  "finish_reason": "stop"
+}

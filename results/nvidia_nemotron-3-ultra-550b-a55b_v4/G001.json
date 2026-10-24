@@ -1,0 +1,83 @@
+{
+  "applicant_id": "G001",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit (B3-5.3-07):** Chapter 7 discharge 2020-03-28; 4-year wait ends 2024-03-28. Closing 2026-12-13 \u2192 wait satisfied.  \n**Credit score (B3-5.1-01):** 736; DU requires no minimum score.  \n**DTI (B3-6-02):** 33.76% (housing $2,252 + credit card $145 \u00f7 $7,100 income) \u2192 within DU limits.  \n**LTV:** 75% (loan $281,250 \u00f7 value $375,000).  \n**Funds to close:** $103,847 (down payment $93,750 + closing costs $10,097).  \n**Available funds:** $234,000 (bank $158,000 + retirement $76,000).  \n**Reserves (B3-4.1-01):** 57.8 months after closing; no minimum required for 1-unit principal residence.  \n**Large deposits/gifts:** None listed.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2020-03-28"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 7100,
+        "monthly_debts": [
+          145
+        ],
+        "housing_payment": 2252
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 10097,
+        "property_value": 375000,
+        "loan_amount": 281250
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 375000,
+        "loan_amount": 281250
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 234000,
+        "monthly_pitia": 2252,
+        "cash_to_close": 103847
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.3-07",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 34847,
+  "seconds": 79.8,
+  "finish_reason": "stop"
+}

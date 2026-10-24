@@ -1,0 +1,66 @@
+{
+  "applicant_id": "G066",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Foreclosure waiting period (B3-5.3-07): 7-year standard period from 2017-11-25 ended 2024-11-25; closing 2026-12-01 is well past. DTI (B3-6-02): 25.58% (housing only, no other debts). Funds to close: $180,597; available $216,000; surplus $35,403. Reserves: 9.11 months PITIA. LTV: 75% (no restriction after 7 years). Credit score 782. No large deposits or gifts.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "foreclosure waiting period standard"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 7,
+        "start_date": "2017-11-25"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3888,
+        "monthly_debts": [],
+        "monthly_income": 15200
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 15597,
+        "loan_amount": 495000,
+        "property_value": 660000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 216000,
+        "cash_to_close": 180597,
+        "monthly_pitia": 3888
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 495000,
+        "property_value": 660000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 22778,
+  "seconds": 25.2,
+  "finish_reason": "stop"
+}

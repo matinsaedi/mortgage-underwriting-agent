@@ -1,0 +1,73 @@
+{
+  "applicant_id": "G039",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $162,968 are short of the $171,768 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.07% (within limits). LTV: 75% (\u226480%, no minimum borrower contribution required). Funds to close: $171,768. Available funds without gift: $162,968 (short $8,800). Reserves without gift: negative (cannot close). Gift donor is \"interested party\" \u2014 B3-4.3-04 prohibits gifts from interested parties (builder, developer, real estate agent, or any other interested party to the transaction). The gift cannot be used. Without it, the borrower lacks sufficient funds to close.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3688,
+        "monthly_income": 11500,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 468750,
+        "property_value": 625000,
+        "closing_costs": 15518
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 171768,
+        "available_funds": 215968,
+        "monthly_pitia": 3688
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party donor requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 625000,
+        "loan_amount": 468750
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party gift not allowed decline"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 18649,
+  "seconds": 29.9,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,97 @@
+{
+  "applicant_id": "G043",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Gifts are used on a second home at 90% LTV, so 5% ($29,750) must come from the borrower's own funds; they have $20,100."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 35.16% \u2264 50% DU limit (B3-6-02). Funds to close $74,347; available $83,605 (bank $20,100 + gift $63,505). Reserves 2.27 months \u2265 2 months required for second home (B3-4.1-01). Credit score 732 acceptable for DU (B3-5.1-01). Gift from parent with letter meets donor and documentation rules (B3-4.3-04). LTV 90% > 80% on a second home triggers 5% minimum borrower contribution ($29,750) from own funds (B3-4.3-04). Borrower has only $20,100 own funds \u2014 shortfall cannot be cured by condition.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "maximum DTI ratio DU loan"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 11600,
+        "monthly_debts": [],
+        "housing_payment": 4079
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 535500,
+        "closing_costs": 14847,
+        "property_value": 595000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 4079,
+        "available_funds": 83605,
+        "cash_to_close": 74347
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation requirements second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 595000,
+        "loan_amount": 535500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution second home LTV greater than 80 percent"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 51146,
+  "seconds": 42.9,
+  "finish_reason": "stop"
+}

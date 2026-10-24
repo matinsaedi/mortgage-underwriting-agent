@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G052",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 36.74% \u2264 50% DU limit (B3-6-02). Funds to close $65,639; available $73,795 (bank $41,600 + gift $32,195) \u2014 sufficient. Reserves 2.28 months \u2265 2 months required for second home (B3-4.1-01). Credit score 702 \u2014 no minimum for DU (B3-5.1-01). Gift from parent (acceptable donor) with letter, allowed for second home (B3-4.3-04). LTV 90% > 80%: minimum 5% borrower contribution ($26,000) met by $41,600 own funds (B3-4.3-04). No bankruptcy/foreclosure. No large deposits.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home donor requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          500
+        ],
+        "housing_payment": 3578,
+        "monthly_income": 11100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 468000,
+        "closing_costs": 13639,
+        "property_value": 520000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3578,
+        "available_funds": 73795,
+        "cash_to_close": 65639
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 23599,
+  "seconds": 68.1,
+  "finish_reason": "stop"
+}

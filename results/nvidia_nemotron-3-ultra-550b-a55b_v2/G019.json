@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G019",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $196,860 are short of the $212,860 needed; document the source of $27,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "DTI: 26.4% (housing only, no other debts) \u2014 well within limits. B3-6-02\nFunds to close: $193,060 (down payment $177,000 + closing costs $16,060). B3-4.1-01\nAvailable funds: $223,860 (bank balance includes $27,000 large deposit). After closing, $30,800 remains.\nReserves: 9.33 months PITIA \u2014 exceeds 6-month requirement for investment property. B3-4.1-01\nLarge deposit: $27,000 on 2026-10-12, source not documented. Since the deposit is needed to meet the 6-month reserve requirement (without it, only 1.15 months remain), documentation is required for this purchase transaction. B3-4.2-02\nCredit: 787 score, no bankruptcy/foreclosure. B3-5.1-01\nIncome: verified, stable employment. B3-3.1-01\n\nDECISION: approve with conditions\nRULES: B3-4.2-02, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3300,
+        "monthly_income": 12500,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 16060,
+        "loan_amount": 413000,
+        "property_value": 590000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 223860,
+        "cash_to_close": 193060,
+        "monthly_pitia": 3300
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property down payment requirements"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-3.8-01",
+    "B3-3.8-04",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 20345,
+  "seconds": 17.5,
+  "finish_reason": "stop"
+}

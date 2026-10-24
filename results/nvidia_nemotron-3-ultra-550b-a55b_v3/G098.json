@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G098",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 24.94% (B3-6-02: \u226445% DU limit). LTV 75%. Funds to close $146,140; available $204,992 (includes $40k large deposit). Reserves after closing 18.73 months; 6 months required for 2\u20134 unit principal residence (B3-4.1-01). Credit score 732; no derogatory events. Large deposit $40,000 (2026-08-29) not sourced; per B3-4.2-02, purchase transactions require documentation when large-deposit funds are needed for down payment, closing costs, or reserves. Without the $40k, remaining reserves would be exactly 6.0 months, so the deposit is needed and must be sourced.\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 12600,
+        "housing_payment": 3142
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13640,
+        "property_value": 530000,
+        "loan_amount": 397500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 146140,
+        "monthly_pitia": 3142,
+        "available_funds": 204992
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirement"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit property reserve requirements"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 530000,
+        "loan_amount": 397500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-4.4-01"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16148,
+  "seconds": 50.3,
+  "finish_reason": "stop"
+}

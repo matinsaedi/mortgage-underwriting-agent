@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G001",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Credit (B3-5.3-07):** Chapter 7 discharge 2020-03-28; 4-year wait ends 2024-03-28. Closing 2026-12-13 is well past the waiting period. \u2713  \n**DTI (B3-6-02):** 33.76% (housing $2,252 + credit card $145 \u00f7 verified income $7,100). Within DU limits. \u2713  \n**LTV:** 75% (loan $281,250 \u00f7 value $375,000). \u2713  \n**Funds to close (B3-4.1-01):** $103,847 needed (down payment $93,750 + closing costs $10,097). Bank balance $158,000 covers this with $54,153 left. \u2713  \n**Reserves (B3-4.1-01):** No minimum for 1-unit principal residence. Post-close bank funds give 24+ months PITIA; total assets give 57.8 months. \u2713  \n**Large deposits/gifts:** None listed. \u2713  \n\nAll requirements met as presented.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "years": 4,
+        "start_date": "2020-03-28"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          145
+        ],
+        "monthly_income": 7100,
+        "housing_payment": 2252
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 281250,
+        "closing_costs": 10097,
+        "property_value": 375000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 234000,
+        "cash_to_close": 103847,
+        "monthly_pitia": 2252
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 375000,
+        "loan_amount": 281250
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves DU principal residence 1-unit"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-01",
+    "B3-4.1-01",
+    "B3-5.3-07"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 27955,
+  "seconds": 34.2,
+  "finish_reason": "stop"
+}

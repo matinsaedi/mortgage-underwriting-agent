@@ -1,0 +1,76 @@
+{
+  "applicant_id": "G003",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 30.57% (B3-6-02) \u2014 within 45% DU limit.  \nLTV 80% \u2014 purchase price equals value.  \nCash to close $150,911 (funds_to_close) vs. $214,000 available \u2014 sufficient.  \nReserves 15.06 months (reserves_months) vs. 6-month investment-property minimum (B3-4.1-01) \u2014 exceeds requirement.  \nCredit score 749 \u2014 DU assesses risk, no minimum score required (B3-5.1-01).  \nNo bankruptcy, foreclosure, large deposits, or gifts to document.  \nAll requirements met as presented.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 13700,
+        "monthly_debts": [],
+        "housing_payment": 4188
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 540000,
+        "closing_costs": 15911,
+        "property_value": 675000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 150911,
+        "available_funds": 214000,
+        "monthly_pitia": 4188
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score minimum investment property"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 540000,
+        "property_value": 675000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 22303,
+  "seconds": 29.7,
+  "finish_reason": "stop"
+}

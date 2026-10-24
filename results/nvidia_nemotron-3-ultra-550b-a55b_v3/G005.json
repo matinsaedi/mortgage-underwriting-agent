@@ -1,0 +1,80 @@
+{
+  "applicant_id": "G005",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $129,244 are short of the $192,144 needed; $84,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "Credit score 743 meets minimum. DTI 28.2% (B3-6-02) well within limits. LTV 75% (\u226480%) so no minimum borrower contribution required for gifts on second home (B3-4.3-04). Funds to close $184,368. Reserves 7.4 months with gift, exceeding 2-month DU requirement for second home (B3-4.1-01).\n\n**Critical issue:** Gift of $84,000 is from an \"interested party.\" B3-4.3-04 explicitly states: \"The donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" This gift is ineligible and cannot be used.\n\nWithout the gift, available funds are only $129,244 (bank balance), which is $55,124 short of the $184,368 needed to close. The file shows no other assets. A condition cannot add funds.\n\nDECISION: decline\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party second home"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 495000,
+        "property_value": 660000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3888,
+        "monthly_debts": [],
+        "monthly_income": 13800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 19368,
+        "property_value": 660000,
+        "loan_amount": 495000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3888,
+        "available_funds": 213244,
+        "cash_to_close": 184368
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contributions second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 30584,
+  "seconds": 32.8,
+  "finish_reason": "stop"
+}

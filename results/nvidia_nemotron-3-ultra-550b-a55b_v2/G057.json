@@ -1,0 +1,74 @@
+{
+  "applicant_id": "G057",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $85,193 are short of the $92,993 needed; document the source of $39,000 in large deposits."
+    ],
+    "rule_ids": [
+      "B3-4.2-02"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Nina Kim (G057)**\n\n- **DTI**: 33.2% (housing $1,793 \u00f7 income $5,400) \u2013 well within limits. B3-6-03.\n- **Funds to close**: $82,235 (down payment $73,750 + closing costs $8,485). B3-4.1-01.\n- **Reserves**: 23.4 months ($124,193 \u2013 $82,235 \u00f7 $1,793) \u2013 exceeds 6-month requirement for investment property. B3-4.1-01.\n- **Credit**: 747 score, no bankruptcy/foreclosure \u2013 eligible.\n- **Large deposit**: $39,000 on 2026-10-23, source not documented. This deposit is needed to meet the 6-month reserve requirement (without it, post-close reserves would be only ~1.7 months). Per B3-4.2-02, purchase transactions require documentation of large deposits used for down payment, closing costs, **or reserves**.\n\n**Condition**: Document source of the $39,000 large deposit (e.g., sale of asset, gift letter, written explanation).\n\nDECISION: approve with conditions\nRULES: B3-4.2-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "large deposit documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "housing_payment": 1793,
+        "monthly_income": 5400
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 295000,
+        "loan_amount": 221250,
+        "closing_costs": 8485
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 82235,
+        "available_funds": 124193,
+        "monthly_pitia": 1793
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-02",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.2-02",
+    "B3-6-03"
+  ],
+  "llm_calls": 3,
+  "input_tokens": 12835,
+  "seconds": 31.3,
+  "finish_reason": "stop"
+}

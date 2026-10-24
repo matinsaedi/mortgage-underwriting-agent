@@ -1,0 +1,98 @@
+{
+  "applicant_id": "G009",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $114,350 are short of the $145,050 needed; $59,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Credit**: Score 777, no bankruptcy/foreclosure \u2014 meets requirements.  \n**LTV**: 80% (484,000/605,000).  \n**DTI**: 34.5% (housing 3,764 + debts 620 \u00f7 income 12,700) \u2014 under 50% DU limit (B3-6-02).  \n**Funds to close**: $137,522 (down payment 121,000 + closing costs 16,522).  \n**Assets**: Bank balance $114,350 + gift $59,000 = $173,350 total.  \n**Reserves with gift**: 9.5 months \u2014 exceeds 2-month second-home requirement (B3-4-1-01).  \n**Reserves without gift**: \u20136.2 months \u2014 insufficient to close.\n\n**Gift issue**: The $59,000 gift is from an \"interested party.\" B3-4.3-04 states: \"The donor may not be, or have any affiliation with, the builder, the developer, the real estate agent, or any other interested party to the transaction.\" An interested-party gift is not allowed for personal gifts. Without this gift, the borrower lacks $23,172 to close. A condition cannot require additional funds or a different donor.\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift from interested party second home"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement second home DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 484000,
+        "property_value": 605000
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3764,
+        "monthly_debts": [
+          510,
+          110
+        ],
+        "monthly_income": 12700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 16522,
+        "loan_amount": 484000,
+        "property_value": 605000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "interested party contribution gift second home"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 173350,
+        "cash_to_close": 137522,
+        "monthly_pitia": 3764
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 137522,
+        "monthly_pitia": 3764,
+        "available_funds": 114350
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 29915,
+  "seconds": 60.2,
+  "finish_reason": "stop"
+}

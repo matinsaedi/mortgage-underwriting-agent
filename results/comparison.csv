@@ -1,0 +1,13 @@
+,Super v1,Ultra v2,Ultra v3,Ultra v4
+applicants,120,120,120,120
+errors,0,0,0,0
+decision accuracy,75%,83%,91%,93%
+cited expected rule,93%,100%,94%,99%
+cited a rule never read,3,0,0,0
+add_years on date cases,22%,100%,100%,100%
+used dti,75%,100%,100%,100%
+used funds_to_close,76%,100%,100%,100%
+reserves_months when required,69%,97%,97%,98%
+avg LLM calls,9.3,6.4,6.3,6.2
+avg seconds,73,33,50,63
+avg input tokens,58992,26506,26825,24312

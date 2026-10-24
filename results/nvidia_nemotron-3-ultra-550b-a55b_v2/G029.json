@@ -1,0 +1,88 @@
+{
+  "applicant_id": "G029",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $94,315 are short of the $128,015 needed; $53,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 32.76% (\u226450% DU limit, B3-6-02) \u2713  \nCredit score: 697 (\u2265620 minimum for DU) \u2713  \nFunds to close: $109,427 (down payment $99,000 + closing costs $10,427)  \nAvailable funds: $94,315 bank balance only \u2014 gift of $53,000 not allowed on investment property (B3-4.3-04)  \nShortfall: $15,112 \u2014 cannot close  \nReserves: N/A (insufficient funds to close)\n\nDECISION: decline  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property DTI requirements Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit investment property Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds investment property Fannie Mae"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3098,
+        "monthly_debts": [
+          160,
+          280
+        ],
+        "monthly_income": 10800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 10427,
+        "loan_amount": 396000,
+        "property_value": 495000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 109427,
+        "monthly_pitia": 3098,
+        "available_funds": 94315
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score investment property Fannie Mae"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-02",
+    "B3-3.8-04",
+    "B3-3.8-06",
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-6-02"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 39895,
+  "seconds": 21.7,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,77 @@
+{
+  "applicant_id": "G103",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.1-01",
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $78,360 are short of the $87,660 needed; $26,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**DTI**: 28.61% (housing $2,098 + debts $420 \u00f7 income $8,800) \u2014 within DU limits.  \n**LTV**: 80% ($264,000 \u00f7 $330,000) \u2014 acceptable.  \n**Cash to close**: $75,072 (down payment $66,000 + closing costs $9,072).  \n**Available funds**: Bank balance $78,360 + gift $26,000 = $104,360.  \n**Reserves with gift**: 13.96 months \u2014 meets 6-month investment-property requirement (B3-4.1-01).  \n\n**Critical issue**: B3-4.3-04 states \u201cGifts are not allowed on an investment property.\u201d The $26,000 parent gift cannot be used.  \n**Without gift**: Own funds $78,360 \u2212 cash to close $75,072 = $3,288 remaining \u2192 1.57 months reserves, below the 6-month minimum for investment property (B3-4.1-01).  \n\nThe borrower cannot satisfy the reserve requirement using only documented own funds.\n\nDECISION: decline  \nRULES: B3-4.3-04, B3-4.1-01",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          240,
+          180
+        ],
+        "housing_payment": 2098,
+        "monthly_income": 8800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 9072,
+        "property_value": 330000,
+        "loan_amount": 264000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 2098,
+        "available_funds": 104360,
+        "cash_to_close": 75072
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "investment property reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds investment property"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 330000,
+        "loan_amount": 264000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.1-02",
+    "B3-4.3-04"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 16271,
+  "seconds": 43.8,
+  "finish_reason": "stop"
+}

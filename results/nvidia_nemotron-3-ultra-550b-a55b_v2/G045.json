@@ -1,0 +1,92 @@
+{
+  "applicant_id": "G045",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Analysis**\n\n**DTI**: 28.53% (housing $2,568 \u00f7 income $9,000) \u2014 well within DU limits.  \n**LTV**: 70% ($318,500 \u00f7 $455,000) \u2014 \u226480%, so no minimum borrower contribution required for 2\u20134 unit principal residence (B3-4.3-06).  \n**Funds to close**: $147,852 (down payment $136,500 + closing costs $11,352).  \n**Available funds**: $141,760 (bank) + $82,000 (gift) = $223,760 \u2014 sufficient.  \n**Reserves**: 29.56 months post-closing \u2014 exceeds 6-month requirement for 2\u20134 unit principal residence (B3-4.1-01).  \n**Credit**: 765 score, no bankruptcy/foreclosure \u2014 no waiting-period concerns.  \n**Gift**: $82,000 from parent (acceptable donor per B3-4.3-04). Gift letter indicated but contents not verified; donor fund availability and transfer not yet documented (B3-4.3-04).\n\n**Conditions needed**:  \n1. Complete gift letter with all required elements: gift amount, donor statement of no repayment, donor name/address/phone/relationship (B3-4.3-04).  \n2. Verification of donor funds and transfer (donor check/deposit slip, electronic transfer evidence, or settlement statement showing receipt) (B3-4.3-04).\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 9000,
+        "housing_payment": 2568,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 318500,
+        "closing_costs": 11352,
+        "property_value": 455000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 147852,
+        "monthly_pitia": 2568,
+        "available_funds": 223760
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "2-4 unit property principal residence requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements gift letter"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "two-to-four unit principal residence minimum borrower contribution 5%"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 455000,
+        "loan_amount": 318500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirements 2-4 unit principal residence DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds verification transfer documentation"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.8-02",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06",
+    "B3-4.3-08",
+    "B3-4.4-02",
+    "B3-5.4-01"
+  ],
+  "llm_calls": 8,
+  "input_tokens": 38084,
+  "seconds": 22.1,
+  "finish_reason": "stop"
+}

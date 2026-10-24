@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G097",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "Bankruptcy waiting period (B3-5.3-07): Chapter 7 discharge 2021-04-21, 4-year wait ends 2025-04-21; closing 2026-12-06 is after wait period. \u2713\nDTI (B3-6-02): 30.06% using verified income $12,500 and debts $70; well within DU limits. \u2713\nFunds to close: $170,962 needed; bank balance $249,000 covers it. \u2713\nReserves: 21.16 months PITIA remaining after closing; exceeds any requirement. \u2713\nLTV: 75%; no large deposits or gifts to document. \u2713\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "Chapter 7 bankruptcy waiting period"
+      }
+    },
+    {
+      "name": "add_years",
+      "args": {
+        "start_date": "2021-04-21",
+        "years": 4
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3688,
+        "monthly_debts": [
+          70
+        ],
+        "monthly_income": 12500
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 14712,
+        "property_value": 625000,
+        "loan_amount": 468750
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "monthly_pitia": 3688,
+        "available_funds": 249000,
+        "cash_to_close": 170962
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 468750,
+        "property_value": 625000
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-5.3-07"
+  ],
+  "llm_calls": 7,
+  "input_tokens": 23006,
+  "seconds": 36.3,
+  "finish_reason": "stop"
+}

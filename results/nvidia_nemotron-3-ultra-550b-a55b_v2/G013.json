@@ -1,0 +1,79 @@
+{
+  "applicant_id": "G013",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**DTI**: 33.03% (housing $2,274 + debts $600 \u00f7 income $8,700) \u2014 within DU 45% limit (B3-6-02).  \n**LTV**: 90% \u2014 second home, >80% LTV.  \n**Funds to close**: $39,121 (down payment $32,500 + closing costs $6,621).  \n**Available funds**: $21,600 bank + $26,269 gift = $47,869 \u2014 sufficient.  \n**Reserves**: 3.85 months ($8,748 remaining \u00f7 $2,274 PITIA) \u2014 meets 2-month second-home requirement (B3-4.1-01).  \n**Minimum borrower contribution**: 5% of $325,000 = $16,250 required from own funds (B3-4.3-04); borrower has $21,600 \u2014 met.  \n**Gift**: Parent donor (acceptable), gift letter present. Lender must verify donor funds availability and transfer (donor check/deposit slip, electronic transfer, or settlement statement) per B3-4.3-04.  \n**Credit**: Score 764, no bankruptcy/foreclosure.  \n**Large deposits**: None.\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 8700,
+        "monthly_debts": [
+          530,
+          70
+        ],
+        "housing_payment": 2274
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 325000,
+        "closing_costs": 6621,
+        "loan_amount": 292500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 39121,
+        "monthly_pitia": 2274,
+        "available_funds": 47869
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum borrower contribution"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 325000,
+        "loan_amount": 292500
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-08"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 23476,
+  "seconds": 14.3,
+  "finish_reason": "stop"
+}

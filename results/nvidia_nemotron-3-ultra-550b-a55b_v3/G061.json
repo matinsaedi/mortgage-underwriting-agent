@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G061",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "Funds of $112,219 are short of the $121,819 needed; $31,000 in gifts can't be used because the donor or property type isn't allowed."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "**Underwriting Review \u2013 Tom Chen (G061)**\n\n- **LTV**: 70.0% (loan $266,000 / value $380,000) \u2013 within limits.  \n- **DTI**: 28.4% (housing $2,161 / income $7,600; no other debts) \u2013 well below 45% limit.  \n- **Cash to close**: $121,819 (down payment $114,000 + closing costs $7,819).  \n- **Available funds**: Bank balance $112,219 + gift $31,000 = $143,219.  \n- **Reserves (with gift)**: 9.9 months after closing \u2013 meets requirement.  \n\n**Critical issue**: The $31,000 gift is from an \u201cinterested party.\u201d Per **B3-4.3-04**, a donor \u201cmay not be, or have any affiliation with\u2026 any other interested party to the transaction.\u201d An interested-party gift is ineligible. Without the gift, the borrower has only $112,219 \u2013 **$9,600 short** of the $121,819 needed to close. No other assets are listed.\n\n**DECISION: decline**  \n**RULES: B3-4.3-04**",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 7600,
+        "housing_payment": 2161
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 7819,
+        "property_value": 380000,
+        "loan_amount": 266000
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 266000,
+        "property_value": 380000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 143219,
+        "cash_to_close": 121819,
+        "monthly_pitia": 2161
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift interested party donor requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift funds own funds"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-02",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.3-06"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 14884,
+  "seconds": 19.8,
+  "finish_reason": "stop"
+}

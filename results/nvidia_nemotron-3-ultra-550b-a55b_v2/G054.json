@@ -1,0 +1,94 @@
+{
+  "applicant_id": "G054",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 29.06% (housing $3,210 + debts $480 \u00f7 income $12,700) \u2014 within DU limits (B3-6-02).  \nLTV: 90% ($418,500 \u00f7 $465,000) \u2014 >80% triggers 5% minimum borrower contribution for second home (B3-4.3-04).  \nFunds to close: $56,501 (down payment $46,500 + closing costs $10,001).  \nAvailable funds: $63,721 (bank $33,800 + gift $29,921).  \nBorrower own-funds contribution: $33,800 > $23,250 (5% of $465,000) \u2014 meets minimum (B3-4.3-04).  \nReserves: 2.25 months ($7,220 remaining \u00f7 $3,210 PITIA) \u2014 meets 2-month second-home requirement (B3-4.1-01).  \nCredit: 736 score \u2014 DU assesses, no minimum (B3-5.1-01).  \nNo bankruptcy, foreclosure, or large deposits.  \nGift: parent donor (acceptable), gift letter present \u2014 must verify donor funds availability and transfer (B3-4.3-04).\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds second home minimum borrower contribution"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12700,
+        "housing_payment": 3210,
+        "monthly_debts": [
+          210,
+          270
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 418500,
+        "closing_costs": 10001
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 465000,
+        "loan_amount": 418500
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 56501,
+        "available_funds": 63721,
+        "monthly_pitia": 3210
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements verification donor funds transfer"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-03",
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 49906,
+  "seconds": 22.6,
+  "finish_reason": "stop"
+}

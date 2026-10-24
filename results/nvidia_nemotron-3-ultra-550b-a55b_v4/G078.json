@@ -1,0 +1,60 @@
+{
+  "applicant_id": "G078",
+  "parsed": {
+    "decision": "decline",
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "expected": {
+    "decision": "decline",
+    "reasons": [
+      "DTI 53.7% exceeds the 50% maximum for DU underwriting."
+    ],
+    "rule_ids": [
+      "B3-6-02"
+    ]
+  },
+  "final_answer": "DTI: 53.73% (verified income $6,300; housing $2,795 + student loan $590) exceeds 50% DU maximum (B3-6-02).\nFunds to close: $102,285 (down payment $89,000 + closing costs $13,285).\nReserves: 15.3 months after closing ($145,000 bank balance \u2212 $102,285 cash to close \u00f7 $2,795 PITIA).\nCredit: 731 score, no bankruptcy/foreclosure.\nIncome: Verified $6,300/month vs. stated $11,700/month; verified used for DTI.\nAssets: No large deposits or gifts; bank balance covers cash to close and reserves.\n\nDECISION: decline\nRULES: B3-6-02",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 6300,
+        "housing_payment": 2795,
+        "monthly_debts": [
+          590
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 356000,
+        "closing_costs": 13285,
+        "property_value": 445000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 145000,
+        "monthly_pitia": 2795,
+        "cash_to_close": 102285
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 15996,
+  "seconds": 23.1,
+  "finish_reason": "stop"
+}

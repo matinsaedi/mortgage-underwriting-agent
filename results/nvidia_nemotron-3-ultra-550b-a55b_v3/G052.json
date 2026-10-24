@@ -1,0 +1,90 @@
+{
+  "applicant_id": "G052",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 36.74% \u2264 50% DU max (B3-6-02). Funds to close: $65,639 needed; $73,795 available (bank $41,600 + gift $32,195). Reserves: 2.28 months \u2265 2-month second-home requirement (B3-4.1-01). Credit: 702, no DU minimum (B3-5.1-01). Gift: parent donor, gift letter present, fully documented (B3-4.3-04). Minimum borrower contribution: 5% \u00d7 $520,000 = $26,000 required; borrower has $41,600 own funds (B3-4.3-04). No bankruptcy/foreclosure. No large deposits. LTV 90% (not checked per instructions).\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "debt-to-income ratio maximum DU"
+      }
+    },
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [
+          500
+        ],
+        "housing_payment": 3578,
+        "monthly_income": 11100
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "closing_costs": 13639,
+        "loan_amount": 468000,
+        "property_value": 520000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves second home DU"
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 73795,
+        "cash_to_close": 65639,
+        "monthly_pitia": 3578
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds documentation gift letter parent"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home DU"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 520000,
+        "loan_amount": 468000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum down payment"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 10,
+  "input_tokens": 53385,
+  "seconds": 45.1,
+  "finish_reason": "stop"
+}

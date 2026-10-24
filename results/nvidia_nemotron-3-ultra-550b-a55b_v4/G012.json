@@ -1,0 +1,89 @@
+{
+  "applicant_id": "G012",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $100,993 are short of the $155,493 needed; obtain a signed gift letter for $66,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI 34.55% \u2264 50% DU limit (B3-6-02). LTV 70% \u2264 80%, so no minimum borrower contribution required; gift from grandparent (acceptable donor per B3-4.3-04) can cover all funds. Funds to close $155,493; available $100,993 bank + $66,000 gift = $166,993. Reserves 4.3 months; no minimum for 1-unit principal residence DU (B3-4.1-01). Credit score 720, no derogatory events. Gift letter missing \u2014 required by B3-4.3-04.\n\nDECISION: approve with conditions\nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2676,
+        "monthly_debts": [
+          330
+        ],
+        "monthly_income": 8700
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 332500,
+        "closing_costs": 12993,
+        "property_value": 475000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 155493,
+        "available_funds": 166993,
+        "monthly_pitia": 2676
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift funds grandparent principal residence documentation"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 332500
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum borrower contribution gift principal residence"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.2-03",
+    "B3-4.3-04",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 19148,
+  "seconds": 70.1,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,75 @@
+{
+  "applicant_id": "G088",
+  "parsed": {
+    "decision": "approve with conditions",
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "expected": {
+    "decision": "approve with conditions",
+    "reasons": [
+      "Verified funds of $79,797 are short of the $148,397 needed; obtain a signed gift letter for $74,000 in gifts."
+    ],
+    "rule_ids": [
+      "B3-4.3-04"
+    ]
+  },
+  "final_answer": "DTI: 28.8% (\u226445% DU limit) \u2014 B3-6-02  \nLTV: 70% \u2014 eligible  \nFunds to close: $148,397; available funds (bank $79,797 + gift $74,000) = $153,797 \u2014 sufficient  \nReserves after closing: $5,400 \u00f7 $2,595 = 2.1 months; DU determines requirement for 1-unit principal residence, typically 0\u20132 months \u2014 adequate  \nCredit score 688 \u2265 620 minimum \u2014 B3-5.1-01  \nNo bankruptcy/foreclosure \u2014 no waiting period  \nGift of $74,000 from parent lacks required gift letter \u2014 B3-4.3-04 requires signed letter with amount, no-repayment statement, donor details\n\nDECISION: approve with conditions  \nRULES: B3-4.3-04",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_debts": [],
+        "monthly_income": 9000,
+        "housing_payment": 2595
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 460000,
+        "loan_amount": 322000,
+        "closing_costs": 10397
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 322000,
+        "property_value": 460000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 153797,
+        "monthly_pitia": 2595,
+        "cash_to_close": 148397
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift letter documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves DU underwriting minimum months"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-3.3-09",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-02"
+  ],
+  "llm_calls": 4,
+  "input_tokens": 11494,
+  "seconds": 11.9,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,68 @@
+{
+  "applicant_id": "G099",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 34.76% (\u226445% per B3-6-02). LTV 75% (\u226480%). Credit score 743 (meets DU requirements). No bankruptcy/foreclosure. Funds to close $68,893; available $68,793 bank + $25,000 gift = $93,793. Reserves 15.92 months. Gift from \"other relative\" is acceptable donor per B3-4.3-04; gift letter present; LTV \u226480% so no minimum borrower contribution required. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 4500,
+        "housing_payment": 1564,
+        "monthly_debts": []
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 191250,
+        "property_value": 255000,
+        "closing_costs": 5143
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "cash_to_close": 68893,
+        "available_funds": 93793,
+        "monthly_pitia": 1564
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift donor relative principal residence"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 191250,
+        "property_value": 255000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score DU principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-5.4-01",
+    "B3-5.4-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 18447,
+  "seconds": 33.6,
+  "finish_reason": "stop"
+}

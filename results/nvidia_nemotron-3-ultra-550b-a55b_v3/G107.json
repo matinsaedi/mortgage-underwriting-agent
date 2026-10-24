@@ -1,0 +1,78 @@
+{
+  "applicant_id": "G107",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI: 28.43% (\u226450% DU limit per B3-6-02). LTV: 75%. Funds to close: $129,905. Available funds: $106,805 bank + $57,000 gift = $163,805. Reserves after closing: 12 months (exceeds DU requirements per B3-4.1-01). Gift from sibling with gift letter is fully documented per project assumptions and B3-4.3-04. No large deposits. No bankruptcy/foreclosure. Credit score 789.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "monthly_income": 12000,
+        "housing_payment": 2826,
+        "monthly_debts": [
+          540,
+          45
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 475000,
+        "loan_amount": 356250,
+        "closing_costs": 11155
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 163805,
+        "monthly_pitia": 2826,
+        "cash_to_close": 129905
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 356250,
+        "property_value": 475000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "gift documentation requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserve requirements DU"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-05",
+    "B3-4.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 6,
+  "input_tokens": 19848,
+  "seconds": 34.1,
+  "finish_reason": "stop"
+}

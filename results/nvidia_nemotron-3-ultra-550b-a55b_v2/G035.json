@@ -1,0 +1,100 @@
+{
+  "applicant_id": "G035",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "**Underwriting Review \u2013 Applicant G035 (Ben Brown)**\n\n- **DTI**: 30.56% (housing $3,382 + student loan $530 \u00f7 verified income $12,800) \u2013 well under DU 50% max (B3-6-02).  \n- **Credit**: 739 score \u2013 DU has no minimum score requirement; score is strong (B3-5.1-01).  \n- **LTV**: 70% ($423,500 \u00f7 $605,000) \u2013 within typical limits for second home purchase.  \n- **Reserves**: 22.04 months post-closing ($274,000 bank balance \u2013 $199,467 cash to close \u00f7 $3,382 PITIA) \u2013 exceeds 2-month requirement for second home (B3-4.1-01).  \n- **Funds to close**: $199,467 (down payment $181,500 + closing costs $17,967) \u2013 fully covered by $274,000 bank balance.  \n- **Derogatory credit**: None (no bankruptcy, foreclosure, or significant derogatory events).  \n- **Large deposits/gifts**: None listed \u2013 no sourcing needed.  \n- **Income**: Verified $12,800/month matches stated; 14.6 years employment \u2013 stable.  \n- **Occupancy**: Second home, 1-unit \u2013 eligible; no minimum borrower contribution required at \u226480% LTV (B3-4.3-04).\n\nAll requirements met as presented.\n\nDECISION: approve  \nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 3382,
+        "monthly_debts": [
+          530
+        ],
+        "monthly_income": 12800
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "property_value": 605000,
+        "loan_amount": 423500,
+        "closing_costs": 17967
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 274000,
+        "cash_to_close": 199467,
+        "monthly_pitia": 3382
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home reserve requirements"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home minimum credit score purchase"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "minimum credit score second home purchase Fannie Mae"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "credit score 620 second home purchase"
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 423500,
+        "property_value": 605000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "second home purchase minimum down payment LTV"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-2-10",
+    "B3-3.4-06",
+    "B3-4.1-01",
+    "B3-4.3-04",
+    "B3-4.3-08",
+    "B3-5.1-01",
+    "B3-5.1-02",
+    "B3-5.3-07",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 9,
+  "input_tokens": 50539,
+  "seconds": 21.8,
+  "finish_reason": "stop"
+}

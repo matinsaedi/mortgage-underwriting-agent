@@ -1,0 +1,70 @@
+{
+  "applicant_id": "G063",
+  "parsed": {
+    "decision": "approve",
+    "rule_ids": []
+  },
+  "expected": {
+    "decision": "approve",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "final_answer": "DTI 33.03% \u2264 50% DU limit (B3-6-02). Reserves 8.2 months; no minimum required for 1-unit principal residence (B3-4.1-01). LTV 80%. Funds to close $96,309; available $118,000 (bank balance). No bankruptcy, foreclosure, large deposits, or gifts. Credit score 780. All requirements met.\n\nDECISION: approve\nRULES: none",
+  "tool_calls": [
+    {
+      "name": "dti",
+      "args": {
+        "housing_payment": 2644,
+        "monthly_income": 9700,
+        "monthly_debts": [
+          530,
+          30
+        ]
+      }
+    },
+    {
+      "name": "funds_to_close",
+      "args": {
+        "loan_amount": 336000,
+        "closing_costs": 12309,
+        "property_value": 420000
+      }
+    },
+    {
+      "name": "reserves_months",
+      "args": {
+        "available_funds": 118000,
+        "cash_to_close": 96309,
+        "monthly_pitia": 2644
+      }
+    },
+    {
+      "name": "ltv",
+      "args": {
+        "loan_amount": 336000,
+        "property_value": 420000
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "DTI limit DU underwriting"
+      }
+    },
+    {
+      "name": "search_guide",
+      "args": {
+        "query": "reserves requirement DU principal residence"
+      }
+    }
+  ],
+  "retrieved_rules": [
+    "B3-4.1-01",
+    "B3-5.4-01",
+    "B3-6-02"
+  ],
+  "llm_calls": 5,
+  "input_tokens": 13733,
+  "seconds": 25.3,
+  "finish_reason": "stop"
+}
